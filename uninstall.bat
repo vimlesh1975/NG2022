@@ -1,0 +1,2 @@
+@ECHO OFF 
+C:\WINDOWS\system32\MsiExec.exe /Uninstall {E2045B7E-BC12-4F05-BA1B-2D8D69120F53} 
