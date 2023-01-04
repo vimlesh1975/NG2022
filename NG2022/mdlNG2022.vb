@@ -96,7 +96,7 @@ Module mdlNG2022
         On Error Resume Next
 
         If frmNG2022.chkSendToHtml.Checked Then
-            loadHtml("C: /casparcg/" + templatename + ".html", datacollection)
+            loadHtml("C:/casparcg/" + templatename + ".html", datacollection)
             For i = 0 To CasparCGDataCollection.DataPairs.Count - 1
                 If CasparCGDataCollection.DataPairs.Item(i).Value.Contains(":/") Then
                     changeImage(CasparCGDataCollection.DataPairs.Item(i).Name, CasparCGDataCollection.DataPairs.Item(i).Value)

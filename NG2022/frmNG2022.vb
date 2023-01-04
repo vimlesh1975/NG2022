@@ -203,4 +203,7 @@ Public Class frmNG2022
         callScript({"setColorRect('" & aa + "','" & bb + "')"})
     End Sub
 
+    Private Sub UcNetBall1_Load(sender As Object, e As EventArgs) Handles UcNetBall1.Load
+
+    End Sub
 End Class
