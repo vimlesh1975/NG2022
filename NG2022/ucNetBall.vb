@@ -5,14 +5,15 @@
         defautdataforball()
         initialisesetscoreball()
 
-        cmbgames.DataSource = New BindingSource(gameName, "")
-        cmbgames.Text = "NetBall"
+
 
         cmbhalfball.DataSource = New BindingSource(halfText, "")
         cmbhalfball.Text = "Q1"
         cmbinfoball.DataSource = New BindingSource(infoball, "")
         cmbinfoball.Text = "Round 1"
 
+        cmbgames.DataSource = New BindingSource(gameName, "")
+        cmbgames.Text = "NetBall"
 
         cmbHeader.DataSource = New BindingSource(headerText, "")
         cmbHeader.Text = "Men's NetBall"
@@ -52,7 +53,6 @@
         Threading.Thread.Sleep(1000)
         If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
         tmrtimeupdateontemplate.Enabled = False
-
 
     End Sub
 
@@ -908,37 +908,7 @@
     End Sub
 
     Private Sub cmbgames_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbgames.SelectedIndexChanged
-        If cmbgames.Text = "Aquatics" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\AQ" & ".png"
-        If cmbgames.Text = "Archery" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\AR" & ".png"
-        If cmbgames.Text = "Atheletics" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\AT" & ".png"
-        If cmbgames.Text = "Badminton" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\BD" & ".png"
-        If cmbgames.Text = "Basketball" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\BK" & ".png"
-        If cmbgames.Text = "Black" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\BLK" & ".png"
-        If cmbgames.Text = "Boxing" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\BX" & ".png"
-        If cmbgames.Text = "Cycling" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\CY" & ".png"
-        If cmbgames.Text = "Diving" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\DIV" & ".png"
-        If cmbgames.Text = "Football" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\FB" & ".png"
-        If cmbgames.Text = "Gymnastics - Artistic" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\Gymnastics - Artistic" & ".png"
-        If cmbgames.Text = "Gymnastics - Rhythmic" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\Gymnastics - Rhythmic" & ".png"
-        If cmbgames.Text = "Gymnastics - Trampoline" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\Gymnastics - Trampoline" & ".png"
-        If cmbgames.Text = "Handball" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\HB" & ".png"
-        If cmbgames.Text = "Hockey" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\HO" & ".png"
-        If cmbgames.Text = "NetBall" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\nb" & ".png"
-        If cmbgames.Text = "Judo" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\HO" & ".png"
-        If cmbgames.Text = "Kabaddi" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\KB" & ".png"
-        If cmbgames.Text = "Kayaking" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\KK" & ".png"
-        If cmbgames.Text = "Shooting" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\SH" & ".png"
-        If cmbgames.Text = "Squash" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\SQ" & ".png"
-        If cmbgames.Text = "Swimming" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\SW" & ".png"
-        If cmbgames.Text = "TableTennis" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\TT" & ".png"
-        If cmbgames.Text = "Taekwondo" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\TK" & ".png"
-        If cmbgames.Text = "Tennis" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\TE" & ".png"
-        If cmbgames.Text = "Triathlon" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\TRI" & ".png"
-        If cmbgames.Text = "Volleyball" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\VB" & ".png"
-        If cmbgames.Text = "Weight lift" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\WL" & ".png"
-        If cmbgames.Text = "Wrestling" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\WR" & ".png"
-        If cmbgames.Text = "Wushu" Then gamelogo.ImageLocation = "C:\casparcg\ng2022\data\games logo\WU" & ".png"
-
+        gamelogo.ImageLocation = getgamelogoImageLocation(cmbgames.Text)
     End Sub
 
     Sub sortresult1(sourcegrid As DataGridView, targetgrid As DataGridView, columntosort As Integer)
