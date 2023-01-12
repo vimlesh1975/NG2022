@@ -1475,7 +1475,7 @@ Partial Class ucBasketBall
         'eventlogo
         '
         Me.eventlogo.BackColor = System.Drawing.SystemColors.Highlight
-        Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/ammu_logo.png"
+        Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/saf.png"
         Me.eventlogo.Location = New System.Drawing.Point(836, 38)
         Me.eventlogo.Name = "eventlogo"
         Me.eventlogo.Size = New System.Drawing.Size(24, 17)

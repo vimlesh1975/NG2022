@@ -634,7 +634,7 @@ Partial Class frmNG2022
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(1177, 670)
+        Me.Button1.Location = New System.Drawing.Point(1168, 709)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1316
@@ -644,7 +644,7 @@ Partial Class frmNG2022
         '
         'txtClientID
         '
-        Me.txtClientID.Location = New System.Drawing.Point(1315, 672)
+        Me.txtClientID.Location = New System.Drawing.Point(1227, 672)
         Me.txtClientID.Name = "txtClientID"
         Me.txtClientID.Size = New System.Drawing.Size(113, 20)
         Me.txtClientID.TabIndex = 1317
@@ -653,7 +653,7 @@ Partial Class frmNG2022
         'lblClientID
         '
         Me.lblClientID.AutoSize = True
-        Me.lblClientID.Location = New System.Drawing.Point(1267, 675)
+        Me.lblClientID.Location = New System.Drawing.Point(1179, 675)
         Me.lblClientID.Name = "lblClientID"
         Me.lblClientID.Size = New System.Drawing.Size(42, 13)
         Me.lblClientID.TabIndex = 1318
@@ -684,7 +684,7 @@ Partial Class frmNG2022
         Me.Controls.Add(Me.gbPannel)
         Me.Name = "frmNG2022"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "NG_060123_1"
+        Me.Text = "NG_100123_1"
         Me.gbPannel.ResumeLayout(False)
         Me.gbPannel.PerformLayout()
         Me.TabControl1.ResumeLayout(False)

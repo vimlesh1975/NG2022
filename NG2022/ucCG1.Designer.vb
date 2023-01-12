@@ -23,9 +23,9 @@ Partial Class ucCG1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucCG1))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbvictorytt = New System.Windows.Forms.GroupBox()
         Me.lblfilenamecg = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
@@ -113,6 +113,7 @@ Partial Class ucCG1
         Me.Label209 = New System.Windows.Forms.Label()
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.cmdstopcg2 = New System.Windows.Forms.Button()
+        Me.cmdHeatsToQuaterFinals = New System.Windows.Forms.Button()
         Me.gbvictorytt.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
         Me.ToolStrip3.SuspendLayout()
@@ -131,6 +132,7 @@ Partial Class ucCG1
         'gbvictorytt
         '
         Me.gbvictorytt.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.gbvictorytt.Controls.Add(Me.cmdHeatsToQuaterFinals)
         Me.gbvictorytt.Controls.Add(Me.lblfilenamecg)
         Me.gbvictorytt.Controls.Add(Me.GroupBox11)
         Me.gbvictorytt.Controls.Add(Me.cmdgroupcg)
@@ -270,7 +272,7 @@ Partial Class ucCG1
         '
         'cmdgroupcg
         '
-        Me.cmdgroupcg.Location = New System.Drawing.Point(588, 202)
+        Me.cmdgroupcg.Location = New System.Drawing.Point(588, 257)
         Me.cmdgroupcg.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdgroupcg.Name = "cmdgroupcg"
         Me.cmdgroupcg.Size = New System.Drawing.Size(61, 34)
@@ -280,10 +282,10 @@ Partial Class ucCG1
         '
         'cmd2refereescg
         '
-        Me.cmd2refereescg.Location = New System.Drawing.Point(579, 141)
+        Me.cmd2refereescg.Location = New System.Drawing.Point(587, 188)
         Me.cmd2refereescg.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmd2refereescg.Name = "cmd2refereescg"
-        Me.cmd2refereescg.Size = New System.Drawing.Size(69, 47)
+        Me.cmd2refereescg.Size = New System.Drawing.Size(60, 62)
         Me.cmd2refereescg.TabIndex = 1254
         Me.cmd2refereescg.Text = "2 Officials with country"
         Me.cmd2refereescg.UseVisualStyleBackColor = True
@@ -305,7 +307,6 @@ Partial Class ucCG1
         'cmbsubheadercg
         '
         Me.cmbsubheadercg.FormattingEnabled = True
-        Me.cmbsubheadercg.Items.AddRange(New Object() {"Aquatics Diving", "Aquatics MarathonSwimming", "Aquatics Swimming", "Aquatics SynchrosedSwimming", "Aquatics WaterPolo", "Archery", "Athletics", "Athletics - Marathon & Race Walks", "Badminton", "Basketball", "BeachVolleyball", "Boxing", "Canoe Slalom", "Canoe Sprint", "Cycling BMX", "Cycling Mountain Bike", "Cycling RoadRace & Time Trial", "Cycling Track", "Equestrian", "Fencing", "Football", "Gymnastics Artistic", "Gymnastics Rhythmic", "Gymnastics Trampoline", "Handball", "Hockey", "Judo", "ModernPentathlon", "Rowing", "Sailing", "Shooting", "Table Tennis", "Taekwondo", "Tennis", "Triathlon", "Volleyball", "Weightlifting", "Wrestling", "", "", "AR Archery", "Men’s Individual", "Men’s Team", "Women’s Individual", "Women’s Team", "", "AT Athletics", "Men’s 100m", "Men’s 200m", "Men’s 400m", "Men’s 800m", "Men’s 1500m", "Men’s 5000m", "Men’s 10000m", "Men’s 110m Hurdles", "Men’s 400m Hurdles", "Men’s 3000m Steeplechase", "Men’s 4x100m Relay", "Men’s 4x400m Relay", "Men’s High Jump", "Men’s Pole Vault", "Men’s Long Jump", "Men’s Triple Jump", "Men’s Shot Put", "Men’s Discus", "Men’s Hammer", "Men’s Javelin", "", "Decathlon", "Men’s Marathon", "Men’s 20km Race Walk", "Men’s 50km Race Walk", "Women’s 100m", "Women’s 200m", "Women’s 400m", "Women’s 800m", "Women’s 1500m", "Women’s 5000m", "Women’s 10000m", "Women’s 100m Hurdles", "Women’s 400m Hurdles", "Women’s 3000m Steeplechase", "Women’s 4x100m Relay", "Women’s 4x400m Relay", "Women’s High Jump", "Women’s Pole Vault", "Women’s Long Jump", "Women’s Triple Jump", "Women’s Shot Put", "Women’s Discus", "Women’s Hammer", "Women’s Javelin", "", "Heptathlon", "Women’s Marathon", "Women’s 20km Race Walk", "BD Badminton", "Men’s Singles", "Men’s Doubles", "Women’s Singles", "Women’s Doubles", "Mixed Doubles", "", "BK Basketball ", "Men’s Basketball ", "Women’s Basketball", "BV Beach Volleyball ", "Men’s Beach Volleyball ", "Women’s Beach Volleyball", "", "BX Boxing", "Men’s Light Fly 49kg", "Men’s Fly 52kg", "Men’s Bantam 56kg", "Men’s Light 60kg", "Men’s Light Welter 64kg", "Men’s Welter 69kg", "Men’s Middle 75kg", "Men’s Light Heavy 81kg", "Men’s Heavy 91kg", "Men’s Super Heavy +91kg", "Women’s Fly 51kg", "Women’s Light 60kg", "Women’s Middle 75kg", "", "CB BMX ", "Men’s BMX ", "Women’s BMX", "", "CF Canoe Sprint", "Men’s Kayak Single 200m", "Men’s Kayak Double 200m", "Men’s Kayak Single 1000m", "Men’s Kayak Double 1000m", "Men’s Kayak Four 1000m", "Men’s Canoe Single 200m", "Men’s Canoe Single 1000m", "Men’s Canoe Double 1000m", "Women’s Kayak Single 200m", "Women’s Kayak Single 500m", "Women’s Kayak Double 500m", "Women’s Kayak Four 500m", "", "CM Mountain Bike ", "Men’s Mountain Bike ", "Women’s Mountain Bike", "", "CR Cycling Road", "Men’s Road Race", "Men’s Individual Time Trial", "Women’s Road Race", "Women’s Individual Time Trial", "", "CS Canoe Slalom", "Men’s Canoe Single", "Men’s Canoe Double", "Men’s Kayak", "Women’s Kayak", "", "CT Cycling Track", "Men’s Keirin", "Men’s Omnium", "Men’s Sprint", "Men’s Team Pursuit", "Men’s Team Sprint", "Women’s Keirin", "Women’s Omnium", "Women’s Sprint", "Women’s Team Pursuit", "Women’s Team Sprint", "", "DV Diving", "Men’s 3m Springboard", "Men’s 10m Platform", "Women’s 3m Springboard", "Women’s 10m Platform", "Men’s Synchronised 3m Springboard", "Men’s Synchronised 10m Platform", "Women’s Synchronised 3m Springboard", "Women’s Synchronised 10m Platform", "", "EQ Equestrian", "Individual Dressage", "Individual Eventing", "Individual Jumping", "Team Dressage", "Team Eventing", "Team Jumping", "FB Football Men’s Football Women’s Football", "", "FE Fencing", "Men’s Individual Epee", "Men’s Individual Foil", "Men’s Individual Sabre", "Men’s Team Foil", "Men’s Team Sabre", "Women’s Individual Epee", "Women’s Individual Foil", "Women’s Individual Sabre", "Women’s Team Foil", "Women’s Team Epee", "", "GA Artistic Gymnastics", "Men’s Qualification", "Men’s Team Final", "Men’s All-Around Final", "Men’s Floor Exercise Final", "Men’s Vault Final", "Men’s Parallel Bars Final", "Men’s Horizontal Bar Final", "Men’s Rings Final", "Men’s Pommel Horse Final", "Women’s Qualification", "Women’s Team Final", "Women’s All-Around Final", "Women’s Floor Exercise Final", "Women’s Vault Final", "Women’s Uneven Bars Final", "Women’s Beam Final", "", "GR Rhythmic Gymnastics ", "Individual All-Around", "Group All-Around", "", "GT ", "Men’s Trampoline ", "Women’s Trampoline", "", "HB Handball ", "Men’s Handball ", "Women’s Handball", "", "HO Hockey ", "Men’s Hockey ", "Women’s Hockey", "", "JU Judo", "Men’s -60kg", "Men’s -66kg", "Men’s -73kg", "Men’s -81kg", "Men’s -90kg", "Men’s -100kg", "Men’s +100kg", "Women’s -48kg", "Women’s -52kg", "Women’s -57kg", "Women’s -63kg", "Women’s -70kg", "Women’s -78kg", "Women’s +78kg", "", "MP Modern Pentathlon", "Men’s Modern Pentathlon ", "Women’s Modern Pentathlon", "", "RO Rowing", "Men’s Single Sculls", "Men’s Double Sculls", "Lightweight Men’s Double Sculls", "Men’s Quadruple Sculls", "Men’s Pair", "Men’s Four", "Lightweight Men’s Four", "Men’s Eight", "Women’s Single Sculls", "Women’s Double Sculls", "Lightweight Women’s Double Sculls", "Women’s Quadruple Sculls", "Women’s Pair", "Women’s Eight", "", "SA Sailing", "Men’s Finn", "Men’s Laser", "Men’s 470", "Men’s Star", "Men’s 49er", "Men’s RS:X Windsurfer", "Women’s 470", "Women’s Laser Radial", "Women’s RS:X Windsurfer", "Women’s Elliott 6m", "", "SH Shooting", "Men’s 50m Rifle 3 Positions", "Men’s 50m Rifle Prone", "Men’s 10m Air Rifle", "Men’s 50m Pistol", "Men’s 25m Rapid Fire Pistol", "Men’s 10m Air Pistol", "Men’s Trap", "Men’s Double Trap", "Men’s Skeet", "Women’s 50m Rifle 3 Positions", "Women’s 10m Air Rifle", "Women’s 25m Pistol", "Women’s 10m Air Pistol", "Women’s Trap", "Women’s Skeet", "", "SW Swimming", "Men’s 50m Freestyle", "Men’s 100m Freestyle", "Men’s 200m Freestyle", "Men’s 400m Freestyle", "Men’s 1500m Freestyle", "Men’s 100m Butterfly", "Men’s 200m Butterfly", "Men’s 100m Breaststroke", "Men’s 200m Breaststroke", "Men’s 100m Backstroke", "Men’s 200m Backstroke", "Men’s 200m Individual Medley", "Men’s 400m Individual Medley", "Men’s 4x100m Freestyle Relay", "Men’s 4x200m Freestyle Relay", "Men’s 4x100m Medley Relay", "Men’s Marathon 10km", "Women’s 50m Freestyle", "Women’s 100m Freestyle", "Women’s 200m Freestyle", "Women’s 400m Freestyle", "Women’s 800m Freestyle", "Women’s 100m Butterfly", "Women’s 200m Butterfly", "Women’s 100m Breaststroke", "Women’s 200m Breaststroke", "Women’s 100m Backstroke", "Women’s 200m Backstroke", "Women’s 200m Individual Medley", "Women’s 400m Individual Medley", "Women’s 4x100m Freestyle Relay", "Women’s 4x200m Freestyle Relay", "Women’s 4x100m Medley Relay", "Women’s Marathon 10km", "SY Synchronised Swimming Duets Teams", "", "TE Tennis", "Men’s Singles", "Men’s Doubles", "Women’s Singles", "Women’s Doubles", "Mixed Doubles", "", "TK Taekwondo", "Men’s -58kg", "Men’s -68kg", "Men’s -80kg", "Men’s +80kg", "Women’s -49kg", "Women’s -57kg", "Women’s -67kg", "Women’s +67kg", "TR Triathlon Men’s ", "Triathlon Women’s Triathlon", "", "TT Table Tennis", "Men’s Singles", "Men’s Team", "Women’s Singles", "Women’s Team", "", "", "", "VO Volleyball ", "Men’s Volleyball ", "Women’s Volleyball", "", "WL Weightlifting", "Men’s 56kg", "Men’s 62kg", "Men’s 69kg", "Men’s 77kg", "Men’s 85kg", "Men’s 94kg", "Men’s 105kg", "Men’s +105kg", "Women’s 48kg", "Women’s 53kg", "Women’s 58kg", "Women’s 63kg", "Women’s 69kg", "Women’s 75kg", "Women’s +75kg", "WP Water Polo ", "Men’s Water Polo ", "Women’s Water Polo", "", "WR Wrestling", "Men’s Freestyle 55kg", "Men’s Freestyle 60kg", "Men’s Freestyle 66kg", "Men’s Freestyle 74kg", "Men’s Freestyle 84kg", "Men’s Freestyle 96kg", "Men’s Freestyle 120kg", "Men’s Greco-Roman 55kg", "Men’s Greco-Roman 60kg", "Men’s Greco-Roman 66kg", "Men’s Greco-Roman 74kg", "Men’s Greco-Roman 84kg", "Men’s Greco-Roman 96kg", "Men’s Greco-Roman 120kg", "", "", "", "Round 1", "Round 2", "Round 3", "Round 4", "Round 5", "Leage Match", "Preliminary Match", "Pre Quarter Final", "Quarter Final", "Semi Final", "Final", "", "Table 1 - Round 3 (Morning Session)", "Table 1 - Round 3 (After noon Session)", "Table 1 - Round 1", "Table 1 - Round 1 (First Session)", "Table 1 - Round 2", "", "Men's Singles", "Women's Singles", "Men's Doubles", "Women's Doubles", "Team Event", "", "Junior Girls Team", "Junior Boys Team", "Cadet Girls Team", "Cadet Boys Team", "", "Junior Girls", "Junior Boys", "Cadet Girls", "Cadet Boys", "", "Junior Mixed Doubles", "Junior Boys Doubles", "Junior Girls Doubles", "Qualifying  - RD1", "Position 9-13", "", "Stage 1 Round 1"})
         Me.cmbsubheadercg.Location = New System.Drawing.Point(65, 37)
         Me.cmbsubheadercg.Name = "cmbsubheadercg"
         Me.cmbsubheadercg.Size = New System.Drawing.Size(220, 21)
@@ -324,7 +325,6 @@ Partial Class ucCG1
         'cmbheadercg
         '
         Me.cmbheadercg.FormattingEnabled = True
-        Me.cmbheadercg.Items.AddRange(New Object() {"Aquatics Diving", "Aquatics MarathonSwimming", "Aquatics Swimming", "Aquatics SynchrosedSwimming", "Aquatics WaterPolo", "Archery", "Athletics", "Athletics - Marathon & Race Walks", "Badminton", "Basketball", "BeachVolleyball", "Boxing", "Kickboxing", "Canoe Slalom", "Canoe Sprint", "Cycling BMX", "Cycling Mountain Bike", "Cycling RoadRace & Time Trial", "Cycling Track", "Equestrian", "Fencing", "Football", "Gymnastics Artistic", "Gymnastics Rhythmic", "Gymnastics Trampoline", "Handball", "Hockey", "Judo", "ModernPentathlon", "Rowing", "Sailing", "Shooting", "Table Tennis", "Taekwondo", "Tennis", "Triathlon", "Volleyball", "Weightlifting", "Wrestling", "", "", "AR Archery", "Men’s Individual", "Men’s Team", "Women’s Individual", "Women’s Team", "", "AT Athletics", "Men’s 100m", "Men’s 200m", "Men’s 400m", "Men’s 800m", "Men’s 1500m", "Men’s 5000m", "Men’s 10000m", "Men’s 110m Hurdles", "Men’s 400m Hurdles", "Men’s 3000m Steeplechase", "Men’s 4x100m Relay", "Men’s 4x400m Relay", "Men’s High Jump", "Men’s Pole Vault", "Men’s Long Jump", "Men’s Triple Jump", "Men’s Shot Put", "Men’s Discus", "Men’s Hammer", "Men’s Javelin", "", "Decathlon", "Men’s Marathon", "Men’s 20km Race Walk", "Men’s 50km Race Walk", "Women’s 100m", "Women’s 200m", "Women’s 400m", "Women’s 800m", "Women’s 1500m", "Women’s 5000m", "Women’s 10000m", "Women’s 100m Hurdles", "Women’s 400m Hurdles", "Women’s 3000m Steeplechase", "Women’s 4x100m Relay", "Women’s 4x400m Relay", "Women’s High Jump", "Women’s Pole Vault", "Women’s Long Jump", "Women’s Triple Jump", "Women’s Shot Put", "Women’s Discus", "Women’s Hammer", "Women’s Javelin", "", "Heptathlon", "Women’s Marathon", "Women’s 20km Race Walk", "BD Badminton", "Men’s Singles", "Men’s Doubles", "Women’s Singles", "Women’s Doubles", "Mixed Doubles", "", "BK Basketball ", "Men’s Basketball ", "Women’s Basketball", "BV Beach Volleyball ", "Men’s Beach Volleyball ", "Women’s Beach Volleyball", "", "BX Boxing", "Men’s Light Fly 49kg", "Men’s Fly 52kg", "Men’s Bantam 56kg", "Men’s Light 60kg", "Men’s Light Welter 64kg", "Men’s Welter 69kg", "Men’s Middle 75kg", "Men’s Light Heavy 81kg", "Men’s Heavy 91kg", "Men’s Super Heavy +91kg", "Women’s Fly 51kg", "Women’s Light 60kg", "Women’s Middle 75kg", "", "CB BMX ", "Men’s BMX ", "Women’s BMX", "", "CF Canoe Sprint", "Men’s Kayak Single 200m", "Men’s Kayak Double 200m", "Men’s Kayak Single 1000m", "Men’s Kayak Double 1000m", "Men’s Kayak Four 1000m", "Men’s Canoe Single 200m", "Men’s Canoe Single 1000m", "Men’s Canoe Double 1000m", "Women’s Kayak Single 200m", "Women’s Kayak Single 500m", "Women’s Kayak Double 500m", "Women’s Kayak Four 500m", "", "CM Mountain Bike ", "Men’s Mountain Bike ", "Women’s Mountain Bike", "", "CR Cycling Road", "Men’s Road Race", "Men’s Individual Time Trial", "Women’s Road Race", "Women’s Individual Time Trial", "", "CS Canoe Slalom", "Men’s Canoe Single", "Men’s Canoe Double", "Men’s Kayak", "Women’s Kayak", "", "CT Cycling Track", "Men’s Keirin", "Men’s Omnium", "Men’s Sprint", "Men’s Team Pursuit", "Men’s Team Sprint", "Women’s Keirin", "Women’s Omnium", "Women’s Sprint", "Women’s Team Pursuit", "Women’s Team Sprint", "", "DV Diving", "Men’s 3m Springboard", "Men’s 10m Platform", "Women’s 3m Springboard", "Women’s 10m Platform", "Men’s Synchronised 3m Springboard", "Men’s Synchronised 10m Platform", "Women’s Synchronised 3m Springboard", "Women’s Synchronised 10m Platform", "", "EQ Equestrian", "Individual Dressage", "Individual Eventing", "Individual Jumping", "Team Dressage", "Team Eventing", "Team Jumping", "FB Football Men’s Football Women’s Football", "", "FE Fencing", "Men’s Individual Epee", "Men’s Individual Foil", "Men’s Individual Sabre", "Men’s Team Foil", "Men’s Team Sabre", "Women’s Individual Epee", "Women’s Individual Foil", "Women’s Individual Sabre", "Women’s Team Foil", "Women’s Team Epee", "", "GA Artistic Gymnastics", "Men’s Qualification", "Men’s Team Final", "Men’s All-Around Final", "Men’s Floor Exercise Final", "Men’s Vault Final", "Men’s Parallel Bars Final", "Men’s Horizontal Bar Final", "Men’s Rings Final", "Men’s Pommel Horse Final", "Women’s Qualification", "Women’s Team Final", "Women’s All-Around Final", "Women’s Floor Exercise Final", "Women’s Vault Final", "Women’s Uneven Bars Final", "Women’s Beam Final", "", "GR Rhythmic Gymnastics ", "Individual All-Around", "Group All-Around", "", "GT ", "Men’s Trampoline ", "Women’s Trampoline", "", "HB Handball ", "Men’s Handball ", "Women’s Handball", "", "HO Hockey ", "Men’s Hockey ", "Women’s Hockey", "", "JU Judo", "Men’s -60kg", "Men’s -66kg", "Men’s -73kg", "Men’s -81kg", "Men’s -90kg", "Men’s -100kg", "Men’s +100kg", "Women’s -48kg", "Women’s -52kg", "Women’s -57kg", "Women’s -63kg", "Women’s -70kg", "Women’s -78kg", "Women’s +78kg", "", "MP Modern Pentathlon", "Men’s Modern Pentathlon ", "Women’s Modern Pentathlon", "", "RO Rowing", "Men’s Single Sculls", "Men’s Double Sculls", "Lightweight Men’s Double Sculls", "Men’s Quadruple Sculls", "Men’s Pair", "Men’s Four", "Lightweight Men’s Four", "Men’s Eight", "Women’s Single Sculls", "Women’s Double Sculls", "Lightweight Women’s Double Sculls", "Women’s Quadruple Sculls", "Women’s Pair", "Women’s Eight", "", "SA Sailing", "Men’s Finn", "Men’s Laser", "Men’s 470", "Men’s Star", "Men’s 49er", "Men’s RS:X Windsurfer", "Women’s 470", "Women’s Laser Radial", "Women’s RS:X Windsurfer", "Women’s Elliott 6m", "", "SH Shooting", "Men’s 50m Rifle 3 Positions", "Men’s 50m Rifle Prone", "Men’s 10m Air Rifle", "Men’s 50m Pistol", "Men’s 25m Rapid Fire Pistol", "Men’s 10m Air Pistol", "Men’s Trap", "Men’s Double Trap", "Men’s Skeet", "Women’s 50m Rifle 3 Positions", "Women’s 10m Air Rifle", "Women’s 25m Pistol", "Women’s 10m Air Pistol", "Women’s Trap", "Women’s Skeet", "", "SW Swimming", "Men’s 50m Freestyle", "Men’s 100m Freestyle", "Men’s 200m Freestyle", "Men’s 400m Freestyle", "Men’s 1500m Freestyle", "Men’s 100m Butterfly", "Men’s 200m Butterfly", "Men’s 100m Breaststroke", "Men’s 200m Breaststroke", "Men’s 100m Backstroke", "Men’s 200m Backstroke", "Men’s 200m Individual Medley", "Men’s 400m Individual Medley", "Men’s 4x100m Freestyle Relay", "Men’s 4x200m Freestyle Relay", "Men’s 4x100m Medley Relay", "Men’s Marathon 10km", "Women’s 50m Freestyle", "Women’s 100m Freestyle", "Women’s 200m Freestyle", "Women’s 400m Freestyle", "Women’s 800m Freestyle", "Women’s 100m Butterfly", "Women’s 200m Butterfly", "Women’s 100m Breaststroke", "Women’s 200m Breaststroke", "Women’s 100m Backstroke", "Women’s 200m Backstroke", "Women’s 200m Individual Medley", "Women’s 400m Individual Medley", "Women’s 4x100m Freestyle Relay", "Women’s 4x200m Freestyle Relay", "Women’s 4x100m Medley Relay", "Women’s Marathon 10km", "SY Synchronised Swimming Duets Teams", "", "TE Tennis", "Men’s Singles", "Men’s Doubles", "Women’s Singles", "Women’s Doubles", "Mixed Doubles", "", "TK Taekwondo", "Men’s -58kg", "Men’s -68kg", "Men’s -80kg", "Men’s +80kg", "Women’s -49kg", "Women’s -57kg", "Women’s -67kg", "Women’s +67kg", "TR Triathlon Men’s ", "Triathlon Women’s Triathlon", "", "TT Table Tennis", "Men’s Singles", "Men’s Team", "Women’s Singles", "Women’s Team", "", "", "", "VO Volleyball ", "Men’s Volleyball ", "Women’s Volleyball", "", "WL Weightlifting", "Men’s 56kg", "Men’s 62kg", "Men’s 69kg", "Men’s 77kg", "Men’s 85kg", "Men’s 94kg", "Men’s 105kg", "Men’s +105kg", "Women’s 48kg", "Women’s 53kg", "Women’s 58kg", "Women’s 63kg", "Women’s 69kg", "Women’s 75kg", "Women’s +75kg", "WP Water Polo ", "Men’s Water Polo ", "Women’s Water Polo", "", "WR Wrestling", "Men’s Freestyle 55kg", "Men’s Freestyle 60kg", "Men’s Freestyle 66kg", "Men’s Freestyle 74kg", "Men’s Freestyle 84kg", "Men’s Freestyle 96kg", "Men’s Freestyle 120kg", "Men’s Greco-Roman 55kg", "Men’s Greco-Roman 60kg", "Men’s Greco-Roman 66kg", "Men’s Greco-Roman 74kg", "Men’s Greco-Roman 84kg", "Men’s Greco-Roman 96kg", "Men’s Greco-Roman 120kg", "", "", "", "Table Tennis", "Reliance 20th Asian Junior Table Tennis", "", "Table 1 - Round 3 (Morning Session)", "Table 1 - Round 3 (After noon Session)", "Table 1 - Round 1", "Table 1 - Round 1 (First Session)", "Table 1 - Round 2", "", "Men's Singles", "Women's Singles", "Men's Doubles", "Women's Doubles", "Team Event", "", "", "Round 1", "Round 2", "Round 3", "Round 4", "Round 5", "Leage Match", "Preliminary Match", "Pre Quarter Final", "Quarter Final", "Semi Final", "Final", "", "Mixed Doubles", "", "Junior Girls Team", "Junior Boys Team", "Cadet Girls Team", "Cadet Boys Team", "", "Junior Girls", "Junior Boys", "Cadet Girls", "Cadet Boys", "", "Junior Mixed Doubles", "Junior Boys Doubles", "Junior Girls Doubles", "Qualifying  - RD1", "Position 9-13", "", "Stage 1 Round 1"})
         Me.cmbheadercg.Location = New System.Drawing.Point(65, 13)
         Me.cmbheadercg.Name = "cmbheadercg"
         Me.cmbheadercg.Size = New System.Drawing.Size(220, 21)
@@ -351,7 +351,7 @@ Partial Class ucCG1
         '
         'cmdroadtofinal
         '
-        Me.cmdroadtofinal.Location = New System.Drawing.Point(452, 139)
+        Me.cmdroadtofinal.Location = New System.Drawing.Point(570, 138)
         Me.cmdroadtofinal.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdroadtofinal.Name = "cmdroadtofinal"
         Me.cmdroadtofinal.Size = New System.Drawing.Size(85, 30)
@@ -483,7 +483,7 @@ Partial Class ucCG1
         '
         'cmdRoadToSemiFinal
         '
-        Me.cmdRoadToSemiFinal.Location = New System.Drawing.Point(347, 139)
+        Me.cmdRoadToSemiFinal.Location = New System.Drawing.Point(465, 138)
         Me.cmdRoadToSemiFinal.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdRoadToSemiFinal.Name = "cmdRoadToSemiFinal"
         Me.cmdRoadToSemiFinal.Size = New System.Drawing.Size(104, 30)
@@ -546,7 +546,7 @@ Partial Class ucCG1
         '
         'cmdbronze2cg
         '
-        Me.cmdbronze2cg.Location = New System.Drawing.Point(345, 268)
+        Me.cmdbronze2cg.Location = New System.Drawing.Point(343, 268)
         Me.cmdbronze2cg.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdbronze2cg.Name = "cmdbronze2cg"
         Me.cmdbronze2cg.Size = New System.Drawing.Size(55, 31)
@@ -566,7 +566,7 @@ Partial Class ucCG1
         '
         'cmdbronzecg
         '
-        Me.cmdbronzecg.Location = New System.Drawing.Point(345, 234)
+        Me.cmdbronzecg.Location = New System.Drawing.Point(343, 234)
         Me.cmdbronzecg.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdbronzecg.Name = "cmdbronzecg"
         Me.cmdbronzecg.Size = New System.Drawing.Size(55, 31)
@@ -596,7 +596,7 @@ Partial Class ucCG1
         '
         'cmdgoldcg
         '
-        Me.cmdgoldcg.Location = New System.Drawing.Point(346, 170)
+        Me.cmdgoldcg.Location = New System.Drawing.Point(344, 170)
         Me.cmdgoldcg.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdgoldcg.Name = "cmdgoldcg"
         Me.cmdgoldcg.Size = New System.Drawing.Size(55, 30)
@@ -606,7 +606,7 @@ Partial Class ucCG1
         '
         'cmdsilvercg
         '
-        Me.cmdsilvercg.Location = New System.Drawing.Point(345, 201)
+        Me.cmdsilvercg.Location = New System.Drawing.Point(343, 201)
         Me.cmdsilvercg.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdsilvercg.Name = "cmdsilvercg"
         Me.cmdsilvercg.Size = New System.Drawing.Size(55, 30)
@@ -616,7 +616,7 @@ Partial Class ucCG1
         '
         'cmdplayeridcg
         '
-        Me.cmdplayeridcg.Location = New System.Drawing.Point(314, 140)
+        Me.cmdplayeridcg.Location = New System.Drawing.Point(313, 140)
         Me.cmdplayeridcg.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdplayeridcg.Name = "cmdplayeridcg"
         Me.cmdplayeridcg.Size = New System.Drawing.Size(30, 159)
@@ -626,35 +626,35 @@ Partial Class ucCG1
         '
         'dgvwinner
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvwinner.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvwinner.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.dgvwinner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvwinner.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn1, Me.DataGridViewTextBoxColumn25, Me.Column29})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvwinner.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvwinner.DefaultCellStyle = DataGridViewCellStyle14
         Me.dgvwinner.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvwinner.Location = New System.Drawing.Point(12, 77)
         Me.dgvwinner.Name = "dgvwinner"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvwinner.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvwinner.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
         Me.dgvwinner.RowTemplate.Height = 24
         Me.dgvwinner.Size = New System.Drawing.Size(297, 228)
         Me.dgvwinner.TabIndex = 1144
@@ -1027,6 +1027,16 @@ Partial Class ucCG1
         Me.cmdstopcg2.Text = "Stop"
         Me.cmdstopcg2.UseVisualStyleBackColor = False
         '
+        'cmdHeatsToQuaterFinals
+        '
+        Me.cmdHeatsToQuaterFinals.Location = New System.Drawing.Point(343, 137)
+        Me.cmdHeatsToQuaterFinals.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cmdHeatsToQuaterFinals.Name = "cmdHeatsToQuaterFinals"
+        Me.cmdHeatsToQuaterFinals.Size = New System.Drawing.Size(122, 30)
+        Me.cmdHeatsToQuaterFinals.TabIndex = 1257
+        Me.cmdHeatsToQuaterFinals.Text = "HeatsToQuaterFinals"
+        Me.cmdHeatsToQuaterFinals.UseVisualStyleBackColor = True
+        '
         'ucCG1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1157,4 +1167,5 @@ Partial Class ucCG1
     Friend WithEvents cmdeventshedule2 As Button
     Friend WithEvents cmdeventshedule As Button
     Friend WithEvents cmdw1 As Button
+    Friend WithEvents cmdHeatsToQuaterFinals As Button
 End Class

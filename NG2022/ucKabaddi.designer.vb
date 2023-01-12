@@ -24,9 +24,9 @@ Partial Class ucKabaddi
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucKabaddi))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmbSubHeader = New System.Windows.Forms.ComboBox()
@@ -41,6 +41,8 @@ Partial Class ucKabaddi
         Me.tmrtimeupdateontemplate = New System.Windows.Forms.Timer(Me.components)
         Me.ofd1 = New System.Windows.Forms.OpenFileDialog()
         Me.Ball = New System.Windows.Forms.TabPage()
+        Me.cmdSaveas2 = New System.Windows.Forms.Button()
+        Me.cmdSaveas1 = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.cmdmatchstatics = New System.Windows.Forms.Button()
         Me.cmdgroupresul2tball = New System.Windows.Forms.Button()
@@ -165,8 +167,6 @@ Partial Class ucKabaddi
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.cmbgames = New System.Windows.Forms.ComboBox()
-        Me.cmdSaveas2 = New System.Windows.Forms.Button()
-        Me.cmdSaveas1 = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.Ball.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -318,6 +318,24 @@ Partial Class ucKabaddi
         Me.Ball.TabIndex = 4
         Me.Ball.UseVisualStyleBackColor = True
         '
+        'cmdSaveas2
+        '
+        Me.cmdSaveas2.Location = New System.Drawing.Point(448, 22)
+        Me.cmdSaveas2.Name = "cmdSaveas2"
+        Me.cmdSaveas2.Size = New System.Drawing.Size(75, 23)
+        Me.cmdSaveas2.TabIndex = 1231
+        Me.cmdSaveas2.Text = "Save As"
+        Me.cmdSaveas2.UseVisualStyleBackColor = True
+        '
+        'cmdSaveas1
+        '
+        Me.cmdSaveas1.Location = New System.Drawing.Point(448, -2)
+        Me.cmdSaveas1.Name = "cmdSaveas1"
+        Me.cmdSaveas1.Size = New System.Drawing.Size(75, 23)
+        Me.cmdSaveas1.TabIndex = 1230
+        Me.cmdSaveas1.Text = "Save As"
+        Me.cmdSaveas1.UseVisualStyleBackColor = True
+        '
         'GroupBox7
         '
         Me.GroupBox7.BackColor = System.Drawing.Color.LightSalmon
@@ -414,35 +432,35 @@ Partial Class ucKabaddi
         Me.dgvsetscoreball.AllowUserToAddRows = False
         Me.dgvsetscoreball.AllowUserToResizeColumns = False
         Me.dgvsetscoreball.AllowUserToResizeRows = False
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvsetscoreball.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvsetscoreball.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvsetscoreball.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvsetscoreball.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn34})
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvsetscoreball.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvsetscoreball.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvsetscoreball.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvsetscoreball.Location = New System.Drawing.Point(8, 14)
         Me.dgvsetscoreball.Name = "dgvsetscoreball"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvsetscoreball.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvsetscoreball.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvsetscoreball.Size = New System.Drawing.Size(251, 112)
         Me.dgvsetscoreball.TabIndex = 661
         '
@@ -729,7 +747,7 @@ Partial Class ucKabaddi
         Me.ToolStrip1.Location = New System.Drawing.Point(5, 6)
         Me.ToolStrip1.MaximumSize = New System.Drawing.Size(200, 200)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(93, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(124, 25)
         Me.ToolStrip1.TabIndex = 1199
         Me.ToolStrip1.Text = "ToolStrip3"
         '
@@ -1550,24 +1568,6 @@ Partial Class ucKabaddi
         Me.cmbgames.Size = New System.Drawing.Size(113, 21)
         Me.cmbgames.TabIndex = 1202
         Me.cmbgames.Text = " Kabaddi"
-        '
-        'cmdSaveas2
-        '
-        Me.cmdSaveas2.Location = New System.Drawing.Point(448, 22)
-        Me.cmdSaveas2.Name = "cmdSaveas2"
-        Me.cmdSaveas2.Size = New System.Drawing.Size(75, 23)
-        Me.cmdSaveas2.TabIndex = 1231
-        Me.cmdSaveas2.Text = "Save As"
-        Me.cmdSaveas2.UseVisualStyleBackColor = True
-        '
-        'cmdSaveas1
-        '
-        Me.cmdSaveas1.Location = New System.Drawing.Point(448, -2)
-        Me.cmdSaveas1.Name = "cmdSaveas1"
-        Me.cmdSaveas1.Size = New System.Drawing.Size(75, 23)
-        Me.cmdSaveas1.TabIndex = 1230
-        Me.cmdSaveas1.Text = "Save As"
-        Me.cmdSaveas1.UseVisualStyleBackColor = True
         '
         'ucKabaddi
         '

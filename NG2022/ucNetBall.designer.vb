@@ -24,9 +24,9 @@ Partial Class ucNetBall
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucNetBall))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmbSubHeader = New System.Windows.Forms.ComboBox()
@@ -68,6 +68,8 @@ Partial Class ucNetBall
         Me.lblfilenamet2ball = New System.Windows.Forms.Label()
         Me.lblfilenamet1ball = New System.Windows.Forms.Label()
         Me.GroupBox22 = New System.Windows.Forms.GroupBox()
+        Me.cmdt2Position = New System.Windows.Forms.Button()
+        Me.cmdt1Position = New System.Windows.Forms.Button()
         Me.GroupBox24 = New System.Windows.Forms.GroupBox()
         Me.cmduprowt2ball = New System.Windows.Forms.Button()
         Me.cmdremoverowt2ball = New System.Windows.Forms.Button()
@@ -157,8 +159,6 @@ Partial Class ucNetBall
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.cmbgames = New System.Windows.Forms.ComboBox()
-        Me.cmdt1Position = New System.Windows.Forms.Button()
-        Me.cmdt2Position = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.Ball.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -422,35 +422,35 @@ Partial Class ucNetBall
         Me.dgvsetscoreball.AllowUserToAddRows = False
         Me.dgvsetscoreball.AllowUserToResizeColumns = False
         Me.dgvsetscoreball.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvsetscoreball.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvsetscoreball.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvsetscoreball.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvsetscoreball.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn34})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvsetscoreball.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvsetscoreball.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgvsetscoreball.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvsetscoreball.Location = New System.Drawing.Point(8, 14)
         Me.dgvsetscoreball.Name = "dgvsetscoreball"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvsetscoreball.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvsetscoreball.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvsetscoreball.Size = New System.Drawing.Size(251, 112)
         Me.dgvsetscoreball.TabIndex = 661
         '
@@ -602,6 +602,24 @@ Partial Class ucNetBall
         Me.GroupBox22.TabIndex = 630
         Me.GroupBox22.TabStop = False
         '
+        'cmdt2Position
+        '
+        Me.cmdt2Position.Location = New System.Drawing.Point(326, 534)
+        Me.cmdt2Position.Name = "cmdt2Position"
+        Me.cmdt2Position.Size = New System.Drawing.Size(98, 28)
+        Me.cmdt2Position.TabIndex = 1206
+        Me.cmdt2Position.Text = "Team2 Position"
+        Me.cmdt2Position.UseVisualStyleBackColor = True
+        '
+        'cmdt1Position
+        '
+        Me.cmdt1Position.Location = New System.Drawing.Point(115, 534)
+        Me.cmdt1Position.Name = "cmdt1Position"
+        Me.cmdt1Position.Size = New System.Drawing.Size(98, 28)
+        Me.cmdt1Position.TabIndex = 1205
+        Me.cmdt1Position.Text = "Team1 Position"
+        Me.cmdt1Position.UseVisualStyleBackColor = True
+        '
         'GroupBox24
         '
         Me.GroupBox24.Controls.Add(Me.cmduprowt2ball)
@@ -709,7 +727,7 @@ Partial Class ucNetBall
         Me.GroupBox23.Controls.Add(Me.cmdaddrowt1ball)
         Me.GroupBox23.Location = New System.Drawing.Point(11, 12)
         Me.GroupBox23.Name = "GroupBox23"
-        Me.GroupBox23.Size = New System.Drawing.Size(189, 24)
+        Me.GroupBox23.Size = New System.Drawing.Size(189, 33)
         Me.GroupBox23.TabIndex = 1203
         Me.GroupBox23.TabStop = False
         '
@@ -739,7 +757,7 @@ Partial Class ucNetBall
         Me.ToolStrip1.Location = New System.Drawing.Point(5, 6)
         Me.ToolStrip1.MaximumSize = New System.Drawing.Size(200, 200)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(93, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(124, 25)
         Me.ToolStrip1.TabIndex = 1199
         Me.ToolStrip1.Text = "ToolStrip3"
         '
@@ -1459,24 +1477,6 @@ Partial Class ucNetBall
         Me.cmbgames.Size = New System.Drawing.Size(113, 21)
         Me.cmbgames.TabIndex = 1202
         Me.cmbgames.Text = "BasketBall"
-        '
-        'cmdt1Position
-        '
-        Me.cmdt1Position.Location = New System.Drawing.Point(115, 534)
-        Me.cmdt1Position.Name = "cmdt1Position"
-        Me.cmdt1Position.Size = New System.Drawing.Size(98, 28)
-        Me.cmdt1Position.TabIndex = 1205
-        Me.cmdt1Position.Text = "Team1 Position"
-        Me.cmdt1Position.UseVisualStyleBackColor = True
-        '
-        'cmdt2Position
-        '
-        Me.cmdt2Position.Location = New System.Drawing.Point(326, 534)
-        Me.cmdt2Position.Name = "cmdt2Position"
-        Me.cmdt2Position.Size = New System.Drawing.Size(98, 28)
-        Me.cmdt2Position.TabIndex = 1206
-        Me.cmdt2Position.Text = "Team2 Position"
-        Me.cmdt2Position.UseVisualStyleBackColor = True
         '
         'ucNetBall
         '

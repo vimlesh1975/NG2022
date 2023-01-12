@@ -121,15 +121,15 @@
         On Error Resume Next
         txtsecball.Text = cmbputsecondball.Text
     End Sub
-    Function openimage(ByVal defaultdirectory As String, ByVal picname As PictureBox)
-        On Error Resume Next
-        Dim picofd As New OpenFileDialog
-        picofd.InitialDirectory = defaultdirectory
-        If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            picname.ImageLocation = picofd.FileName
-        End If
-        Return (Split(picofd.SafeFileName, ".")(0)).Replace("\", "/")
-    End Function
+    'Function openimage(ByVal defaultdirectory As String, ByVal picname As PictureBox)
+    '    On Error Resume Next
+    '    Dim picofd As New OpenFileDialog
+    '    picofd.InitialDirectory = defaultdirectory
+    '    If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+    '        picname.ImageLocation = picofd.FileName
+    '    End If
+    '    Return (Split(picofd.SafeFileName, ".")(0)).Replace("\", "/")
+    'End Function
     Private Sub pict2logoball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pict2logoball.Click
         On Error Resume Next
         txtt2ball.Text = openimage("C:\casparcg\ng2022\data\country\", sender)
@@ -1024,9 +1024,7 @@
         deletesg(dgvt1ball)
     End Sub
 
-    Private Sub cmdaddrowt1ball_Click_1(sender As Object, e As EventArgs) Handles cmdaddrowt1ball.Click
 
-    End Sub
 
     Private Sub cmduprowt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmduprowt1ball.Click
         On Error Resume Next
@@ -1215,5 +1213,13 @@
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/netball/PlayerPosition", CasparCGDataCollection.ToAMCPEscapedXml)
+    End Sub
+
+    Private Sub Ball_Click(sender As Object, e As EventArgs) Handles Ball.Click
+
+    End Sub
+
+    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
+
     End Sub
 End Class

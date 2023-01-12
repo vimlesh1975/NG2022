@@ -22,13 +22,14 @@ Partial Class ucTrack
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucTrack))
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvtrackresult = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn41 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn42 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -60,6 +61,7 @@ Partial Class ucTrack
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.imglocation1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbtimertrack = New System.Windows.Forms.GroupBox()
+        Me.cmdRemoveLap = New System.Windows.Forms.Button()
         Me.cmblaptrack = New System.Windows.Forms.ComboBox()
         Me.cmdlaptrack = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -95,6 +97,7 @@ Partial Class ucTrack
         Me.cmdLanGraphics = New System.Windows.Forms.Button()
         Me.cmdRemoveLanGraphics = New System.Windows.Forms.Button()
         Me.gbperspectivemixer = New System.Windows.Forms.GroupBox()
+        Me.cmdRestoreValues = New System.Windows.Forms.Button()
         Me.Label186 = New System.Windows.Forms.Label()
         Me.nperspectiveblx = New System.Windows.Forms.NumericUpDown()
         Me.nperspectivebly = New System.Windows.Forms.NumericUpDown()
@@ -116,11 +119,43 @@ Partial Class ucTrack
         Me.Label111 = New System.Windows.Forms.Label()
         Me.Label112 = New System.Windows.Forms.Label()
         Me.cmdresetperspectivemixer = New System.Windows.Forms.Button()
-        Me.cmdRestoreValues = New System.Windows.Forms.Button()
         Me.cmdRecords = New System.Windows.Forms.Button()
         Me.cmdSignal = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmdGreenSignal = New System.Windows.Forms.Button()
+        Me.cmdLeader = New System.Windows.Forms.Button()
+        Me.cmdIntermediatResult = New System.Windows.Forms.Button()
+        Me.gbfill = New System.Windows.Forms.GroupBox()
+        Me.cmdRestoreValuesfill = New System.Windows.Forms.Button()
+        Me.nfillx = New System.Windows.Forms.NumericUpDown()
+        Me.nfilly = New System.Windows.Forms.NumericUpDown()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.nfillwidth = New System.Windows.Forms.NumericUpDown()
+        Me.nfillheight = New System.Windows.Forms.NumericUpDown()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.cmdfill = New System.Windows.Forms.Button()
+        Me.dgvt1ball = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cmdt1lineupball = New System.Windows.Forms.Button()
+        Me.Team = New System.Windows.Forms.GroupBox()
+        Me.lblfilenamet1ball = New System.Windows.Forms.Label()
+        Me.GroupBox23 = New System.Windows.Forms.GroupBox()
+        Me.cmduprowt1ball = New System.Windows.Forms.Button()
+        Me.cmdremoverowt1ball = New System.Windows.Forms.Button()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.cmdnewt1ball = New System.Windows.Forms.ToolStripButton()
+        Me.cmdopent1ball = New System.Windows.Forms.ToolStripButton()
+        Me.cmdsavet1ball = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.cmddownrowt1ball = New System.Windows.Forms.Button()
+        Me.cmdaddrowt1ball = New System.Windows.Forms.Button()
+        Me.tmrtimeonform = New System.Windows.Forms.Timer(Me.components)
+        Me.updatecmdIntermediatResult = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cmdClearValue = New System.Windows.Forms.Button()
         CType(Me.dgvtrackresult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbtstrack.SuspendLayout()
         Me.ToolStrip4.SuspendLayout()
@@ -140,6 +175,16 @@ Partial Class ucTrack
         CType(Me.nperspectivetlx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nperspectivetly, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.gbfill.SuspendLayout()
+        CType(Me.nfillx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nfilly, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nfillwidth, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nfillheight, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvt1ball, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Team.SuspendLayout()
+        Me.GroupBox23.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvtrackresult
@@ -147,14 +192,14 @@ Partial Class ucTrack
         Me.dgvtrackresult.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrackresult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvtrackresult.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn41, Me.DataGridViewTextBoxColumn42, Me.DataGridViewComboBoxColumn3, Me.DataGridViewTextBoxColumn43, Me.DataGridViewTextBoxColumn44, Me.DataGridViewTextBoxColumn45, Me.imglocation2})
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvtrackresult.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvtrackresult.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvtrackresult.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvtrackresult.Location = New System.Drawing.Point(26, 490)
         Me.dgvtrackresult.Name = "dgvtrackresult"
@@ -197,9 +242,9 @@ Partial Class ucTrack
         '
         'DataGridViewTextBoxColumn44
         '
-        DataGridViewCellStyle19.Format = "N2"
-        DataGridViewCellStyle19.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn44.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle1.Format = "N2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn44.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewTextBoxColumn44.Frozen = True
         Me.DataGridViewTextBoxColumn44.HeaderText = "Vlaue"
         Me.DataGridViewTextBoxColumn44.Name = "DataGridViewTextBoxColumn44"
@@ -208,9 +253,9 @@ Partial Class ucTrack
         '
         'DataGridViewTextBoxColumn45
         '
-        DataGridViewCellStyle20.Format = "N0"
-        DataGridViewCellStyle20.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle2.Format = "N0"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewTextBoxColumn45.Frozen = True
         Me.DataGridViewTextBoxColumn45.HeaderText = "Position"
         Me.DataGridViewTextBoxColumn45.Name = "DataGridViewTextBoxColumn45"
@@ -227,9 +272,9 @@ Partial Class ucTrack
         '
         'cmdsortbyvaluetrack
         '
-        Me.cmdsortbyvaluetrack.Location = New System.Drawing.Point(397, 127)
+        Me.cmdsortbyvaluetrack.Location = New System.Drawing.Point(365, 124)
         Me.cmdsortbyvaluetrack.Name = "cmdsortbyvaluetrack"
-        Me.cmdsortbyvaluetrack.Size = New System.Drawing.Size(57, 30)
+        Me.cmdsortbyvaluetrack.Size = New System.Drawing.Size(72, 30)
         Me.cmdsortbyvaluetrack.TabIndex = 1297
         Me.cmdsortbyvaluetrack.Text = "Sort"
         Me.cmdsortbyvaluetrack.UseVisualStyleBackColor = True
@@ -343,7 +388,7 @@ Partial Class ucTrack
         '
         'cmdfillresulttrack
         '
-        Me.cmdfillresulttrack.Location = New System.Drawing.Point(460, 127)
+        Me.cmdfillresulttrack.Location = New System.Drawing.Point(443, 126)
         Me.cmdfillresulttrack.Name = "cmdfillresulttrack"
         Me.cmdfillresulttrack.Size = New System.Drawing.Size(57, 29)
         Me.cmdfillresulttrack.TabIndex = 1294
@@ -355,14 +400,14 @@ Partial Class ucTrack
         Me.dgvtrack.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvtrack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn48, Me.Column2, Me.DataGridViewComboBoxColumn2, Me.DataGridViewTextBoxColumn49, Me.Column41, Me.Column1, Me.imglocation1})
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvtrack.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvtrack.Location = New System.Drawing.Point(26, 158)
         Me.dgvtrack.Name = "dgvtrack"
@@ -405,9 +450,9 @@ Partial Class ucTrack
         '
         'Column41
         '
-        DataGridViewCellStyle22.Format = "N2"
-        DataGridViewCellStyle22.NullValue = Nothing
-        Me.Column41.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.Column41.DefaultCellStyle = DataGridViewCellStyle4
         Me.Column41.Frozen = True
         Me.Column41.HeaderText = "Vlaue"
         Me.Column41.Name = "Column41"
@@ -416,9 +461,9 @@ Partial Class ucTrack
         '
         'Column1
         '
-        DataGridViewCellStyle23.Format = "N0"
-        DataGridViewCellStyle23.NullValue = Nothing
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle5.Format = "N0"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle5
         Me.Column1.Frozen = True
         Me.Column1.HeaderText = "Position"
         Me.Column1.Name = "Column1"
@@ -436,6 +481,7 @@ Partial Class ucTrack
         'gbtimertrack
         '
         Me.gbtimertrack.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.gbtimertrack.Controls.Add(Me.cmdRemoveLap)
         Me.gbtimertrack.Controls.Add(Me.cmblaptrack)
         Me.gbtimertrack.Controls.Add(Me.cmdlaptrack)
         Me.gbtimertrack.Controls.Add(Me.Label4)
@@ -448,27 +494,39 @@ Partial Class ucTrack
         Me.gbtimertrack.Controls.Add(Me.txttimersecondtrack)
         Me.gbtimertrack.Controls.Add(Me.txttimerminutetrac)
         Me.gbtimertrack.Controls.Add(Me.cmdtimertrack)
-        Me.gbtimertrack.Location = New System.Drawing.Point(507, 271)
+        Me.gbtimertrack.Location = New System.Drawing.Point(505, 322)
         Me.gbtimertrack.Name = "gbtimertrack"
-        Me.gbtimertrack.Size = New System.Drawing.Size(154, 144)
+        Me.gbtimertrack.Size = New System.Drawing.Size(165, 162)
         Me.gbtimertrack.TabIndex = 1304
         Me.gbtimertrack.TabStop = False
         Me.gbtimertrack.Text = "Timer"
         '
+        'cmdRemoveLap
+        '
+        Me.cmdRemoveLap.BackColor = System.Drawing.Color.Red
+        Me.cmdRemoveLap.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdRemoveLap.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdRemoveLap.Location = New System.Drawing.Point(97, 134)
+        Me.cmdRemoveLap.Name = "cmdRemoveLap"
+        Me.cmdRemoveLap.Size = New System.Drawing.Size(57, 23)
+        Me.cmdRemoveLap.TabIndex = 1316
+        Me.cmdRemoveLap.Text = "Remove"
+        Me.cmdRemoveLap.UseVisualStyleBackColor = False
+        '
         'cmblaptrack
         '
         Me.cmblaptrack.FormattingEnabled = True
-        Me.cmblaptrack.Items.AddRange(New Object() {"1000M", "1500M", "2 Laps to Go", "2000M", "2nd Lap", "500M"})
-        Me.cmblaptrack.Location = New System.Drawing.Point(6, 118)
+        Me.cmblaptrack.Items.AddRange(New Object() {"1000M", "1500M", "2 Laps to Go", "2000M", "2nd Lap", "500M", "FINISH"})
+        Me.cmblaptrack.Location = New System.Drawing.Point(6, 113)
         Me.cmblaptrack.Name = "cmblaptrack"
         Me.cmblaptrack.Size = New System.Drawing.Size(91, 21)
         Me.cmblaptrack.Sorted = True
         Me.cmblaptrack.TabIndex = 1315
-        Me.cmblaptrack.Text = "2nd Lap"
+        Me.cmblaptrack.Text = "1000M"
         '
         'cmdlaptrack
         '
-        Me.cmdlaptrack.Location = New System.Drawing.Point(98, 116)
+        Me.cmdlaptrack.Location = New System.Drawing.Point(98, 111)
         Me.cmdlaptrack.Name = "cmdlaptrack"
         Me.cmdlaptrack.Size = New System.Drawing.Size(52, 23)
         Me.cmdlaptrack.TabIndex = 1292
@@ -478,7 +536,7 @@ Partial Class ucTrack
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(37, 98)
+        Me.Label4.Location = New System.Drawing.Point(37, 93)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(43, 13)
         Me.Label4.TabIndex = 1290
@@ -488,7 +546,7 @@ Partial Class ucTrack
         '
         Me.ntimeropactitytrack.DecimalPlaces = 1
         Me.ntimeropactitytrack.Increment = New Decimal(New Integer() {1, 0, 0, 65536})
-        Me.ntimeropactitytrack.Location = New System.Drawing.Point(86, 94)
+        Me.ntimeropactitytrack.Location = New System.Drawing.Point(86, 89)
         Me.ntimeropactitytrack.Maximum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.ntimeropactitytrack.Name = "ntimeropactitytrack"
         Me.ntimeropactitytrack.Size = New System.Drawing.Size(45, 20)
@@ -500,7 +558,7 @@ Partial Class ucTrack
         Me.cmdtimerremovetrack.BackColor = System.Drawing.Color.Red
         Me.cmdtimerremovetrack.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdtimerremovetrack.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cmdtimerremovetrack.Location = New System.Drawing.Point(86, 69)
+        Me.cmdtimerremovetrack.Location = New System.Drawing.Point(86, 64)
         Me.cmdtimerremovetrack.Name = "cmdtimerremovetrack"
         Me.cmdtimerremovetrack.Size = New System.Drawing.Size(57, 23)
         Me.cmdtimerremovetrack.TabIndex = 1288
@@ -509,7 +567,7 @@ Partial Class ucTrack
         '
         'cmdtimerresumetrack
         '
-        Me.cmdtimerresumetrack.Location = New System.Drawing.Point(86, 43)
+        Me.cmdtimerresumetrack.Location = New System.Drawing.Point(88, 13)
         Me.cmdtimerresumetrack.Name = "cmdtimerresumetrack"
         Me.cmdtimerresumetrack.Size = New System.Drawing.Size(57, 23)
         Me.cmdtimerresumetrack.TabIndex = 1287
@@ -518,7 +576,7 @@ Partial Class ucTrack
         '
         'cmdtimerpausetrack
         '
-        Me.cmdtimerpausetrack.Location = New System.Drawing.Point(86, 17)
+        Me.cmdtimerpausetrack.Location = New System.Drawing.Point(86, 40)
         Me.cmdtimerpausetrack.Name = "cmdtimerpausetrack"
         Me.cmdtimerpausetrack.Size = New System.Drawing.Size(57, 23)
         Me.cmdtimerpausetrack.TabIndex = 1286
@@ -528,7 +586,7 @@ Partial Class ucTrack
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(52, 69)
+        Me.Label3.Location = New System.Drawing.Point(52, 64)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(14, 13)
         Me.Label3.TabIndex = 1285
@@ -537,7 +595,7 @@ Partial Class ucTrack
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(19, 69)
+        Me.Label2.Location = New System.Drawing.Point(19, 64)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(16, 13)
         Me.Label2.TabIndex = 1284
@@ -545,7 +603,7 @@ Partial Class ucTrack
         '
         'txttimersecondtrack
         '
-        Me.txttimersecondtrack.Location = New System.Drawing.Point(46, 46)
+        Me.txttimersecondtrack.Location = New System.Drawing.Point(46, 41)
         Me.txttimersecondtrack.Name = "txttimersecondtrack"
         Me.txttimersecondtrack.Size = New System.Drawing.Size(28, 20)
         Me.txttimersecondtrack.TabIndex = 1282
@@ -553,7 +611,7 @@ Partial Class ucTrack
         '
         'txttimerminutetrac
         '
-        Me.txttimerminutetrac.Location = New System.Drawing.Point(15, 46)
+        Me.txttimerminutetrac.Location = New System.Drawing.Point(15, 41)
         Me.txttimerminutetrac.Name = "txttimerminutetrac"
         Me.txttimerminutetrac.Size = New System.Drawing.Size(28, 20)
         Me.txttimerminutetrac.TabIndex = 1281
@@ -561,7 +619,7 @@ Partial Class ucTrack
         '
         'cmdtimertrack
         '
-        Me.cmdtimertrack.Location = New System.Drawing.Point(5, 17)
+        Me.cmdtimertrack.Location = New System.Drawing.Point(5, 12)
         Me.cmdtimertrack.Name = "cmdtimertrack"
         Me.cmdtimertrack.Size = New System.Drawing.Size(75, 23)
         Me.cmdtimertrack.TabIndex = 1280
@@ -588,7 +646,7 @@ Partial Class ucTrack
         '
         'cmdPlyerIdtrack
         '
-        Me.cmdPlyerIdtrack.Location = New System.Drawing.Point(507, 194)
+        Me.cmdPlyerIdtrack.Location = New System.Drawing.Point(506, 213)
         Me.cmdPlyerIdtrack.Name = "cmdPlyerIdtrack"
         Me.cmdPlyerIdtrack.Size = New System.Drawing.Size(75, 23)
         Me.cmdPlyerIdtrack.TabIndex = 1300
@@ -597,7 +655,7 @@ Partial Class ucTrack
         '
         'cmdstartlisttrack
         '
-        Me.cmdstartlisttrack.Location = New System.Drawing.Point(507, 165)
+        Me.cmdstartlisttrack.Location = New System.Drawing.Point(505, 187)
         Me.cmdstartlisttrack.Name = "cmdstartlisttrack"
         Me.cmdstartlisttrack.Size = New System.Drawing.Size(75, 23)
         Me.cmdstartlisttrack.TabIndex = 1299
@@ -720,7 +778,7 @@ Partial Class ucTrack
         'eventlogo
         '
         Me.eventlogo.BackColor = System.Drawing.SystemColors.Highlight
-        Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/ammu_logo.png"
+        Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/ng2015.png"
         Me.eventlogo.Location = New System.Drawing.Point(850, 34)
         Me.eventlogo.Name = "eventlogo"
         Me.eventlogo.Size = New System.Drawing.Size(24, 17)
@@ -816,10 +874,19 @@ Partial Class ucTrack
         Me.gbperspectivemixer.Controls.Add(Me.cmdresetperspectivemixer)
         Me.gbperspectivemixer.Location = New System.Drawing.Point(605, 91)
         Me.gbperspectivemixer.Name = "gbperspectivemixer"
-        Me.gbperspectivemixer.Size = New System.Drawing.Size(309, 126)
+        Me.gbperspectivemixer.Size = New System.Drawing.Size(309, 132)
         Me.gbperspectivemixer.TabIndex = 1317
         Me.gbperspectivemixer.TabStop = False
         Me.gbperspectivemixer.Text = "Perspective"
+        '
+        'cmdRestoreValues
+        '
+        Me.cmdRestoreValues.Location = New System.Drawing.Point(212, 92)
+        Me.cmdRestoreValues.Name = "cmdRestoreValues"
+        Me.cmdRestoreValues.Size = New System.Drawing.Size(90, 23)
+        Me.cmdRestoreValues.TabIndex = 1317
+        Me.cmdRestoreValues.Text = "Restore Values"
+        Me.cmdRestoreValues.UseVisualStyleBackColor = True
         '
         'Label186
         '
@@ -839,7 +906,6 @@ Partial Class ucTrack
         Me.nperspectiveblx.Name = "nperspectiveblx"
         Me.nperspectiveblx.Size = New System.Drawing.Size(46, 20)
         Me.nperspectiveblx.TabIndex = 432
-        Me.nperspectiveblx.Value = New Decimal(New Integer() {7, 0, 0, -2147483648})
         '
         'nperspectivebly
         '
@@ -850,7 +916,7 @@ Partial Class ucTrack
         Me.nperspectivebly.Name = "nperspectivebly"
         Me.nperspectivebly.Size = New System.Drawing.Size(46, 20)
         Me.nperspectivebly.TabIndex = 431
-        Me.nperspectivebly.Value = New Decimal(New Integer() {45, 0, 0, -2147352576})
+        Me.nperspectivebly.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label187
         '
@@ -888,7 +954,7 @@ Partial Class ucTrack
         Me.nperspectivebrx.Name = "nperspectivebrx"
         Me.nperspectivebrx.Size = New System.Drawing.Size(46, 20)
         Me.nperspectivebrx.TabIndex = 427
-        Me.nperspectivebrx.Value = New Decimal(New Integer() {65, 0, 0, 131072})
+        Me.nperspectivebrx.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'nperspectivebry
         '
@@ -899,7 +965,7 @@ Partial Class ucTrack
         Me.nperspectivebry.Name = "nperspectivebry"
         Me.nperspectivebry.Size = New System.Drawing.Size(46, 20)
         Me.nperspectivebry.TabIndex = 426
-        Me.nperspectivebry.Value = New Decimal(New Integer() {105, 0, 0, 131072})
+        Me.nperspectivebry.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label184
         '
@@ -937,7 +1003,7 @@ Partial Class ucTrack
         Me.nperspectivetrx.Name = "nperspectivetrx"
         Me.nperspectivetrx.Size = New System.Drawing.Size(46, 20)
         Me.nperspectivetrx.TabIndex = 422
-        Me.nperspectivetrx.Value = New Decimal(New Integer() {115, 0, 0, 131072})
+        Me.nperspectivetrx.Value = New Decimal(New Integer() {7, 0, 0, 65536})
         '
         'nperspectivetry
         '
@@ -948,7 +1014,6 @@ Partial Class ucTrack
         Me.nperspectivetry.Name = "nperspectivetry"
         Me.nperspectivetry.Size = New System.Drawing.Size(46, 20)
         Me.nperspectivetry.TabIndex = 421
-        Me.nperspectivetry.Value = New Decimal(New Integer() {6, 0, 0, 65536})
         '
         'Label181
         '
@@ -986,7 +1051,7 @@ Partial Class ucTrack
         Me.nperspectivetlx.Name = "nperspectivetlx"
         Me.nperspectivetlx.Size = New System.Drawing.Size(46, 20)
         Me.nperspectivetlx.TabIndex = 417
-        Me.nperspectivetlx.Value = New Decimal(New Integer() {2, 0, 0, -2147418112})
+        Me.nperspectivetlx.Value = New Decimal(New Integer() {25, 0, 0, 131072})
         '
         'nperspectivetly
         '
@@ -997,7 +1062,6 @@ Partial Class ucTrack
         Me.nperspectivetly.Name = "nperspectivetly"
         Me.nperspectivetly.Size = New System.Drawing.Size(46, 20)
         Me.nperspectivetly.TabIndex = 416
-        Me.nperspectivetly.Value = New Decimal(New Integer() {205, 0, 0, -2147352576})
         '
         'Label111
         '
@@ -1026,18 +1090,9 @@ Partial Class ucTrack
         Me.cmdresetperspectivemixer.Text = "R"
         Me.cmdresetperspectivemixer.UseVisualStyleBackColor = True
         '
-        'cmdRestoreValues
-        '
-        Me.cmdRestoreValues.Location = New System.Drawing.Point(212, 92)
-        Me.cmdRestoreValues.Name = "cmdRestoreValues"
-        Me.cmdRestoreValues.Size = New System.Drawing.Size(90, 23)
-        Me.cmdRestoreValues.TabIndex = 1317
-        Me.cmdRestoreValues.Text = "Restore Values"
-        Me.cmdRestoreValues.UseVisualStyleBackColor = True
-        '
         'cmdRecords
         '
-        Me.cmdRecords.Location = New System.Drawing.Point(794, 364)
+        Me.cmdRecords.Location = New System.Drawing.Point(507, 159)
         Me.cmdRecords.Name = "cmdRecords"
         Me.cmdRecords.Size = New System.Drawing.Size(75, 23)
         Me.cmdRecords.TabIndex = 1318
@@ -1058,7 +1113,7 @@ Partial Class ucTrack
         Me.GroupBox1.BackColor = System.Drawing.Color.LightGray
         Me.GroupBox1.Controls.Add(Me.cmdGreenSignal)
         Me.GroupBox1.Controls.Add(Me.cmdSignal)
-        Me.GroupBox1.Location = New System.Drawing.Point(707, 490)
+        Me.GroupBox1.Location = New System.Drawing.Point(505, 242)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(162, 74)
         Me.GroupBox1.TabIndex = 1320
@@ -1074,10 +1129,333 @@ Partial Class ucTrack
         Me.cmdGreenSignal.Text = "Change to Green Signal"
         Me.cmdGreenSignal.UseVisualStyleBackColor = True
         '
+        'cmdLeader
+        '
+        Me.cmdLeader.Location = New System.Drawing.Point(609, 589)
+        Me.cmdLeader.Name = "cmdLeader"
+        Me.cmdLeader.Size = New System.Drawing.Size(75, 28)
+        Me.cmdLeader.TabIndex = 1321
+        Me.cmdLeader.Text = "Leader"
+        Me.cmdLeader.UseVisualStyleBackColor = True
+        '
+        'cmdIntermediatResult
+        '
+        Me.cmdIntermediatResult.Location = New System.Drawing.Point(13, 6)
+        Me.cmdIntermediatResult.Name = "cmdIntermediatResult"
+        Me.cmdIntermediatResult.Size = New System.Drawing.Size(102, 28)
+        Me.cmdIntermediatResult.TabIndex = 1322
+        Me.cmdIntermediatResult.Text = "Split Point Result"
+        Me.cmdIntermediatResult.UseVisualStyleBackColor = True
+        '
+        'gbfill
+        '
+        Me.gbfill.BackColor = System.Drawing.Color.PapayaWhip
+        Me.gbfill.Controls.Add(Me.cmdRestoreValuesfill)
+        Me.gbfill.Controls.Add(Me.nfillx)
+        Me.gbfill.Controls.Add(Me.nfilly)
+        Me.gbfill.Controls.Add(Me.Label43)
+        Me.gbfill.Controls.Add(Me.Label44)
+        Me.gbfill.Controls.Add(Me.nfillwidth)
+        Me.gbfill.Controls.Add(Me.nfillheight)
+        Me.gbfill.Controls.Add(Me.Label45)
+        Me.gbfill.Controls.Add(Me.Label46)
+        Me.gbfill.Controls.Add(Me.cmdfill)
+        Me.gbfill.Location = New System.Drawing.Point(920, 91)
+        Me.gbfill.Name = "gbfill"
+        Me.gbfill.Size = New System.Drawing.Size(166, 132)
+        Me.gbfill.TabIndex = 1323
+        Me.gbfill.TabStop = False
+        Me.gbfill.Text = "Fill"
+        '
+        'cmdRestoreValuesfill
+        '
+        Me.cmdRestoreValuesfill.Location = New System.Drawing.Point(6, 104)
+        Me.cmdRestoreValuesfill.Name = "cmdRestoreValuesfill"
+        Me.cmdRestoreValuesfill.Size = New System.Drawing.Size(90, 23)
+        Me.cmdRestoreValuesfill.TabIndex = 1318
+        Me.cmdRestoreValuesfill.Text = "Restore Values"
+        Me.cmdRestoreValuesfill.UseVisualStyleBackColor = True
+        '
+        'nfillx
+        '
+        Me.nfillx.DecimalPlaces = 2
+        Me.nfillx.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.nfillx.Location = New System.Drawing.Point(51, 10)
+        Me.nfillx.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
+        Me.nfillx.Minimum = New Decimal(New Integer() {2, 0, 0, -2147483648})
+        Me.nfillx.Name = "nfillx"
+        Me.nfillx.Size = New System.Drawing.Size(46, 20)
+        Me.nfillx.TabIndex = 417
+        Me.nfillx.Value = New Decimal(New Integer() {9, 0, 0, -2147352576})
+        '
+        'nfilly
+        '
+        Me.nfilly.DecimalPlaces = 2
+        Me.nfilly.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.nfilly.Location = New System.Drawing.Point(51, 34)
+        Me.nfilly.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
+        Me.nfilly.Minimum = New Decimal(New Integer() {2, 0, 0, -2147483648})
+        Me.nfilly.Name = "nfilly"
+        Me.nfilly.Size = New System.Drawing.Size(46, 20)
+        Me.nfilly.TabIndex = 416
+        Me.nfilly.Value = New Decimal(New Integer() {30, 0, 0, 131072})
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Location = New System.Drawing.Point(6, 83)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(44, 13)
+        Me.Label43.TabIndex = 415
+        Me.Label43.Text = "Y Scale"
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Location = New System.Drawing.Point(6, 63)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(44, 13)
+        Me.Label44.TabIndex = 414
+        Me.Label44.Text = "X Scale"
+        '
+        'nfillwidth
+        '
+        Me.nfillwidth.DecimalPlaces = 2
+        Me.nfillwidth.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.nfillwidth.Location = New System.Drawing.Point(51, 58)
+        Me.nfillwidth.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
+        Me.nfillwidth.Name = "nfillwidth"
+        Me.nfillwidth.Size = New System.Drawing.Size(46, 20)
+        Me.nfillwidth.TabIndex = 413
+        Me.nfillwidth.Value = New Decimal(New Integer() {143, 0, 0, 131072})
+        '
+        'nfillheight
+        '
+        Me.nfillheight.DecimalPlaces = 2
+        Me.nfillheight.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.nfillheight.Location = New System.Drawing.Point(51, 82)
+        Me.nfillheight.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
+        Me.nfillheight.Name = "nfillheight"
+        Me.nfillheight.Size = New System.Drawing.Size(46, 20)
+        Me.nfillheight.TabIndex = 412
+        Me.nfillheight.Value = New Decimal(New Integer() {55, 0, 0, 131072})
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Location = New System.Drawing.Point(35, 37)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(14, 13)
+        Me.Label45.TabIndex = 410
+        Me.Label45.Text = "Y"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Location = New System.Drawing.Point(33, 16)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(14, 13)
+        Me.Label46.TabIndex = 408
+        Me.Label46.Text = "X"
+        '
+        'cmdfill
+        '
+        Me.cmdfill.Location = New System.Drawing.Point(100, 8)
+        Me.cmdfill.Name = "cmdfill"
+        Me.cmdfill.Size = New System.Drawing.Size(21, 94)
+        Me.cmdfill.TabIndex = 407
+        Me.cmdfill.Text = "R"
+        Me.cmdfill.UseVisualStyleBackColor = True
+        '
+        'dgvt1ball
+        '
+        Me.dgvt1ball.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvt1ball.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn27})
+        Me.dgvt1ball.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.dgvt1ball.Location = New System.Drawing.Point(10, 91)
+        Me.dgvt1ball.Name = "dgvt1ball"
+        Me.dgvt1ball.RowTemplate.Height = 18
+        Me.dgvt1ball.Size = New System.Drawing.Size(243, 198)
+        Me.dgvt1ball.TabIndex = 1324
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.Width = 190
+        '
+        'cmdt1lineupball
+        '
+        Me.cmdt1lineupball.Location = New System.Drawing.Point(12, 295)
+        Me.cmdt1lineupball.Name = "cmdt1lineupball"
+        Me.cmdt1lineupball.Size = New System.Drawing.Size(98, 28)
+        Me.cmdt1lineupball.TabIndex = 1325
+        Me.cmdt1lineupball.Text = "Team List"
+        Me.cmdt1lineupball.UseVisualStyleBackColor = True
+        '
+        'Team
+        '
+        Me.Team.BackColor = System.Drawing.Color.MistyRose
+        Me.Team.Controls.Add(Me.lblfilenamet1ball)
+        Me.Team.Controls.Add(Me.GroupBox23)
+        Me.Team.Controls.Add(Me.dgvt1ball)
+        Me.Team.Controls.Add(Me.cmdt1lineupball)
+        Me.Team.Location = New System.Drawing.Point(837, 276)
+        Me.Team.Name = "Team"
+        Me.Team.Size = New System.Drawing.Size(259, 341)
+        Me.Team.TabIndex = 1329
+        Me.Team.TabStop = False
+        Me.Team.Text = "Team List By Current Lane"
+        '
+        'lblfilenamet1ball
+        '
+        Me.lblfilenamet1ball.AutoSize = True
+        Me.lblfilenamet1ball.Location = New System.Drawing.Point(6, 24)
+        Me.lblfilenamet1ball.Name = "lblfilenamet1ball"
+        Me.lblfilenamet1ball.Size = New System.Drawing.Size(81, 13)
+        Me.lblfilenamet1ball.TabIndex = 1327
+        Me.lblfilenamet1ball.Text = "lblfilenamet1ball"
+        '
+        'GroupBox23
+        '
+        Me.GroupBox23.Controls.Add(Me.cmduprowt1ball)
+        Me.GroupBox23.Controls.Add(Me.cmdremoverowt1ball)
+        Me.GroupBox23.Controls.Add(Me.ToolStrip1)
+        Me.GroupBox23.Controls.Add(Me.cmddownrowt1ball)
+        Me.GroupBox23.Controls.Add(Me.cmdaddrowt1ball)
+        Me.GroupBox23.Location = New System.Drawing.Point(6, 56)
+        Me.GroupBox23.Name = "GroupBox23"
+        Me.GroupBox23.Size = New System.Drawing.Size(189, 35)
+        Me.GroupBox23.TabIndex = 1326
+        Me.GroupBox23.TabStop = False
+        '
+        'cmduprowt1ball
+        '
+        Me.cmduprowt1ball.Image = CType(resources.GetObject("cmduprowt1ball.Image"), System.Drawing.Image)
+        Me.cmduprowt1ball.Location = New System.Drawing.Point(88, 8)
+        Me.cmduprowt1ball.Name = "cmduprowt1ball"
+        Me.cmduprowt1ball.Size = New System.Drawing.Size(22, 18)
+        Me.cmduprowt1ball.TabIndex = 1201
+        Me.cmduprowt1ball.UseVisualStyleBackColor = True
+        '
+        'cmdremoverowt1ball
+        '
+        Me.cmdremoverowt1ball.BackgroundImage = CType(resources.GetObject("cmdremoverowt1ball.BackgroundImage"), System.Drawing.Image)
+        Me.cmdremoverowt1ball.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold)
+        Me.cmdremoverowt1ball.Location = New System.Drawing.Point(160, 8)
+        Me.cmdremoverowt1ball.Name = "cmdremoverowt1ball"
+        Me.cmdremoverowt1ball.Size = New System.Drawing.Size(22, 18)
+        Me.cmdremoverowt1ball.TabIndex = 1200
+        Me.cmdremoverowt1ball.UseVisualStyleBackColor = True
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmdnewt1ball, Me.cmdopent1ball, Me.cmdsavet1ball, Me.ToolStripSeparator3, Me.ToolStripSeparator4})
+        Me.ToolStrip1.Location = New System.Drawing.Point(5, 6)
+        Me.ToolStrip1.MaximumSize = New System.Drawing.Size(200, 200)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(93, 25)
+        Me.ToolStrip1.TabIndex = 1199
+        Me.ToolStrip1.Text = "ToolStrip3"
+        '
+        'cmdnewt1ball
+        '
+        Me.cmdnewt1ball.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.cmdnewt1ball.Image = CType(resources.GetObject("cmdnewt1ball.Image"), System.Drawing.Image)
+        Me.cmdnewt1ball.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdnewt1ball.Name = "cmdnewt1ball"
+        Me.cmdnewt1ball.Size = New System.Drawing.Size(23, 22)
+        Me.cmdnewt1ball.Text = "&New"
+        '
+        'cmdopent1ball
+        '
+        Me.cmdopent1ball.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.cmdopent1ball.Image = CType(resources.GetObject("cmdopent1ball.Image"), System.Drawing.Image)
+        Me.cmdopent1ball.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdopent1ball.Name = "cmdopent1ball"
+        Me.cmdopent1ball.Size = New System.Drawing.Size(23, 22)
+        Me.cmdopent1ball.Text = "&Open"
+        '
+        'cmdsavet1ball
+        '
+        Me.cmdsavet1ball.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.cmdsavet1ball.Image = CType(resources.GetObject("cmdsavet1ball.Image"), System.Drawing.Image)
+        Me.cmdsavet1ball.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdsavet1ball.Name = "cmdsavet1ball"
+        Me.cmdsavet1ball.Size = New System.Drawing.Size(23, 22)
+        Me.cmdsavet1ball.Text = "&Save"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        '
+        'cmddownrowt1ball
+        '
+        Me.cmddownrowt1ball.Image = CType(resources.GetObject("cmddownrowt1ball.Image"), System.Drawing.Image)
+        Me.cmddownrowt1ball.Location = New System.Drawing.Point(110, 8)
+        Me.cmddownrowt1ball.Name = "cmddownrowt1ball"
+        Me.cmddownrowt1ball.Size = New System.Drawing.Size(22, 18)
+        Me.cmddownrowt1ball.TabIndex = 1198
+        Me.cmddownrowt1ball.UseVisualStyleBackColor = True
+        '
+        'cmdaddrowt1ball
+        '
+        Me.cmdaddrowt1ball.Image = CType(resources.GetObject("cmdaddrowt1ball.Image"), System.Drawing.Image)
+        Me.cmdaddrowt1ball.Location = New System.Drawing.Point(133, 8)
+        Me.cmdaddrowt1ball.Name = "cmdaddrowt1ball"
+        Me.cmdaddrowt1ball.Size = New System.Drawing.Size(22, 18)
+        Me.cmdaddrowt1ball.TabIndex = 1197
+        Me.cmdaddrowt1ball.UseVisualStyleBackColor = True
+        '
+        'tmrtimeonform
+        '
+        Me.tmrtimeonform.Interval = 1000
+        '
+        'updatecmdIntermediatResult
+        '
+        Me.updatecmdIntermediatResult.Location = New System.Drawing.Point(13, 40)
+        Me.updatecmdIntermediatResult.Name = "updatecmdIntermediatResult"
+        Me.updatecmdIntermediatResult.Size = New System.Drawing.Size(102, 28)
+        Me.updatecmdIntermediatResult.TabIndex = 1330
+        Me.updatecmdIntermediatResult.Text = "Update"
+        Me.updatecmdIntermediatResult.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.LightCoral
+        Me.GroupBox2.Controls.Add(Me.updatecmdIntermediatResult)
+        Me.GroupBox2.Controls.Add(Me.cmdIntermediatResult)
+        Me.GroupBox2.Location = New System.Drawing.Point(592, 497)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(138, 74)
+        Me.GroupBox2.TabIndex = 1331
+        Me.GroupBox2.TabStop = False
+        '
+        'cmdClearValue
+        '
+        Me.cmdClearValue.Location = New System.Drawing.Point(362, 99)
+        Me.cmdClearValue.Name = "cmdClearValue"
+        Me.cmdClearValue.Size = New System.Drawing.Size(75, 23)
+        Me.cmdClearValue.TabIndex = 1332
+        Me.cmdClearValue.Text = "Clear"
+        Me.cmdClearValue.UseVisualStyleBackColor = True
+        '
         'ucTrack
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.cmdClearValue)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.Team)
+        Me.Controls.Add(Me.gbfill)
+        Me.Controls.Add(Me.cmdLeader)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmdRecords)
         Me.Controls.Add(Me.gbperspectivemixer)
@@ -1104,7 +1482,7 @@ Partial Class ucTrack
         Me.Controls.Add(Me.cmdfillresulttrack)
         Me.Controls.Add(Me.dgvtrack)
         Me.Name = "ucTrack"
-        Me.Size = New System.Drawing.Size(930, 830)
+        Me.Size = New System.Drawing.Size(1156, 830)
         CType(Me.dgvtrackresult, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbtstrack.ResumeLayout(False)
         Me.gbtstrack.PerformLayout()
@@ -1129,6 +1507,20 @@ Partial Class ucTrack
         CType(Me.nperspectivetlx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nperspectivetly, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        Me.gbfill.ResumeLayout(False)
+        Me.gbfill.PerformLayout()
+        CType(Me.nfillx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nfilly, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nfillwidth, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nfillheight, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvt1ball, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Team.ResumeLayout(False)
+        Me.Team.PerformLayout()
+        Me.GroupBox23.ResumeLayout(False)
+        Me.GroupBox23.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1226,4 +1618,38 @@ Partial Class ucTrack
     Friend WithEvents cmdSignal As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents cmdGreenSignal As Button
+    Friend WithEvents cmdLeader As Button
+    Friend WithEvents cmdIntermediatResult As Button
+    Friend WithEvents gbfill As GroupBox
+    Friend WithEvents nfillx As NumericUpDown
+    Friend WithEvents nfilly As NumericUpDown
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Label44 As Label
+    Friend WithEvents nfillwidth As NumericUpDown
+    Friend WithEvents nfillheight As NumericUpDown
+    Friend WithEvents Label45 As Label
+    Friend WithEvents Label46 As Label
+    Friend WithEvents cmdfill As Button
+    Friend WithEvents cmdRestoreValuesfill As Button
+    Friend WithEvents dgvt1ball As DataGridView
+    Friend WithEvents cmdt1lineupball As Button
+    Friend WithEvents Team As GroupBox
+    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox23 As GroupBox
+    Friend WithEvents cmduprowt1ball As Button
+    Friend WithEvents cmdremoverowt1ball As Button
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents cmdnewt1ball As ToolStripButton
+    Friend WithEvents cmdopent1ball As ToolStripButton
+    Friend WithEvents cmdsavet1ball As ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents cmddownrowt1ball As Button
+    Friend WithEvents cmdaddrowt1ball As Button
+    Friend WithEvents lblfilenamet1ball As Label
+    Friend WithEvents cmdRemoveLap As Button
+    Friend WithEvents tmrtimeonform As Timer
+    Friend WithEvents updatecmdIntermediatResult As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents cmdClearValue As Button
 End Class

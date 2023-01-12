@@ -104,15 +104,15 @@
         On Error Resume Next
         txtsecball.Text = cmbputsecondball.Text
     End Sub
-    Function openimage(ByVal defaultdirectory As String, ByVal picname As PictureBox)
-        On Error Resume Next
-        Dim picofd As New OpenFileDialog
-        picofd.InitialDirectory = defaultdirectory
-        If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            picname.ImageLocation = picofd.FileName
-        End If
-        Return (Split(picofd.SafeFileName, ".")(0)).Replace("\", "/")
-    End Function
+    'Function openimage(ByVal defaultdirectory As String, ByVal picname As PictureBox)
+    '    On Error Resume Next
+    '    Dim picofd As New OpenFileDialog
+    '    picofd.InitialDirectory = defaultdirectory
+    '    If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+    '        picname.ImageLocation = picofd.FileName
+    '    End If
+    '    Return (Split(picofd.SafeFileName, ".")(0)).Replace("\", "/")
+    'End Function
     Private Sub pict2logoball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pict2logoball.Click
         On Error Resume Next
         txtt2ball.Text = openimage("C:\casparcg\ng2022\data\country\", sender)

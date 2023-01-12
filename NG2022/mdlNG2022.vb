@@ -123,7 +123,7 @@ Module mdlNG2022
     Function openimage(ByVal defaultdirectory As String, ByVal picname As PictureBox)
         On Error Resume Next
         Dim picofd As New OpenFileDialog
-        picofd.InitialDirectory = defaultdirectory
+        picofd.InitialDirectory = defaultdirectory.Replace("/", "\")
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
             picname.ImageLocation = picofd.FileName
         End If
@@ -177,20 +177,22 @@ Module mdlNG2022
                 li = ""
                 Do Until sr.EndOfStream
                     li = sr.ReadLine()
-                    dgvname.Rows.Add()
+
                     Dim xyz As Array = Split(li, ",")
+                    If (xyz(0) <> "") Then dgvname.Rows.Add()
+
                     For k = 0 To dgvname.ColumnCount - 1
-                        If dgvname.Name = "dgvtrack" Then
-                            If k = 2 Then
-                                dgvname.Rows(g).Cells(k).Value = Image.FromFile(xyz(k))
+                        If xyz(k) <> "" Then
+                            If dgvname.Name = "dgvtrack" Then
+                                If k = 2 Then
+                                    dgvname.Rows(g).Cells(k).Value = Image.FromFile(xyz(k))
+                                Else
+                                    dgvname.Rows(g).Cells(k).Value = xyz(k) 'CType(xyz(0), Integer)
+                                End If
                             Else
                                 dgvname.Rows(g).Cells(k).Value = xyz(k) 'CType(xyz(0), Integer)
                             End If
-                        Else
-                            dgvname.Rows(g).Cells(k).Value = xyz(k) 'CType(xyz(0), Integer)
                         End If
-
-
                     Next
                     g = g + 1
                 Loop

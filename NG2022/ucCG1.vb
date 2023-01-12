@@ -210,6 +210,10 @@ Public Class ucCG1
 
     Private Sub ucCG1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         winnerdefaultdat()
+        cmbheadercg.DataSource = New BindingSource(headerText, "")
+        cmbheadercg.Text = "World Rowing Cup 2023"
+        cmbsubheadercg.DataSource = New BindingSource(subHeader, "")
+        cmbsubheadercg.Text = "Men's Single Sculls"
     End Sub
 
     Private Sub cmdstopcg2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopcg2.Click
@@ -642,5 +646,20 @@ Public Class ucCG1
     End Sub
     Private Sub dgvwinner_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvwinner.CellContentClick
 
+    End Sub
+
+    Private Sub cmdHeatsToQuaterFinals_Click(sender As Object, e As EventArgs) Handles cmdHeatsToQuaterFinals.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        CasparCGDataCollection.SetData("ccgheader", cmbheadercg.Text)
+        CasparCGDataCollection.SetData("ccgsubheader", "Heats To QuaterFinals- " & cmbsubheadercg.Text)
+        For i = 0 To 7
+            CasparCGDataCollection.SetData("ccgloader" & i + 1, dgvwinner.Rows(i).Cells(2).Value.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgf" & i, dgvwinner.Rows(i).Cells(1).Value)
+        Next
+
+        CasparCGDataCollection.SetData("ccgloader51", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader52", eventlogo.ImageLocation.Replace("\", "/"))
+        showtemplate("ng2022/template/cg/HeatsToQuaterFinals", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 End Class
