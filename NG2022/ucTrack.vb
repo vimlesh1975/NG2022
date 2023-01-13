@@ -440,7 +440,7 @@ Public Class ucTrack
         With dgvtrackresult
 
             CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
-            CasparCGDataCollection.SetData("ccgsubheader", "Winner-" + cmbSubHeader.Text)
+            CasparCGDataCollection.SetData("ccgsubheader", txtWinner.Text + "-" + cmbSubHeader.Text)
 
             Dim i = 0
             CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(1).Value)
@@ -553,6 +553,9 @@ Public Class ucTrack
             CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(1).Value)
             CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(6).Value.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
+            CasparCGDataCollection.SetData("ccgLeader", txtLeader.Text)
+
+
 
             CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
@@ -766,5 +769,50 @@ Public Class ucTrack
             dgvtrack.Rows(ii).Cells(5).Value = ""
         Next
 
+    End Sub
+
+    Private Sub cmdIntermediatResultwithsubHeader_Click(sender As Object, e As EventArgs) Handles cmdIntermediatResultwithsubHeader.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+
+        With dgvtrackresult
+            CasparCGDataCollection.SetData("ccg_subHeader", txtStanding.Text)
+
+            For i = 0 To .RowCount - 2
+                CasparCGDataCollection.SetData("ccg_ln" & i, .Rows(i).Cells(0).Value)
+
+                CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(1).Value)
+                CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(6).Value.Replace("\", "/"))
+
+                CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
+
+                If i <> 0 Then
+                    CasparCGDataCollection.SetData("ccg_r" & i, "+" & (Format(CType(.Rows(i).Cells(4).Value, Double) - CType(.Rows(0).Cells(4).Value, Double), "00.00")).Replace(".", ":"))
+
+                Else
+                    CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(4).Value, Double), "00.00").Replace(".", ":"))
+
+                End If
+
+            Next
+
+            CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+            showtemplate("ng2022/template/track/intermediatResultwithHeading", CasparCGDataCollection.ToAMCPEscapedXml)
+        End With
+    End Sub
+
+    Private Sub cmdfalseStart_Click(sender As Object, e As EventArgs) Handles cmdfalseStart.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        CasparCGDataCollection.SetData("ccg_start", txtFalseStart.Text)
+
+        CasparCGDataCollection.SetData("ccgf0", dgvtrack.CurrentRow.Cells(3).Value)
+        CasparCGDataCollection.SetData("ccgf1", dgvtrack.CurrentRow.Cells(0).Value)
+        CasparCGDataCollection.SetData("ccgf2", dgvtrack.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccgloader1", dgvtrack.CurrentRow.Cells(6).Value.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
+        showtemplate("ng2022/template/Track/falseStart", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 End Class

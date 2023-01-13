@@ -23,13 +23,13 @@ Partial Class ucTrack
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucTrack))
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvtrackresult = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn41 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn42 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -156,6 +156,12 @@ Partial Class ucTrack
         Me.updatecmdIntermediatResult = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.cmdClearValue = New System.Windows.Forms.Button()
+        Me.txtWinner = New System.Windows.Forms.TextBox()
+        Me.txtLeader = New System.Windows.Forms.TextBox()
+        Me.txtStanding = New System.Windows.Forms.TextBox()
+        Me.cmdIntermediatResultwithsubHeader = New System.Windows.Forms.Button()
+        Me.cmdfalseStart = New System.Windows.Forms.Button()
+        Me.txtFalseStart = New System.Windows.Forms.TextBox()
         CType(Me.dgvtrackresult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbtstrack.SuspendLayout()
         Me.ToolStrip4.SuspendLayout()
@@ -192,14 +198,14 @@ Partial Class ucTrack
         Me.dgvtrackresult.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrackresult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvtrackresult.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn41, Me.DataGridViewTextBoxColumn42, Me.DataGridViewComboBoxColumn3, Me.DataGridViewTextBoxColumn43, Me.DataGridViewTextBoxColumn44, Me.DataGridViewTextBoxColumn45, Me.imglocation2})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvtrackresult.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvtrackresult.DefaultCellStyle = DataGridViewCellStyle15
         Me.dgvtrackresult.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvtrackresult.Location = New System.Drawing.Point(26, 490)
         Me.dgvtrackresult.Name = "dgvtrackresult"
@@ -242,9 +248,9 @@ Partial Class ucTrack
         '
         'DataGridViewTextBoxColumn44
         '
-        DataGridViewCellStyle1.Format = "N2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn44.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.Format = "N2"
+        DataGridViewCellStyle13.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn44.DefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridViewTextBoxColumn44.Frozen = True
         Me.DataGridViewTextBoxColumn44.HeaderText = "Vlaue"
         Me.DataGridViewTextBoxColumn44.Name = "DataGridViewTextBoxColumn44"
@@ -253,9 +259,9 @@ Partial Class ucTrack
         '
         'DataGridViewTextBoxColumn45
         '
-        DataGridViewCellStyle2.Format = "N0"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Format = "N0"
+        DataGridViewCellStyle14.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle14
         Me.DataGridViewTextBoxColumn45.Frozen = True
         Me.DataGridViewTextBoxColumn45.HeaderText = "Position"
         Me.DataGridViewTextBoxColumn45.Name = "DataGridViewTextBoxColumn45"
@@ -400,14 +406,14 @@ Partial Class ucTrack
         Me.dgvtrack.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvtrack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn48, Me.Column2, Me.DataGridViewComboBoxColumn2, Me.DataGridViewTextBoxColumn49, Me.Column41, Me.Column1, Me.imglocation1})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle18
         Me.dgvtrack.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvtrack.Location = New System.Drawing.Point(26, 158)
         Me.dgvtrack.Name = "dgvtrack"
@@ -450,9 +456,9 @@ Partial Class ucTrack
         '
         'Column41
         '
-        DataGridViewCellStyle4.Format = "N2"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.Column41.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle16.Format = "N2"
+        DataGridViewCellStyle16.NullValue = Nothing
+        Me.Column41.DefaultCellStyle = DataGridViewCellStyle16
         Me.Column41.Frozen = True
         Me.Column41.HeaderText = "Vlaue"
         Me.Column41.Name = "Column41"
@@ -461,9 +467,9 @@ Partial Class ucTrack
         '
         'Column1
         '
-        DataGridViewCellStyle5.Format = "N0"
-        DataGridViewCellStyle5.NullValue = Nothing
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle17.Format = "N0"
+        DataGridViewCellStyle17.NullValue = Nothing
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle17
         Me.Column1.Frozen = True
         Me.Column1.HeaderText = "Position"
         Me.Column1.Name = "Column1"
@@ -646,7 +652,7 @@ Partial Class ucTrack
         '
         'cmdPlyerIdtrack
         '
-        Me.cmdPlyerIdtrack.Location = New System.Drawing.Point(506, 213)
+        Me.cmdPlyerIdtrack.Location = New System.Drawing.Point(683, 261)
         Me.cmdPlyerIdtrack.Name = "cmdPlyerIdtrack"
         Me.cmdPlyerIdtrack.Size = New System.Drawing.Size(75, 23)
         Me.cmdPlyerIdtrack.TabIndex = 1300
@@ -817,7 +823,7 @@ Partial Class ucTrack
         '
         'cmdWinner
         '
-        Me.cmdWinner.Location = New System.Drawing.Point(507, 490)
+        Me.cmdWinner.Location = New System.Drawing.Point(600, 729)
         Me.cmdWinner.Name = "cmdWinner"
         Me.cmdWinner.Size = New System.Drawing.Size(75, 28)
         Me.cmdWinner.TabIndex = 1314
@@ -1131,7 +1137,7 @@ Partial Class ucTrack
         '
         'cmdLeader
         '
-        Me.cmdLeader.Location = New System.Drawing.Point(609, 589)
+        Me.cmdLeader.Location = New System.Drawing.Point(600, 759)
         Me.cmdLeader.Name = "cmdLeader"
         Me.cmdLeader.Size = New System.Drawing.Size(75, 28)
         Me.cmdLeader.TabIndex = 1321
@@ -1140,11 +1146,11 @@ Partial Class ucTrack
         '
         'cmdIntermediatResult
         '
-        Me.cmdIntermediatResult.Location = New System.Drawing.Point(13, 6)
+        Me.cmdIntermediatResult.Location = New System.Drawing.Point(13, 17)
         Me.cmdIntermediatResult.Name = "cmdIntermediatResult"
-        Me.cmdIntermediatResult.Size = New System.Drawing.Size(102, 28)
+        Me.cmdIntermediatResult.Size = New System.Drawing.Size(119, 28)
         Me.cmdIntermediatResult.TabIndex = 1322
-        Me.cmdIntermediatResult.Text = "Split Point Result"
+        Me.cmdIntermediatResult.Text = "Split Point Standing"
         Me.cmdIntermediatResult.UseVisualStyleBackColor = True
         '
         'gbfill
@@ -1300,7 +1306,7 @@ Partial Class ucTrack
         Me.Team.Controls.Add(Me.GroupBox23)
         Me.Team.Controls.Add(Me.dgvt1ball)
         Me.Team.Controls.Add(Me.cmdt1lineupball)
-        Me.Team.Location = New System.Drawing.Point(837, 276)
+        Me.Team.Location = New System.Drawing.Point(880, 276)
         Me.Team.Name = "Team"
         Me.Team.Size = New System.Drawing.Size(259, 341)
         Me.Team.TabIndex = 1329
@@ -1420,7 +1426,7 @@ Partial Class ucTrack
         '
         'updatecmdIntermediatResult
         '
-        Me.updatecmdIntermediatResult.Location = New System.Drawing.Point(13, 40)
+        Me.updatecmdIntermediatResult.Location = New System.Drawing.Point(20, 112)
         Me.updatecmdIntermediatResult.Name = "updatecmdIntermediatResult"
         Me.updatecmdIntermediatResult.Size = New System.Drawing.Size(102, 28)
         Me.updatecmdIntermediatResult.TabIndex = 1330
@@ -1432,9 +1438,9 @@ Partial Class ucTrack
         Me.GroupBox2.BackColor = System.Drawing.Color.LightCoral
         Me.GroupBox2.Controls.Add(Me.updatecmdIntermediatResult)
         Me.GroupBox2.Controls.Add(Me.cmdIntermediatResult)
-        Me.GroupBox2.Location = New System.Drawing.Point(592, 497)
+        Me.GroupBox2.Location = New System.Drawing.Point(626, 524)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(138, 74)
+        Me.GroupBox2.Size = New System.Drawing.Size(138, 146)
         Me.GroupBox2.TabIndex = 1331
         Me.GroupBox2.TabStop = False
         '
@@ -1447,10 +1453,66 @@ Partial Class ucTrack
         Me.cmdClearValue.Text = "Clear"
         Me.cmdClearValue.UseVisualStyleBackColor = True
         '
+        'txtWinner
+        '
+        Me.txtWinner.Location = New System.Drawing.Point(520, 734)
+        Me.txtWinner.Name = "txtWinner"
+        Me.txtWinner.Size = New System.Drawing.Size(74, 20)
+        Me.txtWinner.TabIndex = 1333
+        Me.txtWinner.Text = "Winner"
+        '
+        'txtLeader
+        '
+        Me.txtLeader.Location = New System.Drawing.Point(520, 760)
+        Me.txtLeader.Name = "txtLeader"
+        Me.txtLeader.Size = New System.Drawing.Size(74, 20)
+        Me.txtLeader.TabIndex = 1334
+        Me.txtLeader.Text = "Leader"
+        '
+        'txtStanding
+        '
+        Me.txtStanding.Location = New System.Drawing.Point(745, 699)
+        Me.txtStanding.Name = "txtStanding"
+        Me.txtStanding.Size = New System.Drawing.Size(111, 20)
+        Me.txtStanding.TabIndex = 1335
+        Me.txtStanding.Text = "Heat 1 500M"
+        '
+        'cmdIntermediatResultwithsubHeader
+        '
+        Me.cmdIntermediatResultwithsubHeader.Location = New System.Drawing.Point(862, 694)
+        Me.cmdIntermediatResultwithsubHeader.Name = "cmdIntermediatResultwithsubHeader"
+        Me.cmdIntermediatResultwithsubHeader.Size = New System.Drawing.Size(205, 28)
+        Me.cmdIntermediatResultwithsubHeader.TabIndex = 1331
+        Me.cmdIntermediatResultwithsubHeader.Text = "Split Point Standing with subHeder"
+        Me.cmdIntermediatResultwithsubHeader.UseVisualStyleBackColor = True
+        '
+        'cmdfalseStart
+        '
+        Me.cmdfalseStart.Location = New System.Drawing.Point(794, 290)
+        Me.cmdfalseStart.Name = "cmdfalseStart"
+        Me.cmdfalseStart.Size = New System.Drawing.Size(75, 23)
+        Me.cmdfalseStart.TabIndex = 1336
+        Me.cmdfalseStart.Text = "False Start"
+        Me.cmdfalseStart.UseVisualStyleBackColor = True
+        '
+        'txtFalseStart
+        '
+        Me.txtFalseStart.Location = New System.Drawing.Point(677, 293)
+        Me.txtFalseStart.Name = "txtFalseStart"
+        Me.txtFalseStart.Size = New System.Drawing.Size(108, 20)
+        Me.txtFalseStart.TabIndex = 1337
+        Me.txtFalseStart.Text = "False Start DSQ"
+        '
         'ucTrack
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.txtFalseStart)
+        Me.Controls.Add(Me.cmdfalseStart)
+        Me.Controls.Add(Me.cmdIntermediatResultwithsubHeader)
+        Me.Controls.Add(Me.txtStanding)
+        Me.Controls.Add(Me.txtLeader)
+        Me.Controls.Add(Me.txtWinner)
         Me.Controls.Add(Me.cmdClearValue)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Team)
@@ -1652,4 +1714,10 @@ Partial Class ucTrack
     Friend WithEvents updatecmdIntermediatResult As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents cmdClearValue As Button
+    Friend WithEvents txtWinner As TextBox
+    Friend WithEvents txtLeader As TextBox
+    Friend WithEvents txtStanding As TextBox
+    Friend WithEvents cmdIntermediatResultwithsubHeader As Button
+    Friend WithEvents cmdfalseStart As Button
+    Friend WithEvents txtFalseStart As TextBox
 End Class
