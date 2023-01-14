@@ -42,6 +42,8 @@ Partial Class frmNG2022
         Me.lblport = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.CanoeSlalom = New System.Windows.Forms.TabPage()
+        Me.UcCanoeSlalom1 = New NG2022.ucCanoeSlalom()
         Me.Rowing = New System.Windows.Forms.TabPage()
         Me.UcTrack1 = New NG2022.ucTrack()
         Me.NetBall = New System.Windows.Forms.TabPage()
@@ -81,6 +83,7 @@ Partial Class frmNG2022
         Me.UcCasparcgWindow1 = New NG2022.ucCasparcgWindow()
         Me.gbPannel.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.CanoeSlalom.SuspendLayout()
         Me.Rowing.SuspendLayout()
         Me.NetBall.SuspendLayout()
         Me.BasketBall.SuspendLayout()
@@ -277,6 +280,7 @@ Partial Class frmNG2022
         '
         'TabControl1
         '
+        Me.TabControl1.Controls.Add(Me.CanoeSlalom)
         Me.TabControl1.Controls.Add(Me.Rowing)
         Me.TabControl1.Controls.Add(Me.NetBall)
         Me.TabControl1.Controls.Add(Me.BasketBall)
@@ -288,8 +292,26 @@ Partial Class frmNG2022
         Me.TabControl1.Location = New System.Drawing.Point(5, 61)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1143, 873)
+        Me.TabControl1.Size = New System.Drawing.Size(1143, 928)
         Me.TabControl1.TabIndex = 1174
+        '
+        'CanoeSlalom
+        '
+        Me.CanoeSlalom.Controls.Add(Me.UcCanoeSlalom1)
+        Me.CanoeSlalom.Location = New System.Drawing.Point(4, 22)
+        Me.CanoeSlalom.Name = "CanoeSlalom"
+        Me.CanoeSlalom.Padding = New System.Windows.Forms.Padding(3)
+        Me.CanoeSlalom.Size = New System.Drawing.Size(1135, 902)
+        Me.CanoeSlalom.TabIndex = 8
+        Me.CanoeSlalom.Text = "CanoeSlalom"
+        Me.CanoeSlalom.UseVisualStyleBackColor = True
+        '
+        'UcCanoeSlalom1
+        '
+        Me.UcCanoeSlalom1.Location = New System.Drawing.Point(3, 5)
+        Me.UcCanoeSlalom1.Name = "UcCanoeSlalom1"
+        Me.UcCanoeSlalom1.Size = New System.Drawing.Size(1126, 897)
+        Me.UcCanoeSlalom1.TabIndex = 0
         '
         'Rowing
         '
@@ -305,7 +327,7 @@ Partial Class frmNG2022
         '
         Me.UcTrack1.Location = New System.Drawing.Point(8, 7)
         Me.UcTrack1.Name = "UcTrack1"
-        Me.UcTrack1.Size = New System.Drawing.Size(1073, 822)
+        Me.UcTrack1.Size = New System.Drawing.Size(1124, 822)
         Me.UcTrack1.TabIndex = 0
         '
         'NetBall
@@ -673,7 +695,7 @@ Partial Class frmNG2022
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1916, 936)
+        Me.ClientSize = New System.Drawing.Size(1916, 990)
         Me.Controls.Add(Me.lblClientID)
         Me.Controls.Add(Me.txtClientID)
         Me.Controls.Add(Me.Button1)
@@ -684,10 +706,11 @@ Partial Class frmNG2022
         Me.Controls.Add(Me.gbPannel)
         Me.Name = "frmNG2022"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "NG_100123_1"
+        Me.Text = "NG_140123_1"
         Me.gbPannel.ResumeLayout(False)
         Me.gbPannel.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        Me.CanoeSlalom.ResumeLayout(False)
         Me.Rowing.ResumeLayout(False)
         Me.NetBall.ResumeLayout(False)
         Me.BasketBall.ResumeLayout(False)
@@ -763,4 +786,6 @@ Partial Class frmNG2022
     Friend WithEvents Rowing As TabPage
     Friend WithEvents UcNetBall1 As ucNetBall
     Friend WithEvents UcTrack1 As ucTrack
+    Friend WithEvents CanoeSlalom As TabPage
+    Friend WithEvents UcCanoeSlalom1 As ucCanoeSlalom
 End Class

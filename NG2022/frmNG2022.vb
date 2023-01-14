@@ -206,4 +206,8 @@ Public Class frmNG2022
     Private Sub UcNetBall1_Load(sender As Object, e As EventArgs) Handles UcNetBall1.Load
 
     End Sub
+
+    Private Sub UcTrack1_Load(sender As Object, e As EventArgs) Handles UcTrack1.Load
+
+    End Sub
 End Class

@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_00213DACBD5743DD8345D31FE6EC8DD4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_002734CFF206498E934AF0C8F6F89457"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -291,6 +297,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_0A9B301858E042CCB123FBB415C02EE6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0ACAEC99BEBA4479B9B82BBA5F18616C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -521,6 +533,12 @@
         {
         "MsmKey" = "8:_1400203AF8544687AC1602A2C596DBC4"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_14010BCCFAFA5BDB8879DAF53772246F"
+        "OwnerKey" = "8:_01A118ACE428453DA00924323B55D696"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -849,6 +867,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2193A31CE2104FD3AAE0A70032B52E47"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_21F92DCE22C74684BBB69683AB4463E9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1125,6 +1149,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2AF9FA274FB147FD94928EAB3AD793C2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2B28D2855CDB44809F65B59C40A34143"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1216,6 +1246,12 @@
         "Entry"
         {
         "MsmKey" = "8:_2E2A104F831542F09D16D439B35FF9A6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2E42B253D7574D23A17185A055D200C9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1336,6 +1372,12 @@
         "Entry"
         {
         "MsmKey" = "8:_322B8A0F12244359920024AAC238584A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_323EAA75975241388691DBC21BDCD7BA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1515,6 +1557,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_393510190460447293DB2A55E4A2ACA5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3949C9668B4746019394109EA2367C13"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1576,6 +1624,18 @@
         "Entry"
         {
         "MsmKey" = "8:_3B1163C60D17464DAC9A9501BE619D90"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3B238D214BE94A1BBCA43348AC244BB7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3B45B0E5813B40E78F96C6E9BB243B1A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1707,6 +1767,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3EE903FD786E44E0B390FCF8DA87C088"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3F239C1924DF44A6A864E8B9016F54B9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1755,6 +1821,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_40B9F6AEDCF94CDD8960B1E818CB1E1B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_416AAB6B581E485C82FF7399C50937E3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1797,6 +1869,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_434762FD35E44CE8A1B1C2E0D5159CB6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4377C7510F6849E99C4414788F2D35B5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1827,7 +1905,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_44769232552A4DD884C83801807043B5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_44AAFECA348C4E3098B16A883203F3C6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_44BCDB424DFC44B1AFB805A30137A9A5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2128,6 +2218,12 @@
         "Entry"
         {
         "MsmKey" = "8:_5016492E2B704ABA89B300A69BBF8BEB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_503FAB325FD54EE2AAA3DE7837DBFD2D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2625,6 +2721,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6280519FCAF64C76B65C174913288BDF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_62BE7CBABBE04DEFAA9B8DA7CFA6AF1A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2817,6 +2919,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_67CDD5D2923B4DBFA4B6224322B7647A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_68B2354676784A73901ECA7AAE64995E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2985,6 +3093,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6E3D3B692F164FD2A8E304A48CC085B3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6E49856777424C97B48333BAFDD25079"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3124,6 +3238,12 @@
         "Entry"
         {
         "MsmKey" = "8:_721D5CE5F8EF4F3BB7346EFF3C4BDA48"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_724726AA75A7442C9E53E830695F8B88"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3369,6 +3489,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7A827E5DE38A44D297E9DEC7B8D674F7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7AA5D62245CB4C0692EE3724BDDCFB14"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3567,6 +3693,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_82228451680B4B678899A69503263D0C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8232005FA073460793A4879EC2C6E897"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3628,6 +3760,12 @@
         "Entry"
         {
         "MsmKey" = "8:_83477BBE0CE3402497A51A39425E6469"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_834E9219CF624968B5F14814220CC4C0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3718,6 +3856,12 @@
         "Entry"
         {
         "MsmKey" = "8:_864B44A8B41242A7B655EEC967C1701C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_86607C35E8EE4B15A8443F84B37CB1D5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3814,6 +3958,12 @@
         "Entry"
         {
         "MsmKey" = "8:_899C1A83D556424EA0B3018A290C8291"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_899F656259F3494EA1726C1CBD7FBEC4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3999,6 +4149,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_8D9B291CB98641AC9BE72FF0C72B326A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8DCD905C07E44E5FB74297EEE89BD9B5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -4144,6 +4300,12 @@
         "Entry"
         {
         "MsmKey" = "8:_932DB9D92EBB4032B30300B2588F74FA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_93432ECE8A5843C9B4531F05E4ED4999"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -4378,6 +4540,12 @@
         "Entry"
         {
         "MsmKey" = "8:_9885EA9087984EE9BE2AC47A9996628C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_98BE3CC566DF4D889CA8B65C920DE3CC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -4659,6 +4827,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A219175911444F3F969D0298F2A87B7F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A22C3F31642747B5B18734468B73831D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -4695,6 +4869,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A30954060CD64CD7964BF91A754F8280"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A38C4A8950254D519B702E950C819DCF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -4715,12 +4895,6 @@
         {
         "MsmKey" = "8:_A3CB1094CE2D4954832ECFEF165FFF89"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A418300D53D62C557C2F4720D106FEA0"
-        "OwnerKey" = "8:_01A118ACE428453DA00924323B55D696"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -4809,6 +4983,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A85AB6C0803F4AF8889806F52DC4F598"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A870FA2DED064351B7BB8252E3F9F138"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -4828,6 +5008,12 @@
         "Entry"
         {
         "MsmKey" = "8:_A944383F831C4295BF85C7E53860A88F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A9774670CA9349FD9144577CA4D03EFB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -5026,6 +5212,18 @@
         "Entry"
         {
         "MsmKey" = "8:_AFB093AA9EA14FBC9F15A950ED3DCE1F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AFD7095A205B41868641BEEF5EF7EE83"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AFE80BDD7E6141D680C4FD65CD910EF2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -5403,6 +5601,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_BF0715FF4DF7416791D90C9DF5BF5D13"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BF585F92316E47CCB5891A8E2FDB7FBF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -5547,6 +5751,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C46FE95554DD49ACBA0DF072BDA823CC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C49AF8C3ED4A42F584E82F2E86987760"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -5572,6 +5782,12 @@
         "Entry"
         {
         "MsmKey" = "8:_C63112C5D44144C2A73764C34AC52776"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C6602B2D063948E4B87402E3C08C4D97"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -5781,6 +5997,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CE8BA67395094E85B30B22B369AD8A2F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_CF65E113E56E4085A4583D199AB21A5C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -5800,6 +6022,12 @@
         "Entry"
         {
         "MsmKey" = "8:_D14188165CF04D33A7B34148B50D36AE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D179CF8945544FA58319EBC0771D283F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -5836,6 +6064,12 @@
         "Entry"
         {
         "MsmKey" = "8:_D30B1238FD4F413FBED40128CA80CD31"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D3558FBD136F41B0A1C7E237A39DDB73"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -5902,6 +6136,12 @@
         "Entry"
         {
         "MsmKey" = "8:_D57270E80488482F8F23E1938DBDBE02"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D5A8481370AB4F89BB329035176290DD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -6033,6 +6273,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DBB9964B874C44428BA00E9340D7FA4F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DBDD532945F849E1A3057B5B318C0B48"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -6129,6 +6375,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DE694C7F2DE741DF82C23B9563942AC2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DE7AFA2D89E34097A6EEB0C2FB80FA6D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -6136,6 +6388,12 @@
         "Entry"
         {
         "MsmKey" = "8:_DEA373FA2A59498C9293730505DC4E7A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DF704A630EDC4C3282A71166AD8731F5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -6369,6 +6627,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E5E4048209E943ADA7DC690D868BA964"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E5E53A1D023547219AEC285F85C5CE68"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -6453,6 +6717,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E950A3FC4CC14C6CB15485AA1EBDDAFB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E96198ADE07349B0B7FD64EBA30B3AC0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -6496,6 +6766,12 @@
         "Entry"
         {
         "MsmKey" = "8:_EB711D5E75A34B6F84DA185B295CC848"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EB9396EF81FC4B3895AC3BDAFCB70612"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -6556,6 +6832,12 @@
         "Entry"
         {
         "MsmKey" = "8:_ED9D8EB6308744D2B30BDDF4207396BC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EDD4518B45C74620972DEFE8F349690E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -6700,6 +6982,12 @@
         "Entry"
         {
         "MsmKey" = "8:_F1FF08BDB33E46A0B7D8E55897821C04"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F211815B3CC2472B8A437FC26D3902CF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -7096,7 +7384,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A418300D53D62C557C2F4720D106FEA0"
+        "OwnerKey" = "8:_14010BCCFAFA5BDB8879DAF53772246F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -7212,6 +7500,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_00213DACBD5743DD8345D31FE6EC8DD4"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\player_id.txt"
+            "TargetName" = "8:player_id.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_002734CFF206498E934AF0C8F6F89457"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\ball\\Silver.html"
@@ -8112,6 +8420,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0A9B301858E042CCB123FBB415C02EE6"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\topthree.html"
+            "TargetName" = "8:topthree.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0ACAEC99BEBA4479B9B82BBA5F18616C"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\KB_Plates\\Venue ID.png"
@@ -8890,6 +9218,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_14010BCCFAFA5BDB8879DAF53772246F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_14010BCCFAFA5BDB8879DAF53772246F"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_C352CB8034934421A4016B029BA767E6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_14CE0CD07FF941AD895D4A2D096B5754"
@@ -9972,6 +10331,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2193A31CE2104FD3AAE0A70032B52E47"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\score.css"
+            "TargetName" = "8:score.css"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_21F92DCE22C74684BBB69683AB4463E9"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\khokho\\out.txt"
@@ -10892,6 +11271,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2AF9FA274FB147FD94928EAB3AD793C2"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\main.js"
+            "TargetName" = "8:main.js"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2B28D2855CDB44809F65B59C40A34143"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\FB_Plates\\two plate.png"
@@ -11198,6 +11597,26 @@
             "TargetName" = "8:KAR.png"
             "Tag" = "8:"
             "Folder" = "8:_FB5159D6AA3048168CB0D54A384460E8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2E42B253D7574D23A17185A055D200C9"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\teamlineup.html"
+            "TargetName" = "8:teamlineup.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -11598,6 +12017,26 @@
             "TargetName" = "8:IntermediatResult.html"
             "Tag" = "8:"
             "Folder" = "8:_141C8CFBDE994D0AAA068A3030BB89BB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_323EAA75975241388691DBC21BDCD7BA"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\signal.txt"
+            "TargetName" = "8:signal.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -12192,6 +12631,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_393510190460447293DB2A55E4A2ACA5"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\Records.html"
+            "TargetName" = "8:Records.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3949C9668B4746019394109EA2367C13"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\KH_Plates\\Games_Pictogram\\RS.png"
@@ -12398,6 +12857,46 @@
             "TargetName" = "8:Cote-d-Ivoire.png"
             "Tag" = "8:"
             "Folder" = "8:_240AD2A3542844C2BEEA078E11941836"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3B238D214BE94A1BBCA43348AC244BB7"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\CanoeSlalom\\002_Athletics_MENS 200m HEAT2.txt"
+            "TargetName" = "8:002_Athletics_MENS 200m HEAT2.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_F1C43160D7BA4485A8D0F75C5DA28F41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3B45B0E5813B40E78F96C6E9BB243B1A"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\leader.txt"
+            "TargetName" = "8:leader.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -12843,6 +13342,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3EE903FD786E44E0B390FCF8DA87C088"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\IntermediatResult.html"
+            "TargetName" = "8:IntermediatResult.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F239C1924DF44A6A864E8B9016F54B9"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\Blank\\State_Short_Cut\\TN.png"
@@ -13003,6 +13522,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_40B9F6AEDCF94CDD8960B1E818CB1E1B"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\intermediatResultwithHeading.txt"
+            "TargetName" = "8:intermediatResultwithHeading.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_416AAB6B581E485C82FF7399C50937E3"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\NetBall\\PlayerPosition.html"
@@ -13143,6 +13682,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_434762FD35E44CE8A1B1C2E0D5159CB6"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\indivisulascore.txt"
+            "TargetName" = "8:indivisulascore.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4377C7510F6849E99C4414788F2D35B5"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\cg\\Medal All Three.html"
@@ -13243,12 +13802,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_44769232552A4DD884C83801807043B5"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\opening.html"
+            "TargetName" = "8:opening.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_44AAFECA348C4E3098B16A883203F3C6"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\NetBall\\groupresult2.html"
             "TargetName" = "8:groupresult2.html"
             "Tag" = "8:"
             "Folder" = "8:_9BEB6D1904994576B7096356D141957A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_44BCDB424DFC44B1AFB805A30137A9A5"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\intermediatResultwithHeading.html"
+            "TargetName" = "8:intermediatResultwithHeading.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -14249,6 +14848,26 @@
             "TargetName" = "8:ARP.png"
             "Tag" = "8:"
             "Folder" = "8:_FB5159D6AA3048168CB0D54A384460E8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_503FAB325FD54EE2AAA3DE7837DBFD2D"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\leader.html"
+            "TargetName" = "8:leader.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -15903,6 +16522,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6280519FCAF64C76B65C174913288BDF"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\player_id.html"
+            "TargetName" = "8:player_id.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_62BE7CBABBE04DEFAA9B8DA7CFA6AF1A"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\flag\\Kiribati.png"
@@ -16543,6 +17182,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_67CDD5D2923B4DBFA4B6224322B7647A"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\CanoeSlalom\\002_Athletics_MENS 200m HEAT1.txt"
+            "TargetName" = "8:002_Athletics_MENS 200m HEAT1.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_F1C43160D7BA4485A8D0F75C5DA28F41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_68B2354676784A73901ECA7AAE64995E"
             {
             "SourcePath" = "8:D:\\kapil\\101122\\without logo\\Blank\\Player_Yello Card.png"
@@ -17114,6 +17773,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E3D3B692F164FD2A8E304A48CC085B3"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\result.txt"
+            "TargetName" = "8:result.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E49856777424C97B48333BAFDD25079"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Track\\intermediatResultwithHeading.txt"
@@ -17580,6 +18259,26 @@
             "TargetName" = "8:gymnastics.png"
             "Tag" = "8:"
             "Folder" = "8:_03CA9C286FE1436AB2DD1C96CEC15098"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_724726AA75A7442C9E53E830695F8B88"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\falseStart.html"
+            "TargetName" = "8:falseStart.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -18394,6 +19093,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7A827E5DE38A44D297E9DEC7B8D674F7"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\laps.html"
+            "TargetName" = "8:laps.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7AA5D62245CB4C0692EE3724BDDCFB14"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\KB_Plates\\Games_Pictogram\\MK.png"
@@ -19054,6 +19773,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82228451680B4B678899A69503263D0C"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\main.css"
+            "TargetName" = "8:main.css"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8232005FA073460793A4879EC2C6E897"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\Blank\\Games_Pictogram\\WR.png"
@@ -19260,6 +19999,26 @@
             "TargetName" = "8:Chad.png"
             "Tag" = "8:"
             "Folder" = "8:_240AD2A3542844C2BEEA078E11941836"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_834E9219CF624968B5F14814220CC4C0"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\event_id.txt"
+            "TargetName" = "8:event_id.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -19560,6 +20319,26 @@
             "TargetName" = "8:score_boxing.html"
             "Tag" = "8:"
             "Folder" = "8:_9025BBDA6A9F4EFD8E017BE22653E5C9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_86607C35E8EE4B15A8443F84B37CB1D5"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\teamlineup2.txt"
+            "TargetName" = "8:teamlineup2.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -19880,6 +20659,26 @@
             "TargetName" = "8:Bahamas.png"
             "Tag" = "8:"
             "Folder" = "8:_240AD2A3542844C2BEEA078E11941836"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_899F656259F3494EA1726C1CBD7FBEC4"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\timer.js"
+            "TargetName" = "8:timer.js"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -20485,6 +21284,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8D9B291CB98641AC9BE72FF0C72B326A"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\result.html"
+            "TargetName" = "8:result.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8DCD905C07E44E5FB74297EEE89BD9B5"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\khokho\\player_id.html"
@@ -20971,6 +21790,26 @@
             "TargetName" = "8:MAH.png"
             "Tag" = "8:"
             "Folder" = "8:_FB5159D6AA3048168CB0D54A384460E8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_93432ECE8A5843C9B4531F05E4ED4999"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\listCanoeSlalom.txt"
+            "TargetName" = "8:listCanoeSlalom.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -21751,6 +22590,26 @@
             "TargetName" = "8:BIH.png"
             "Tag" = "8:"
             "Folder" = "8:_62662C40778A4CC18D8D12D148DC2E0E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_98BE3CC566DF4D889CA8B65C920DE3CC"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\score.txt"
+            "TargetName" = "8:score.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -22685,6 +23544,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A219175911444F3F969D0298F2A87B7F"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\laps.txt"
+            "TargetName" = "8:laps.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A22C3F31642747B5B18734468B73831D"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\KH_Plates\\Games_Pictogram\\KH.png"
@@ -22805,6 +23684,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A30954060CD64CD7964BF91A754F8280"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\openiing.html"
+            "TargetName" = "8:openiing.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A38C4A8950254D519B702E950C819DCF"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\kabaddi\\red_card.html"
@@ -22883,37 +23782,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A418300D53D62C557C2F4720D106FEA0"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_A418300D53D62C557C2F4720D106FEA0"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Newtonsoft.Json.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_C352CB8034934421A4016B029BA767E6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A45CC10CEE844815849AB4D1620C0E76"
@@ -23196,6 +24064,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A85AB6C0803F4AF8889806F52DC4F598"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\Records.txt"
+            "TargetName" = "8:Records.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A870FA2DED064351B7BB8252E3F9F138"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\cg\\event_shedule2.txt"
@@ -23262,6 +24150,26 @@
             "TargetName" = "8:6line.html"
             "Tag" = "8:"
             "Folder" = "8:_2113BDFC3A5542B8979A6C1C50264F4B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A9774670CA9349FD9144577CA4D03EFB"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\teamlineup.txt"
+            "TargetName" = "8:teamlineup.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -23922,6 +24830,46 @@
             "TargetName" = "8:score.js"
             "Tag" = "8:"
             "Folder" = "8:_141C8CFBDE994D0AAA068A3030BB89BB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AFD7095A205B41868641BEEF5EF7EE83"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\IntermediatResult.txt"
+            "TargetName" = "8:IntermediatResult.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AFE80BDD7E6141D680C4FD65CD910EF2"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\langraphics.html"
+            "TargetName" = "8:langraphics.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -25176,6 +26124,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BF0715FF4DF7416791D90C9DF5BF5D13"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\event_id.html"
+            "TargetName" = "8:event_id.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BF585F92316E47CCB5891A8E2FDB7FBF"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\NetBall\\closing.txt"
@@ -25656,6 +26624,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C46FE95554DD49ACBA0DF072BDA823CC"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\score.html"
+            "TargetName" = "8:score.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C49AF8C3ED4A42F584E82F2E86987760"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\flag\\Micronesia.png"
@@ -25742,6 +26730,26 @@
             "TargetName" = "8:BK.png"
             "Tag" = "8:"
             "Folder" = "8:_77E1EEAA03D7422D9185C0FA6DAF5CA1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C6602B2D063948E4B87402E3C08C4D97"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\opening.txt"
+            "TargetName" = "8:opening.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -26436,6 +27444,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CE8BA67395094E85B30B22B369AD8A2F"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\langraphics.txt"
+            "TargetName" = "8:langraphics.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF65E113E56E4085A4583D199AB21A5C"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\games logo\\HO.png"
@@ -26502,6 +27530,26 @@
             "TargetName" = "8:Netherlands.png"
             "Tag" = "8:"
             "Folder" = "8:_240AD2A3542844C2BEEA078E11941836"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D179CF8945544FA58319EBC0771D283F"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\timer.html"
+            "TargetName" = "8:timer.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -26622,6 +27670,26 @@
             "TargetName" = "8:GOA.png"
             "Tag" = "8:"
             "Folder" = "8:_A3210F930A474E5EA088C687876AA87A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D3558FBD136F41B0A1C7E237A39DDB73"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\timer.txt"
+            "TargetName" = "8:timer.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -26842,6 +27910,26 @@
             "TargetName" = "8:red_card.txt"
             "Tag" = "8:"
             "Folder" = "8:_3623217405F24A9DA2A9B9E32D03F5A6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D5A8481370AB4F89BB329035176290DD"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\openiing.txt"
+            "TargetName" = "8:openiing.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -27276,6 +28364,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DBB9964B874C44428BA00E9340D7FA4F"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\signal.html"
+            "TargetName" = "8:signal.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DBDD532945F849E1A3057B5B318C0B48"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\KB_Plates\\Match Score-B.png"
@@ -27596,6 +28704,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE694C7F2DE741DF82C23B9563942AC2"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\teamlineup2.html"
+            "TargetName" = "8:teamlineup2.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE7AFA2D89E34097A6EEB0C2FB80FA6D"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\games logo\\NB.png"
@@ -27622,6 +28750,26 @@
             "TargetName" = "8:GO.png"
             "Tag" = "8:"
             "Folder" = "8:_77E1EEAA03D7422D9185C0FA6DAF5CA1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DF704A630EDC4C3282A71166AD8731F5"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\winner.txt"
+            "TargetName" = "8:winner.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -28396,6 +29544,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E5E4048209E943ADA7DC690D868BA964"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\falseStart.txt"
+            "TargetName" = "8:falseStart.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E5E53A1D023547219AEC285F85C5CE68"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\Blank\\Games_Pictogram\\JD.png"
@@ -28676,6 +29844,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E950A3FC4CC14C6CB15485AA1EBDDAFB"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\winner.html"
+            "TargetName" = "8:winner.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E96198ADE07349B0B7FD64EBA30B3AC0"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\KB_Plates\\Cronch_Plate Larg._Clock.png"
@@ -28822,6 +30010,26 @@
             "TargetName" = "8:2line.txt"
             "Tag" = "8:"
             "Folder" = "8:_2113BDFC3A5542B8979A6C1C50264F4B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EB9396EF81FC4B3895AC3BDAFCB70612"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\indivisulascore.html"
+            "TargetName" = "8:indivisulascore.html"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -29022,6 +30230,26 @@
             "TargetName" = "8:Belize.png"
             "Tag" = "8:"
             "Folder" = "8:_240AD2A3542844C2BEEA078E11941836"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EDD4518B45C74620972DEFE8F349690E"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\topthree.txt"
+            "TargetName" = "8:topthree.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -29502,6 +30730,26 @@
             "TargetName" = "8:set7.txt"
             "Tag" = "8:"
             "Folder" = "8:_8E0268B08D7443B794EAEF739D21D9DB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F211815B3CC2472B8A437FC26D3902CF"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\CanoeSlalom\\score.js"
+            "TargetName" = "8:score.js"
+            "Tag" = "8:"
+            "Folder" = "8:_5689DF3ABA584D6E8742CD80BFD674C2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -31171,6 +32419,17 @@
                                             }
                                         }
                                     }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_F1C43160D7BA4485A8D0F75C5DA28F41"
+                                    {
+                                    "Name" = "8:CanoeSlalom"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_0C722183FB0648409816F884483B1C78"
+                                        "Folders"
+                                        {
+                                        }
+                                    }
                                     "{9EF0B969-E518-4E46-987F-47570745A589}:_FA6DC21ACACB446F96A68C7A98EAB8D3"
                                     {
                                     "Name" = "8:KH_Plates"
@@ -31277,6 +32536,17 @@
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
                                     "Property" = "8:_464B5609B47A4F2EA1ACBA7F7DA74A1B"
+                                        "Folders"
+                                        {
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5689DF3ABA584D6E8742CD80BFD674C2"
+                                    {
+                                    "Name" = "8:CanoeSlalom"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_E292E5CEC9354BC7B97E8C9B18019F2E"
                                         "Folders"
                                         {
                                         }

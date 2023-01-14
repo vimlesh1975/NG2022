@@ -1,25 +1,24 @@
 ﻿Imports System.Threading
 Imports Microsoft.VisualBasic.FileIO
 
-Public Class ucTrack
+Public Class ucCanoeSlalom
     Private Sub ucRowing_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         defauttrackdata()
-        defautdataforball()
 
         cmbgames.DataSource = New BindingSource(gameName, "")
-        cmbgames.Text = "Rowing"
+        cmbgames.Text = "Kayaking"
 
         cmbHeader.DataSource = New BindingSource(headerText, "")
-        cmbHeader.Text = "World Rowing Cup 2023"
+        cmbHeader.Text = "World Canoe Slalom Cup 2023"
         cmbSubHeader.DataSource = New BindingSource(subHeader, "")
-        cmbSubHeader.Text = "Men's Single Sculls"
+        cmbSubHeader.Text = "Men's Canoe Single - Final"
     End Sub
     Sub defauttrackdata()
         DataGridViewComboBoxColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
         DataGridViewComboBoxColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
 
         With dgvtrack
-            .Rows.Add(8)
+            .Rows.Add(10)
 
             .Rows(0).Cells(0).Value = 1
             .Rows(0).Cells(1).Value = "IND"
@@ -84,6 +83,20 @@ Public Class ucTrack
             .Rows(7).Cells(4).Value = 7.06
             .Rows(7).Cells(5).Value = 1
             .Rows(7).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Bangladesh.png"
+
+            .Rows(8).Cells(0).Value = 9
+            .Rows(8).Cells(1).Value = "ITA"
+            .Rows(8).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Italy.png")
+            .Rows(8).Cells(3).Value = "PREM LAL GUPTA"
+            .Rows(8).Cells(4).Value = 7.45
+            .Rows(8).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Italy.png"
+
+            .Rows(9).Cells(0).Value = 10
+            .Rows(9).Cells(1).Value = "AUS"
+            .Rows(9).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Australia.png")
+            .Rows(9).Cells(3).Value = "NITIN V SUMANTH"
+            .Rows(9).Cells(4).Value = 7.48
+            .Rows(9).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Australia.png"
 
 
         End With
@@ -173,7 +186,7 @@ Public Class ucTrack
 
             CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
-            showtemplate("ng2022/template/track/result", CasparCGDataCollection.ToAMCPEscapedXml)
+            showtemplate("ng2022/template/canoeslalom/result", CasparCGDataCollection.ToAMCPEscapedXml)
         End With
 
     End Sub
@@ -202,7 +215,7 @@ Public Class ucTrack
 
             CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
-            showtemplate("ng2022/template/track/topthree", CasparCGDataCollection.ToAMCPEscapedXml)
+            showtemplate("ng2022/template/canoeslalom/topthree", CasparCGDataCollection.ToAMCPEscapedXml)
         End With
     End Sub
     Private Sub newtrack_Click(sender As Object, e As EventArgs) Handles newtrack.Click
@@ -213,13 +226,13 @@ Public Class ucTrack
 
     Private Sub opentrack_Click(sender As Object, e As EventArgs) Handles opentrack.Click
 
-        opendatasg("C:\casparcg\ng2022\data\track\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenametrack)
+        opendatasg("C:\casparcg\ng2022\data\canoeslalom\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenametrack)
         maketrack6thcolumninteger(dgvtrack)
         dgvtrackresult.Rows.Clear()
     End Sub
 
     Private Sub savetrack_Click(sender As Object, e As EventArgs) Handles savetrack.Click
-        savedatasg("C:\casparcg\ng2022\data\track\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenametrack)
+        savedatasg("C:\casparcg\ng2022\data\canoeslalom\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenametrack)
     End Sub
 
     Private Sub uprowtrack_Click(sender As Object, e As EventArgs) Handles uprowtrack.Click
@@ -251,12 +264,12 @@ Public Class ucTrack
         On Error Resume Next
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgf0", dgvtrack.CurrentRow.Cells(3).Value)
-        CasparCGDataCollection.SetData("ccgf1", dgvtrack.CurrentRow.Cells(0).Value)
+        'CasparCGDataCollection.SetData("ccgf1", dgvtrack.CurrentRow.Cells(0).Value)
         CasparCGDataCollection.SetData("ccgf2", dgvtrack.CurrentRow.Cells(1).Value)
         CasparCGDataCollection.SetData("ccgloader1", dgvtrack.CurrentRow.Cells(6).Value.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
-        showtemplate("ng2022/template/Track/player_id", CasparCGDataCollection.ToAMCPEscapedXml)
+        showtemplate("ng2022/template/canoeslalom/player_id", CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
 
@@ -268,7 +281,7 @@ Public Class ucTrack
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("uptimer1", txttimerminutetrac.Text + ":" + txttimersecondtrack.Text + "." + "000")
         CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, "ng2022/template/Track/timer", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, "ng2022/template/canoeslalom/timer", True, CasparCGDataCollection.ToAMCPEscapedXml)
         'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "startTimer(" & (txttimerminutetrac.Text) * 60000 + (txttimersecondtrack.Text) * 1000 & ")" & """")
         'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "pause()" & """")
 
@@ -316,7 +329,7 @@ Public Class ucTrack
         CasparCGDataCollection.Clear()
 
         CasparCGDataCollection.SetData("ccg_laps", cmblaptrack.Text)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text) + 3, Int(cmblayergames.Text) + 3, "ng2022/template/Track/laps", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text) + 3, Int(cmblayergames.Text) + 3, "ng2022/template/canoeslalom/laps", True, CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
 
@@ -345,7 +358,7 @@ Public Class ucTrack
 
             CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
-            showtemplate("ng2022/template/track/indivisulascore", CasparCGDataCollection.ToAMCPEscapedXml)
+            showtemplate("ng2022/template/canoeslalom/indivisulascore", CasparCGDataCollection.ToAMCPEscapedXml)
         End With
     End Sub
 
@@ -370,7 +383,7 @@ Public Class ucTrack
 
             CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
-            showtemplate("ng2022/template/track/teamlineup", CasparCGDataCollection.ToAMCPEscapedXml)
+            showtemplate("ng2022/template/canoeslalom/teamlineup", CasparCGDataCollection.ToAMCPEscapedXml)
         End With
 
     End Sub
@@ -452,91 +465,40 @@ Public Class ucTrack
 
             CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
-            showtemplate("ng2022/template/track/indivisulascore", CasparCGDataCollection.ToAMCPEscapedXml)
+            showtemplate("ng2022/template/canoeslalom/indivisulascore", CasparCGDataCollection.ToAMCPEscapedXml)
 
         End With
     End Sub
 
-    Private Sub cmdLanGraphics_Click(sender As Object, e As EventArgs) Handles cmdLanGraphics.Click
-        On Error Resume Next
-        CasparCGDataCollection.Clear()
-        With dgvtrack
-            For i = 0 To .RowCount - 2
-                CasparCGDataCollection.SetData("ccg_ln" & i, .Rows(i).Cells(0).Value)
-                CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(1).Value)
-                CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(6).Value.Replace("\", "/"))
-                CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
-            Next
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text) + 2, Int(cmblayergames.Text) + 2, "ng2022/template/track/langraphics", True, CasparCGDataCollection.ToAMCPEscapedXml)
-            ' CasparDevice.SendString("mixer 1-98 perspective 0.60 0.25 1.15 0.50 0.80 0.95 -5.30 0.35")
-            perspectivemixer()
-            nfill()
-        End With
-    End Sub
 
-    Private Sub cmdRemoveLanGraphics_Click(sender As Object, e As EventArgs) Handles cmdRemoveLanGraphics.Click
+
+    Private Sub cmdRemoveLanGraphics_Click(sender As Object, e As EventArgs)
         On Error Resume Next
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text) + 2, Int(cmblayergames.Text) + 2)
         Threading.Thread.Sleep(2000)
         CasparDevice.SendString("mixer 1-" + Int(cmblayergames.Text) + 2 + " clear")
 
     End Sub
-    Sub perspectivemixer() Handles nperspectivetlx.ValueChanged, nperspectivetly.ValueChanged, nperspectivetrx.ValueChanged, nperspectivetry.ValueChanged, nperspectivebrx.ValueChanged, nperspectivebry.ValueChanged, nperspectiveblx.ValueChanged, nperspectivebly.ValueChanged
-        On Error Resume Next
-        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 2 & " perspective " & Replace(nperspectivetlx.Value, ",", ".") & " " & Replace(nperspectivetly.Value, ",", ".") & " " & Replace(nperspectivetrx.Value, ",", ".") & " " & Replace(nperspectivetry.Value, ",", ".") & " " & Replace(nperspectivebrx.Value, ",", ".") & " " & Replace(nperspectivebry.Value, ",", ".") & " " & Replace(nperspectiveblx.Value, ",", ".") & " " & Replace(nperspectivebly.Value, ",", "."))
 
-    End Sub
-    Sub resetperpectivemixer()
-        On Error Resume Next
-        nperspectivetlx.Value = 0
-        nperspectivetly.Value = 0
 
-        nperspectivetrx.Value = 1
-        nperspectivetry.Value = 0
-
-        nperspectivebrx.Value = 1
-        nperspectivebry.Value = 1
-
-        nperspectiveblx.Value = 0
-        nperspectivebly.Value = 1
-    End Sub
-    Private Sub cmdresetperspectivemixer_Click(sender As Object, e As EventArgs) Handles cmdresetperspectivemixer.Click
-        On Error Resume Next
-        resetperpectivemixer()
-    End Sub
-
-    Private Sub cmdRestoreValues_Click(sender As Object, e As EventArgs) Handles cmdRestoreValues.Click
-        On Error Resume Next
-        nperspectivetlx.Value = 0.25
-        nperspectivetly.Value = 0
-
-        nperspectivetrx.Value = 0.7
-        nperspectivetry.Value = 0
-
-        nperspectivebrx.Value = 1
-        nperspectivebry.Value = 1
-
-        nperspectiveblx.Value = 0
-        nperspectivebly.Value = 1
-    End Sub
 
     Private Sub cmdRecords_Click(sender As Object, e As EventArgs) Handles cmdRecords.Click
-        showtemplate("ng2022/template/Track/records", CasparCGDataCollection.ToAMCPEscapedXml)
+        showtemplate("ng2022/template/canoeslalom/records", CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
 
-    Private Sub cmdSignal_Click(sender As Object, e As EventArgs) Handles cmdSignal.Click
+    Private Sub cmdSignal_Click(sender As Object, e As EventArgs)
         CasparCGDataCollection.Clear()
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/Track/signal", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/canoeslalom/signal", True, CasparCGDataCollection.ToAMCPEscapedXml)
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imgred').getElementsByTagName('image')[0].style.opacity=1" & """")
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imggreen').getElementsByTagName('image')[0].style.opacity=0" & """")
 
         cmdtimertrack.PerformClick()
     End Sub
 
-    Private Sub cmdGreenSignal_Click(sender As Object, e As EventArgs) Handles cmdGreenSignal.Click
+    Private Sub cmdGreenSignal_Click(sender As Object, e As EventArgs)
         CasparCGDataCollection.Clear()
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/Track/signal", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/canoeslalom/signal", True, CasparCGDataCollection.ToAMCPEscapedXml)
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imgred').getElementsByTagName('image')[0].style.opacity=0" & """")
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imggreen').getElementsByTagName('image')[0].style.opacity=1" & """")
         cmdtimerresumetrack.PerformClick()
@@ -560,7 +522,7 @@ Public Class ucTrack
 
             CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
-            showtemplate("ng2022/template/track/leader", CasparCGDataCollection.ToAMCPEscapedXml)
+            showtemplate("ng2022/template/canoeslalom/leader", CasparCGDataCollection.ToAMCPEscapedXml)
 
         End With
     End Sub
@@ -589,114 +551,13 @@ Public Class ucTrack
 
             CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
-            showtemplate("ng2022/template/track/IntermediatResult", CasparCGDataCollection.ToAMCPEscapedXml)
+            showtemplate("ng2022/template/canoeslalom/IntermediatResult", CasparCGDataCollection.ToAMCPEscapedXml)
         End With
     End Sub
 
-    Private Sub cmdfill_Click(sender As Object, e As EventArgs) Handles cmdfill.Click
-        On Error Resume Next
-        mixerfillreset()
-    End Sub
-    Sub mixerfillreset()
-        On Error Resume Next
-        nfillx.Value = 0
-        nfilly.Value = 0
-        nfillwidth.Value = 1
-        nfillheight.Value = 1
-    End Sub
 
-    Private Sub nfill() Handles nfillx.ValueChanged, nfilly.ValueChanged, nfillwidth.ValueChanged, nfillheight.ValueChanged
-        On Error Resume Next
-        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 2 & " fill " & Replace(nfillx.Value, ",", ".") & " " & Replace(nfilly.Value, ",", ".") & " " & Replace(nfillwidth.Value, ",", ".") & " " & Replace(nfillheight.Value, ",", "."))
 
-    End Sub
 
-    Private Sub cmdRestoreValuesfill_Click(sender As Object, e As EventArgs) Handles cmdRestoreValuesfill.Click
-        On Error Resume Next
-        nfillx.Value = -0.09
-        nfilly.Value = 0.3
-        nfillwidth.Value = 1.43
-        nfillheight.Value = 0.55
-    End Sub
-    Private Sub defautdataforball()
-        On Error Resume Next
-
-        With dgvt1ball
-
-            .Rows.Add(8)
-            .Rows(0).Cells(0).Value = "21 K Bharadwaja"
-            .Rows(1).Cells(0).Value = "52 N Sri Sai"
-            .Rows(2).Cells(0).Value = "73 A K Prajapati"
-            .Rows(3).Cells(0).Value = "34 Deepesh Sahu"
-            .Rows(4).Cells(0).Value = "18 Vatsal Reshamwala"
-            .Rows(5).Cells(0).Value = "22 Devanshu Soni"
-            .Rows(6).Cells(0).Value = "23 Honey Mehra"
-            .Rows(7).Cells(0).Value = "24 Mayank Jain"
-
-        End With
-    End Sub
-
-    Private Sub cmdt1lineupball_Click(sender As Object, e As EventArgs) Handles cmdt1lineupball.Click
-        On Error Resume Next
-        CasparCGDataCollection.Clear()
-        For i = 0 To 7
-            CasparCGDataCollection.SetData("ccgf" & i, dgvt1ball.Rows(i).Cells(0).Value)
-        Next
-        CasparCGDataCollection.SetData("ccgheader", dgvtrack.CurrentRow.Cells(3).Value)
-        CasparCGDataCollection.SetData("ccgsubheader", "Team List")
-        CasparCGDataCollection.SetData("ccg_ln0", dgvtrack.CurrentRow.Cells(0).Value)
-        CasparCGDataCollection.SetData("ccg_code0",dgvtrack.CurrentRow.Cells(1).Value)
-        CasparCGDataCollection.SetData("ccgloader1", dgvtrack.CurrentRow.Cells(6).Value.Replace("\", "/"))
-        CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
-        CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
-        showtemplate("ng2022/template/track/teamlineup2", CasparCGDataCollection.ToAMCPEscapedXml)
-    End Sub
-
-    Private Sub cmdnewt1ball_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub cmdopent1ball_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub cmdsavet1ball_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub cmduprowt1ball_Click(sender As Object, e As EventArgs) Handles cmduprowt1ball.Click
-        On Error Resume Next
-        upsg(dgvt1ball)
-    End Sub
-
-    Private Sub cmddownrowt1ball_Click(sender As Object, e As EventArgs) Handles cmddownrowt1ball.Click
-        On Error Resume Next
-        downsg(dgvt1ball)
-    End Sub
-
-    Private Sub cmdremoverowt1ball_Click_1(sender As Object, e As EventArgs) Handles cmdremoverowt1ball.Click
-        deletesg(dgvt1ball)
-    End Sub
-
-    Private Sub cmdaddrowt1ball_Click_1(sender As Object, e As EventArgs) Handles cmdaddrowt1ball.Click
-        insertsg(dgvt1ball)
-    End Sub
-
-    Private Sub cmdnewt1ball_Click_1(sender As Object, e As EventArgs) Handles cmdnewt1ball.Click
-        On Error Resume Next
-        newdatasg(dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
-    End Sub
-
-    Private Sub cmdopent1ball_Click_1(sender As Object, e As EventArgs) Handles cmdopent1ball.Click
-        On Error Resume Next
-        opendatasg("C:\casparcg\ng2022\data\track\teamlist", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
-
-    End Sub
-
-    Private Sub cmdsavet1ball_Click_1(sender As Object, e As EventArgs) Handles cmdsavet1ball.Click
-        On Error Resume Next
-        savedatasg("C:\casparcg\ng2022\data\track\teamlist", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
-    End Sub
 
     Private Sub gamelogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gamelogo.Click
         On Error Resume Next
@@ -799,7 +660,7 @@ Public Class ucTrack
 
             CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
-            showtemplate("ng2022/template/track/intermediatResultwithHeading", CasparCGDataCollection.ToAMCPEscapedXml)
+            showtemplate("ng2022/template/canoeslalom/intermediatResultwithHeading", CasparCGDataCollection.ToAMCPEscapedXml)
         End With
     End Sub
 
@@ -809,11 +670,11 @@ Public Class ucTrack
         CasparCGDataCollection.SetData("ccg_start", txtFalseStart.Text)
 
         CasparCGDataCollection.SetData("ccgf0", dgvtrack.CurrentRow.Cells(3).Value)
-        CasparCGDataCollection.SetData("ccgf1", dgvtrack.CurrentRow.Cells(0).Value)
+        'CasparCGDataCollection.SetData("ccgf1", dgvtrack.CurrentRow.Cells(0).Value)
         CasparCGDataCollection.SetData("ccgf2", dgvtrack.CurrentRow.Cells(1).Value)
         CasparCGDataCollection.SetData("ccgloader1", dgvtrack.CurrentRow.Cells(6).Value.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
-        showtemplate("ng2022/template/Track/falseStart", CasparCGDataCollection.ToAMCPEscapedXml)
+        showtemplate("ng2022/template/canoeslalom/falseStart", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 End Class
