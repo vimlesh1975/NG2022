@@ -126,6 +126,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ucGymnastic.Designer.vb">
+      <DependentUpon>ucGymnastic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucGymnastic.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucNetBall.designer.vb">
       <DependentUpon>ucNetBall.vb</DependentUpon>
     </Compile>
@@ -196,6 +202,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucGymnastic.resx">
+      <DependentUpon>ucGymnastic.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucNetBall.resx">
       <DependentUpon>ucNetBall.vb</DependentUpon>

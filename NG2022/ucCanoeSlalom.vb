@@ -24,79 +24,102 @@ Public Class ucCanoeSlalom
             .Rows(0).Cells(1).Value = "IND"
             .Rows(0).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/india.png")
             .Rows(0).Cells(3).Value = "MOHAMAD ALGARNI"
-            .Rows(0).Cells(4).Value = 7.2
+            .Rows(0).Cells(4).Value = 87.2
             .Rows(0).Cells(6).Value = "C:/casparcg/NG2022/data/flag/india.png"
+            .Rows(0).Cells(7).Value = 2
+            .Rows(0).Cells(8).Value = 50
+
 
             .Rows(1).Cells(0).Value = 2
             .Rows(1).Cells(1).Value = "AFG"
             .Rows(1).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Afghanistan.png")
             .Rows(1).Cells(3).Value = "SANDEEP KARAN SINGH"
-            .Rows(1).Cells(4).Value = 7.33
+            .Rows(1).Cells(4).Value = 77.33
             .Rows(1).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Afghanistan.png"
+            .Rows(1).Cells(7).Value = 3
+            .Rows(1).Cells(8).Value = 100
 
             .Rows(2).Cells(0).Value = 3
             .Rows(2).Cells(1).Value = "PAK"
             .Rows(2).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Pakistan.png")
             .Rows(2).Cells(3).Value = "EMAD HAMED NOUR"
-            .Rows(2).Cells(4).Value = 7.1
+            .Rows(2).Cells(4).Value = 97.1
             .Rows(2).Cells(5).Value = 2
             .Rows(2).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Pakistan.png"
+            .Rows(2).Cells(7).Value = 7
+            .Rows(2).Cells(8).Value = 50
 
             .Rows(3).Cells(0).Value = 4
             .Rows(3).Cells(1).Value = "NEP"
             .Rows(3).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Nepal.png")
             .Rows(3).Cells(3).Value = "RASHEED RAMZI"
-            .Rows(3).Cells(4).Value = 7.11
+            .Rows(3).Cells(4).Value = 107.11
             .Rows(3).Cells(5).Value = 3
             .Rows(3).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Nepal.png"
+            .Rows(3).Cells(7).Value = 3
+            .Rows(3).Cells(8).Value = 0
 
 
             .Rows(4).Cells(0).Value = 5
             .Rows(4).Cells(1).Value = "SRI"
             .Rows(4).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Sri-Lanka.png")
             .Rows(4).Cells(3).Value = "HAMZA DRIOUCH"
-            .Rows(4).Cells(4).Value = 7.32
+            .Rows(4).Cells(4).Value = 105.32
             .Rows(4).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Sri-Lanka.png"
-
+            .Rows(4).Cells(7).Value = 0
+            .Rows(4).Cells(8).Value = 100
 
             .Rows(5).Cells(0).Value = 6
             .Rows(5).Cells(1).Value = "BHU"
             .Rows(5).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Bhutan.png")
             .Rows(5).Cells(3).Value = "RAM PRASAD SAHANI"
-            .Rows(5).Cells(4).Value = 7.35
+            .Rows(5).Cells(4).Value = 96.35
             .Rows(5).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Bhutan.png"
-
+            .Rows(5).Cells(7).Value = 3
+            .Rows(5).Cells(8).Value = 150
 
             .Rows(6).Cells(0).Value = 7
             .Rows(6).Cells(1).Value = "MDV"
             .Rows(6).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Maldives.png")
             .Rows(6).Cells(3).Value = "ABDULLAH OBAID"
-            .Rows(6).Cells(4).Value = 7.18
+            .Rows(6).Cells(4).Value = 106.18
             .Rows(6).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Maldives.png"
-
+            .Rows(6).Cells(7).Value = 2
+            .Rows(6).Cells(8).Value = 50
 
 
             .Rows(7).Cells(0).Value = 8
             .Rows(7).Cells(1).Value = "BAN"
             .Rows(7).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Bangladesh.png")
             .Rows(7).Cells(3).Value = "VIMLESH KUMAR"
-            .Rows(7).Cells(4).Value = 7.06
+            .Rows(7).Cells(4).Value = 85.06
             .Rows(7).Cells(5).Value = 1
             .Rows(7).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Bangladesh.png"
+            .Rows(7).Cells(7).Value = 4
+            .Rows(7).Cells(8).Value = 150
 
             .Rows(8).Cells(0).Value = 9
             .Rows(8).Cells(1).Value = "ITA"
             .Rows(8).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Italy.png")
             .Rows(8).Cells(3).Value = "PREM LAL GUPTA"
-            .Rows(8).Cells(4).Value = 7.45
+            .Rows(8).Cells(4).Value = 84.45
             .Rows(8).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Italy.png"
+            .Rows(8).Cells(7).Value = 5
+            .Rows(8).Cells(8).Value = 200
+
 
             .Rows(9).Cells(0).Value = 10
             .Rows(9).Cells(1).Value = "AUS"
             .Rows(9).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Australia.png")
             .Rows(9).Cells(3).Value = "NITIN V SUMANTH"
-            .Rows(9).Cells(4).Value = 7.48
+            .Rows(9).Cells(4).Value = 108.48
             .Rows(9).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Australia.png"
+            .Rows(9).Cells(7).Value = 4
+            .Rows(9).Cells(8).Value = 250
+
+            For i = 0 To .RowCount - 2
+                .Rows(i).Cells(9).Value = Val(.Rows(i).Cells(4).Value) + Val(.Rows(i).Cells(7).Value) + Val(.Rows(i).Cells(8).Value)
+            Next
 
 
         End With
@@ -180,7 +203,7 @@ Public Class ucCanoeSlalom
                 CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(6).Value.Replace("\", "/"))
 
                 CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
-                CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(4).Value, Double), "00.00").Replace(".", ":"))
+                CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(9).Value, Double), "000.00"))
 
             Next
 
@@ -208,7 +231,7 @@ Public Class ucCanoeSlalom
                 CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(6).Value.Replace("\", "/"))
 
                 CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
-                CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(4).Value, Double), "00.00").Replace(".", ":"))
+                CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(9).Value, Double), "000.00"))
 
 
             Next
@@ -279,7 +302,7 @@ Public Class ucCanoeSlalom
         On Error Resume Next
 
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("uptimer1", txttimerminutetrac.Text + ":" + txttimersecondtrack.Text + "." + "000")
+        CasparCGDataCollection.SetData("uptimer1", Format(Val(txttimerminutetrac.Text) * 60 + txttimersecondtrack.Text, "000") + "." + "000")
         CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, "ng2022/template/canoeslalom/timer", True, CasparCGDataCollection.ToAMCPEscapedXml)
         'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "startTimer(" & (txttimerminutetrac.Text) * 60000 + (txttimersecondtrack.Text) * 1000 & ")" & """")
@@ -288,23 +311,14 @@ Public Class ucCanoeSlalom
 
     End Sub
 
-    Dim pauseCount = 0
     Private Sub cmdtimerpausetrack_Click(sender As Object, e As EventArgs) Handles cmdtimerpausetrack.Click
         On Error Resume Next
-        'CasparCGDataCollection.Clear()
+        CasparCGDataCollection.Clear()
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "pause()" & """")
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, CasparCGDataCollection)
-
-        dgvtrack.CurrentRow.Cells(4).Value = txttimerminutetrac.Text + "." + Format(Val(txttimersecondtrack.Text), "00")
-        pauseCount += 1
-        dgvtrack.CurrentRow.Cells(5).Value = pauseCount
-        cmdfillresulttrack.PerformClick()
-        updatecmdIntermediatResult.PerformClick()
-        'Thread.Sleep(2000)
-        'txttimersecondtrack.Text = Val(txttimersecondtrack) + 2
-        If pauseCount < 8 Then
-            cmdtimerresumetrack.PerformClick()
-        End If
+        dgvtrack.CurrentRow.Cells(4).Value = Val(txttimerminutetrac.Text) * 60 + Val(txttimersecondtrack.Text)
+        'cmdfillresulttrack.PerformClick()
+        'updatecmdIntermediatResult.PerformClick()
+        tmrtimeonform.Enabled = False
     End Sub
 
 
@@ -336,9 +350,7 @@ Public Class ucCanoeSlalom
     Private Sub cmdtimerremovetrack_Click(sender As Object, e As EventArgs) Handles cmdtimerremovetrack.Click
         On Error Resume Next
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1)
-        Threading.Thread.Sleep(2000)
         tmrtimeonform.Enabled = False
-        pauseCount = 0
     End Sub
 
     Private Sub cmdindivisualresulttrack_Click(sender As Object, e As EventArgs) Handles cmdindivisualresulttrack.Click
@@ -346,15 +358,14 @@ Public Class ucCanoeSlalom
         CasparCGDataCollection.Clear()
         With dgvtrackresult
 
-            CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
-            CasparCGDataCollection.SetData("ccgsubheader", cmbSubHeader.Text)
-
-            CasparCGDataCollection.SetData("ccg_ln" & 0, .CurrentRow.Cells(0).Value)
             CasparCGDataCollection.SetData("ccg_code" & 0, .CurrentRow.Cells(1).Value)
             CasparCGDataCollection.SetData("ccgloader" & 0, .CurrentRow.Cells(6).Value.Replace("\", "/"))
 
             CasparCGDataCollection.SetData("ccgf" & 0, .CurrentRow.Cells(3).Value)
-            CasparCGDataCollection.SetData("ccg_r" & 0, Format(CType(.CurrentRow.Cells(4).Value, Double), "00.00").Replace(".", ":"))
+            CasparCGDataCollection.SetData("ccg_t" & 0, Format(CType(.CurrentRow.Cells(4).Value, Double), "000.00"))
+            CasparCGDataCollection.SetData("ccg_h" & 0, .CurrentRow.Cells(7).Value)
+            CasparCGDataCollection.SetData("ccg_m" & 0, .CurrentRow.Cells(8).Value)
+            CasparCGDataCollection.SetData("ccg_r" & 0, Format(CType(.CurrentRow.Cells(9).Value, Double), "000.00"))
 
             CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
@@ -394,7 +405,6 @@ Public Class ucCanoeSlalom
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
         Threading.Thread.Sleep(1000)
         If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
-        'tmrtimeupdateontemplate.Enabled = False
 
     End Sub
 
@@ -444,7 +454,7 @@ Public Class ucCanoeSlalom
     End Sub
 
     Private Sub cmdSaveas1_Click(sender As Object, e As EventArgs) Handles cmdSaveas1.Click
-        saveasdatasg("C:\casparcg\ng2022\data\track", dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1track)
+        saveasdatasg("C:\casparcg\ng2022\data\canoeslalom", dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1track)
 
     End Sub
 
@@ -461,11 +471,11 @@ Public Class ucCanoeSlalom
             CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(6).Value.Replace("\", "/"))
 
             CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
-            CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(4).Value, Double), "00.00").Replace(".", ":"))
+            CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(9).Value, Double), "000.00"))
 
             CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
-            showtemplate("ng2022/template/canoeslalom/indivisulascore", CasparCGDataCollection.ToAMCPEscapedXml)
+            showtemplate("ng2022/template/canoeslalom/winner", CasparCGDataCollection.ToAMCPEscapedXml)
 
         End With
     End Sub
@@ -504,28 +514,7 @@ Public Class ucCanoeSlalom
         cmdtimerresumetrack.PerformClick()
     End Sub
 
-    Private Sub cmdLeader_Click(sender As Object, e As EventArgs) Handles cmdLeader.Click
-        On Error Resume Next
-        CasparCGDataCollection.Clear()
-        With dgvtrackresult
 
-            'CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
-            'CasparCGDataCollection.SetData("ccgsubheader", "Winner-" + cmbSubHeader.Text)
-
-            Dim i = 0
-            CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(1).Value)
-            CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(6).Value.Replace("\", "/"))
-            CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
-            CasparCGDataCollection.SetData("ccgLeader", txtLeader.Text)
-
-
-
-            CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
-            CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
-            showtemplate("ng2022/template/canoeslalom/leader", CasparCGDataCollection.ToAMCPEscapedXml)
-
-        End With
-    End Sub
 
     Private Sub cmdIntermediatResult_Click(sender As Object, e As EventArgs) Handles cmdIntermediatResult.Click
         On Error Resume Next
@@ -533,17 +522,17 @@ Public Class ucCanoeSlalom
         With dgvtrackresult
 
             For i = 0 To .RowCount - 2
-                CasparCGDataCollection.SetData("ccg_ln" & i, .Rows(i).Cells(0).Value)
+                CasparCGDataCollection.SetData("ccg_ln" & i, i + 1)
                 CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(1).Value)
                 CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(6).Value.Replace("\", "/"))
 
                 CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
 
                 If i <> 0 Then
-                    CasparCGDataCollection.SetData("ccg_r" & i, "+" & (Format(CType(.Rows(i).Cells(4).Value, Double) - CType(.Rows(0).Cells(4).Value, Double), "00.00")).Replace(".", ":"))
+                    CasparCGDataCollection.SetData("ccg_r" & i, "+" & (Format(CType(.Rows(i).Cells(9).Value, Double) - CType(.Rows(0).Cells(9).Value, Double), "000.00")))
 
                 Else
-                    CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(4).Value, Double), "00.00").Replace(".", ":"))
+                    CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(9).Value, Double), "000.00"))
 
                 End If
 
@@ -608,10 +597,10 @@ Public Class ucCanoeSlalom
                 CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
 
                 If i <> 0 Then
-                    CasparCGDataCollection.SetData("ccg_r" & i, "+" & (Format(CType(.Rows(i).Cells(4).Value, Double) - CType(.Rows(0).Cells(4).Value, Double), "00.00")).Replace(".", ":"))
+                    CasparCGDataCollection.SetData("ccg_r" & i, "+" & (Format(CType(.Rows(i).Cells(4).Value, Double) - CType(.Rows(0).Cells(4).Value, Double), "000.00")))
 
                 Else
-                    CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(4).Value, Double), "00.00").Replace(".", ":"))
+                    CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(4).Value, Double), "000.00"))
 
                 End If
 
@@ -629,6 +618,9 @@ Public Class ucCanoeSlalom
         For ii = 0 To dgvtrack.RowCount - 1
             dgvtrack.Rows(ii).Cells(4).Value = ""
             dgvtrack.Rows(ii).Cells(5).Value = ""
+            dgvtrack.Rows(ii).Cells(7).Value = 0
+            dgvtrack.Rows(ii).Cells(8).Value = 0
+            dgvtrack.Rows(ii).Cells(9).Value = 0
         Next
 
     End Sub
@@ -641,7 +633,7 @@ Public Class ucCanoeSlalom
             CasparCGDataCollection.SetData("ccg_subHeader", txtStanding.Text)
 
             For i = 0 To .RowCount - 2
-                CasparCGDataCollection.SetData("ccg_ln" & i, .Rows(i).Cells(0).Value)
+                CasparCGDataCollection.SetData("ccg_ln" & i, i + 1)
 
                 CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(1).Value)
                 CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(6).Value.Replace("\", "/"))
@@ -649,10 +641,10 @@ Public Class ucCanoeSlalom
                 CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
 
                 If i <> 0 Then
-                    CasparCGDataCollection.SetData("ccg_r" & i, "+" & (Format(CType(.Rows(i).Cells(4).Value, Double) - CType(.Rows(0).Cells(4).Value, Double), "00.00")).Replace(".", ":"))
+                    CasparCGDataCollection.SetData("ccg_r" & i, "+" & (Format(CType(.Rows(i).Cells(9).Value, Double) - CType(.Rows(0).Cells(9).Value, Double), "000.00")))
 
                 Else
-                    CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(4).Value, Double), "00.00").Replace(".", ":"))
+                    CasparCGDataCollection.SetData("ccg_r" & i, Format(CType(.Rows(i).Cells(9).Value, Double), "000.00"))
 
                 End If
 
@@ -676,5 +668,48 @@ Public Class ucCanoeSlalom
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/canoeslalom/falseStart", CasparCGDataCollection.ToAMCPEscapedXml)
+    End Sub
+
+    Private Sub cmdplayerId2_Click(sender As Object, e As EventArgs) Handles cmdplayerId2.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        CasparCGDataCollection.SetData("ccgf0", dgvtrack.CurrentRow.Cells(3).Value)
+        'CasparCGDataCollection.SetData("ccgf1", dgvtrack.CurrentRow.Cells(0).Value)
+        CasparCGDataCollection.SetData("ccgf2", dgvtrack.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccgloader1", dgvtrack.CurrentRow.Cells(6).Value.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
+        showtemplate("ng2022/template/canoeslalom/player_id2", CasparCGDataCollection.ToAMCPEscapedXml)
+    End Sub
+
+    Private Sub cmdCourseDescription_Click(sender As Object, e As EventArgs) Handles cmdCourseDescription.Click
+        showtemplate("ng2022/template/canoeslalom/CourseDescription", CasparCGDataCollection.ToAMCPEscapedXml)
+
+    End Sub
+
+    Sub calculateTotal()
+        With dgvtrack
+            For i = 0 To .RowCount - 2
+                .Rows(i).Cells(9).Value = Val(.Rows(i).Cells(4).Value) + Val(.Rows(i).Cells(7).Value) + Val(.Rows(i).Cells(8).Value)
+            Next
+        End With
+    End Sub
+
+    Private Sub dgvtrack_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvtrack.CellValueChanged
+        If e.ColumnIndex = 4 Or e.ColumnIndex = 7 Or e.ColumnIndex = 8 Then
+            calculateTotal()
+        End If
+    End Sub
+
+    Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
+
+    End Sub
+
+    Private Sub cmblayergames_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmblayergames.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
+
     End Sub
 End Class

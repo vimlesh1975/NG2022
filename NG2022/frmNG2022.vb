@@ -13,6 +13,10 @@ Public Class frmNG2022
 
         CasparDevice.Connect(cmbhost.Text, txtport.Text)
         UcCasparcgWindow1.SetProcessParent("casparcg")
+        'ultraTabControl1.Tabs[0].TabPage.AutoScroll = true;
+        TabControl1.TabPages("Gymnastic").AutoScroll = True
+
+
     End Sub
     Sub connectionhandler()
         'On Error Resume Next
@@ -208,6 +212,10 @@ Public Class frmNG2022
     End Sub
 
     Private Sub UcTrack1_Load(sender As Object, e As EventArgs) Handles UcTrack1.Load
+
+    End Sub
+
+    Private Sub UcCanoeSlalom1_Load(sender As Object, e As EventArgs) Handles UcCanoeSlalom1.Load
 
     End Sub
 End Class

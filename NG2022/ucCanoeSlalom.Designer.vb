@@ -38,6 +38,9 @@ Partial Class ucCanoeSlalom
         Me.DataGridViewTextBoxColumn44 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn45 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.imglocation2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmdsortbyvaluetrack = New System.Windows.Forms.Button()
         Me.lblfilenametrack = New System.Windows.Forms.Label()
         Me.gbtstrack = New System.Windows.Forms.GroupBox()
@@ -60,7 +63,11 @@ Partial Class ucCanoeSlalom
         Me.Column41 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.imglocation1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Heats = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Misses = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbtimertrack = New System.Windows.Forms.GroupBox()
+        Me.cmdplayerId2 = New System.Windows.Forms.Button()
         Me.cmdRemoveLap = New System.Windows.Forms.Button()
         Me.cmblaptrack = New System.Windows.Forms.ComboBox()
         Me.cmdlaptrack = New System.Windows.Forms.Button()
@@ -95,7 +102,6 @@ Partial Class ucCanoeSlalom
         Me.lblfilenamet1track = New System.Windows.Forms.Label()
         Me.cmdWinner = New System.Windows.Forms.Button()
         Me.cmdRecords = New System.Windows.Forms.Button()
-        Me.cmdLeader = New System.Windows.Forms.Button()
         Me.cmdIntermediatResult = New System.Windows.Forms.Button()
         Me.tmrtimeonform = New System.Windows.Forms.Timer(Me.components)
         Me.updatecmdIntermediatResult = New System.Windows.Forms.Button()
@@ -104,9 +110,9 @@ Partial Class ucCanoeSlalom
         Me.txtStanding = New System.Windows.Forms.TextBox()
         Me.cmdClearValue = New System.Windows.Forms.Button()
         Me.txtWinner = New System.Windows.Forms.TextBox()
-        Me.txtLeader = New System.Windows.Forms.TextBox()
         Me.cmdfalseStart = New System.Windows.Forms.Button()
         Me.txtFalseStart = New System.Windows.Forms.TextBox()
+        Me.cmdCourseDescription = New System.Windows.Forms.Button()
         CType(Me.dgvtrackresult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbtstrack.SuspendLayout()
         Me.ToolStrip4.SuspendLayout()
@@ -123,7 +129,7 @@ Partial Class ucCanoeSlalom
         '
         Me.dgvtrackresult.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrackresult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvtrackresult.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn41, Me.DataGridViewTextBoxColumn42, Me.DataGridViewComboBoxColumn3, Me.DataGridViewTextBoxColumn43, Me.DataGridViewTextBoxColumn44, Me.DataGridViewTextBoxColumn45, Me.imglocation2})
+        Me.dgvtrackresult.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn41, Me.DataGridViewTextBoxColumn42, Me.DataGridViewComboBoxColumn3, Me.DataGridViewTextBoxColumn43, Me.DataGridViewTextBoxColumn44, Me.DataGridViewTextBoxColumn45, Me.imglocation2, Me.Column3, Me.Column4, Me.Column6})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -136,7 +142,7 @@ Partial Class ucCanoeSlalom
         Me.dgvtrackresult.Location = New System.Drawing.Point(26, 529)
         Me.dgvtrackresult.Name = "dgvtrackresult"
         Me.dgvtrackresult.RowTemplate.Height = 30
-        Me.dgvtrackresult.Size = New System.Drawing.Size(474, 364)
+        Me.dgvtrackresult.Size = New System.Drawing.Size(643, 423)
         Me.dgvtrackresult.TabIndex = 1298
         '
         'DataGridViewTextBoxColumn41
@@ -201,6 +207,27 @@ Partial Class ucCanoeSlalom
         Me.imglocation2.MinimumWidth = 2
         Me.imglocation2.Name = "imglocation2"
         Me.imglocation2.Width = 2
+        '
+        'Column3
+        '
+        Me.Column3.Frozen = True
+        Me.Column3.HeaderText = "Heats"
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 50
+        '
+        'Column4
+        '
+        Me.Column4.Frozen = True
+        Me.Column4.HeaderText = "Misses"
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 50
+        '
+        'Column6
+        '
+        Me.Column6.Frozen = True
+        Me.Column6.HeaderText = "Total"
+        Me.Column6.Name = "Column6"
+        Me.Column6.Width = 50
         '
         'cmdsortbyvaluetrack
         '
@@ -331,7 +358,7 @@ Partial Class ucCanoeSlalom
         '
         Me.dgvtrack.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvtrack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn48, Me.Column2, Me.DataGridViewComboBoxColumn2, Me.DataGridViewTextBoxColumn49, Me.Column41, Me.Column1, Me.imglocation1})
+        Me.dgvtrack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn48, Me.Column2, Me.DataGridViewComboBoxColumn2, Me.DataGridViewTextBoxColumn49, Me.Column41, Me.Column1, Me.imglocation1, Me.Heats, Me.Misses, Me.Column5})
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -344,7 +371,7 @@ Partial Class ucCanoeSlalom
         Me.dgvtrack.Location = New System.Drawing.Point(26, 158)
         Me.dgvtrack.Name = "dgvtrack"
         Me.dgvtrack.RowTemplate.Height = 30
-        Me.dgvtrack.Size = New System.Drawing.Size(474, 364)
+        Me.dgvtrack.Size = New System.Drawing.Size(643, 364)
         Me.dgvtrack.TabIndex = 1293
         '
         'DataGridViewTextBoxColumn48
@@ -410,9 +437,28 @@ Partial Class ucCanoeSlalom
         Me.imglocation1.Name = "imglocation1"
         Me.imglocation1.Width = 2
         '
+        'Heats
+        '
+        Me.Heats.HeaderText = "Heats"
+        Me.Heats.Name = "Heats"
+        Me.Heats.Width = 50
+        '
+        'Misses
+        '
+        Me.Misses.HeaderText = "Misses"
+        Me.Misses.Name = "Misses"
+        Me.Misses.Width = 50
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Total"
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 50
+        '
         'gbtimertrack
         '
         Me.gbtimertrack.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.gbtimertrack.Controls.Add(Me.cmdplayerId2)
         Me.gbtimertrack.Controls.Add(Me.cmdRemoveLap)
         Me.gbtimertrack.Controls.Add(Me.cmblaptrack)
         Me.gbtimertrack.Controls.Add(Me.cmdlaptrack)
@@ -426,12 +472,21 @@ Partial Class ucCanoeSlalom
         Me.gbtimertrack.Controls.Add(Me.txttimersecondtrack)
         Me.gbtimertrack.Controls.Add(Me.txttimerminutetrac)
         Me.gbtimertrack.Controls.Add(Me.cmdtimertrack)
-        Me.gbtimertrack.Location = New System.Drawing.Point(505, 322)
+        Me.gbtimertrack.Location = New System.Drawing.Point(704, 321)
         Me.gbtimertrack.Name = "gbtimertrack"
         Me.gbtimertrack.Size = New System.Drawing.Size(213, 144)
         Me.gbtimertrack.TabIndex = 1304
         Me.gbtimertrack.TabStop = False
         Me.gbtimertrack.Text = "Timer"
+        '
+        'cmdplayerId2
+        '
+        Me.cmdplayerId2.Location = New System.Drawing.Point(142, 13)
+        Me.cmdplayerId2.Name = "cmdplayerId2"
+        Me.cmdplayerId2.Size = New System.Drawing.Size(65, 23)
+        Me.cmdplayerId2.TabIndex = 1338
+        Me.cmdplayerId2.Text = "Player ID"
+        Me.cmdplayerId2.UseVisualStyleBackColor = True
         '
         'cmdRemoveLap
         '
@@ -448,13 +503,13 @@ Partial Class ucCanoeSlalom
         'cmblaptrack
         '
         Me.cmblaptrack.FormattingEnabled = True
-        Me.cmblaptrack.Items.AddRange(New Object() {"1000M", "1500M", "2 Laps to Go", "2000M", "2nd Lap", "500M", "FINISH"})
+        Me.cmblaptrack.Items.AddRange(New Object() {"1000M", "1500M", "2 Laps to Go", "2000M", "2nd Lap", "500M", "FINISH", "Penalty 52"})
         Me.cmblaptrack.Location = New System.Drawing.Point(6, 113)
         Me.cmblaptrack.Name = "cmblaptrack"
         Me.cmblaptrack.Size = New System.Drawing.Size(91, 21)
         Me.cmblaptrack.Sorted = True
         Me.cmblaptrack.TabIndex = 1315
-        Me.cmblaptrack.Text = "1000M"
+        Me.cmblaptrack.Text = "Penalty 52"
         '
         'cmdlaptrack
         '
@@ -499,7 +554,7 @@ Partial Class ucCanoeSlalom
         '
         'cmdtimerresumetrack
         '
-        Me.cmdtimerresumetrack.Location = New System.Drawing.Point(88, 13)
+        Me.cmdtimerresumetrack.Location = New System.Drawing.Point(81, 13)
         Me.cmdtimerresumetrack.Name = "cmdtimerresumetrack"
         Me.cmdtimerresumetrack.Size = New System.Drawing.Size(57, 23)
         Me.cmdtimerresumetrack.TabIndex = 1287
@@ -512,7 +567,7 @@ Partial Class ucCanoeSlalom
         Me.cmdtimerpausetrack.Name = "cmdtimerpausetrack"
         Me.cmdtimerpausetrack.Size = New System.Drawing.Size(132, 23)
         Me.cmdtimerpausetrack.TabIndex = 1286
-        Me.cmdtimerpausetrack.Text = "Set Value and Position"
+        Me.cmdtimerpausetrack.Text = "Set Value"
         Me.cmdtimerpausetrack.UseVisualStyleBackColor = True
         '
         'Label3
@@ -560,7 +615,7 @@ Partial Class ucCanoeSlalom
         '
         'cmdtopthreetrack
         '
-        Me.cmdtopthreetrack.Location = New System.Drawing.Point(505, 524)
+        Me.cmdtopthreetrack.Location = New System.Drawing.Point(704, 523)
         Me.cmdtopthreetrack.Name = "cmdtopthreetrack"
         Me.cmdtopthreetrack.Size = New System.Drawing.Size(75, 28)
         Me.cmdtopthreetrack.TabIndex = 1302
@@ -569,7 +624,7 @@ Partial Class ucCanoeSlalom
         '
         'cmdresulttrack
         '
-        Me.cmdresulttrack.Location = New System.Drawing.Point(505, 555)
+        Me.cmdresulttrack.Location = New System.Drawing.Point(704, 554)
         Me.cmdresulttrack.Name = "cmdresulttrack"
         Me.cmdresulttrack.Size = New System.Drawing.Size(75, 28)
         Me.cmdresulttrack.TabIndex = 1301
@@ -578,7 +633,7 @@ Partial Class ucCanoeSlalom
         '
         'cmdPlyerIdtrack
         '
-        Me.cmdPlyerIdtrack.Location = New System.Drawing.Point(683, 261)
+        Me.cmdPlyerIdtrack.Location = New System.Drawing.Point(700, 231)
         Me.cmdPlyerIdtrack.Name = "cmdPlyerIdtrack"
         Me.cmdPlyerIdtrack.Size = New System.Drawing.Size(75, 23)
         Me.cmdPlyerIdtrack.TabIndex = 1300
@@ -587,7 +642,7 @@ Partial Class ucCanoeSlalom
         '
         'cmdstartlisttrack
         '
-        Me.cmdstartlisttrack.Location = New System.Drawing.Point(505, 187)
+        Me.cmdstartlisttrack.Location = New System.Drawing.Point(700, 186)
         Me.cmdstartlisttrack.Name = "cmdstartlisttrack"
         Me.cmdstartlisttrack.Size = New System.Drawing.Size(75, 23)
         Me.cmdstartlisttrack.TabIndex = 1299
@@ -596,7 +651,7 @@ Partial Class ucCanoeSlalom
         '
         'cmdindivisualresulttrack
         '
-        Me.cmdindivisualresulttrack.Location = New System.Drawing.Point(507, 589)
+        Me.cmdindivisualresulttrack.Location = New System.Drawing.Point(706, 588)
         Me.cmdindivisualresulttrack.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdindivisualresulttrack.Name = "cmdindivisualresulttrack"
         Me.cmdindivisualresulttrack.Size = New System.Drawing.Size(95, 28)
@@ -749,7 +804,7 @@ Partial Class ucCanoeSlalom
         '
         'cmdWinner
         '
-        Me.cmdWinner.Location = New System.Drawing.Point(589, 677)
+        Me.cmdWinner.Location = New System.Drawing.Point(788, 635)
         Me.cmdWinner.Name = "cmdWinner"
         Me.cmdWinner.Size = New System.Drawing.Size(75, 28)
         Me.cmdWinner.TabIndex = 1314
@@ -758,21 +813,12 @@ Partial Class ucCanoeSlalom
         '
         'cmdRecords
         '
-        Me.cmdRecords.Location = New System.Drawing.Point(507, 159)
+        Me.cmdRecords.Location = New System.Drawing.Point(700, 158)
         Me.cmdRecords.Name = "cmdRecords"
         Me.cmdRecords.Size = New System.Drawing.Size(75, 23)
         Me.cmdRecords.TabIndex = 1318
         Me.cmdRecords.Text = "Records"
         Me.cmdRecords.UseVisualStyleBackColor = True
-        '
-        'cmdLeader
-        '
-        Me.cmdLeader.Location = New System.Drawing.Point(591, 643)
-        Me.cmdLeader.Name = "cmdLeader"
-        Me.cmdLeader.Size = New System.Drawing.Size(75, 28)
-        Me.cmdLeader.TabIndex = 1321
-        Me.cmdLeader.Text = "Leader"
-        Me.cmdLeader.UseVisualStyleBackColor = True
         '
         'cmdIntermediatResult
         '
@@ -789,7 +835,7 @@ Partial Class ucCanoeSlalom
         '
         'updatecmdIntermediatResult
         '
-        Me.updatecmdIntermediatResult.Location = New System.Drawing.Point(141, 8)
+        Me.updatecmdIntermediatResult.Location = New System.Drawing.Point(145, 11)
         Me.updatecmdIntermediatResult.Name = "updatecmdIntermediatResult"
         Me.updatecmdIntermediatResult.Size = New System.Drawing.Size(52, 87)
         Me.updatecmdIntermediatResult.TabIndex = 1330
@@ -803,7 +849,7 @@ Partial Class ucCanoeSlalom
         Me.GroupBox2.Controls.Add(Me.cmdIntermediatResult)
         Me.GroupBox2.Controls.Add(Me.cmdIntermediatResultwithsubHeader)
         Me.GroupBox2.Controls.Add(Me.txtStanding)
-        Me.GroupBox2.Location = New System.Drawing.Point(626, 524)
+        Me.GroupBox2.Location = New System.Drawing.Point(812, 519)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(203, 104)
         Me.GroupBox2.TabIndex = 1331
@@ -837,23 +883,15 @@ Partial Class ucCanoeSlalom
         '
         'txtWinner
         '
-        Me.txtWinner.Location = New System.Drawing.Point(509, 682)
+        Me.txtWinner.Location = New System.Drawing.Point(708, 640)
         Me.txtWinner.Name = "txtWinner"
         Me.txtWinner.Size = New System.Drawing.Size(74, 20)
         Me.txtWinner.TabIndex = 1333
         Me.txtWinner.Text = "Winner"
         '
-        'txtLeader
-        '
-        Me.txtLeader.Location = New System.Drawing.Point(511, 644)
-        Me.txtLeader.Name = "txtLeader"
-        Me.txtLeader.Size = New System.Drawing.Size(74, 20)
-        Me.txtLeader.TabIndex = 1334
-        Me.txtLeader.Text = "Leader"
-        '
         'cmdfalseStart
         '
-        Me.cmdfalseStart.Location = New System.Drawing.Point(788, 290)
+        Me.cmdfalseStart.Location = New System.Drawing.Point(817, 261)
         Me.cmdfalseStart.Name = "cmdfalseStart"
         Me.cmdfalseStart.Size = New System.Drawing.Size(75, 23)
         Me.cmdfalseStart.TabIndex = 1336
@@ -862,23 +900,31 @@ Partial Class ucCanoeSlalom
         '
         'txtFalseStart
         '
-        Me.txtFalseStart.Location = New System.Drawing.Point(677, 293)
+        Me.txtFalseStart.Location = New System.Drawing.Point(700, 263)
         Me.txtFalseStart.Name = "txtFalseStart"
         Me.txtFalseStart.Size = New System.Drawing.Size(108, 20)
         Me.txtFalseStart.TabIndex = 1337
         Me.txtFalseStart.Text = "False Start DSQ"
         '
+        'cmdCourseDescription
+        '
+        Me.cmdCourseDescription.Location = New System.Drawing.Point(802, 158)
+        Me.cmdCourseDescription.Name = "cmdCourseDescription"
+        Me.cmdCourseDescription.Size = New System.Drawing.Size(115, 28)
+        Me.cmdCourseDescription.TabIndex = 1338
+        Me.cmdCourseDescription.Text = "Course Description"
+        Me.cmdCourseDescription.UseVisualStyleBackColor = True
+        '
         'ucCanoeSlalom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.cmdCourseDescription)
         Me.Controls.Add(Me.txtFalseStart)
         Me.Controls.Add(Me.cmdfalseStart)
-        Me.Controls.Add(Me.txtLeader)
         Me.Controls.Add(Me.txtWinner)
         Me.Controls.Add(Me.cmdClearValue)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.cmdLeader)
         Me.Controls.Add(Me.cmdRecords)
         Me.Controls.Add(Me.cmdWinner)
         Me.Controls.Add(Me.cmdSaveas1)
@@ -903,7 +949,7 @@ Partial Class ucCanoeSlalom
         Me.Controls.Add(Me.cmdfillresulttrack)
         Me.Controls.Add(Me.dgvtrack)
         Me.Name = "ucCanoeSlalom"
-        Me.Size = New System.Drawing.Size(1134, 947)
+        Me.Size = New System.Drawing.Size(1134, 967)
         CType(Me.dgvtrackresult, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbtstrack.ResumeLayout(False)
         Me.gbtstrack.PerformLayout()
@@ -969,26 +1015,11 @@ Partial Class ucCanoeSlalom
     Friend WithEvents Label1 As Label
     Friend WithEvents eventlogo As PictureBox
     Friend WithEvents gamelogo As PictureBox
-    Friend WithEvents DataGridViewTextBoxColumn41 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn42 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewComboBoxColumn3 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewTextBoxColumn43 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn44 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn45 As DataGridViewTextBoxColumn
-    Friend WithEvents imglocation2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn48 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewComboBoxColumn2 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewTextBoxColumn49 As DataGridViewTextBoxColumn
-    Friend WithEvents Column41 As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents imglocation1 As DataGridViewTextBoxColumn
     Friend WithEvents cmdSaveas1 As Button
     Friend WithEvents lblfilenamet1track As Label
     Friend WithEvents cmdWinner As Button
     Friend WithEvents cmblaptrack As ComboBox
     Friend WithEvents cmdRecords As Button
-    Friend WithEvents cmdLeader As Button
     Friend WithEvents cmdIntermediatResult As Button
     Friend WithEvents cmdRemoveLap As Button
     Friend WithEvents tmrtimeonform As Timer
@@ -996,9 +1027,30 @@ Partial Class ucCanoeSlalom
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents cmdClearValue As Button
     Friend WithEvents txtWinner As TextBox
-    Friend WithEvents txtLeader As TextBox
     Friend WithEvents txtStanding As TextBox
     Friend WithEvents cmdIntermediatResultwithsubHeader As Button
     Friend WithEvents cmdfalseStart As Button
     Friend WithEvents txtFalseStart As TextBox
+    Friend WithEvents DataGridViewTextBoxColumn48 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewComboBoxColumn2 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewTextBoxColumn49 As DataGridViewTextBoxColumn
+    Friend WithEvents Column41 As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents imglocation1 As DataGridViewTextBoxColumn
+    Friend WithEvents Heats As DataGridViewTextBoxColumn
+    Friend WithEvents Misses As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn41 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn42 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewComboBoxColumn3 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewTextBoxColumn43 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn44 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn45 As DataGridViewTextBoxColumn
+    Friend WithEvents imglocation2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents cmdplayerId2 As Button
+    Friend WithEvents cmdCourseDescription As Button
 End Class
