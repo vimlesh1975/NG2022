@@ -645,23 +645,11 @@ Public Class ucTrack
         CasparCGDataCollection.SetData("ccgheader", dgvtrack.CurrentRow.Cells(3).Value)
         CasparCGDataCollection.SetData("ccgsubheader", "Team List")
         CasparCGDataCollection.SetData("ccg_ln0", dgvtrack.CurrentRow.Cells(0).Value)
-        CasparCGDataCollection.SetData("ccg_code0",dgvtrack.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccg_code0", dgvtrack.CurrentRow.Cells(1).Value)
         CasparCGDataCollection.SetData("ccgloader1", dgvtrack.CurrentRow.Cells(6).Value.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/track/teamlineup2", CasparCGDataCollection.ToAMCPEscapedXml)
-    End Sub
-
-    Private Sub cmdnewt1ball_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub cmdopent1ball_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub cmdsavet1ball_Click(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub cmduprowt1ball_Click(sender As Object, e As EventArgs) Handles cmduprowt1ball.Click

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucGymnastic
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,14 @@ Partial Class ucGymnastic
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucGymnastic))
         Me.dgvGymnastics = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -55,6 +55,8 @@ Partial Class ucGymnastic
         Me.Score = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.imgAddress = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmdcleardatagym = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.cmbchangecolumnnamegym = New System.Windows.Forms.ComboBox()
@@ -147,6 +149,21 @@ Partial Class ucGymnastic
         Me.eventlogo = New System.Windows.Forms.PictureBox()
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.cmbgames = New System.Windows.Forms.ComboBox()
+        Me.Team = New System.Windows.Forms.GroupBox()
+        Me.lblfilenamet1ball = New System.Windows.Forms.Label()
+        Me.GroupBox23 = New System.Windows.Forms.GroupBox()
+        Me.cmduprowt1ball = New System.Windows.Forms.Button()
+        Me.cmdremoverowt1ball = New System.Windows.Forms.Button()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.cmdnewt1ball = New System.Windows.Forms.ToolStripButton()
+        Me.cmdopent1ball = New System.Windows.Forms.ToolStripButton()
+        Me.cmdsavet1ball = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.cmddownrowt1ball = New System.Windows.Forms.Button()
+        Me.cmdaddrowt1ball = New System.Windows.Forms.Button()
+        Me.dgvt1ball = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvGymnastics, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
@@ -157,25 +174,29 @@ Partial Class ucGymnastic
         Me.GroupBox3.SuspendLayout()
         CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gamelogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Team.SuspendLayout()
+        Me.GroupBox23.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
+        CType(Me.dgvt1ball, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvGymnastics
         '
         Me.dgvGymnastics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvGymnastics.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column7, Me.Column8, Me.Column9, Me.Column20, Me.Column6, Me.Column4, Me.Column11, Me.Column10, Me.Column13, Me.Column12, Me.Column24, Me.Column23, Me.Column22, Me.Column14, Me.Column21, Me.Column25, Me.Column15, Me.Column16, Me.Column17, Me.Column18, Me.Column28, Me.Column19, Me.Penalties, Me.Score, Me.Column26, Me.Column27})
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvGymnastics.DefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvGymnastics.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column7, Me.Column8, Me.Column9, Me.Column20, Me.Column6, Me.Column4, Me.Column11, Me.Column10, Me.Column13, Me.Column12, Me.Column24, Me.Column23, Me.Column22, Me.Column14, Me.Column21, Me.Column25, Me.Column15, Me.Column16, Me.Column17, Me.Column18, Me.Column28, Me.Column19, Me.Penalties, Me.Score, Me.Column26, Me.Column27, Me.imgAddress, Me.Column29})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvGymnastics.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvGymnastics.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvGymnastics.Location = New System.Drawing.Point(3, 587)
         Me.dgvGymnastics.Name = "dgvGymnastics"
         Me.dgvGymnastics.RowTemplate.Height = 24
-        Me.dgvGymnastics.Size = New System.Drawing.Size(1347, 271)
+        Me.dgvGymnastics.Size = New System.Drawing.Size(1509, 271)
         Me.dgvGymnastics.TabIndex = 5
         '
         'Column1
@@ -196,7 +217,6 @@ Partial Class ucGymnastic
         '
         Me.Column3.Frozen = True
         Me.Column3.HeaderText = "Country"
-        Me.Column3.Items.AddRange(New Object() {"BLK", "A_N", "AP", "ARP", "ASM", "BIH", "CG", "CHA", "D_D", "DEL", "DNH", "GOA", "GUJ", "HAR", "HP", "J_K", "JHA", "KAR", "KER", "LD", "MAH", "MAN", "MGA", "MIZ", "MP", "NAG", "ORI", "PON", "PUN", "RAJ", "SER", "SIK", "TN", "TRI", "TS", "UK", "UP", "WB"})
         Me.Column3.Name = "Column3"
         Me.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
@@ -361,6 +381,18 @@ Partial Class ucGymnastic
         '
         Me.Column27.HeaderText = "Official ID"
         Me.Column27.Name = "Column27"
+        '
+        'imgAddress
+        '
+        Me.imgAddress.HeaderText = ""
+        Me.imgAddress.Name = "imgAddress"
+        Me.imgAddress.Width = 5
+        '
+        'Column29
+        '
+        Me.Column29.HeaderText = "Column29"
+        Me.Column29.Name = "Column29"
+        Me.Column29.Width = 50
         '
         'cmdcleardatagym
         '
@@ -530,7 +562,7 @@ Partial Class ucGymnastic
         '
         'cmdteamlist
         '
-        Me.cmdteamlist.Location = New System.Drawing.Point(390, 268)
+        Me.cmdteamlist.Location = New System.Drawing.Point(11, 295)
         Me.cmdteamlist.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdteamlist.Name = "cmdteamlist"
         Me.cmdteamlist.Size = New System.Drawing.Size(72, 34)
@@ -1239,7 +1271,7 @@ Partial Class ucGymnastic
         'gamelogo
         '
         Me.gamelogo.BackColor = System.Drawing.SystemColors.Highlight
-        Me.gamelogo.ImageLocation = "C:/casparcg/ng2022/data/games logo/nb.png"
+        Me.gamelogo.ImageLocation = "C:/casparcg/ng2022/data/games logo/Gymnastics - Artistic.png"
         Me.gamelogo.Location = New System.Drawing.Point(946, 65)
         Me.gamelogo.Name = "gamelogo"
         Me.gamelogo.Size = New System.Drawing.Size(22, 19)
@@ -1254,13 +1286,152 @@ Partial Class ucGymnastic
         Me.cmbgames.Name = "cmbgames"
         Me.cmbgames.Size = New System.Drawing.Size(113, 21)
         Me.cmbgames.TabIndex = 1330
-        Me.cmbgames.Text = "BasketBall"
+        Me.cmbgames.Text = "Gymnastics - Artistic"
+        '
+        'Team
+        '
+        Me.Team.BackColor = System.Drawing.Color.MistyRose
+        Me.Team.Controls.Add(Me.lblfilenamet1ball)
+        Me.Team.Controls.Add(Me.GroupBox23)
+        Me.Team.Controls.Add(Me.dgvt1ball)
+        Me.Team.Controls.Add(Me.cmdteamlist)
+        Me.Team.Location = New System.Drawing.Point(71, 147)
+        Me.Team.Name = "Team"
+        Me.Team.Size = New System.Drawing.Size(262, 341)
+        Me.Team.TabIndex = 1331
+        Me.Team.TabStop = False
+        Me.Team.Text = "Team List By Current Lane"
+        '
+        'lblfilenamet1ball
+        '
+        Me.lblfilenamet1ball.AutoSize = True
+        Me.lblfilenamet1ball.Location = New System.Drawing.Point(6, 24)
+        Me.lblfilenamet1ball.Name = "lblfilenamet1ball"
+        Me.lblfilenamet1ball.Size = New System.Drawing.Size(81, 13)
+        Me.lblfilenamet1ball.TabIndex = 1327
+        Me.lblfilenamet1ball.Text = "lblfilenamet1ball"
+        '
+        'GroupBox23
+        '
+        Me.GroupBox23.Controls.Add(Me.cmduprowt1ball)
+        Me.GroupBox23.Controls.Add(Me.cmdremoverowt1ball)
+        Me.GroupBox23.Controls.Add(Me.ToolStrip1)
+        Me.GroupBox23.Controls.Add(Me.cmddownrowt1ball)
+        Me.GroupBox23.Controls.Add(Me.cmdaddrowt1ball)
+        Me.GroupBox23.Location = New System.Drawing.Point(6, 56)
+        Me.GroupBox23.Name = "GroupBox23"
+        Me.GroupBox23.Size = New System.Drawing.Size(189, 35)
+        Me.GroupBox23.TabIndex = 1326
+        Me.GroupBox23.TabStop = False
+        '
+        'cmduprowt1ball
+        '
+        Me.cmduprowt1ball.Image = CType(resources.GetObject("cmduprowt1ball.Image"), System.Drawing.Image)
+        Me.cmduprowt1ball.Location = New System.Drawing.Point(88, 8)
+        Me.cmduprowt1ball.Name = "cmduprowt1ball"
+        Me.cmduprowt1ball.Size = New System.Drawing.Size(22, 18)
+        Me.cmduprowt1ball.TabIndex = 1201
+        Me.cmduprowt1ball.UseVisualStyleBackColor = True
+        '
+        'cmdremoverowt1ball
+        '
+        Me.cmdremoverowt1ball.BackgroundImage = CType(resources.GetObject("cmdremoverowt1ball.BackgroundImage"), System.Drawing.Image)
+        Me.cmdremoverowt1ball.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold)
+        Me.cmdremoverowt1ball.Location = New System.Drawing.Point(160, 8)
+        Me.cmdremoverowt1ball.Name = "cmdremoverowt1ball"
+        Me.cmdremoverowt1ball.Size = New System.Drawing.Size(22, 18)
+        Me.cmdremoverowt1ball.TabIndex = 1200
+        Me.cmdremoverowt1ball.UseVisualStyleBackColor = True
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cmdnewt1ball, Me.cmdopent1ball, Me.cmdsavet1ball, Me.ToolStripSeparator3, Me.ToolStripSeparator4})
+        Me.ToolStrip1.Location = New System.Drawing.Point(5, 6)
+        Me.ToolStrip1.MaximumSize = New System.Drawing.Size(200, 200)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(93, 25)
+        Me.ToolStrip1.TabIndex = 1199
+        Me.ToolStrip1.Text = "ToolStrip3"
+        '
+        'cmdnewt1ball
+        '
+        Me.cmdnewt1ball.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.cmdnewt1ball.Image = CType(resources.GetObject("cmdnewt1ball.Image"), System.Drawing.Image)
+        Me.cmdnewt1ball.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdnewt1ball.Name = "cmdnewt1ball"
+        Me.cmdnewt1ball.Size = New System.Drawing.Size(23, 22)
+        Me.cmdnewt1ball.Text = "&New"
+        '
+        'cmdopent1ball
+        '
+        Me.cmdopent1ball.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.cmdopent1ball.Image = CType(resources.GetObject("cmdopent1ball.Image"), System.Drawing.Image)
+        Me.cmdopent1ball.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdopent1ball.Name = "cmdopent1ball"
+        Me.cmdopent1ball.Size = New System.Drawing.Size(23, 22)
+        Me.cmdopent1ball.Text = "&Open"
+        '
+        'cmdsavet1ball
+        '
+        Me.cmdsavet1ball.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.cmdsavet1ball.Image = CType(resources.GetObject("cmdsavet1ball.Image"), System.Drawing.Image)
+        Me.cmdsavet1ball.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.cmdsavet1ball.Name = "cmdsavet1ball"
+        Me.cmdsavet1ball.Size = New System.Drawing.Size(23, 22)
+        Me.cmdsavet1ball.Text = "&Save"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        '
+        'cmddownrowt1ball
+        '
+        Me.cmddownrowt1ball.Image = CType(resources.GetObject("cmddownrowt1ball.Image"), System.Drawing.Image)
+        Me.cmddownrowt1ball.Location = New System.Drawing.Point(110, 8)
+        Me.cmddownrowt1ball.Name = "cmddownrowt1ball"
+        Me.cmddownrowt1ball.Size = New System.Drawing.Size(22, 18)
+        Me.cmddownrowt1ball.TabIndex = 1198
+        Me.cmddownrowt1ball.UseVisualStyleBackColor = True
+        '
+        'cmdaddrowt1ball
+        '
+        Me.cmdaddrowt1ball.Image = CType(resources.GetObject("cmdaddrowt1ball.Image"), System.Drawing.Image)
+        Me.cmdaddrowt1ball.Location = New System.Drawing.Point(133, 8)
+        Me.cmdaddrowt1ball.Name = "cmdaddrowt1ball"
+        Me.cmdaddrowt1ball.Size = New System.Drawing.Size(22, 18)
+        Me.cmdaddrowt1ball.TabIndex = 1197
+        Me.cmdaddrowt1ball.UseVisualStyleBackColor = True
+        '
+        'dgvt1ball
+        '
+        Me.dgvt1ball.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvt1ball.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn27})
+        Me.dgvt1ball.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.dgvt1ball.Location = New System.Drawing.Point(10, 91)
+        Me.dgvt1ball.Name = "dgvt1ball"
+        Me.dgvt1ball.RowTemplate.Height = 18
+        Me.dgvt1ball.Size = New System.Drawing.Size(243, 198)
+        Me.dgvt1ball.TabIndex = 1324
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.Width = 190
         '
         'ucGymnastic
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.Controls.Add(Me.Team)
         Me.Controls.Add(Me.cmbgames)
         Me.Controls.Add(Me.cmdstopgym)
         Me.Controls.Add(Me.Label30)
@@ -1320,7 +1491,6 @@ Partial Class ucGymnastic
         Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.chkwithnumbergym)
-        Me.Controls.Add(Me.cmdteamlist)
         Me.Controls.Add(Me.lblfilenamegym)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cmdplayeridgym)
@@ -1328,7 +1498,7 @@ Partial Class ucGymnastic
         Me.Controls.Add(Me.cmdgymnasticsstsrtlist1)
         Me.Controls.Add(Me.dgvGymnastics)
         Me.Name = "ucGymnastic"
-        Me.Size = New System.Drawing.Size(1353, 905)
+        Me.Size = New System.Drawing.Size(1543, 905)
         CType(Me.dgvGymnastics, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
@@ -1346,42 +1516,19 @@ Partial Class ucGymnastic
         Me.GroupBox3.PerformLayout()
         CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gamelogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Team.ResumeLayout(False)
+        Me.Team.PerformLayout()
+        Me.GroupBox23.ResumeLayout(False)
+        Me.GroupBox23.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        CType(Me.dgvt1ball, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents dgvGymnastics As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewComboBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents Column20 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column11 As DataGridViewTextBoxColumn
-    Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents Column13 As DataGridViewTextBoxColumn
-    Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents Column24 As DataGridViewTextBoxColumn
-    Friend WithEvents Column23 As DataGridViewTextBoxColumn
-    Friend WithEvents Column22 As DataGridViewTextBoxColumn
-    Friend WithEvents Column14 As DataGridViewTextBoxColumn
-    Friend WithEvents Column21 As DataGridViewTextBoxColumn
-    Friend WithEvents Column25 As DataGridViewTextBoxColumn
-    Friend WithEvents Column15 As DataGridViewTextBoxColumn
-    Friend WithEvents Column16 As DataGridViewTextBoxColumn
-    Friend WithEvents Column17 As DataGridViewTextBoxColumn
-    Friend WithEvents Column18 As DataGridViewTextBoxColumn
-    Friend WithEvents Column28 As DataGridViewTextBoxColumn
-    Friend WithEvents Column19 As DataGridViewTextBoxColumn
-    Friend WithEvents Penalties As DataGridViewTextBoxColumn
-    Friend WithEvents Score As DataGridViewTextBoxColumn
-    Friend WithEvents Column26 As DataGridViewTextBoxColumn
-    Friend WithEvents Column27 As DataGridViewTextBoxColumn
     Friend WithEvents cmdcleardatagym As Button
     Friend WithEvents GroupBox8 As GroupBox
     Friend WithEvents cmbchangecolumnnamegym As ComboBox
@@ -1474,4 +1621,51 @@ Partial Class ucGymnastic
     Friend WithEvents eventlogo As PictureBox
     Friend WithEvents gamelogo As PictureBox
     Friend WithEvents cmbgames As ComboBox
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewImageColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
+    Friend WithEvents Column20 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
+    Friend WithEvents Column13 As DataGridViewTextBoxColumn
+    Friend WithEvents Column12 As DataGridViewTextBoxColumn
+    Friend WithEvents Column24 As DataGridViewTextBoxColumn
+    Friend WithEvents Column23 As DataGridViewTextBoxColumn
+    Friend WithEvents Column22 As DataGridViewTextBoxColumn
+    Friend WithEvents Column14 As DataGridViewTextBoxColumn
+    Friend WithEvents Column21 As DataGridViewTextBoxColumn
+    Friend WithEvents Column25 As DataGridViewTextBoxColumn
+    Friend WithEvents Column15 As DataGridViewTextBoxColumn
+    Friend WithEvents Column16 As DataGridViewTextBoxColumn
+    Friend WithEvents Column17 As DataGridViewTextBoxColumn
+    Friend WithEvents Column18 As DataGridViewTextBoxColumn
+    Friend WithEvents Column28 As DataGridViewTextBoxColumn
+    Friend WithEvents Column19 As DataGridViewTextBoxColumn
+    Friend WithEvents Penalties As DataGridViewTextBoxColumn
+    Friend WithEvents Score As DataGridViewTextBoxColumn
+    Friend WithEvents Column26 As DataGridViewTextBoxColumn
+    Friend WithEvents Column27 As DataGridViewTextBoxColumn
+    Friend WithEvents imgAddress As DataGridViewTextBoxColumn
+    Friend WithEvents Column29 As DataGridViewTextBoxColumn
+    Friend WithEvents Team As GroupBox
+    Friend WithEvents lblfilenamet1ball As Label
+    Friend WithEvents GroupBox23 As GroupBox
+    Friend WithEvents cmduprowt1ball As Button
+    Friend WithEvents cmdremoverowt1ball As Button
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents cmdnewt1ball As ToolStripButton
+    Friend WithEvents cmdopent1ball As ToolStripButton
+    Friend WithEvents cmdsavet1ball As ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents cmddownrowt1ball As Button
+    Friend WithEvents cmdaddrowt1ball As Button
+    Friend WithEvents dgvt1ball As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
 End Class

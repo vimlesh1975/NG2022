@@ -1,9 +1,13 @@
-﻿Public Class ucGymnastic
+﻿Imports System.Drawing.Printing
+Imports System.Net.NetworkInformation
+
+Public Class ucGymnastic
     Private Sub ucGymnastic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         gymnasticsdefaultdata()
+        defautdataforball()
 
         cmbgames.DataSource = New BindingSource(gameName, "")
-        cmbgames.Text = "Gymnastic"
+        cmbgames.Text = "Gymnastics - Artistic"
 
         cmbHeader.DataSource = New BindingSource(headerText, "")
         cmbHeader.Text = "World Gymnastic Cup 2023"
@@ -11,75 +15,128 @@
         cmbSubHeader.Text = "Men's Artistic Vault - Final"
 
     End Sub
-
-    Sub gymnasticsdefaultdata()
+    Private Sub defautdataforball()
         On Error Resume Next
 
+        With dgvt1ball
 
-        dgvGymnastics.Rows.Add(12)
+            .Rows.Add(8)
+            .Rows(0).Cells(0).Value = "21 K Bharadwaja"
+            .Rows(1).Cells(0).Value = "52 N Sri Sai"
+            .Rows(2).Cells(0).Value = "73 A K Prajapati"
+            .Rows(3).Cells(0).Value = "34 Deepesh Sahu"
+            .Rows(4).Cells(0).Value = "18 Vatsal Reshamwala"
+            .Rows(5).Cells(0).Value = "22 Devanshu Soni"
+            .Rows(6).Cells(0).Value = "23 Honey Mehra"
+            .Rows(7).Cells(0).Value = "24 Mayank Jain"
 
-        dgvGymnastics.Rows(0).Cells(0).Value = 1
-        dgvGymnastics.Rows(0).Cells(1).Value = "MOHAMAD ALGARNI"
-        dgvGymnastics.Rows(0).Cells(2).Value = "A_N"
-        dgvGymnastics.Rows(0).Cells(3).Value = 54.91
+        End With
+    End Sub
+    Sub gymnasticsdefaultdata()
+        On Error Resume Next
+        Column3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
 
-        dgvGymnastics.Rows(1).Cells(0).Value = 2
-        dgvGymnastics.Rows(1).Cells(1).Value = "SANDEEP KARAN SINGH"
-        dgvGymnastics.Rows(1).Cells(2).Value = "ARP"
-        dgvGymnastics.Rows(1).Cells(3).Value = 32.41
+        With dgvGymnastics
 
-        dgvGymnastics.Rows(2).Cells(0).Value = 3
-        dgvGymnastics.Rows(2).Cells(1).Value = "EMAD HAMED NOUR"
-        dgvGymnastics.Rows(2).Cells(2).Value = "BIH"
-        dgvGymnastics.Rows(2).Cells(3).Value = 51.25
 
-        dgvGymnastics.Rows(3).Cells(0).Value = 4
-        dgvGymnastics.Rows(3).Cells(1).Value = "RASHEED RAMZI"
-        dgvGymnastics.Rows(3).Cells(2).Value = "CHA"
-        dgvGymnastics.Rows(3).Cells(3).Value = 12.25
+            .Rows.Add(12)
+            Dim falg1 = "C:/casparcg/NG2022/data/flag/india.png"
 
-        dgvGymnastics.Rows(4).Cells(0).Value = 5
-        dgvGymnastics.Rows(4).Cells(1).Value = "HAMZA DRIOUCH"
-        dgvGymnastics.Rows(4).Cells(2).Value = "DEL"
-        dgvGymnastics.Rows(4).Cells(3).Value = 52.58
+            .Rows(0).Cells(0).Value = 1
+            dgvGymnastics.Rows(0).Cells(1).Value = "MOHAMAD ALGARNI"
+            dgvGymnastics.Rows(0).Cells(2).Value = Image.FromFile(falg1)
+            dgvGymnastics.Rows(0).Cells(30).Value = falg1
+            dgvGymnastics.Rows(0).Cells(31).Value = "IND"
 
-        dgvGymnastics.Rows(5).Cells(0).Value = 6
-        dgvGymnastics.Rows(5).Cells(1).Value = "SANDEEP KARAN SINGH"
-        dgvGymnastics.Rows(5).Cells(2).Value = "DNH"
-        dgvGymnastics.Rows(5).Cells(3).Value = 54.25
+            Dim falg2 = "C:/casparcg/NG2022/data/flag/Afghanistan.png"
+            dgvGymnastics.Rows(1).Cells(0).Value = 2
+            dgvGymnastics.Rows(1).Cells(1).Value = "SANDEEP KARAN SINGH"
+            dgvGymnastics.Rows(1).Cells(2).Value = Image.FromFile(falg2)
+            dgvGymnastics.Rows(1).Cells(30).Value = falg2
+            dgvGymnastics.Rows(1).Cells(31).Value = "AFG"
 
-        dgvGymnastics.Rows(6).Cells(0).Value = 7
-        dgvGymnastics.Rows(6).Cells(1).Value = "ABDULLAH OBAID"
-        dgvGymnastics.Rows(6).Cells(2).Value = "GOA"
-        dgvGymnastics.Rows(6).Cells(3).Value = 56.25
 
-        dgvGymnastics.Rows(7).Cells(0).Value = 8
-        dgvGymnastics.Rows(7).Cells(1).Value = "AMASSRI WESAM"
-        dgvGymnastics.Rows(7).Cells(2).Value = "GUJ"
-        dgvGymnastics.Rows(7).Cells(3).Value = 52.14
+            Dim falg3 = "C:/casparcg/NG2022/data/flag/Pakistan.png"
+            dgvGymnastics.Rows(2).Cells(0).Value = 3
+            dgvGymnastics.Rows(2).Cells(1).Value = "EMAD HAMED NOUR"
+            dgvGymnastics.Rows(2).Cells(2).Value = Image.FromFile(falg3)
+            dgvGymnastics.Rows(2).Cells(30).Value = falg3
+            dgvGymnastics.Rows(2).Cells(31).Value = "PAK"
 
-        dgvGymnastics.Rows(8).Cells(0).Value = 9
-        dgvGymnastics.Rows(8).Cells(1).Value = "SAJAD MORADI"
-        dgvGymnastics.Rows(8).Cells(2).Value = "KER"
-        dgvGymnastics.Rows(8).Cells(3).Value = 32.36
 
-        dgvGymnastics.Rows(9).Cells(0).Value = 10
-        dgvGymnastics.Rows(9).Cells(1).Value = "PRANJAL GOGOI"
-        dgvGymnastics.Rows(9).Cells(2).Value = "MAH"
-        dgvGymnastics.Rows(9).Cells(3).Value = 31.45
+            Dim falg4 = "C:/casparcg/NG2022/data/flag/Nepal.png"
+            dgvGymnastics.Rows(3).Cells(0).Value = 4
+            dgvGymnastics.Rows(3).Cells(1).Value = "RASHEED RAMZI"
+            dgvGymnastics.Rows(3).Cells(2).Value = Image.FromFile(falg4)
+            dgvGymnastics.Rows(3).Cells(30).Value = falg4
+            dgvGymnastics.Rows(3).Cells(31).Value = "NEP"
 
-        dgvGymnastics.Rows(10).Cells(0).Value = 11
-        dgvGymnastics.Rows(10).Cells(1).Value = "MOHAMMAD ALAZEMI"
-        dgvGymnastics.Rows(10).Cells(2).Value = "MGA"
-        dgvGymnastics.Rows(10).Cells(3).Value = 47.18
 
-        dgvGymnastics.Rows(11).Cells(0).Value = 12
-        dgvGymnastics.Rows(11).Cells(1).Value = "YUKI AKIMOTO"
-        dgvGymnastics.Rows(11).Cells(2).Value = "ORI"
-        dgvGymnastics.Rows(11).Cells(3).Value = 41.42
+            Dim falg5 = "C:/casparcg/NG2022/data/flag/Eritrea.png"
+            dgvGymnastics.Rows(4).Cells(0).Value = 5
+            dgvGymnastics.Rows(4).Cells(1).Value = "HAMZA DRIOUCH"
+            dgvGymnastics.Rows(4).Cells(2).Value = Image.FromFile(falg5)
+            dgvGymnastics.Rows(4).Cells(30).Value = falg5
+            dgvGymnastics.Rows(4).Cells(31).Value = "ERI"
+
+
+            Dim falg6 = "C:/casparcg/NG2022/data/flag/Malaysia.png"
+            dgvGymnastics.Rows(5).Cells(0).Value = 6
+            dgvGymnastics.Rows(5).Cells(1).Value = "SANDEEP KARAN SINGH"
+            dgvGymnastics.Rows(5).Cells(2).Value = Image.FromFile(falg6)
+            dgvGymnastics.Rows(5).Cells(30).Value = falg6
+            dgvGymnastics.Rows(5).Cells(31).Value = "MAL"
+
+            Dim falg7 = ("C:/casparcg/NG2022/data/flag/Sri-Lanka.png")
+            dgvGymnastics.Rows(6).Cells(0).Value = 7
+            dgvGymnastics.Rows(6).Cells(1).Value = "ABDULLAH OBAID"
+            dgvGymnastics.Rows(6).Cells(2).Value = Image.FromFile(falg7)
+            dgvGymnastics.Rows(6).Cells(30).Value = falg7
+            dgvGymnastics.Rows(6).Cells(31).Value = "SRI"
+
+
+            Dim falg8 = ("C:/casparcg/NG2022/data/flag/Bhutan.png")
+            dgvGymnastics.Rows(7).Cells(0).Value = 8
+            dgvGymnastics.Rows(7).Cells(1).Value = "AMASSRI WESAM"
+            dgvGymnastics.Rows(7).Cells(2).Value = Image.FromFile(falg8)
+            dgvGymnastics.Rows(7).Cells(30).Value = falg8
+            dgvGymnastics.Rows(7).Cells(31).Value = "BHU"
+
+
+            Dim falg9 = ("C:/casparcg/NG2022/data/flag/Maldives.png")
+            dgvGymnastics.Rows(8).Cells(0).Value = 9
+            dgvGymnastics.Rows(8).Cells(1).Value = "SAJAD MORADI"
+            dgvGymnastics.Rows(8).Cells(2).Value = Image.FromFile(falg9)
+            dgvGymnastics.Rows(8).Cells(30).Value = falg9
+            dgvGymnastics.Rows(8).Cells(31).Value = "MAL"
+
+
+            Dim falg10 = ("C:/casparcg/NG2022/data/flag/Bangladesh.png")
+            dgvGymnastics.Rows(9).Cells(0).Value = 10
+            dgvGymnastics.Rows(9).Cells(1).Value = "PRANJAL GOGOI"
+            dgvGymnastics.Rows(9).Cells(2).Value = Image.FromFile(falg10)
+            dgvGymnastics.Rows(9).Cells(30).Value = falg10
+            dgvGymnastics.Rows(9).Cells(31).Value = "BAN"
+
+
+            Dim falg11 = ("C:/casparcg/NG2022/data/flag/Italy.png")
+            dgvGymnastics.Rows(10).Cells(0).Value = 11
+            dgvGymnastics.Rows(10).Cells(1).Value = "MOHAMMAD ALAZEMI"
+            dgvGymnastics.Rows(10).Cells(2).Value = Image.FromFile(falg11)
+            dgvGymnastics.Rows(10).Cells(30).Value = falg11
+            dgvGymnastics.Rows(10).Cells(31).Value = "ITA"
+
+
+            Dim falg12 = ("C:/casparcg/NG2022/data/flag/Australia.png")
+            dgvGymnastics.Rows(11).Cells(0).Value = 12
+            dgvGymnastics.Rows(11).Cells(1).Value = "YUKI AKIMOTO"
+            dgvGymnastics.Rows(11).Cells(2).Value = Image.FromFile(falg12)
+            dgvGymnastics.Rows(11).Cells(30).Value = falg12
+            dgvGymnastics.Rows(11).Cells(31).Value = "AUS"
+        End With
 
         For i = 0 To dgvGymnastics.RowCount - 2
-            For j = 3 To dgvGymnastics.ColumnCount - 1
+            For j = 3 To 29
                 dgvGymnastics.Rows(i).Cells(j).Value = Format(i * j, "00.00")
             Next
         Next
@@ -88,39 +145,49 @@
 
     Private Sub cmdgymnasticsstsrtlist1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdgymnasticsstsrtlist1.Click
         On Error Resume Next
-        CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("header1", cmbHeader.Text)
-        For i = 0 To dgvGymnastics.RowCount - 1
-            If dgvGymnastics.Rows(i).Cells(0).Value <> "" Then
-                If chkwithnumbergym.Checked Then
-                    CasparCGDataCollection.SetData("sn" & i + 1, dgvGymnastics.Rows(i).Cells(0).Value)
-                End If
-                CasparCGDataCollection.SetData("loader" & i + 1, "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.Rows(i).Cells(2).Value & ".png")
-            End If
-            CasparCGDataCollection.SetData("name" & i + 1, dgvGymnastics.Rows(i).Cells(1).Value)
-        Next
-        CasparCGDataCollection.SetData("loader51", gamelogo.ImageLocation)
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
-        CasparCGDataCollection.SetData("startlist", cmbSubHeader.Text)
-        showtemplate("ng2022/template/Gymnastics/startlist1", CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+        CasparCGDataCollection.SetData("ccgsubheader", "Starting Lineup- " + cmbSubHeader.Text)
+
+        With dgvGymnastics
+
+            For i = 0 To 7
+                CasparCGDataCollection.SetData("ccg_ln" & i, .Rows(i).Cells(0).Value)
+                CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(31).Value)
+                CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(30).Value.Replace("\", "/"))
+
+                CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(1).Value)
+            Next
+        End With
+
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+        showtemplate("ng2022/template/Gymnastics/teamlineup", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
     Private Sub cmdgymnasticsstsrtlist2_Click(sender As Object, e As EventArgs) Handles cmdgymnasticsstsrtlist2.Click
+
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("header1", cmbHeader.Text)
-        For i = 8 To dgvGymnastics.RowCount - 1
-            If dgvGymnastics.Rows(i).Cells(0).Value <> "" Then
-                If chkwithnumbergym.Checked Then
-                    CasparCGDataCollection.SetData("sn" & i - 7, dgvGymnastics.Rows(i).Cells(0).Value)
+        CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+        CasparCGDataCollection.SetData("ccgsubheader", "Starting Lineup- " + cmbSubHeader.Text)
+
+        With dgvGymnastics
+
+            For i = 8 To .RowCount - 1
+                If .Rows(i).Cells(0).Value <> "" Then
+                    If chkwithnumbergym.Checked Then
+                        CasparCGDataCollection.SetData("ccg_ln" & i - 8, .Rows(i).Cells(0).Value)
+                    End If
+                    CasparCGDataCollection.SetData("ccg_code" & i - 8, .Rows(i).Cells(31).Value)
+                    CasparCGDataCollection.SetData("ccgloader" & i - 8, .Rows(i).Cells(30).Value.Replace("\", "/"))
+                    CasparCGDataCollection.SetData("ccgf" & i - 8, .Rows(i).Cells(1).Value)
                 End If
-                CasparCGDataCollection.SetData("loader" & i - 7, "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.Rows(i).Cells(2).Value & ".png")
-                CasparCGDataCollection.SetData("name" & i - 7, dgvGymnastics.Rows(i).Cells(1).Value)
-            End If
-        Next
-        CasparCGDataCollection.SetData("loader51", gamelogo.ImageLocation)
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
-        CasparCGDataCollection.SetData("startlist", cmbSubHeader.Text)
-        showtemplate("ng2022/template/Gymnastics/startlist1", CasparCGDataCollection.ToAMCPEscapedXml)
+            Next
+        End With
+
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+        showtemplate("ng2022/template/Gymnastics/teamlineup", CasparCGDataCollection.ToAMCPEscapedXml)
+
     End Sub
     Private Sub cmdstopgym_Click(sender As Object, e As EventArgs) Handles cmdstopgym.Click
         On Error Resume Next
@@ -134,11 +201,13 @@
     Private Sub cmdeventid_Click(sender As Object, e As EventArgs) Handles cmdeventid.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f0", cmbHeader.Text)
-        CasparCGDataCollection.SetData("f1", cmbSubHeader.Text)
-        CasparCGDataCollection.SetData("loader5", gamelogo.ImageLocation)
-        CasparCGDataCollection.SetData("loader6", eventlogo.ImageLocation)
+        CasparCGDataCollection.SetData("ccgf0", cmbHeader.Text)
+        CasparCGDataCollection.SetData("ccgf1", cmbSubHeader.Text)
+        CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
+
         showtemplate("ng2022/template/Gymnastics/event_id", CasparCGDataCollection.ToAMCPEscapedXml)
+
     End Sub
 
     Private Sub gamelogo_Click(sender As Object, e As EventArgs) Handles gamelogo.Click
@@ -158,24 +227,35 @@
     Private Sub cmdteamlist_Click(sender As Object, e As EventArgs) Handles cmdteamlist.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("subheader", cmbSubHeader.Text)
-        For i = 0 To 5
-            CasparCGDataCollection.SetData("f" & i, dgvGymnastics.Rows(i).Cells(1).Value)
+        For i = 0 To 7
+            CasparCGDataCollection.SetData("ccgf" & i, dgvt1ball.Rows(i).Cells(0).Value)
         Next
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader5", gamelogo.ImageLocation)
-        CasparCGDataCollection.SetData("loader6", eventlogo.ImageLocation)
-        showtemplate("ng2022/template/Gymnastics/teamlist", CasparCGDataCollection.ToAMCPEscapedXml)
+        With dgvGymnastics
+            CasparCGDataCollection.SetData("ccgheader", .CurrentRow.Cells(1).Value)
+            CasparCGDataCollection.SetData("ccgsubheader", "Team List")
+            'CasparCGDataCollection.SetData("ccg_ln0", .CurrentRow.Cells(0).Value)
+            CasparCGDataCollection.SetData("ccg_code0", .CurrentRow.Cells(31).Value)
+            CasparCGDataCollection.SetData("ccgloader1", .CurrentRow.Cells(30).Value.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
+        End With
+
+        showtemplate("ng2022/template/gymnastics/teamlineup2", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
     Private Sub cmdplayeridgym_Click(sender As Object, e As EventArgs) Handles cmdplayeridgym.Click
+
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f0", dgvGymnastics.CurrentRow.Cells(0).Value)
-        CasparCGDataCollection.SetData("f1", dgvGymnastics.CurrentRow.Cells(1).Value)
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/Gymnastics/player_id", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        With dgvGymnastics
+            CasparCGDataCollection.SetData("ccgf0", .CurrentRow.Cells(1).Value)
+            CasparCGDataCollection.SetData("ccgf1", .CurrentRow.Cells(0).Value)
+            CasparCGDataCollection.SetData("ccgf2", .CurrentRow.Cells(31).Value)
+            CasparCGDataCollection.SetData("ccgloader1", .CurrentRow.Cells(30).Value.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
+        End With
+
         showtemplate("ng2022/template/Gymnastics/player_id", CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
@@ -191,21 +271,18 @@
     End Sub
 
     Private Sub cmdplayergamepointgym_Click(sender As Object, e As EventArgs) Handles cmdplayergamepointgym.Click
+
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f1", dgvGymnastics.CurrentRow.Cells(1).Value)
-        CasparCGDataCollection.SetData("f2", dgvGymnastics.Columns(CType(cmbplayergamepointgym.Text, Integer)).HeaderText)
-        CasparCGDataCollection.SetData("f4", dgvGymnastics.CurrentRow.Cells(CType(cmbplayergamepointgym.Text, Integer)).Value)
-        If chkwithnumbergym.Checked Then
-            CasparCGDataCollection.SetData("f3", dgvGymnastics.CurrentRow.Cells(0).Value)
-            CasparCGDataCollection.SetData("alpha", 1)
-        Else
-            CasparCGDataCollection.SetData("f3", "")
-            CasparCGDataCollection.SetData("alpha", 0)
-        End If
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
-        showtemplate("ng2022/template/Gymnastics/player_any_score", CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparCGDataCollection.SetData("ccgheader", dgvGymnastics.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccgsubheader", dgvGymnastics.Columns(CType(cmbplayergamepointgym.Text, Integer)).HeaderText)
+        CasparCGDataCollection.SetData("ccg_r0", dgvGymnastics.CurrentRow.Cells(CType(cmbplayergamepointgym.Text, Integer)).Value)
+        CasparCGDataCollection.SetData("ccgloader0", dgvGymnastics.CurrentRow.Cells(30).Value.Replace("\", "/"))
+
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+
+        showtemplate("ng2022/template/Gymnastics/playerGamePoint", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
     Private Sub cmdchangecolumnnamegym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdchangecolumnnamegym.Click
@@ -216,185 +293,247 @@
     Private Sub cmdresult1gym_Click(sender As Object, e As EventArgs) Handles cmdresult1gym.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("header1", cmbHeader.Text)
-        For i = 0 To dgvGymnastics.RowCount - 1
-            If dgvGymnastics.Rows(i).Cells(0).Value <> "" Then
-                CasparCGDataCollection.SetData("sn" & i + 1, i + 1)
-                CasparCGDataCollection.SetData("loader" & i + 1, "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.Rows(i).Cells(2).Value & ".png")
-                CasparCGDataCollection.SetData("name" & i + 1, dgvGymnastics.Rows(i).Cells(1).Value)
-                CasparCGDataCollection.SetData("value" & i + 1, dgvGymnastics.Rows(i).Cells(CType(cmbstandingsgym.Text, Integer)).Value)
-                CasparCGDataCollection.SetData("alpha" & i + 1, 1)
-            End If
-        Next
-        CasparCGDataCollection.SetData("loader51", gamelogo.ImageLocation)
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
-        CasparCGDataCollection.SetData("startlist", cmbSubHeader.Text)
-        showtemplate("ng2022/template/Gymnastics/result1", CasparCGDataCollection.ToAMCPEscapedXml)
+        With dgvGymnastics
+            CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+            CasparCGDataCollection.SetData("ccgsubheader", "Standings- " & cmbSubHeader.Text)
+            For i = 0 To 7
+                If .Rows(i).Cells(0).Value <> "" Then
+                    CasparCGDataCollection.SetData("ccg_ln" & i, i + 1)
+                    CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(31).Value)
+                    CasparCGDataCollection.SetData("ccgred" & i, "")
+                    CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(30).Value.Replace("\", "/"))
+
+                    CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(1).Value)
+                    CasparCGDataCollection.SetData("ccg_r" & i, .Rows(i).Cells(CType(cmbstandingsgym.Text, Integer)).Value)
+
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
+
+                End If
+            Next
+            CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+            showtemplate("ng2022/template/Gymnastics/result", CasparCGDataCollection.ToAMCPEscapedXml)
+
+            For i = 0 To 7
+                If .Rows(i).Cells(0).Value <> "" Then
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
+                End If
+            Next
+        End With
     End Sub
 
     Private Sub cmdresult2gym_Click(sender As Object, e As EventArgs) Handles cmdresult2gym.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("header1", cmbHeader.Text)
-        For i = 8 To dgvGymnastics.RowCount - 1
-            If dgvGymnastics.Rows(i).Cells(0).Value <> "" Then
-                CasparCGDataCollection.SetData("sn" & i - 7, i + 1)
-                CasparCGDataCollection.SetData("loader" & i - 7, "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.Rows(i).Cells(2).Value & ".png")
-                CasparCGDataCollection.SetData("name" & i - 7, dgvGymnastics.Rows(i).Cells(1).Value)
-                CasparCGDataCollection.SetData("value" & i - 7, dgvGymnastics.Rows(i).Cells(CType(cmbstandingsgym.Text, Integer)).Value)
-                CasparCGDataCollection.SetData("alpha" & i - 7, 1)
-            End If
-        Next
-        CasparCGDataCollection.SetData("loader51", gamelogo.ImageLocation)
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
-        CasparCGDataCollection.SetData("startlist", cmbSubHeader.Text)
-        showtemplate("ng2022/template/Gymnastics/result1", CasparCGDataCollection.ToAMCPEscapedXml)
+        With dgvGymnastics
+            CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+            CasparCGDataCollection.SetData("ccgsubheader", "Standings- " & cmbSubHeader.Text)
+            For i = 8 To .RowCount - 1
+                If .Rows(i).Cells(0).Value <> "" Then
+                    CasparCGDataCollection.SetData("ccg_ln" & i - 8, i + 1)
+                    CasparCGDataCollection.SetData("ccg_code" & i - 8, .Rows(i).Cells(31).Value)
+                    CasparCGDataCollection.SetData("ccgloader" & i - 8, .Rows(i).Cells(30).Value.Replace("\", "/"))
+
+                    CasparCGDataCollection.SetData("ccgf" & i - 8, .Rows(i).Cells(1).Value)
+                    CasparCGDataCollection.SetData("ccg_r" & i - 8, .Rows(i).Cells(CType(cmbstandingsgym.Text, Integer)).Value)
+                End If
+            Next
+            CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+            showtemplate("ng2022/template/Gymnastics/result", CasparCGDataCollection.ToAMCPEscapedXml)
+            For i = 8 To .RowCount - 1
+                If .Rows(i).Cells(0).Value <> "" Then
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i - 8 & "').style.display = 'block'" & """")
+                End If
+            Next
+        End With
     End Sub
 
     Private Sub cmdtop3standingsgym_Click(sender As Object, e As EventArgs) Handles cmdtop3standingsgym.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        For i = 0 To dgvGymnastics.RowCount - 1
-            If dgvGymnastics.Rows(i).Cells(0).Value <> "" Then
-                'CasparCGDataCollection.SetData("sn" & i + 1, i + 1)
-                CasparCGDataCollection.SetData("loader" & i + 1, "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.Rows(i).Cells(2).Value & ".png")
-                CasparCGDataCollection.SetData("name" & i + 1, dgvGymnastics.Rows(i).Cells(1).Value)
-                CasparCGDataCollection.SetData("value" & i + 1, dgvGymnastics.Rows(i).Cells(CType(cmbstandingsgym.Text, Integer)).Value)
-                CasparCGDataCollection.SetData("alpha" & i + 1, 1)
-            End If
-        Next
-        CasparCGDataCollection.SetData("loader51", gamelogo.ImageLocation)
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
+        With dgvGymnastics
+            CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+            CasparCGDataCollection.SetData("ccgsubheader", "Standings- " & cmbSubHeader.Text)
+            For i = 0 To 2
+                If .Rows(i).Cells(0).Value <> "" Then
+                    CasparCGDataCollection.SetData("ccg_ln" & i, i + 1)
+                    CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(31).Value)
+                    CasparCGDataCollection.SetData("ccgred" & i, "")
+                    CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(30).Value.Replace("\", "/"))
 
-        CasparCGDataCollection.SetData("startlist", cmbSubHeader.Text)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/Gymnastics/top_three", True, CasparCGDataCollection.ToAMCPEscapedXml)
-        showtemplate("ng2022/template/Gymnastics/top_three", CasparCGDataCollection.ToAMCPEscapedXml)
+                    CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(1).Value)
+                    CasparCGDataCollection.SetData("ccg_r" & i, .Rows(i).Cells(CType(cmbstandingsgym.Text, Integer)).Value)
+
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
+
+                End If
+            Next
+            CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+            showtemplate("ng2022/template/Gymnastics/topthree", CasparCGDataCollection.ToAMCPEscapedXml)
+
+        End With
 
     End Sub
 
     Private Sub cmdVaultStandings1_Click(sender As Object, e As EventArgs) Handles cmdVaultStandings1.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("header1", cmbHeader.Text)
-        For i = 0 To dgvGymnastics.RowCount - 1
-            If dgvGymnastics.Rows(i).Cells(0).Value <> "" Then
-                CasparCGDataCollection.SetData("sn" & i + 1, i + 1)
-                CasparCGDataCollection.SetData("loader" & i + 1, "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.Rows(i).Cells(2).Value & ".png")
-                CasparCGDataCollection.SetData("name" & i + 1, dgvGymnastics.Rows(i).Cells(1).Value)
+        With dgvGymnastics
+            CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+            CasparCGDataCollection.SetData("ccgsubheader", "vault_standing- " & cmbSubHeader.Text)
+            For i = 0 To 7
+                If .Rows(i).Cells(0).Value <> "" Then
+                    CasparCGDataCollection.SetData("ccg_ln" & i, i + 1)
+                    CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(31).Value)
+                    CasparCGDataCollection.SetData("ccgred" & i, "")
+                    CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(30).Value.Replace("\", "/"))
 
-                CasparCGDataCollection.SetData("vault1" & i + 1, dgvGymnastics.Rows(i).Cells(20).Value)
-                CasparCGDataCollection.SetData("vault2" & i + 1, dgvGymnastics.Rows(i).Cells(21).Value)
-                CasparCGDataCollection.SetData("value" & i + 1, dgvGymnastics.Rows(i).Cells(22).Value)
-            End If
-        Next
-        CasparCGDataCollection.SetData("loader51", gamelogo.ImageLocation)
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
-        showtemplate("ng2022/template/Gymnastics/vault_standings", CasparCGDataCollection.ToAMCPEscapedXml)
+                    CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(1).Value)
+
+                    CasparCGDataCollection.SetData("ccg_r" & i, .Rows(i).Cells(20).Value)
+                    CasparCGDataCollection.SetData("ccg_r1" & i, .Rows(i).Cells(21).Value)
+                    CasparCGDataCollection.SetData("ccg_r2" & i, .Rows(i).Cells(22).Value)
+
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
+
+                End If
+            Next
+            CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+            showtemplate("ng2022/template/Gymnastics/vault_standings", CasparCGDataCollection.ToAMCPEscapedXml)
+
+            For i = 0 To 7
+                If .Rows(i).Cells(0).Value <> "" Then
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
+                End If
+            Next
+        End With
     End Sub
 
     Private Sub cmdVaultStandings2_Click(sender As Object, e As EventArgs) Handles cmdVaultStandings2.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("header1", cmbHeader.Text)
-        For i = 8 To dgvGymnastics.RowCount - 1
-            If dgvGymnastics.Rows(i).Cells(0).Value <> "" Then
-                CasparCGDataCollection.SetData("sn" & i - 7, i + 1)
-                CasparCGDataCollection.SetData("loader" & i - 7, "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.Rows(i).Cells(2).Value & ".png")
-                CasparCGDataCollection.SetData("name" & i - 7, dgvGymnastics.Rows(i).Cells(1).Value)
+        With dgvGymnastics
+            CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+            CasparCGDataCollection.SetData("ccgsubheader", "Standings- " & cmbSubHeader.Text)
+            For i = 8 To .RowCount - 1
+                If .Rows(i).Cells(0).Value <> "" Then
+                    CasparCGDataCollection.SetData("ccg_ln" & i - 8, i + 1)
+                    CasparCGDataCollection.SetData("ccg_code" & i - 8, .Rows(i).Cells(31).Value)
+                    CasparCGDataCollection.SetData("ccgloader" & i - 8, .Rows(i).Cells(30).Value.Replace("\", "/"))
 
-                CasparCGDataCollection.SetData("vault1" & i - 7, dgvGymnastics.Rows(i).Cells(20).Value)
-                CasparCGDataCollection.SetData("vault2" & i - 7, dgvGymnastics.Rows(i).Cells(21).Value)
-                CasparCGDataCollection.SetData("value" & i - 7, dgvGymnastics.Rows(i).Cells(22).Value)
-            End If
-        Next
-        CasparCGDataCollection.SetData("loader51", gamelogo.ImageLocation)
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
-        showtemplate("ng2022/template/Gymnastics/vault_standings", CasparCGDataCollection.ToAMCPEscapedXml)
+                    CasparCGDataCollection.SetData("ccgf" & i - 8, .Rows(i).Cells(1).Value)
+                    CasparCGDataCollection.SetData("ccg_r" & i - 8, .Rows(i).Cells(20).Value)
+                    CasparCGDataCollection.SetData("ccg_r1" & i - 8, .Rows(i).Cells(21).Value)
+                    CasparCGDataCollection.SetData("ccg_r2" & i - 8, .Rows(i).Cells(22).Value)
+                End If
+            Next
+            CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+            showtemplate("ng2022/template/Gymnastics/vault_standings", CasparCGDataCollection.ToAMCPEscapedXml)
+            For i = 8 To .RowCount - 1
+                If .Rows(i).Cells(0).Value <> "" Then
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i - 8 & "').style.display = 'block'" & """")
+                End If
+            Next
+        End With
     End Sub
 
     Private Sub cmdplayerscorecardgym_Click(sender As Object, e As EventArgs) Handles cmdplayerscorecardgym.Click
+
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f0", dgvGymnastics.CurrentRow.Cells(1).Value)
-        If rdoArtisticsgym.Checked Then
-            CasparCGDataCollection.SetData("f1", dgvGymnastics.Columns(23).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(23).Value & "   " & dgvGymnastics.Columns(25).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(25).Value & "   " & dgvGymnastics.Columns(26).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(26).Value)
-            CasparCGDataCollection.SetData("f2", dgvGymnastics.Columns(27).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(27).Value)
-            If chkwithnumbergym.Checked Then
-                CasparCGDataCollection.SetData("f3", dgvGymnastics.CurrentRow.Index + 1)
-                CasparCGDataCollection.SetData("alpha", 1)
-            Else
-                CasparCGDataCollection.SetData("f3", "")
-                CasparCGDataCollection.SetData("alpha", 0)
-            End If
-        Else
-            For i = 23 To 27
-                CasparCGDataCollection.SetData("f" & i - 22, dgvGymnastics.Columns(i).HeaderText)
-                CasparCGDataCollection.SetData("f" & i - 17, dgvGymnastics.CurrentRow.Cells(i).Value)
-            Next
+        CasparCGDataCollection.SetData("ccgheader", dgvGymnastics.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccgsubheader", dgvGymnastics.Columns(CType(cmbplayergamepointgym.Text, Integer)).HeaderText)
 
-            If chkwithnumbergym.Checked Then
-                CasparCGDataCollection.SetData("f15", dgvGymnastics.CurrentRow.Cells(0).Value)
-                CasparCGDataCollection.SetData("alpha", 1)
-            Else
-                CasparCGDataCollection.SetData("f15", "")
-                CasparCGDataCollection.SetData("alpha", 0)
-            End If
-        End If
+        CasparCGDataCollection.SetData("ccg_d", dgvGymnastics.CurrentRow.Cells(23).Value)
+        CasparCGDataCollection.SetData("ccg_e", dgvGymnastics.CurrentRow.Cells(25).Value)
+        CasparCGDataCollection.SetData("ccg_p", dgvGymnastics.CurrentRow.Cells(26).Value)
+        CasparCGDataCollection.SetData("ccg_r0", dgvGymnastics.CurrentRow.Cells(27).Value)
 
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader6", eventlogo.ImageLocation)
-        If rdoArtisticsgym.Checked Then
-            showtemplate("ng2022/template/Gymnastics/PlayerScorecard", CasparCGDataCollection.ToAMCPEscapedXml)
-        Else
-            showtemplate("ng2022/template/Gymnastics/PlayerScorecard2", CasparCGDataCollection.ToAMCPEscapedXml)
-        End If
+        CasparCGDataCollection.SetData("ccgloader0", dgvGymnastics.CurrentRow.Cells(30).Value.Replace("\", "/"))
+
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+
+        showtemplate("ng2022/template/Gymnastics/PlayerScorecard", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
     Private Sub cmdplayerscorecard2ndvaultgym_Click(sender As Object, e As EventArgs) Handles cmdplayerscorecard2ndvaultgym.Click
+        'On Error Resume Next
+        'CasparCGDataCollection.Clear()
+        'CasparCGDataCollection.SetData("f0", dgvGymnastics.CurrentRow.Cells(1).Value)
+        'If rdoArtisticsgym.Checked Then
+        '    CasparCGDataCollection.SetData("f1", dgvGymnastics.Columns(23).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(23).Value & "   " & dgvGymnastics.Columns(25).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(25).Value & "   " & dgvGymnastics.Columns(26).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(26).Value)
+        '    CasparCGDataCollection.SetData("f2", dgvGymnastics.Columns(27).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(27).Value)
+        '    CasparCGDataCollection.SetData("f4", dgvGymnastics.Columns(20).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(20).Value)
+        '    If rdoaveragevaultgym.Checked Then
+        '        CasparCGDataCollection.SetData("f5", "Total" & " " & (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)) / 2)
+        '    Else
+        '        CasparCGDataCollection.SetData("f5", "Total" & " " & (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)))
+
+        '    End If
+
+
+        '    If chkwithnumbergym.Checked Then
+        '        CasparCGDataCollection.SetData("f3", dgvGymnastics.CurrentRow.Index + 1)
+        '        CasparCGDataCollection.SetData("alpha", 1)
+        '    Else
+        '        CasparCGDataCollection.SetData("f3", "")
+        '        CasparCGDataCollection.SetData("alpha", 0)
+        '    End If
+        'Else
+        '    For i = 23 To 27
+        '        CasparCGDataCollection.SetData("f" & i - 22, dgvGymnastics.Columns(i).HeaderText)
+        '        CasparCGDataCollection.SetData("f" & i - 17, dgvGymnastics.CurrentRow.Cells(i).Value)
+        '    Next
+
+        '    If chkwithnumbergym.Checked Then
+        '        CasparCGDataCollection.SetData("f15", dgvGymnastics.CurrentRow.Cells(0).Value)
+        '        CasparCGDataCollection.SetData("alpha", 1)
+        '    Else
+        '        CasparCGDataCollection.SetData("f15", "")
+        '        CasparCGDataCollection.SetData("alpha", 0)
+        '    End If
+        'End If
+
+        'CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
+        'CasparCGDataCollection.SetData("loader6", eventlogo.ImageLocation)
+        'If rdoArtisticsgym.Checked Then
+        '    showtemplate("ng2022/template/Gymnastics/PlayerScorecard2ndvault", CasparCGDataCollection.ToAMCPEscapedXml)
+        'Else
+        '    'CasparDevice.Channels(g_int_ChannelNumber-1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/Gymnastics/PlayerScorecard2", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        'End If
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f0", dgvGymnastics.CurrentRow.Cells(1).Value)
-        If rdoArtisticsgym.Checked Then
-            CasparCGDataCollection.SetData("f1", dgvGymnastics.Columns(23).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(23).Value & "   " & dgvGymnastics.Columns(25).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(25).Value & "   " & dgvGymnastics.Columns(26).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(26).Value)
-            CasparCGDataCollection.SetData("f2", dgvGymnastics.Columns(27).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(27).Value)
-            CasparCGDataCollection.SetData("f4", dgvGymnastics.Columns(20).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(20).Value)
-            If rdoaveragevaultgym.Checked Then
-                CasparCGDataCollection.SetData("f5", "Total" & " " & (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)) / 2)
-            Else
-                CasparCGDataCollection.SetData("f5", "Total" & " " & (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)))
+        CasparCGDataCollection.SetData("ccgheader", dgvGymnastics.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccgsubheader", dgvGymnastics.Columns(CType(cmbplayergamepointgym.Text, Integer)).HeaderText)
 
-            End If
+        CasparCGDataCollection.SetData("ccg_d", dgvGymnastics.CurrentRow.Cells(23).Value)
+        CasparCGDataCollection.SetData("ccg_e", dgvGymnastics.CurrentRow.Cells(25).Value)
+        CasparCGDataCollection.SetData("ccg_p", dgvGymnastics.CurrentRow.Cells(26).Value)
+        CasparCGDataCollection.SetData("ccg_r0", dgvGymnastics.CurrentRow.Cells(27).Value)
+        CasparCGDataCollection.SetData("ccg_v0", dgvGymnastics.CurrentRow.Cells(20).Value)
 
+        If rdoaveragevaultgym.Checked Then
+            CasparCGDataCollection.SetData("ccg_t0", (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)) / 2)
 
-            If chkwithnumbergym.Checked Then
-                CasparCGDataCollection.SetData("f3", dgvGymnastics.CurrentRow.Index + 1)
-                CasparCGDataCollection.SetData("alpha", 1)
-            Else
-                CasparCGDataCollection.SetData("f3", "")
-                CasparCGDataCollection.SetData("alpha", 0)
-            End If
+            'CasparCGDataCollection.SetData("f5", "Total" & " " & (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)) / 2)
         Else
-            For i = 23 To 27
-                CasparCGDataCollection.SetData("f" & i - 22, dgvGymnastics.Columns(i).HeaderText)
-                CasparCGDataCollection.SetData("f" & i - 17, dgvGymnastics.CurrentRow.Cells(i).Value)
-            Next
+            'CasparCGDataCollection.SetData("f5", "Total" & " " & (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)))
+            CasparCGDataCollection.SetData("ccg_t0", Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value))
 
-            If chkwithnumbergym.Checked Then
-                CasparCGDataCollection.SetData("f15", dgvGymnastics.CurrentRow.Cells(0).Value)
-                CasparCGDataCollection.SetData("alpha", 1)
-            Else
-                CasparCGDataCollection.SetData("f15", "")
-                CasparCGDataCollection.SetData("alpha", 0)
-            End If
         End If
 
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader6", eventlogo.ImageLocation)
-        If rdoArtisticsgym.Checked Then
-            showtemplate("ng2022/template/Gymnastics/PlayerScorecard2ndvault", CasparCGDataCollection.ToAMCPEscapedXml)
-        Else
-            'CasparDevice.Channels(g_int_ChannelNumber-1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/Gymnastics/PlayerScorecard2", True, CasparCGDataCollection.ToAMCPEscapedXml)
-        End If
+
+        CasparCGDataCollection.SetData("ccgloader0", dgvGymnastics.CurrentRow.Cells(30).Value.Replace("\", "/"))
+
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+
+        showtemplate("ng2022/template/Gymnastics/PlayerScorecard2ndvault", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
     Private Sub cmdteamlistwithgamenamegym_Click(sender As Object, e As EventArgs) Handles cmdteamlistwithgamenamegym.Click
@@ -441,115 +580,97 @@
     Private Sub Build1gym_Click(sender As Object, e As EventArgs) Handles Build1gym.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f0", dgvGymnastics.CurrentRow.Cells(1).Value)
-        For i = 1 To 7
-            CasparCGDataCollection.SetData("f" & i, dgvGymnastics.Columns(i + 2).HeaderText)
-            CasparCGDataCollection.SetData("f" & i + 7, dgvGymnastics.CurrentRow.Cells(i + 2).Value)
+        CasparCGDataCollection.SetData("ccgheader", dgvGymnastics.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccg_r0", dgvGymnastics.CurrentRow.Cells(9).Value)
+        For i = 0 To 6
+            'CasparCGDataCollection.SetData("ccg_f" & i, dgvGymnastics.Columns(i + 2).HeaderText)
+            CasparCGDataCollection.SetData("ccg_f" & i, dgvGymnastics.CurrentRow.Cells(i + 3).Value)
         Next
 
-        If chkwithnumbergym.Checked Then
-            CasparCGDataCollection.SetData("f15", dgvGymnastics.CurrentRow.Cells(0).Value)
-            CasparCGDataCollection.SetData("alpha", 1)
-        Else
-            CasparCGDataCollection.SetData("f15", "")
-            CasparCGDataCollection.SetData("alpha", 0)
-        End If
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader6", eventlogo.ImageLocation)
+        CasparCGDataCollection.SetData("ccgloader0", (dgvGymnastics.CurrentRow.Cells(30).Value).Replace("\", "/"))
+
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/Gymnastics/build1", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
     Private Sub cmdplayerscore1gym_Click(sender As Object, e As EventArgs) Handles cmdplayerscore1gym.Click
+
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f1", dgvGymnastics.CurrentRow.Cells(1).Value)
-        CasparCGDataCollection.SetData("f2", dgvGymnastics.CurrentRow.Cells(9).Value)
-        If chkwithnumbergym.Checked Then
-            CasparCGDataCollection.SetData("f3", dgvGymnastics.CurrentRow.Cells(0).Value)
-            CasparCGDataCollection.SetData("alpha", 1)
-        Else
-            CasparCGDataCollection.SetData("f3", "")
-            CasparCGDataCollection.SetData("alpha", 0)
-        End If
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
+        CasparCGDataCollection.SetData("ccgheader", dgvGymnastics.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccgsubheader", dgvGymnastics.Columns(9).HeaderText)
+        CasparCGDataCollection.SetData("ccg_r0", dgvGymnastics.CurrentRow.Cells(9).Value)
+        CasparCGDataCollection.SetData("ccgloader0", dgvGymnastics.CurrentRow.Cells(30).Value.Replace("\", "/"))
+
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+
         showtemplate("ng2022/template/Gymnastics/player_score", CasparCGDataCollection.ToAMCPEscapedXml)
+
     End Sub
 
     Private Sub Build2gym_Click(sender As Object, e As EventArgs) Handles Build2gym.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f0", dgvGymnastics.CurrentRow.Cells(1).Value)
-        For i = 1 To 5
-            CasparCGDataCollection.SetData("f" & i, dgvGymnastics.Columns(i + 9).HeaderText)
-            CasparCGDataCollection.SetData("f" & i + 5, dgvGymnastics.CurrentRow.Cells(i + 9).Value)
+        CasparCGDataCollection.SetData("ccgheader", dgvGymnastics.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccg_r0", dgvGymnastics.CurrentRow.Cells(14).Value)
+        For i = 0 To 3
+            'CasparCGDataCollection.SetData("ccg_f" & i, dgvGymnastics.Columns(i + 2).HeaderText)
+            CasparCGDataCollection.SetData("ccg_f" & i, dgvGymnastics.CurrentRow.Cells(i + 10).Value)
         Next
-        If chkwithnumbergym.Checked Then
-            CasparCGDataCollection.SetData("f15", dgvGymnastics.CurrentRow.Cells(0).Value)
-            CasparCGDataCollection.SetData("alpha", 1)
-        Else
-            CasparCGDataCollection.SetData("f15", "")
-            CasparCGDataCollection.SetData("alpha", 0)
-        End If
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader6", eventlogo.ImageLocation)
+
+        CasparCGDataCollection.SetData("ccgloader0", (dgvGymnastics.CurrentRow.Cells(30).Value).Replace("\", "/"))
+
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/Gymnastics/build2", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
     Private Sub cmdplayerscore2gym_Click(sender As Object, e As EventArgs) Handles cmdplayerscore2gym.Click
+
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f1", dgvGymnastics.CurrentRow.Cells(1).Value)
-        CasparCGDataCollection.SetData("f2", dgvGymnastics.CurrentRow.Cells(14).Value)
-        If chkwithnumbergym.Checked Then
-            CasparCGDataCollection.SetData("f3", dgvGymnastics.CurrentRow.Cells(0).Value)
-            CasparCGDataCollection.SetData("alpha", 1)
-        Else
-            CasparCGDataCollection.SetData("f3", "")
-            CasparCGDataCollection.SetData("alpha", 0)
-        End If
+        CasparCGDataCollection.SetData("ccgheader", dgvGymnastics.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccgsubheader", dgvGymnastics.Columns(9).HeaderText)
+        CasparCGDataCollection.SetData("ccg_r0", dgvGymnastics.CurrentRow.Cells(14).Value)
+        CasparCGDataCollection.SetData("ccgloader0", dgvGymnastics.CurrentRow.Cells(30).Value.Replace("\", "/"))
 
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+
         showtemplate("ng2022/template/Gymnastics/player_score", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
     Private Sub Build3gym_Click(sender As Object, e As EventArgs) Handles Build3gym.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f0", dgvGymnastics.CurrentRow.Cells(1).Value)
-        For i = 1 To 5
-            CasparCGDataCollection.SetData("f" & i, dgvGymnastics.Columns(i + 14).HeaderText)
-            CasparCGDataCollection.SetData("f" & i + 5, dgvGymnastics.CurrentRow.Cells(i + 14).Value)
+        CasparCGDataCollection.SetData("ccgheader", dgvGymnastics.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccg_r0", dgvGymnastics.CurrentRow.Cells(19).Value)
+        For i = 0 To 3
+            'CasparCGDataCollection.SetData("ccg_f" & i, dgvGymnastics.Columns(i + 2).HeaderText)
+            CasparCGDataCollection.SetData("ccg_f" & i, dgvGymnastics.CurrentRow.Cells(i + 15).Value)
         Next
-        If chkwithnumbergym.Checked Then
-            CasparCGDataCollection.SetData("f15", dgvGymnastics.CurrentRow.Cells(0).Value)
-            CasparCGDataCollection.SetData("alpha", 1)
-        Else
-            CasparCGDataCollection.SetData("f15", "")
-            CasparCGDataCollection.SetData("alpha", 0)
-        End If
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader6", eventlogo.ImageLocation)
+
+        CasparCGDataCollection.SetData("ccgloader0", (dgvGymnastics.CurrentRow.Cells(30).Value).Replace("\", "/"))
+
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/Gymnastics/build3", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
     Private Sub cmdplayerscore3gym_Click(sender As Object, e As EventArgs) Handles cmdplayerscore3gym.Click
+
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        CasparCGDataCollection.SetData("f1", dgvGymnastics.CurrentRow.Cells(1).Value)
-        CasparCGDataCollection.SetData("f2", dgvGymnastics.CurrentRow.Cells(19).Value)
+        CasparCGDataCollection.SetData("ccgheader", dgvGymnastics.CurrentRow.Cells(1).Value)
+        CasparCGDataCollection.SetData("ccgsubheader", dgvGymnastics.Columns(9).HeaderText)
+        CasparCGDataCollection.SetData("ccg_r0", dgvGymnastics.CurrentRow.Cells(19).Value)
+        CasparCGDataCollection.SetData("ccgloader0", dgvGymnastics.CurrentRow.Cells(30).Value.Replace("\", "/"))
 
-        If chkwithnumbergym.Checked Then
-            CasparCGDataCollection.SetData("f3", dgvGymnastics.CurrentRow.Cells(0).Value)
-            CasparCGDataCollection.SetData("alpha", 1)
-        Else
-            CasparCGDataCollection.SetData("f3", "")
-            CasparCGDataCollection.SetData("alpha", 0)
-        End If
+        CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
 
-        CasparCGDataCollection.SetData("loader1", "C:/casparcg/mydata/games/State_Short_Name/" & dgvGymnastics.CurrentRow.Cells(2).Value & ".png")
-        CasparCGDataCollection.SetData("loader52", eventlogo.ImageLocation)
         showtemplate("ng2022/template/Gymnastics/player_score", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
@@ -627,6 +748,52 @@
             Else
                 dgvGymnastics.Rows(i).Cells(27).Value = Format(Val(dgvGymnastics.Rows(i).Cells(23).Value) + Val(dgvGymnastics.Rows(i).Cells(24).Value) + Val(dgvGymnastics.Rows(i).Cells(25).Value) - Val(dgvGymnastics.Rows(i).Cells(26).Value), "00.000")
 
+            End If
+        Next
+    End Sub
+
+
+    Private Sub cmduprowt1ball_Click(sender As Object, e As EventArgs) Handles cmduprowt1ball.Click
+        On Error Resume Next
+        upsg(dgvt1ball)
+    End Sub
+
+    Private Sub cmddownrowt1ball_Click(sender As Object, e As EventArgs) Handles cmddownrowt1ball.Click
+        On Error Resume Next
+        downsg(dgvt1ball)
+    End Sub
+
+    Private Sub cmdremoverowt1ball_Click_1(sender As Object, e As EventArgs) Handles cmdremoverowt1ball.Click
+        deletesg(dgvt1ball)
+    End Sub
+
+    Private Sub cmdaddrowt1ball_Click_1(sender As Object, e As EventArgs) Handles cmdaddrowt1ball.Click
+        insertsg(dgvt1ball)
+    End Sub
+
+    Private Sub cmdnewt1ball_Click_1(sender As Object, e As EventArgs) Handles cmdnewt1ball.Click
+        On Error Resume Next
+        newdatasg(dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+    End Sub
+
+    Private Sub cmdopent1ball_Click_1(sender As Object, e As EventArgs) Handles cmdopent1ball.Click
+        On Error Resume Next
+        opendatasg("C:\casparcg\ng2022\data\Gymnastics\teamlist", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+
+    End Sub
+
+    Private Sub cmdsavet1ball_Click_1(sender As Object, e As EventArgs) Handles cmdsavet1ball.Click
+        On Error Resume Next
+        savedatasg("C:\casparcg\ng2022\data\Gymnastics\teamlist", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+    End Sub
+
+    Private Sub rdoaveragevaultgym_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rdoaveragevaultgym.CheckedChanged, rdoaddvaultgym.CheckedChanged
+        On Error Resume Next
+        For i = 0 To dgvGymnastics.RowCount - 1
+            If rdoaveragevaultgym.Checked Then
+                dgvGymnastics.Rows(i).Cells(22).Value = Format((Val(dgvGymnastics.Rows(i).Cells(20).Value) + Val(dgvGymnastics.Rows(i).Cells(21).Value)) / 2, "00.00")
+            Else
+                dgvGymnastics.Rows(i).Cells(22).Value = Format(Val(dgvGymnastics.Rows(i).Cells(20).Value) + Val(dgvGymnastics.Rows(i).Cells(21).Value), "00.00")
             End If
         Next
     End Sub
