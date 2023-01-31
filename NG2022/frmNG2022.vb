@@ -218,4 +218,8 @@ Public Class frmNG2022
     Private Sub UcCanoeSlalom1_Load(sender As Object, e As EventArgs) Handles UcCanoeSlalom1.Load
 
     End Sub
+
+    Private Sub UcGymnastic1_Load(sender As Object, e As EventArgs) Handles UcGymnastic1.Load
+
+    End Sub
 End Class

@@ -22,7 +22,7 @@ Partial Class ucGymnastic
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucGymnastic))
         Me.dgvGymnastics = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -184,14 +184,14 @@ Partial Class ucGymnastic
         '
         Me.dgvGymnastics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvGymnastics.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column7, Me.Column8, Me.Column9, Me.Column20, Me.Column6, Me.Column4, Me.Column11, Me.Column10, Me.Column13, Me.Column12, Me.Column24, Me.Column23, Me.Column22, Me.Column14, Me.Column21, Me.Column25, Me.Column15, Me.Column16, Me.Column17, Me.Column18, Me.Column28, Me.Column19, Me.Penalties, Me.Score, Me.Column26, Me.Column27, Me.imgAddress, Me.Column29})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvGymnastics.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvGymnastics.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvGymnastics.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvGymnastics.Location = New System.Drawing.Point(3, 587)
         Me.dgvGymnastics.Name = "dgvGymnastics"
@@ -396,7 +396,7 @@ Partial Class ucGymnastic
         '
         'cmdcleardatagym
         '
-        Me.cmdcleardatagym.Location = New System.Drawing.Point(391, 382)
+        Me.cmdcleardatagym.Location = New System.Drawing.Point(290, 281)
         Me.cmdcleardatagym.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdcleardatagym.Name = "cmdcleardatagym"
         Me.cmdcleardatagym.Size = New System.Drawing.Size(72, 23)
@@ -410,7 +410,7 @@ Partial Class ucGymnastic
         Me.GroupBox8.Controls.Add(Me.cmbchangecolumnnamegym)
         Me.GroupBox8.Controls.Add(Me.txtchangecolumnnamegym)
         Me.GroupBox8.Controls.Add(Me.cmdchangecolumnnamegym)
-        Me.GroupBox8.Location = New System.Drawing.Point(877, 202)
+        Me.GroupBox8.Location = New System.Drawing.Point(771, 103)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(154, 64)
         Me.GroupBox8.TabIndex = 1275
@@ -449,7 +449,7 @@ Partial Class ucGymnastic
         Me.GroupBox7.Controls.Add(Me.Label38)
         Me.GroupBox7.Controls.Add(Me.cmbplayergamepointgym)
         Me.GroupBox7.Controls.Add(Me.cmdplayergamepointgym)
-        Me.GroupBox7.Location = New System.Drawing.Point(719, 204)
+        Me.GroupBox7.Location = New System.Drawing.Point(613, 105)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(152, 61)
         Me.GroupBox7.TabIndex = 1274
@@ -493,7 +493,7 @@ Partial Class ucGymnastic
         Me.GroupBox1.Controls.Add(Me.cmbstandingsgym)
         Me.GroupBox1.Controls.Add(Me.cmdresult2gym)
         Me.GroupBox1.Controls.Add(Me.cmdresult1gym)
-        Me.GroupBox1.Location = New System.Drawing.Point(476, 239)
+        Me.GroupBox1.Location = New System.Drawing.Point(370, 140)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(220, 72)
         Me.GroupBox1.TabIndex = 1273
@@ -553,7 +553,7 @@ Partial Class ucGymnastic
         'chkwithnumbergym
         '
         Me.chkwithnumbergym.AutoSize = True
-        Me.chkwithnumbergym.Location = New System.Drawing.Point(580, 204)
+        Me.chkwithnumbergym.Location = New System.Drawing.Point(474, 105)
         Me.chkwithnumbergym.Name = "chkwithnumbergym"
         Me.chkwithnumbergym.Size = New System.Drawing.Size(88, 17)
         Me.chkwithnumbergym.TabIndex = 1272
@@ -573,7 +573,7 @@ Partial Class ucGymnastic
         'lblfilenamegym
         '
         Me.lblfilenamegym.AutoSize = True
-        Me.lblfilenamegym.Location = New System.Drawing.Point(389, 356)
+        Me.lblfilenamegym.Location = New System.Drawing.Point(288, 255)
         Me.lblfilenamegym.MaximumSize = New System.Drawing.Size(250, 0)
         Me.lblfilenamegym.Name = "lblfilenamegym"
         Me.lblfilenamegym.Size = New System.Drawing.Size(57, 13)
@@ -583,7 +583,7 @@ Partial Class ucGymnastic
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(392, 341)
+        Me.Label3.Location = New System.Drawing.Point(291, 240)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(54, 13)
         Me.Label3.TabIndex = 1269
@@ -591,7 +591,7 @@ Partial Class ucGymnastic
         '
         'cmdplayeridgym
         '
-        Me.cmdplayeridgym.Location = New System.Drawing.Point(470, 191)
+        Me.cmdplayeridgym.Location = New System.Drawing.Point(364, 92)
         Me.cmdplayeridgym.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdplayeridgym.Name = "cmdplayeridgym"
         Me.cmdplayeridgym.Size = New System.Drawing.Size(103, 42)
@@ -601,7 +601,7 @@ Partial Class ucGymnastic
         '
         'cmdgymnasticsstsrtlist2
         '
-        Me.cmdgymnasticsstsrtlist2.Location = New System.Drawing.Point(390, 229)
+        Me.cmdgymnasticsstsrtlist2.Location = New System.Drawing.Point(284, 130)
         Me.cmdgymnasticsstsrtlist2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdgymnasticsstsrtlist2.Name = "cmdgymnasticsstsrtlist2"
         Me.cmdgymnasticsstsrtlist2.Size = New System.Drawing.Size(72, 36)
@@ -611,7 +611,7 @@ Partial Class ucGymnastic
         '
         'cmdgymnasticsstsrtlist1
         '
-        Me.cmdgymnasticsstsrtlist1.Location = New System.Drawing.Point(390, 188)
+        Me.cmdgymnasticsstsrtlist1.Location = New System.Drawing.Point(284, 89)
         Me.cmdgymnasticsstsrtlist1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdgymnasticsstsrtlist1.Name = "cmdgymnasticsstsrtlist1"
         Me.cmdgymnasticsstsrtlist1.Size = New System.Drawing.Size(72, 39)
@@ -797,6 +797,7 @@ Partial Class ucGymnastic
         Me.cmdteamlistwithgamenamegym.TabIndex = 1286
         Me.cmdteamlistwithgamenamegym.Text = "Team List with Game name"
         Me.cmdteamlistwithgamenamegym.UseVisualStyleBackColor = True
+        Me.cmdteamlistwithgamenamegym.Visible = False
         '
         'cmdofficialsgym
         '
@@ -807,6 +808,7 @@ Partial Class ucGymnastic
         Me.cmdofficialsgym.TabIndex = 1285
         Me.cmdofficialsgym.Text = "Officials"
         Me.cmdofficialsgym.UseVisualStyleBackColor = True
+        Me.cmdofficialsgym.Visible = False
         '
         'Label5
         '
@@ -1081,7 +1083,7 @@ Partial Class ucGymnastic
         'cmdrowupzym
         '
         Me.cmdrowupzym.Image = CType(resources.GetObject("cmdrowupzym.Image"), System.Drawing.Image)
-        Me.cmdrowupzym.Location = New System.Drawing.Point(479, 423)
+        Me.cmdrowupzym.Location = New System.Drawing.Point(378, 322)
         Me.cmdrowupzym.Name = "cmdrowupzym"
         Me.cmdrowupzym.Size = New System.Drawing.Size(28, 23)
         Me.cmdrowupzym.TabIndex = 1323
@@ -1091,7 +1093,7 @@ Partial Class ucGymnastic
         '
         Me.cmdrowdeletegym.BackgroundImage = CType(resources.GetObject("cmdrowdeletegym.BackgroundImage"), System.Drawing.Image)
         Me.cmdrowdeletegym.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdrowdeletegym.Location = New System.Drawing.Point(580, 423)
+        Me.cmdrowdeletegym.Location = New System.Drawing.Point(479, 322)
         Me.cmdrowdeletegym.Name = "cmdrowdeletegym"
         Me.cmdrowdeletegym.Size = New System.Drawing.Size(33, 22)
         Me.cmdrowdeletegym.TabIndex = 1322
@@ -1101,7 +1103,7 @@ Partial Class ucGymnastic
         '
         Me.tsgym.Dock = System.Windows.Forms.DockStyle.None
         Me.tsgym.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.newgym, Me.opengym, Me.savegym, Me.ToolStripSeparator8, Me.ToolStripSeparator9})
-        Me.tsgym.Location = New System.Drawing.Point(390, 421)
+        Me.tsgym.Location = New System.Drawing.Point(289, 320)
         Me.tsgym.MaximumSize = New System.Drawing.Size(200, 200)
         Me.tsgym.Name = "tsgym"
         Me.tsgym.Size = New System.Drawing.Size(93, 25)
@@ -1148,7 +1150,7 @@ Partial Class ucGymnastic
         'cmdrowdowngym
         '
         Me.cmdrowdowngym.Image = CType(resources.GetObject("cmdrowdowngym.Image"), System.Drawing.Image)
-        Me.cmdrowdowngym.Location = New System.Drawing.Point(507, 422)
+        Me.cmdrowdowngym.Location = New System.Drawing.Point(406, 321)
         Me.cmdrowdowngym.Name = "cmdrowdowngym"
         Me.cmdrowdowngym.Size = New System.Drawing.Size(36, 23)
         Me.cmdrowdowngym.TabIndex = 1320
@@ -1157,7 +1159,7 @@ Partial Class ucGymnastic
         'cmdrowinsertgym
         '
         Me.cmdrowinsertgym.Image = CType(resources.GetObject("cmdrowinsertgym.Image"), System.Drawing.Image)
-        Me.cmdrowinsertgym.Location = New System.Drawing.Point(544, 422)
+        Me.cmdrowinsertgym.Location = New System.Drawing.Point(443, 321)
         Me.cmdrowinsertgym.Name = "cmdrowinsertgym"
         Me.cmdrowinsertgym.Size = New System.Drawing.Size(34, 23)
         Me.cmdrowinsertgym.TabIndex = 1319
@@ -1167,7 +1169,7 @@ Partial Class ucGymnastic
         '
         Me.cmdstopgym.BackColor = System.Drawing.Color.Red
         Me.cmdstopgym.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.cmdstopgym.Location = New System.Drawing.Point(507, 36)
+        Me.cmdstopgym.Location = New System.Drawing.Point(390, 14)
         Me.cmdstopgym.Name = "cmdstopgym"
         Me.cmdstopgym.Size = New System.Drawing.Size(325, 62)
         Me.cmdstopgym.TabIndex = 1324
@@ -1177,7 +1179,7 @@ Partial Class ucGymnastic
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(832, 64)
+        Me.Label30.Location = New System.Drawing.Point(715, 42)
         Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(44, 13)
@@ -1188,7 +1190,7 @@ Partial Class ucGymnastic
         '
         Me.cmblayergames.FormattingEnabled = True
         Me.cmblayergames.Items.AddRange(New Object() {"96", "97", "98", "99", "100"})
-        Me.cmblayergames.Location = New System.Drawing.Point(882, 63)
+        Me.cmblayergames.Location = New System.Drawing.Point(765, 41)
         Me.cmblayergames.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmblayergames.Name = "cmblayergames"
         Me.cmblayergames.Size = New System.Drawing.Size(40, 21)
@@ -1203,7 +1205,7 @@ Partial Class ucGymnastic
         Me.GroupBox3.Controls.Add(Me.cmdeventid)
         Me.GroupBox3.Controls.Add(Me.Label17)
         Me.GroupBox3.Controls.Add(Me.Label1)
-        Me.GroupBox3.Location = New System.Drawing.Point(131, 38)
+        Me.GroupBox3.Location = New System.Drawing.Point(14, 16)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(370, 62)
         Me.GroupBox3.TabIndex = 1329
@@ -1261,7 +1263,7 @@ Partial Class ucGymnastic
         '
         Me.eventlogo.BackColor = System.Drawing.SystemColors.Highlight
         Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/ng2015.png"
-        Me.eventlogo.Location = New System.Drawing.Point(978, 67)
+        Me.eventlogo.Location = New System.Drawing.Point(861, 45)
         Me.eventlogo.Name = "eventlogo"
         Me.eventlogo.Size = New System.Drawing.Size(24, 17)
         Me.eventlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1272,7 +1274,7 @@ Partial Class ucGymnastic
         '
         Me.gamelogo.BackColor = System.Drawing.SystemColors.Highlight
         Me.gamelogo.ImageLocation = "C:/casparcg/ng2022/data/games logo/Gymnastics - Artistic.png"
-        Me.gamelogo.Location = New System.Drawing.Point(946, 65)
+        Me.gamelogo.Location = New System.Drawing.Point(829, 43)
         Me.gamelogo.Name = "gamelogo"
         Me.gamelogo.Size = New System.Drawing.Size(22, 19)
         Me.gamelogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1282,7 +1284,7 @@ Partial Class ucGymnastic
         'cmbgames
         '
         Me.cmbgames.FormattingEnabled = True
-        Me.cmbgames.Location = New System.Drawing.Point(860, 36)
+        Me.cmbgames.Location = New System.Drawing.Point(743, 14)
         Me.cmbgames.Name = "cmbgames"
         Me.cmbgames.Size = New System.Drawing.Size(113, 21)
         Me.cmbgames.TabIndex = 1330
@@ -1295,7 +1297,7 @@ Partial Class ucGymnastic
         Me.Team.Controls.Add(Me.GroupBox23)
         Me.Team.Controls.Add(Me.dgvt1ball)
         Me.Team.Controls.Add(Me.cmdteamlist)
-        Me.Team.Location = New System.Drawing.Point(71, 147)
+        Me.Team.Location = New System.Drawing.Point(14, 84)
         Me.Team.Name = "Team"
         Me.Team.Size = New System.Drawing.Size(262, 341)
         Me.Team.TabIndex = 1331

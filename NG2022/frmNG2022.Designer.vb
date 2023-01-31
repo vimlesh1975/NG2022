@@ -728,7 +728,7 @@ Partial Class frmNG2022
         Me.Controls.Add(Me.gbPannel)
         Me.Name = "frmNG2022"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "NG_310123_1"
+        Me.Text = "NG_310123_2"
         Me.gbPannel.ResumeLayout(False)
         Me.gbPannel.PerformLayout()
         Me.TabControl1.ResumeLayout(False)

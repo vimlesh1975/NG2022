@@ -449,6 +449,7 @@ Public Class ucGymnastic
         CasparCGDataCollection.SetData("ccgsubheader", dgvGymnastics.Columns(CType(cmbplayergamepointgym.Text, Integer)).HeaderText)
 
         CasparCGDataCollection.SetData("ccg_d", dgvGymnastics.CurrentRow.Cells(23).Value)
+        CasparCGDataCollection.SetData("ccg_a", dgvGymnastics.CurrentRow.Cells(24).Value)
         CasparCGDataCollection.SetData("ccg_e", dgvGymnastics.CurrentRow.Cells(25).Value)
         CasparCGDataCollection.SetData("ccg_p", dgvGymnastics.CurrentRow.Cells(26).Value)
         CasparCGDataCollection.SetData("ccg_r0", dgvGymnastics.CurrentRow.Cells(27).Value)
@@ -458,7 +459,12 @@ Public Class ucGymnastic
         CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
 
-        showtemplate("ng2022/template/Gymnastics/PlayerScorecard", CasparCGDataCollection.ToAMCPEscapedXml)
+        If rdoRhythmicgym.Checked Then
+            showtemplate("ng2022/template/Gymnastics/PlayerScorecard2", CasparCGDataCollection.ToAMCPEscapedXml)
+        Else
+            showtemplate("ng2022/template/Gymnastics/PlayerScorecard", CasparCGDataCollection.ToAMCPEscapedXml)
+        End If
+
     End Sub
 
     Private Sub cmdplayerscorecard2ndvaultgym_Click(sender As Object, e As EventArgs) Handles cmdplayerscorecard2ndvaultgym.Click
@@ -744,9 +750,10 @@ Public Class ucGymnastic
         For i = 0 To dgvGymnastics.RowCount - 1
             If rdoArtisticsgym.Checked Then
                 dgvGymnastics.Rows(i).Cells(27).Value = Format(Val(dgvGymnastics.Rows(i).Cells(23).Value) + Val(dgvGymnastics.Rows(i).Cells(25).Value) - Val(dgvGymnastics.Rows(i).Cells(26).Value), "00.000")
-
+                cmdplayerscorecard2ndvaultgym.Visible = True
             Else
                 dgvGymnastics.Rows(i).Cells(27).Value = Format(Val(dgvGymnastics.Rows(i).Cells(23).Value) + Val(dgvGymnastics.Rows(i).Cells(24).Value) + Val(dgvGymnastics.Rows(i).Cells(25).Value) - Val(dgvGymnastics.Rows(i).Cells(26).Value), "00.000")
+                cmdplayerscorecard2ndvaultgym.Visible = False
 
             End If
         Next
