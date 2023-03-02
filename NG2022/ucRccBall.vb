@@ -250,13 +250,19 @@
 
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
+
+        CasparCGDataCollection.SetData("extraalpha", 1)
+        CasparCGDataCollection.SetData("showClockAndhalf", 1)
+        CasparCGDataCollection.SetData("ccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
+        CasparCGDataCollection.SetData("ccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
+
         showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "extraalpha('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showClockAndhalf('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "extraalpha('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showClockAndhalf('1')" & """")
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = False
         tmrupdateontemplateextra.Enabled = True
@@ -734,10 +740,12 @@
 
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
+
+        CasparCGDataCollection.SetData("ccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
+        CasparCGDataCollection.SetData("ccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
         showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
+
         tmrtimeupdateontemplate.Enabled = False
         tmrupdateontemplateextra.Enabled = False
     End Sub
@@ -755,11 +763,15 @@
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
 
+        CasparCGDataCollection.SetData("showClockAndhalf", 1)
+        CasparCGDataCollection.SetData("ccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
+        CasparCGDataCollection.SetData("ccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
+
         showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showClockAndhalf('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showClockAndhalf('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = True
         tmrupdateontemplateextra.Enabled = False
@@ -778,12 +790,12 @@
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
 
+        CasparCGDataCollection.SetData("showinfo", 1)
+        CasparCGDataCollection.SetData("ccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
+        CasparCGDataCollection.SetData("ccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
+
+
         showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
-
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showinfo('1')" & """")
-
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = False
         tmrupdateontemplateextra.Enabled = False
@@ -1146,16 +1158,23 @@
 
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
-        showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showPenalty('1')" & """")
+
+        CasparCGDataCollection.SetData("ccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
+        CasparCGDataCollection.SetData("ccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
+
+        CasparCGDataCollection.SetData("showPenalty", 1)
 
         With dgvpenaltyball
             For iii = 0 To 4
                 If .Rows(0).Cells(iii).Value <> "" Then
                     If .Rows(0).Cells(iii).Value = 0 Then
-                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+                        CasparCGDataCollection.SetData("ccgpenaltycircle" & iii + 1, ColorTranslator.ToHtml(Color.Red))
+
+                        ' CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
                     Else
-                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
+                        CasparCGDataCollection.SetData("ccgpenaltycircle" & iii + 1, ColorTranslator.ToHtml(Color.Green))
+
+                        ' CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
                     End If
 
                 End If
@@ -1163,9 +1182,13 @@
             For iii = 0 To 4
                 If .Rows(1).Cells(iii).Value <> "" Then
                     If .Rows(1).Cells(iii).Value = 0 Then
-                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+                        CasparCGDataCollection.SetData("ccgpenaltycircle" & iii + 1 + 5, ColorTranslator.ToHtml(Color.Red))
+
+                        ' CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
                     Else
-                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
+                        CasparCGDataCollection.SetData("ccgpenaltycircle" & iii + 1 + 5, ColorTranslator.ToHtml(Color.Green))
+
+                        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
                     End If
 
                 End If
@@ -1173,8 +1196,39 @@
 
         End With
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
+        showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
+
+
+
+
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showPenalty('1')" & """")
+
+        'With dgvpenaltyball
+        '    For iii = 0 To 4
+        '        If .Rows(0).Cells(iii).Value <> "" Then
+        '            If .Rows(0).Cells(iii).Value = 0 Then
+        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+        '            Else
+        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
+        '            End If
+
+        '        End If
+        '    Next
+        '    For iii = 0 To 4
+        '        If .Rows(1).Cells(iii).Value <> "" Then
+        '            If .Rows(1).Cells(iii).Value = 0 Then
+        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+        '            Else
+        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
+        '            End If
+
+        '        End If
+        '    Next
+
+        'End With
+
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = False
         tmrupdateontemplateextra.Enabled = False
