@@ -222,4 +222,8 @@ Public Class frmNG2022
     Private Sub UcGymnastic1_Load(sender As Object, e As EventArgs) Handles UcGymnastic1.Load
 
     End Sub
+
+    Private Sub UcKhoKho1_Load(sender As Object, e As EventArgs) Handles UcKhoKho1.Load
+
+    End Sub
 End Class

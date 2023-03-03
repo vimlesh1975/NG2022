@@ -579,10 +579,12 @@
 
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
+
+        CasparCGDataCollection.SetData("xccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
+        CasparCGDataCollection.SetData("xccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
+
         showtemplatescore("ng2022/template/khokho/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
         tmrtimeupdateontemplate.Enabled = False
     End Sub
     Private Sub cmdscorewithclock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdscorewithclock.Click
@@ -599,12 +601,12 @@
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
 
-        showtemplatescore("ng2022/template/khokho/score", CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparCGDataCollection.SetData("xccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
+        CasparCGDataCollection.SetData("xccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
+        CasparCGDataCollection.SetData("showClockAndhalf", "1")
+        CasparCGDataCollection.SetData("showccgccgTimeStrip", "1")
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showccgccgTimeStrip('1')" & """")
+        showtemplatescore("ng2022/template/khokho/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
         tmrtimeupdateontemplate.Enabled = True
     End Sub
@@ -622,12 +624,11 @@
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
 
+        CasparCGDataCollection.SetData("xccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
+        CasparCGDataCollection.SetData("xccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
+        CasparCGDataCollection.SetData("showinfo", "1")
+
         showtemplatescore("ng2022/template/khokho/score", CasparCGDataCollection.ToAMCPEscapedXml)
-
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
-
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = False
 
@@ -1072,13 +1073,15 @@
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
 
+        CasparCGDataCollection.SetData("xccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
+        CasparCGDataCollection.SetData("xccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
+        CasparCGDataCollection.SetData("showinfo", "1")
+        CasparCGDataCollection.SetData("showccgccgTimeStrip", "1")
+        CasparCGDataCollection.SetData("showClockAndhalf", "1")
+
+
         showtemplatescore("ng2022/template/khokho/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showccgccgTimeStrip('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
 
         tmrtimeupdateontemplate.Enabled = True
     End Sub
@@ -1106,13 +1109,19 @@
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
 
-        showtemplatescore("ng2022/template/khokho/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showccgccgTimeStrip('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showccgstatusStrip('1')" & """")
+        CasparCGDataCollection.SetData("xccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
+        CasparCGDataCollection.SetData("xccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
+        'CasparCGDataCollection.SetData("showinfo", "1")
+        CasparCGDataCollection.SetData("showccgccgTimeStrip", "1")
+        CasparCGDataCollection.SetData("showClockAndhalf", "1")
+        CasparCGDataCollection.SetData("showccgstatusStrip", "1")
+
+
+
+
+
+        showtemplatescore("ng2022/template/khokho/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
 
         tmrtimeupdateontemplate.Enabled = True
