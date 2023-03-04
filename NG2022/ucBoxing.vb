@@ -727,4 +727,19 @@ Public Class ucBoxing
 
         showtemplate("ng2022/template/boxing/final", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
+
+    Private Sub cmdvsball_Click(sender As Object, e As EventArgs) Handles cmdvsball.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        CasparCGDataCollection.SetData("ccgf0", cmbHeader.Text)
+        CasparCGDataCollection.SetData("ccgf1", cmbSubHeader.Text)
+        CasparCGDataCollection.SetData("ccgf2", txtPlayer1.Text)
+        CasparCGDataCollection.SetData("ccgf3", txtPlayer2.Text)
+
+        CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
+        showtemplate("ng2022/template/boxing/versus", CasparCGDataCollection.ToAMCPEscapedXml)
+    End Sub
 End Class

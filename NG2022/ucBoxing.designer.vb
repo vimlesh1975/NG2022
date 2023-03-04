@@ -25,7 +25,7 @@ Partial Class ucBoxing
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucBoxing))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmbSubHeader = New System.Windows.Forms.ComboBox()
         Me.cmbHeader = New System.Windows.Forms.ComboBox()
@@ -39,6 +39,7 @@ Partial Class ucBoxing
         Me.tmrtimeupdateontemplate = New System.Windows.Forms.Timer(Me.components)
         Me.ofd1 = New System.Windows.Forms.OpenFileDialog()
         Me.Ball = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.cmdRound2 = New System.Windows.Forms.Button()
         Me.cmdRound1 = New System.Windows.Forms.Button()
         Me.gbtstrack = New System.Windows.Forms.GroupBox()
@@ -101,7 +102,7 @@ Partial Class ucBoxing
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.cmbgames = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmdvsball = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.Ball.SuspendLayout()
         Me.gbtstrack.SuspendLayout()
@@ -236,9 +237,18 @@ Partial Class ucBoxing
         Me.Ball.TabIndex = 4
         Me.Ball.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(624, 304)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 28)
+        Me.Button1.TabIndex = 1307
+        Me.Button1.Text = "Final"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'cmdRound2
         '
-        Me.cmdRound2.Location = New System.Drawing.Point(243, 313)
+        Me.cmdRound2.Location = New System.Drawing.Point(543, 304)
         Me.cmdRound2.Name = "cmdRound2"
         Me.cmdRound2.Size = New System.Drawing.Size(75, 28)
         Me.cmdRound2.TabIndex = 1306
@@ -247,7 +257,7 @@ Partial Class ucBoxing
         '
         'cmdRound1
         '
-        Me.cmdRound1.Location = New System.Drawing.Point(138, 313)
+        Me.cmdRound1.Location = New System.Drawing.Point(462, 304)
         Me.cmdRound1.Name = "cmdRound1"
         Me.cmdRound1.Size = New System.Drawing.Size(75, 28)
         Me.cmdRound1.TabIndex = 1305
@@ -354,7 +364,7 @@ Partial Class ucBoxing
         '
         'cmdJudges
         '
-        Me.cmdJudges.Location = New System.Drawing.Point(33, 313)
+        Me.cmdJudges.Location = New System.Drawing.Point(379, 304)
         Me.cmdJudges.Name = "cmdJudges"
         Me.cmdJudges.Size = New System.Drawing.Size(75, 28)
         Me.cmdJudges.TabIndex = 1303
@@ -366,14 +376,14 @@ Partial Class ucBoxing
         Me.dgvtrack.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvtrack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.DataGridViewComboBoxColumn2, Me.DataGridViewTextBoxColumn49, Me.imglocation1, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvtrack.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvtrack.Location = New System.Drawing.Point(6, 76)
         Me.dgvtrack.Name = "dgvtrack"
@@ -483,6 +493,7 @@ Partial Class ucBoxing
         'GroupBox16
         '
         Me.GroupBox16.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox16.Controls.Add(Me.cmdvsball)
         Me.GroupBox16.Controls.Add(Me.cmdSetBoth)
         Me.GroupBox16.Controls.Add(Me.txtCounty2)
         Me.GroupBox16.Controls.Add(Me.txtCounty1)
@@ -804,14 +815,14 @@ Partial Class ucBoxing
         Me.cmbgames.TabIndex = 1202
         Me.cmbgames.Text = "Boxing"
         '
-        'Button1
+        'cmdvsball
         '
-        Me.Button1.Location = New System.Drawing.Point(339, 313)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 28)
-        Me.Button1.TabIndex = 1307
-        Me.Button1.Text = "Final"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmdvsball.Location = New System.Drawing.Point(18, 167)
+        Me.cmdvsball.Name = "cmdvsball"
+        Me.cmdvsball.Size = New System.Drawing.Size(43, 23)
+        Me.cmdvsball.TabIndex = 1244
+        Me.cmdvsball.Text = "V/S"
+        Me.cmdvsball.UseVisualStyleBackColor = True
         '
         'ucBoxing
         '
@@ -921,4 +932,5 @@ Partial Class ucBoxing
     Friend WithEvents cmdRound1 As Button
     Friend WithEvents cmdRound2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents cmdvsball As Button
 End Class
