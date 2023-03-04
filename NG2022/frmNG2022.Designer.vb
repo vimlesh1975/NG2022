@@ -43,15 +43,25 @@ Partial Class frmNG2022
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Gymnastic = New System.Windows.Forms.TabPage()
+        Me.UcGymnastic1 = New NG2022.ucGymnastic()
         Me.CanoeSlalom = New System.Windows.Forms.TabPage()
+        Me.UcCanoeSlalom1 = New NG2022.ucCanoeSlalom()
         Me.Rowing = New System.Windows.Forms.TabPage()
+        Me.UcTrack1 = New NG2022.ucTrack()
         Me.NetBall = New System.Windows.Forms.TabPage()
+        Me.UcNetBall1 = New NG2022.ucNetBall()
         Me.BasketBall = New System.Windows.Forms.TabPage()
+        Me.UcBasketBall1 = New NG2022.ucBasketBall()
         Me.CG1 = New System.Windows.Forms.TabPage()
+        Me.UcCG11 = New NG2022.ucCG1()
         Me.CG2 = New System.Windows.Forms.TabPage()
+        Me.UcCG21 = New NG2022.ucCG2()
         Me.Kabaddi = New System.Windows.Forms.TabPage()
+        Me.UcKabaddi1 = New NG2022.ucKabaddi()
         Me.KhoKho = New System.Windows.Forms.TabPage()
+        Me.UcKhoKho1 = New NG2022.ucKhoKho()
         Me.Football_Hockey = New System.Windows.Forms.TabPage()
+        Me.UcRccBall1 = New NG2022.ucRccBall()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.gbOutAnimation = New System.Windows.Forms.GroupBox()
         Me.rdoSqueezeOut = New System.Windows.Forms.RadioButton()
@@ -72,17 +82,9 @@ Partial Class frmNG2022
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtClientID = New System.Windows.Forms.TextBox()
         Me.lblClientID = New System.Windows.Forms.Label()
-        Me.UcGymnastic1 = New NG2022.ucGymnastic()
-        Me.UcCanoeSlalom1 = New NG2022.ucCanoeSlalom()
-        Me.UcTrack1 = New NG2022.ucTrack()
-        Me.UcNetBall1 = New NG2022.ucNetBall()
-        Me.UcBasketBall1 = New NG2022.ucBasketBall()
-        Me.UcCG11 = New NG2022.ucCG1()
-        Me.UcCG21 = New NG2022.ucCG2()
-        Me.UcKabaddi1 = New NG2022.ucKabaddi()
-        Me.UcKhoKho1 = New NG2022.ucKhoKho()
-        Me.UcRccBall1 = New NG2022.ucRccBall()
         Me.UcCasparcgWindow1 = New NG2022.ucCasparcgWindow()
+        Me.Boxing = New System.Windows.Forms.TabPage()
+        Me.UcBoxing1 = New NG2022.ucBoxing()
         Me.gbPannel.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.Gymnastic.SuspendLayout()
@@ -98,6 +100,7 @@ Partial Class frmNG2022
         Me.GroupBox12.SuspendLayout()
         Me.gbOutAnimation.SuspendLayout()
         Me.gbINAnimation.SuspendLayout()
+        Me.Boxing.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbPannel
@@ -283,6 +286,7 @@ Partial Class frmNG2022
         '
         'TabControl1
         '
+        Me.TabControl1.Controls.Add(Me.Boxing)
         Me.TabControl1.Controls.Add(Me.Gymnastic)
         Me.TabControl1.Controls.Add(Me.CanoeSlalom)
         Me.TabControl1.Controls.Add(Me.Rowing)
@@ -309,6 +313,14 @@ Partial Class frmNG2022
         Me.Gymnastic.Text = "Gymnastic"
         Me.Gymnastic.UseVisualStyleBackColor = True
         '
+        'UcGymnastic1
+        '
+        Me.UcGymnastic1.BackColor = System.Drawing.Color.Gainsboro
+        Me.UcGymnastic1.Location = New System.Drawing.Point(3, 3)
+        Me.UcGymnastic1.Name = "UcGymnastic1"
+        Me.UcGymnastic1.Size = New System.Drawing.Size(1353, 876)
+        Me.UcGymnastic1.TabIndex = 0
+        '
         'CanoeSlalom
         '
         Me.CanoeSlalom.Controls.Add(Me.UcCanoeSlalom1)
@@ -320,6 +332,13 @@ Partial Class frmNG2022
         Me.CanoeSlalom.Text = "CanoeSlalom"
         Me.CanoeSlalom.UseVisualStyleBackColor = True
         '
+        'UcCanoeSlalom1
+        '
+        Me.UcCanoeSlalom1.Location = New System.Drawing.Point(3, 5)
+        Me.UcCanoeSlalom1.Name = "UcCanoeSlalom1"
+        Me.UcCanoeSlalom1.Size = New System.Drawing.Size(1126, 897)
+        Me.UcCanoeSlalom1.TabIndex = 0
+        '
         'Rowing
         '
         Me.Rowing.Controls.Add(Me.UcTrack1)
@@ -329,6 +348,13 @@ Partial Class frmNG2022
         Me.Rowing.TabIndex = 6
         Me.Rowing.Text = "Rowing/Canoe Sprint"
         Me.Rowing.UseVisualStyleBackColor = True
+        '
+        'UcTrack1
+        '
+        Me.UcTrack1.Location = New System.Drawing.Point(8, 7)
+        Me.UcTrack1.Name = "UcTrack1"
+        Me.UcTrack1.Size = New System.Drawing.Size(1124, 822)
+        Me.UcTrack1.TabIndex = 0
         '
         'NetBall
         '
@@ -340,6 +366,15 @@ Partial Class frmNG2022
         Me.NetBall.Text = "NetBall"
         Me.NetBall.UseVisualStyleBackColor = True
         '
+        'UcNetBall1
+        '
+        Me.UcNetBall1.AutoScroll = True
+        Me.UcNetBall1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcNetBall1.Location = New System.Drawing.Point(4, 4)
+        Me.UcNetBall1.Name = "UcNetBall1"
+        Me.UcNetBall1.Size = New System.Drawing.Size(1137, 776)
+        Me.UcNetBall1.TabIndex = 0
+        '
         'BasketBall
         '
         Me.BasketBall.Controls.Add(Me.UcBasketBall1)
@@ -349,6 +384,15 @@ Partial Class frmNG2022
         Me.BasketBall.TabIndex = 5
         Me.BasketBall.Text = "BasketBall"
         Me.BasketBall.UseVisualStyleBackColor = True
+        '
+        'UcBasketBall1
+        '
+        Me.UcBasketBall1.AutoScroll = True
+        Me.UcBasketBall1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcBasketBall1.Location = New System.Drawing.Point(11, 4)
+        Me.UcBasketBall1.Name = "UcBasketBall1"
+        Me.UcBasketBall1.Size = New System.Drawing.Size(1137, 776)
+        Me.UcBasketBall1.TabIndex = 0
         '
         'CG1
         '
@@ -361,6 +405,13 @@ Partial Class frmNG2022
         Me.CG1.Text = "CG1"
         Me.CG1.UseVisualStyleBackColor = True
         '
+        'UcCG11
+        '
+        Me.UcCG11.Location = New System.Drawing.Point(6, 6)
+        Me.UcCG11.Name = "UcCG11"
+        Me.UcCG11.Size = New System.Drawing.Size(874, 731)
+        Me.UcCG11.TabIndex = 0
+        '
         'CG2
         '
         Me.CG2.Controls.Add(Me.UcCG21)
@@ -370,6 +421,15 @@ Partial Class frmNG2022
         Me.CG2.TabIndex = 3
         Me.CG2.Text = "CG2"
         Me.CG2.UseVisualStyleBackColor = True
+        '
+        'UcCG21
+        '
+        Me.UcCG21.AutoScroll = True
+        Me.UcCG21.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcCG21.Location = New System.Drawing.Point(3, 3)
+        Me.UcCG21.Name = "UcCG21"
+        Me.UcCG21.Size = New System.Drawing.Size(789, 718)
+        Me.UcCG21.TabIndex = 0
         '
         'Kabaddi
         '
@@ -382,6 +442,15 @@ Partial Class frmNG2022
         Me.Kabaddi.Text = "Kabaddi"
         Me.Kabaddi.UseVisualStyleBackColor = True
         '
+        'UcKabaddi1
+        '
+        Me.UcKabaddi1.AutoScroll = True
+        Me.UcKabaddi1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcKabaddi1.Location = New System.Drawing.Point(6, 6)
+        Me.UcKabaddi1.Name = "UcKabaddi1"
+        Me.UcKabaddi1.Size = New System.Drawing.Size(1137, 776)
+        Me.UcKabaddi1.TabIndex = 0
+        '
         'KhoKho
         '
         Me.KhoKho.Controls.Add(Me.UcKhoKho1)
@@ -393,6 +462,15 @@ Partial Class frmNG2022
         Me.KhoKho.Text = "KhoKho"
         Me.KhoKho.UseVisualStyleBackColor = True
         '
+        'UcKhoKho1
+        '
+        Me.UcKhoKho1.AutoScroll = True
+        Me.UcKhoKho1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcKhoKho1.Location = New System.Drawing.Point(0, 4)
+        Me.UcKhoKho1.Name = "UcKhoKho1"
+        Me.UcKhoKho1.Size = New System.Drawing.Size(1137, 776)
+        Me.UcKhoKho1.TabIndex = 0
+        '
         'Football_Hockey
         '
         Me.Football_Hockey.Controls.Add(Me.UcRccBall1)
@@ -403,6 +481,15 @@ Partial Class frmNG2022
         Me.Football_Hockey.TabIndex = 2
         Me.Football_Hockey.Text = "Football/Hockey/ Rugby 7s"
         Me.Football_Hockey.UseVisualStyleBackColor = True
+        '
+        'UcRccBall1
+        '
+        Me.UcRccBall1.AutoScroll = True
+        Me.UcRccBall1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcRccBall1.Location = New System.Drawing.Point(3, 0)
+        Me.UcRccBall1.Name = "UcRccBall1"
+        Me.UcRccBall1.Size = New System.Drawing.Size(1129, 780)
+        Me.UcRccBall1.TabIndex = 0
         '
         'GroupBox12
         '
@@ -620,89 +707,6 @@ Partial Class frmNG2022
         Me.lblClientID.TabIndex = 1318
         Me.lblClientID.Text = "ClientId"
         '
-        'UcGymnastic1
-        '
-        Me.UcGymnastic1.BackColor = System.Drawing.Color.Gainsboro
-        Me.UcGymnastic1.Location = New System.Drawing.Point(3, 3)
-        Me.UcGymnastic1.Name = "UcGymnastic1"
-        Me.UcGymnastic1.Size = New System.Drawing.Size(1353, 876)
-        Me.UcGymnastic1.TabIndex = 0
-        '
-        'UcCanoeSlalom1
-        '
-        Me.UcCanoeSlalom1.Location = New System.Drawing.Point(3, 5)
-        Me.UcCanoeSlalom1.Name = "UcCanoeSlalom1"
-        Me.UcCanoeSlalom1.Size = New System.Drawing.Size(1126, 897)
-        Me.UcCanoeSlalom1.TabIndex = 0
-        '
-        'UcTrack1
-        '
-        Me.UcTrack1.Location = New System.Drawing.Point(8, 7)
-        Me.UcTrack1.Name = "UcTrack1"
-        Me.UcTrack1.Size = New System.Drawing.Size(1124, 822)
-        Me.UcTrack1.TabIndex = 0
-        '
-        'UcNetBall1
-        '
-        Me.UcNetBall1.AutoScroll = True
-        Me.UcNetBall1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcNetBall1.Location = New System.Drawing.Point(4, 4)
-        Me.UcNetBall1.Name = "UcNetBall1"
-        Me.UcNetBall1.Size = New System.Drawing.Size(1137, 776)
-        Me.UcNetBall1.TabIndex = 0
-        '
-        'UcBasketBall1
-        '
-        Me.UcBasketBall1.AutoScroll = True
-        Me.UcBasketBall1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcBasketBall1.Location = New System.Drawing.Point(11, 4)
-        Me.UcBasketBall1.Name = "UcBasketBall1"
-        Me.UcBasketBall1.Size = New System.Drawing.Size(1137, 776)
-        Me.UcBasketBall1.TabIndex = 0
-        '
-        'UcCG11
-        '
-        Me.UcCG11.Location = New System.Drawing.Point(6, 6)
-        Me.UcCG11.Name = "UcCG11"
-        Me.UcCG11.Size = New System.Drawing.Size(874, 731)
-        Me.UcCG11.TabIndex = 0
-        '
-        'UcCG21
-        '
-        Me.UcCG21.AutoScroll = True
-        Me.UcCG21.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcCG21.Location = New System.Drawing.Point(3, 3)
-        Me.UcCG21.Name = "UcCG21"
-        Me.UcCG21.Size = New System.Drawing.Size(789, 718)
-        Me.UcCG21.TabIndex = 0
-        '
-        'UcKabaddi1
-        '
-        Me.UcKabaddi1.AutoScroll = True
-        Me.UcKabaddi1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcKabaddi1.Location = New System.Drawing.Point(6, 6)
-        Me.UcKabaddi1.Name = "UcKabaddi1"
-        Me.UcKabaddi1.Size = New System.Drawing.Size(1137, 776)
-        Me.UcKabaddi1.TabIndex = 0
-        '
-        'UcKhoKho1
-        '
-        Me.UcKhoKho1.AutoScroll = True
-        Me.UcKhoKho1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcKhoKho1.Location = New System.Drawing.Point(0, 4)
-        Me.UcKhoKho1.Name = "UcKhoKho1"
-        Me.UcKhoKho1.Size = New System.Drawing.Size(1137, 776)
-        Me.UcKhoKho1.TabIndex = 0
-        '
-        'UcRccBall1
-        '
-        Me.UcRccBall1.AutoScroll = True
-        Me.UcRccBall1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcRccBall1.Location = New System.Drawing.Point(3, 0)
-        Me.UcRccBall1.Name = "UcRccBall1"
-        Me.UcRccBall1.Size = New System.Drawing.Size(1129, 780)
-        Me.UcRccBall1.TabIndex = 0
-        '
         'UcCasparcgWindow1
         '
         Me.UcCasparcgWindow1.AllowDrop = True
@@ -712,6 +716,26 @@ Partial Class frmNG2022
         Me.UcCasparcgWindow1.Name = "UcCasparcgWindow1"
         Me.UcCasparcgWindow1.Size = New System.Drawing.Size(756, 498)
         Me.UcCasparcgWindow1.TabIndex = 1173
+        '
+        'Boxing
+        '
+        Me.Boxing.Controls.Add(Me.UcBoxing1)
+        Me.Boxing.Location = New System.Drawing.Point(4, 22)
+        Me.Boxing.Name = "Boxing"
+        Me.Boxing.Padding = New System.Windows.Forms.Padding(3)
+        Me.Boxing.Size = New System.Drawing.Size(1135, 902)
+        Me.Boxing.TabIndex = 10
+        Me.Boxing.Text = "Boxing"
+        Me.Boxing.UseVisualStyleBackColor = True
+        '
+        'UcBoxing1
+        '
+        Me.UcBoxing1.AutoScroll = True
+        Me.UcBoxing1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcBoxing1.Location = New System.Drawing.Point(6, 3)
+        Me.UcBoxing1.Name = "UcBoxing1"
+        Me.UcBoxing1.Size = New System.Drawing.Size(1137, 776)
+        Me.UcBoxing1.TabIndex = 0
         '
         'frmNG2022
         '
@@ -728,7 +752,7 @@ Partial Class frmNG2022
         Me.Controls.Add(Me.gbPannel)
         Me.Name = "frmNG2022"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "NG_030323_1"
+        Me.Text = "NG_040323_1"
         Me.gbPannel.ResumeLayout(False)
         Me.gbPannel.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
@@ -748,6 +772,7 @@ Partial Class frmNG2022
         Me.gbOutAnimation.PerformLayout()
         Me.gbINAnimation.ResumeLayout(False)
         Me.gbINAnimation.PerformLayout()
+        Me.Boxing.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -813,4 +838,6 @@ Partial Class frmNG2022
     Friend WithEvents UcCanoeSlalom1 As ucCanoeSlalom
     Friend WithEvents Gymnastic As TabPage
     Friend WithEvents UcGymnastic1 As ucGymnastic
+    Friend WithEvents Boxing As TabPage
+    Friend WithEvents UcBoxing1 As ucBoxing
 End Class
