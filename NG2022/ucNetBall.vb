@@ -48,10 +48,25 @@
     End Sub
     Private Sub cmdstopgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopgym.Click
         On Error Resume Next
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(Int(cmblayergames.Text))
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
-        Threading.Thread.Sleep(1000)
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        If frmNG2022.chkanimation.Checked Then
+            frmNG2022.animation2(Int(cmblayergames.Text))
+        End If
+        If frmNG2022.chkanimation.Checked = False Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outEfeect()")
+        Else
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        End If
+
+        If frmNG2022.chkanimation.Checked Then
+            Threading.Thread.Sleep(1000)
+            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        End If
+
+        'On Error Resume Next
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(Int(cmblayergames.Text))
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        'Threading.Thread.Sleep(1000)
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
         tmrtimeupdateontemplate.Enabled = False
 
     End Sub

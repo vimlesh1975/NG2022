@@ -42,6 +42,8 @@ Partial Class frmNG2022
         Me.lblport = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.Boxing = New System.Windows.Forms.TabPage()
+        Me.UcBoxing1 = New NG2022.ucBoxing()
         Me.Gymnastic = New System.Windows.Forms.TabPage()
         Me.UcGymnastic1 = New NG2022.ucGymnastic()
         Me.CanoeSlalom = New System.Windows.Forms.TabPage()
@@ -83,10 +85,9 @@ Partial Class frmNG2022
         Me.txtClientID = New System.Windows.Forms.TextBox()
         Me.lblClientID = New System.Windows.Forms.Label()
         Me.UcCasparcgWindow1 = New NG2022.ucCasparcgWindow()
-        Me.Boxing = New System.Windows.Forms.TabPage()
-        Me.UcBoxing1 = New NG2022.ucBoxing()
         Me.gbPannel.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.Boxing.SuspendLayout()
         Me.Gymnastic.SuspendLayout()
         Me.CanoeSlalom.SuspendLayout()
         Me.Rowing.SuspendLayout()
@@ -100,7 +101,6 @@ Partial Class frmNG2022
         Me.GroupBox12.SuspendLayout()
         Me.gbOutAnimation.SuspendLayout()
         Me.gbINAnimation.SuspendLayout()
-        Me.Boxing.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbPannel
@@ -302,6 +302,26 @@ Partial Class frmNG2022
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1143, 928)
         Me.TabControl1.TabIndex = 1340
+        '
+        'Boxing
+        '
+        Me.Boxing.Controls.Add(Me.UcBoxing1)
+        Me.Boxing.Location = New System.Drawing.Point(4, 22)
+        Me.Boxing.Name = "Boxing"
+        Me.Boxing.Padding = New System.Windows.Forms.Padding(3)
+        Me.Boxing.Size = New System.Drawing.Size(1135, 902)
+        Me.Boxing.TabIndex = 10
+        Me.Boxing.Text = "Boxing"
+        Me.Boxing.UseVisualStyleBackColor = True
+        '
+        'UcBoxing1
+        '
+        Me.UcBoxing1.AutoScroll = True
+        Me.UcBoxing1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcBoxing1.Location = New System.Drawing.Point(6, 3)
+        Me.UcBoxing1.Name = "UcBoxing1"
+        Me.UcBoxing1.Size = New System.Drawing.Size(1137, 776)
+        Me.UcBoxing1.TabIndex = 0
         '
         'Gymnastic
         '
@@ -717,26 +737,6 @@ Partial Class frmNG2022
         Me.UcCasparcgWindow1.Size = New System.Drawing.Size(756, 498)
         Me.UcCasparcgWindow1.TabIndex = 1173
         '
-        'Boxing
-        '
-        Me.Boxing.Controls.Add(Me.UcBoxing1)
-        Me.Boxing.Location = New System.Drawing.Point(4, 22)
-        Me.Boxing.Name = "Boxing"
-        Me.Boxing.Padding = New System.Windows.Forms.Padding(3)
-        Me.Boxing.Size = New System.Drawing.Size(1135, 902)
-        Me.Boxing.TabIndex = 10
-        Me.Boxing.Text = "Boxing"
-        Me.Boxing.UseVisualStyleBackColor = True
-        '
-        'UcBoxing1
-        '
-        Me.UcBoxing1.AutoScroll = True
-        Me.UcBoxing1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcBoxing1.Location = New System.Drawing.Point(6, 3)
-        Me.UcBoxing1.Name = "UcBoxing1"
-        Me.UcBoxing1.Size = New System.Drawing.Size(1137, 776)
-        Me.UcBoxing1.TabIndex = 0
-        '
         'frmNG2022
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -752,10 +752,11 @@ Partial Class frmNG2022
         Me.Controls.Add(Me.gbPannel)
         Me.Name = "frmNG2022"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "NG_040323_1"
+        Me.Text = "NG_050323_1"
         Me.gbPannel.ResumeLayout(False)
         Me.gbPannel.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        Me.Boxing.ResumeLayout(False)
         Me.Gymnastic.ResumeLayout(False)
         Me.CanoeSlalom.ResumeLayout(False)
         Me.Rowing.ResumeLayout(False)
@@ -772,7 +773,6 @@ Partial Class frmNG2022
         Me.gbOutAnimation.PerformLayout()
         Me.gbINAnimation.ResumeLayout(False)
         Me.gbINAnimation.PerformLayout()
-        Me.Boxing.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -25,7 +25,9 @@ Partial Class ucBoxing
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucBoxing))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmbSubHeader = New System.Windows.Forms.ComboBox()
         Me.cmbHeader = New System.Windows.Forms.ComboBox()
@@ -39,7 +41,12 @@ Partial Class ucBoxing
         Me.tmrtimeupdateontemplate = New System.Windows.Forms.Timer(Me.components)
         Me.ofd1 = New System.Windows.Forms.OpenFileDialog()
         Me.Ball = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmdCalculate = New System.Windows.Forms.Button()
+        Me.txtt2gball = New System.Windows.Forms.TextBox()
+        Me.cmdwinnerBoxing = New System.Windows.Forms.Button()
+        Me.cmbwinningmethodboxing = New System.Windows.Forms.ComboBox()
+        Me.txtt1gball = New System.Windows.Forms.TextBox()
+        Me.cmdFinal = New System.Windows.Forms.Button()
         Me.cmdRound2 = New System.Windows.Forms.Button()
         Me.cmdRound1 = New System.Windows.Forms.Button()
         Me.gbtstrack = New System.Windows.Forms.GroupBox()
@@ -70,17 +77,20 @@ Partial Class ucBoxing
         Me.cmdSaveas1 = New System.Windows.Forms.Button()
         Me.lblfilenamet1ball = New System.Windows.Forms.Label()
         Me.GroupBox16 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmdSetBoth = New System.Windows.Forms.Button()
+        Me.cmdadjustminball = New System.Windows.Forms.Button()
+        Me.cmdadjustsecball = New System.Windows.Forms.Button()
+        Me.cmbputminuteball = New System.Windows.Forms.ComboBox()
+        Me.cmbputsecondball = New System.Windows.Forms.ComboBox()
+        Me.cmdInterChange = New System.Windows.Forms.Button()
+        Me.cmdvsball = New System.Windows.Forms.Button()
         Me.txtCounty2 = New System.Windows.Forms.TextBox()
         Me.txtCounty1 = New System.Windows.Forms.TextBox()
         Me.txtPlayer2 = New System.Windows.Forms.TextBox()
         Me.txtPlayer1 = New System.Windows.Forms.TextBox()
         Me.cmdplayeridt2ball = New System.Windows.Forms.Button()
         Me.cmdplayeridt1ball = New System.Windows.Forms.Button()
-        Me.cmdadjustsecball = New System.Windows.Forms.Button()
-        Me.cmbputsecondball = New System.Windows.Forms.ComboBox()
-        Me.cmbputminuteball = New System.Windows.Forms.ComboBox()
-        Me.cmdadjustminball = New System.Windows.Forms.Button()
         Me.cmbinfoball = New System.Windows.Forms.ComboBox()
         Me.cmdscorewithclock = New System.Windows.Forms.Button()
         Me.Label45 = New System.Windows.Forms.Label()
@@ -102,13 +112,13 @@ Partial Class ucBoxing
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.cmbgames = New System.Windows.Forms.ComboBox()
-        Me.cmdvsball = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.Ball.SuspendLayout()
         Me.gbtstrack.SuspendLayout()
         Me.ToolStrip4.SuspendLayout()
         CType(Me.dgvtrack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox16.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.GroupBox15.SuspendLayout()
         CType(Me.pict2logoball, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pict1logoball, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -222,7 +232,12 @@ Partial Class ucBoxing
         '
         'Ball
         '
-        Me.Ball.Controls.Add(Me.Button1)
+        Me.Ball.Controls.Add(Me.cmdCalculate)
+        Me.Ball.Controls.Add(Me.txtt2gball)
+        Me.Ball.Controls.Add(Me.cmdwinnerBoxing)
+        Me.Ball.Controls.Add(Me.cmbwinningmethodboxing)
+        Me.Ball.Controls.Add(Me.txtt1gball)
+        Me.Ball.Controls.Add(Me.cmdFinal)
         Me.Ball.Controls.Add(Me.cmdRound2)
         Me.Ball.Controls.Add(Me.cmdRound1)
         Me.Ball.Controls.Add(Me.gbtstrack)
@@ -237,32 +252,88 @@ Partial Class ucBoxing
         Me.Ball.TabIndex = 4
         Me.Ball.UseVisualStyleBackColor = True
         '
-        'Button1
+        'cmdCalculate
         '
-        Me.Button1.Location = New System.Drawing.Point(624, 304)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 28)
-        Me.Button1.TabIndex = 1307
-        Me.Button1.Text = "Final"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmdCalculate.Location = New System.Drawing.Point(6, 309)
+        Me.cmdCalculate.Name = "cmdCalculate"
+        Me.cmdCalculate.Size = New System.Drawing.Size(75, 28)
+        Me.cmdCalculate.TabIndex = 1344
+        Me.cmdCalculate.Text = "Calculate"
+        Me.cmdCalculate.UseVisualStyleBackColor = True
+        '
+        'txtt2gball
+        '
+        Me.txtt2gball.Location = New System.Drawing.Point(669, 330)
+        Me.txtt2gball.Name = "txtt2gball"
+        Me.txtt2gball.Size = New System.Drawing.Size(38, 20)
+        Me.txtt2gball.TabIndex = 1346
+        Me.txtt2gball.Text = "0"
+        '
+        'cmdwinnerBoxing
+        '
+        Me.cmdwinnerBoxing.BackColor = System.Drawing.Color.Green
+        Me.cmdwinnerBoxing.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdwinnerBoxing.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdwinnerBoxing.Location = New System.Drawing.Point(291, 399)
+        Me.cmdwinnerBoxing.Name = "cmdwinnerBoxing"
+        Me.cmdwinnerBoxing.Size = New System.Drawing.Size(75, 23)
+        Me.cmdwinnerBoxing.TabIndex = 1343
+        Me.cmdwinnerBoxing.Text = "Winner"
+        Me.cmdwinnerBoxing.UseVisualStyleBackColor = False
+        '
+        'cmbwinningmethodboxing
+        '
+        Me.cmbwinningmethodboxing.FormattingEnabled = True
+        Me.cmbwinningmethodboxing.Items.AddRange(New Object() {"WINNER BY POINTS", "WINNER BY Refree Stopped the Contest", "WINNER BY  Technical  Knock Out", "WINNER BY Knock Out", "WINNER ", "WINNER BY Retired", "WINNER BY  DISQ"})
+        Me.cmbwinningmethodboxing.Location = New System.Drawing.Point(36, 401)
+        Me.cmbwinningmethodboxing.Name = "cmbwinningmethodboxing"
+        Me.cmbwinningmethodboxing.Size = New System.Drawing.Size(249, 21)
+        Me.cmbwinningmethodboxing.TabIndex = 1342
+        Me.cmbwinningmethodboxing.Text = "WINNER BY POINTS"
+        '
+        'txtt1gball
+        '
+        Me.txtt1gball.Location = New System.Drawing.Point(669, 309)
+        Me.txtt1gball.Name = "txtt1gball"
+        Me.txtt1gball.Size = New System.Drawing.Size(38, 20)
+        Me.txtt1gball.TabIndex = 1345
+        Me.txtt1gball.Text = "0"
+        '
+        'cmdFinal
+        '
+        Me.cmdFinal.BackColor = System.Drawing.Color.Green
+        Me.cmdFinal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdFinal.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdFinal.Location = New System.Drawing.Point(575, 309)
+        Me.cmdFinal.Name = "cmdFinal"
+        Me.cmdFinal.Size = New System.Drawing.Size(75, 28)
+        Me.cmdFinal.TabIndex = 1307
+        Me.cmdFinal.Text = "Final"
+        Me.cmdFinal.UseVisualStyleBackColor = False
         '
         'cmdRound2
         '
-        Me.cmdRound2.Location = New System.Drawing.Point(543, 304)
+        Me.cmdRound2.BackColor = System.Drawing.Color.Green
+        Me.cmdRound2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdRound2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdRound2.Location = New System.Drawing.Point(494, 309)
         Me.cmdRound2.Name = "cmdRound2"
         Me.cmdRound2.Size = New System.Drawing.Size(75, 28)
         Me.cmdRound2.TabIndex = 1306
         Me.cmdRound2.Text = "Round2"
-        Me.cmdRound2.UseVisualStyleBackColor = True
+        Me.cmdRound2.UseVisualStyleBackColor = False
         '
         'cmdRound1
         '
-        Me.cmdRound1.Location = New System.Drawing.Point(462, 304)
+        Me.cmdRound1.BackColor = System.Drawing.Color.Green
+        Me.cmdRound1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdRound1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdRound1.Location = New System.Drawing.Point(413, 309)
         Me.cmdRound1.Name = "cmdRound1"
         Me.cmdRound1.Size = New System.Drawing.Size(75, 28)
         Me.cmdRound1.TabIndex = 1305
         Me.cmdRound1.Text = "Round1"
-        Me.cmdRound1.UseVisualStyleBackColor = True
+        Me.cmdRound1.UseVisualStyleBackColor = False
         '
         'gbtstrack
         '
@@ -364,31 +435,34 @@ Partial Class ucBoxing
         '
         'cmdJudges
         '
-        Me.cmdJudges.Location = New System.Drawing.Point(379, 304)
+        Me.cmdJudges.BackColor = System.Drawing.Color.Green
+        Me.cmdJudges.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdJudges.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdJudges.Location = New System.Drawing.Point(330, 309)
         Me.cmdJudges.Name = "cmdJudges"
         Me.cmdJudges.Size = New System.Drawing.Size(75, 28)
         Me.cmdJudges.TabIndex = 1303
         Me.cmdJudges.Text = "Judges"
-        Me.cmdJudges.UseVisualStyleBackColor = True
+        Me.cmdJudges.UseVisualStyleBackColor = False
         '
         'dgvtrack
         '
         Me.dgvtrack.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvtrack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.DataGridViewComboBoxColumn2, Me.DataGridViewTextBoxColumn49, Me.imglocation1, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle9
         Me.dgvtrack.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvtrack.Location = New System.Drawing.Point(6, 76)
         Me.dgvtrack.Name = "dgvtrack"
         Me.dgvtrack.RowTemplate.Height = 30
-        Me.dgvtrack.Size = New System.Drawing.Size(693, 222)
+        Me.dgvtrack.Size = New System.Drawing.Size(726, 222)
         Me.dgvtrack.TabIndex = 1294
         '
         'Column2
@@ -397,7 +471,6 @@ Partial Class ucBoxing
         Me.Column2.HeaderText = "Code"
         Me.Column2.Name = "Column2"
         Me.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.Column2.Width = 40
         '
         'DataGridViewComboBoxColumn2
         '
@@ -444,6 +517,10 @@ Partial Class ucBoxing
         '
         'Column5
         '
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle7
         Me.Column5.HeaderText = "TOTAL1"
         Me.Column5.Name = "Column5"
         Me.Column5.Width = 50
@@ -468,6 +545,10 @@ Partial Class ucBoxing
         '
         'Column9
         '
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        Me.Column9.DefaultCellStyle = DataGridViewCellStyle8
         Me.Column9.HeaderText = "TOTAL2"
         Me.Column9.Name = "Column9"
         Me.Column9.Width = 50
@@ -493,18 +574,15 @@ Partial Class ucBoxing
         'GroupBox16
         '
         Me.GroupBox16.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox16.Controls.Add(Me.GroupBox1)
+        Me.GroupBox16.Controls.Add(Me.cmdInterChange)
         Me.GroupBox16.Controls.Add(Me.cmdvsball)
-        Me.GroupBox16.Controls.Add(Me.cmdSetBoth)
         Me.GroupBox16.Controls.Add(Me.txtCounty2)
         Me.GroupBox16.Controls.Add(Me.txtCounty1)
         Me.GroupBox16.Controls.Add(Me.txtPlayer2)
         Me.GroupBox16.Controls.Add(Me.txtPlayer1)
         Me.GroupBox16.Controls.Add(Me.cmdplayeridt2ball)
         Me.GroupBox16.Controls.Add(Me.cmdplayeridt1ball)
-        Me.GroupBox16.Controls.Add(Me.cmdadjustsecball)
-        Me.GroupBox16.Controls.Add(Me.cmbputsecondball)
-        Me.GroupBox16.Controls.Add(Me.cmbputminuteball)
-        Me.GroupBox16.Controls.Add(Me.cmdadjustminball)
         Me.GroupBox16.Controls.Add(Me.cmbinfoball)
         Me.GroupBox16.Controls.Add(Me.cmdscorewithclock)
         Me.GroupBox16.Controls.Add(Me.Label45)
@@ -517,21 +595,95 @@ Partial Class ucBoxing
         Me.GroupBox16.Controls.Add(Me.txtminball)
         Me.GroupBox16.Controls.Add(Me.cmdstartclockball)
         Me.GroupBox16.Controls.Add(Me.cmdpauseclockball)
-        Me.GroupBox16.Location = New System.Drawing.Point(738, 55)
+        Me.GroupBox16.Location = New System.Drawing.Point(738, 76)
         Me.GroupBox16.Name = "GroupBox16"
-        Me.GroupBox16.Size = New System.Drawing.Size(363, 192)
+        Me.GroupBox16.Size = New System.Drawing.Size(363, 480)
         Me.GroupBox16.TabIndex = 625
         Me.GroupBox16.TabStop = False
         Me.GroupBox16.Text = "Score"
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.DarkSalmon
+        Me.GroupBox1.Controls.Add(Me.cmdSetBoth)
+        Me.GroupBox1.Controls.Add(Me.cmdadjustminball)
+        Me.GroupBox1.Controls.Add(Me.cmdadjustsecball)
+        Me.GroupBox1.Controls.Add(Me.cmbputminuteball)
+        Me.GroupBox1.Controls.Add(Me.cmbputsecondball)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 118)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(103, 102)
+        Me.GroupBox1.TabIndex = 1348
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Clock Set"
+        '
         'cmdSetBoth
         '
-        Me.cmdSetBoth.Location = New System.Drawing.Point(109, 156)
+        Me.cmdSetBoth.Location = New System.Drawing.Point(6, 72)
         Me.cmdSetBoth.Name = "cmdSetBoth"
         Me.cmdSetBoth.Size = New System.Drawing.Size(86, 24)
         Me.cmdSetBoth.TabIndex = 1243
         Me.cmdSetBoth.Text = "Set Both"
         Me.cmdSetBoth.UseVisualStyleBackColor = True
+        '
+        'cmdadjustminball
+        '
+        Me.cmdadjustminball.Location = New System.Drawing.Point(6, 21)
+        Me.cmdadjustminball.Name = "cmdadjustminball"
+        Me.cmdadjustminball.Size = New System.Drawing.Size(36, 24)
+        Me.cmdadjustminball.TabIndex = 1221
+        Me.cmdadjustminball.Text = "Set"
+        Me.cmdadjustminball.UseVisualStyleBackColor = True
+        '
+        'cmdadjustsecball
+        '
+        Me.cmdadjustsecball.Location = New System.Drawing.Point(56, 21)
+        Me.cmdadjustsecball.Name = "cmdadjustsecball"
+        Me.cmdadjustsecball.Size = New System.Drawing.Size(36, 24)
+        Me.cmdadjustsecball.TabIndex = 1224
+        Me.cmdadjustsecball.Text = "Set"
+        Me.cmdadjustsecball.UseVisualStyleBackColor = True
+        '
+        'cmbputminuteball
+        '
+        Me.cmbputminuteball.FormattingEnabled = True
+        Me.cmbputminuteball.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"})
+        Me.cmbputminuteball.Location = New System.Drawing.Point(7, 46)
+        Me.cmbputminuteball.Name = "cmbputminuteball"
+        Me.cmbputminuteball.Size = New System.Drawing.Size(43, 21)
+        Me.cmbputminuteball.TabIndex = 1222
+        Me.cmbputminuteball.Text = "3"
+        '
+        'cmbputsecondball
+        '
+        Me.cmbputsecondball.FormattingEnabled = True
+        Me.cmbputsecondball.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"})
+        Me.cmbputsecondball.Location = New System.Drawing.Point(56, 47)
+        Me.cmbputsecondball.Name = "cmbputsecondball"
+        Me.cmbputsecondball.Size = New System.Drawing.Size(40, 21)
+        Me.cmbputsecondball.TabIndex = 1223
+        Me.cmbputsecondball.Text = "00"
+        '
+        'cmdInterChange
+        '
+        Me.cmdInterChange.Location = New System.Drawing.Point(6, 10)
+        Me.cmdInterChange.Name = "cmdInterChange"
+        Me.cmdInterChange.Size = New System.Drawing.Size(193, 23)
+        Me.cmdInterChange.TabIndex = 1347
+        Me.cmdInterChange.Text = "Interchange"
+        Me.cmdInterChange.UseVisualStyleBackColor = True
+        '
+        'cmdvsball
+        '
+        Me.cmdvsball.BackColor = System.Drawing.Color.Green
+        Me.cmdvsball.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdvsball.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdvsball.Location = New System.Drawing.Point(283, 36)
+        Me.cmdvsball.Name = "cmdvsball"
+        Me.cmdvsball.Size = New System.Drawing.Size(43, 46)
+        Me.cmdvsball.TabIndex = 1244
+        Me.cmdvsball.Text = "V/S"
+        Me.cmdvsball.UseVisualStyleBackColor = False
         '
         'txtCounty2
         '
@@ -567,64 +719,26 @@ Partial Class ucBoxing
         '
         'cmdplayeridt2ball
         '
-        Me.cmdplayeridt2ball.Location = New System.Drawing.Point(6, 131)
+        Me.cmdplayeridt2ball.Location = New System.Drawing.Point(207, 61)
         Me.cmdplayeridt2ball.Name = "cmdplayeridt2ball"
-        Me.cmdplayeridt2ball.Size = New System.Drawing.Size(70, 33)
+        Me.cmdplayeridt2ball.Size = New System.Drawing.Size(70, 21)
         Me.cmdplayeridt2ball.TabIndex = 1205
         Me.cmdplayeridt2ball.Text = "Player ID 2"
         Me.cmdplayeridt2ball.UseVisualStyleBackColor = True
         '
         'cmdplayeridt1ball
         '
-        Me.cmdplayeridt1ball.Location = New System.Drawing.Point(6, 90)
+        Me.cmdplayeridt1ball.Location = New System.Drawing.Point(207, 36)
         Me.cmdplayeridt1ball.Name = "cmdplayeridt1ball"
-        Me.cmdplayeridt1ball.Size = New System.Drawing.Size(70, 33)
+        Me.cmdplayeridt1ball.Size = New System.Drawing.Size(70, 22)
         Me.cmdplayeridt1ball.TabIndex = 1204
         Me.cmdplayeridt1ball.Text = "Player ID 1"
         Me.cmdplayeridt1ball.UseVisualStyleBackColor = True
         '
-        'cmdadjustsecball
-        '
-        Me.cmdadjustsecball.Location = New System.Drawing.Point(159, 105)
-        Me.cmdadjustsecball.Name = "cmdadjustsecball"
-        Me.cmdadjustsecball.Size = New System.Drawing.Size(36, 24)
-        Me.cmdadjustsecball.TabIndex = 1224
-        Me.cmdadjustsecball.Text = "Set"
-        Me.cmdadjustsecball.UseVisualStyleBackColor = True
-        '
-        'cmbputsecondball
-        '
-        Me.cmbputsecondball.FormattingEnabled = True
-        Me.cmbputsecondball.Items.AddRange(New Object() {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"})
-        Me.cmbputsecondball.Location = New System.Drawing.Point(159, 131)
-        Me.cmbputsecondball.Name = "cmbputsecondball"
-        Me.cmbputsecondball.Size = New System.Drawing.Size(40, 21)
-        Me.cmbputsecondball.TabIndex = 1223
-        Me.cmbputsecondball.Text = "00"
-        '
-        'cmbputminuteball
-        '
-        Me.cmbputminuteball.FormattingEnabled = True
-        Me.cmbputminuteball.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"})
-        Me.cmbputminuteball.Location = New System.Drawing.Point(110, 130)
-        Me.cmbputminuteball.Name = "cmbputminuteball"
-        Me.cmbputminuteball.Size = New System.Drawing.Size(43, 21)
-        Me.cmbputminuteball.TabIndex = 1222
-        Me.cmbputminuteball.Text = "3"
-        '
-        'cmdadjustminball
-        '
-        Me.cmdadjustminball.Location = New System.Drawing.Point(109, 105)
-        Me.cmdadjustminball.Name = "cmdadjustminball"
-        Me.cmdadjustminball.Size = New System.Drawing.Size(36, 24)
-        Me.cmdadjustminball.TabIndex = 1221
-        Me.cmdadjustminball.Text = "Set"
-        Me.cmdadjustminball.UseVisualStyleBackColor = True
-        '
         'cmbinfoball
         '
         Me.cmbinfoball.FormattingEnabled = True
-        Me.cmbinfoball.Location = New System.Drawing.Point(248, 58)
+        Me.cmbinfoball.Location = New System.Drawing.Point(163, 165)
         Me.cmbinfoball.Name = "cmbinfoball"
         Me.cmbinfoball.Size = New System.Drawing.Size(93, 21)
         Me.cmbinfoball.TabIndex = 1220
@@ -632,17 +746,20 @@ Partial Class ucBoxing
         '
         'cmdscorewithclock
         '
-        Me.cmdscorewithclock.Location = New System.Drawing.Point(268, 131)
+        Me.cmdscorewithclock.BackColor = System.Drawing.Color.Green
+        Me.cmdscorewithclock.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdscorewithclock.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdscorewithclock.Location = New System.Drawing.Point(292, 121)
         Me.cmdscorewithclock.Name = "cmdscorewithclock"
-        Me.cmdscorewithclock.Size = New System.Drawing.Size(48, 57)
+        Me.cmdscorewithclock.Size = New System.Drawing.Size(48, 97)
         Me.cmdscorewithclock.TabIndex = 1218
         Me.cmdscorewithclock.Text = "Clock+ info"
-        Me.cmdscorewithclock.UseVisualStyleBackColor = True
+        Me.cmdscorewithclock.UseVisualStyleBackColor = False
         '
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(221, 63)
+        Me.Label45.Location = New System.Drawing.Point(136, 170)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(25, 13)
         Me.Label45.TabIndex = 1208
@@ -652,7 +769,7 @@ Partial Class ucBoxing
         '
         Me.cmbhalfball.FormattingEnabled = True
         Me.cmbhalfball.Items.AddRange(New Object() {"1st", "2nd", "3rd", "4th", "Ext"})
-        Me.cmbhalfball.Location = New System.Drawing.Point(300, 36)
+        Me.cmbhalfball.Location = New System.Drawing.Point(215, 143)
         Me.cmbhalfball.Name = "cmbhalfball"
         Me.cmbhalfball.Size = New System.Drawing.Size(54, 21)
         Me.cmbhalfball.TabIndex = 626
@@ -662,7 +779,7 @@ Partial Class ucBoxing
         '
         Me.GroupBox15.Controls.Add(Me.rdodowncounterball)
         Me.GroupBox15.Controls.Add(Me.rdoupcounterball)
-        Me.GroupBox15.Location = New System.Drawing.Point(219, 84)
+        Me.GroupBox15.Location = New System.Drawing.Point(134, 191)
         Me.GroupBox15.Name = "GroupBox15"
         Me.GroupBox15.Size = New System.Drawing.Size(114, 33)
         Me.GroupBox15.TabIndex = 624
@@ -715,7 +832,7 @@ Partial Class ucBoxing
         '
         'cmdresetclockball
         '
-        Me.cmdresetclockball.Location = New System.Drawing.Point(315, 11)
+        Me.cmdresetclockball.Location = New System.Drawing.Point(230, 118)
         Me.cmdresetclockball.Name = "cmdresetclockball"
         Me.cmdresetclockball.Size = New System.Drawing.Size(47, 23)
         Me.cmdresetclockball.TabIndex = 611
@@ -724,7 +841,7 @@ Partial Class ucBoxing
         '
         'txtsecball
         '
-        Me.txtsecball.Location = New System.Drawing.Point(260, 37)
+        Me.txtsecball.Location = New System.Drawing.Point(175, 144)
         Me.txtsecball.Name = "txtsecball"
         Me.txtsecball.Size = New System.Drawing.Size(38, 20)
         Me.txtsecball.TabIndex = 610
@@ -732,7 +849,7 @@ Partial Class ucBoxing
         '
         'txtminball
         '
-        Me.txtminball.Location = New System.Drawing.Point(215, 37)
+        Me.txtminball.Location = New System.Drawing.Point(130, 144)
         Me.txtminball.Name = "txtminball"
         Me.txtminball.Size = New System.Drawing.Size(39, 20)
         Me.txtminball.TabIndex = 609
@@ -740,7 +857,7 @@ Partial Class ucBoxing
         '
         'cmdstartclockball
         '
-        Me.cmdstartclockball.Location = New System.Drawing.Point(215, 11)
+        Me.cmdstartclockball.Location = New System.Drawing.Point(130, 118)
         Me.cmdstartclockball.Name = "cmdstartclockball"
         Me.cmdstartclockball.Size = New System.Drawing.Size(39, 23)
         Me.cmdstartclockball.TabIndex = 607
@@ -750,7 +867,7 @@ Partial Class ucBoxing
         '
         'cmdpauseclockball
         '
-        Me.cmdpauseclockball.Location = New System.Drawing.Point(260, 11)
+        Me.cmdpauseclockball.Location = New System.Drawing.Point(175, 118)
         Me.cmdpauseclockball.Name = "cmdpauseclockball"
         Me.cmdpauseclockball.Size = New System.Drawing.Size(49, 23)
         Me.cmdpauseclockball.TabIndex = 606
@@ -815,15 +932,6 @@ Partial Class ucBoxing
         Me.cmbgames.TabIndex = 1202
         Me.cmbgames.Text = "Boxing"
         '
-        'cmdvsball
-        '
-        Me.cmdvsball.Location = New System.Drawing.Point(18, 167)
-        Me.cmdvsball.Name = "cmdvsball"
-        Me.cmdvsball.Size = New System.Drawing.Size(43, 23)
-        Me.cmdvsball.TabIndex = 1244
-        Me.cmdvsball.Text = "V/S"
-        Me.cmdvsball.UseVisualStyleBackColor = True
-        '
         'ucBoxing
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -844,6 +952,7 @@ Partial Class ucBoxing
         CType(Me.dgvtrack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox16.ResumeLayout(False)
         Me.GroupBox16.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox15.ResumeLayout(False)
         Me.GroupBox15.PerformLayout()
         CType(Me.pict2logoball, System.ComponentModel.ISupportInitialize).EndInit()
@@ -917,6 +1026,10 @@ Partial Class ucBoxing
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents downrowtrack As Button
     Friend WithEvents addrowtrack As Button
+    Friend WithEvents cmdRound1 As Button
+    Friend WithEvents cmdRound2 As Button
+    Friend WithEvents cmdFinal As Button
+    Friend WithEvents cmdvsball As Button
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewComboBoxColumn2 As DataGridViewImageColumn
     Friend WithEvents DataGridViewTextBoxColumn49 As DataGridViewTextBoxColumn
@@ -929,8 +1042,11 @@ Partial Class ucBoxing
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents cmdRound1 As Button
-    Friend WithEvents cmdRound2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents cmdvsball As Button
+    Friend WithEvents cmdCalculate As Button
+    Friend WithEvents cmdwinnerBoxing As Button
+    Friend WithEvents cmbwinningmethodboxing As ComboBox
+    Friend WithEvents txtt2gball As TextBox
+    Friend WithEvents txtt1gball As TextBox
+    Friend WithEvents cmdInterChange As Button
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

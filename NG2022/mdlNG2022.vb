@@ -144,11 +144,15 @@ Module mdlNG2022
             Next
         End If
 
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animation1(layergames)
-        Threading.Thread.Sleep(250)
+        If frmNG2022.chkanimation.Checked Then
+            frmNG2022.animation1(layergames)
+            Threading.Thread.Sleep(250)
+        End If
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(layergames), layergames, templatename, True, datacollection)
-        Threading.Thread.Sleep(1300)
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(layergames)
+        If frmNG2022.chkanimation.Checked Then
+            Threading.Thread.Sleep(1300)
+            frmNG2022.animationtoscreen(layergames)
+        End If
 
     End Sub
 

@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.Diagnostics.Eventing.Reader
+Imports System.IO
 
 Public Class ucBoxing
     Private Sub NG_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -79,10 +80,19 @@ Public Class ucBoxing
     End Sub
     Private Sub cmdstopgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopgym.Click
         On Error Resume Next
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(Int(cmblayergames.Text))
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
-        Threading.Thread.Sleep(1000)
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        If frmNG2022.chkanimation.Checked Then
+            frmNG2022.animation2(Int(cmblayergames.Text))
+        End If
+        If frmNG2022.chkanimation.Checked = False Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outEfeect()")
+        Else
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        End If
+
+        If frmNG2022.chkanimation.Checked Then
+            Threading.Thread.Sleep(1000)
+            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        End If
         tmrtimeupdateontemplate.Enabled = False
 
     End Sub
@@ -228,9 +238,11 @@ Public Class ucBoxing
         On Error Resume Next
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgf0", txtPlayer1.Text)
+        CasparCGDataCollection.SetData("ccgsn1", txtCounty1.Text)
+        CasparCGDataCollection.SetData("ccgwincolor", ColorTranslator.ToHtml(Color.Red))
+
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
-        CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/boxing/player_id", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
@@ -239,9 +251,10 @@ Public Class ucBoxing
         On Error Resume Next
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgf0", txtPlayer2.Text)
+        CasparCGDataCollection.SetData("ccgsn1", txtCounty2.Text)
+        CasparCGDataCollection.SetData("ccgwincolor", ColorTranslator.ToHtml(Color.Blue))
         CasparCGDataCollection.SetData("ccgloader1", pict2logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
-        CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/boxing/player_id", CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
@@ -455,8 +468,11 @@ Public Class ucBoxing
             Dim aa As New OpenFileDialog
             aa.InitialDirectory = "C:\casparcg\NG2022\data\flag\"
             If aa.ShowDialog = DialogResult.OK Then
-                dgvtrack.CurrentCell.Value = Image.FromFile(aa.FileName)
-                dgvtrack.CurrentRow.Cells(3).Value = aa.FileName
+                With dgvtrack
+                    .CurrentCell.Value = Image.FromFile(aa.FileName)
+                    .CurrentRow.Cells(3).Value = aa.FileName
+                    .CurrentRow.Cells(0).Value = Path.GetFileNameWithoutExtension(aa.FileName)
+                End With
             End If
         End If
     End Sub
@@ -544,10 +560,10 @@ Public Class ucBoxing
     End Sub
     Private Sub savetrack_Click(sender As Object, e As EventArgs) Handles savetrack.Click
         On Error Resume Next
-        savedataboxing("C:\casparcg\ng2022\data\boxing\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+        savedataboxing("C:\casparcg\ng2022\data\boxing\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1ball, False)
     End Sub
 
-    Sub savedataboxing(ByVal initialdirectory As String, ByVal dgvname As DataGridView, ByVal headername As ComboBox, ByVal subheadername As ComboBox, ByVal lblfilename As Label)
+    Sub savedataboxing(ByVal initialdirectory As String, ByVal dgvname As DataGridView, ByVal headername As ComboBox, ByVal subheadername As ComboBox, ByVal lblfilename As Label, Optional newfile As Boolean = False)
         On Error Resume Next
 
         Dim osd2 As New SaveFileDialog
@@ -555,7 +571,8 @@ Public Class ucBoxing
         osd2.InitialDirectory = initialdirectory
         'osd2.FileName = "001_" & ucRccBall.cmbHeader.Text & "_" & ucSG2016.cmbSubHeader.Text
 
-        If File.Exists(lblfilename.Text) = True Then
+
+        If File.Exists(lblfilename.Text) = True And newfile = False Then
             osd2.FileName = lblfilename.Text
             GoTo 20
         End If
@@ -698,22 +715,29 @@ Public Class ucBoxing
         End With
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub cmdFinal_Click(sender As Object, e As EventArgs) Handles cmdFinal.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
         With dgvtrack
 
-            CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
-            CasparCGDataCollection.SetData("ccgsubheader", "Judges")
+            'CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+            'CasparCGDataCollection.SetData("ccgsubheader", cmbSubHeader.Text)
 
-            CasparCGDataCollection.SetData("ccgf0", txtPlayer1.Text)
-            CasparCGDataCollection.SetData("ccgf1", txtPlayer2.Text)
+            If Val(txtt1gball.Text) > Val(txtt2gball.Text) Then
+                CasparCGDataCollection.SetData("ccgsn1", txtCounty1.Text)
+                CasparCGDataCollection.SetData("ccgloader55", pict1logoball.ImageLocation.Replace("\", "/"))
+                CasparCGDataCollection.SetData("ccgf0", txtPlayer1.Text)
+                CasparCGDataCollection.SetData("ccgwincolor", ColorTranslator.ToHtml(Color.Red))
 
-            CasparCGDataCollection.SetData("ccgsn1", txtCounty1.Text)
-            CasparCGDataCollection.SetData("ccgsn2", txtCounty2.Text)
+            Else
+                CasparCGDataCollection.SetData("ccgsn1", txtCounty2.Text)
+                CasparCGDataCollection.SetData("ccgloader55", pict2logoball.ImageLocation.Replace("\", "/"))
+                CasparCGDataCollection.SetData("ccgf0", txtPlayer2.Text)
+                CasparCGDataCollection.SetData("ccgwincolor", ColorTranslator.ToHtml(Color.Blue))
 
-            CasparCGDataCollection.SetData("ccgloader55", pict1logoball.ImageLocation.Replace("\", "/"))
-            CasparCGDataCollection.SetData("ccgloader56", pict2logoball.ImageLocation.Replace("\", "/"))
+
+            End If
+            CasparCGDataCollection.SetData("ccgpoints", txtt1gball.Text & "-" & txtt2gball.Text)
 
             For i = 0 To .RowCount - 2
                 CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(3).Value.Replace("\", "/"))
@@ -722,6 +746,11 @@ Public Class ucBoxing
                 CasparCGDataCollection.SetData("ccg_code" & 5 + i, .Rows(i).Cells(0).Value)
 
                 CasparCGDataCollection.SetData("ccgr1pl1j" & i + 1, .Rows(i).Cells(7).Value & "-" & .Rows(i).Cells(11).Value)
+                If Val(.Rows(i).Cells(7).Value > Val(.Rows(i).Cells(11).Value)) Then
+                    CasparCGDataCollection.SetData("ccgwincolorj" & i + 1, ColorTranslator.ToHtml(Color.Red))
+                Else
+                    CasparCGDataCollection.SetData("ccgwincolorj" & i + 1, ColorTranslator.ToHtml(Color.Blue))
+                End If
             Next
         End With
 
@@ -741,5 +770,77 @@ Public Class ucBoxing
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/boxing/versus", CasparCGDataCollection.ToAMCPEscapedXml)
+    End Sub
+
+    Private Sub pict1logoball_Click(sender As Object, e As EventArgs) Handles pict1logoball.Click
+        On Error Resume Next
+        txtCounty1.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+    End Sub
+
+    Private Sub pict2logoball_Click(sender As Object, e As EventArgs) Handles pict2logoball.Click
+        On Error Resume Next
+        txtCounty2.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+    End Sub
+
+    Private Sub cmdCalculate_Click(sender As Object, e As EventArgs) Handles cmdCalculate.Click
+        txtt1gball.Text = 0
+        txtt2gball.Text = 0
+
+        With dgvtrack
+            For i = 0 To .RowCount - 2
+                .Rows(i).Cells(7).Value = Val(.Rows(i).Cells(4).Value) + Val(.Rows(i).Cells(5).Value) + Val(.Rows(i).Cells(6).Value)
+                .Rows(i).Cells(11).Value = Val(.Rows(i).Cells(8).Value) + Val(.Rows(i).Cells(9).Value) + Val(.Rows(i).Cells(10).Value)
+
+                If Val(.Rows(i).Cells(7).Value) > Val(.Rows(i).Cells(11).Value) Then
+                    txtt1gball.Text = Val(txtt1gball.Text) + 1
+                Else
+                    txtt2gball.Text = Val(txtt2gball.Text) + 1
+                End If
+
+
+            Next
+
+        End With
+    End Sub
+
+    Private Sub cmdInterChange_Click(sender As Object, e As EventArgs) Handles cmdInterChange.Click
+
+        Dim _txtPlayer1 = txtPlayer1.Text
+        Dim _txtCounty1 = txtCounty1.Text
+        Dim _pict1logoball = pict1logoball.ImageLocation
+
+        txtPlayer1.Text = txtPlayer2.Text
+        txtCounty1.Text = txtCounty2.Text
+        pict1logoball.ImageLocation = pict2logoball.ImageLocation
+
+        txtPlayer2.Text = _txtPlayer1
+        txtCounty2.Text = _txtCounty1
+        pict2logoball.ImageLocation = _pict1logoball
+
+    End Sub
+
+    Private Sub cmdSaveas1_Click(sender As Object, e As EventArgs) Handles cmdSaveas1.Click
+        savedataboxing("C:\casparcg\ng2022\data\boxing\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1ball, True)
+
+    End Sub
+
+    Private Sub cmdwinnerBoxing_Click(sender As Object, e As EventArgs) Handles cmdwinnerBoxing.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        If Val(txtt1gball.Text) > Val(txtt2gball.Text) Then
+            CasparCGDataCollection.SetData("ccgf0", txtPlayer1.Text)
+            CasparCGDataCollection.SetData("ccgsn1", txtCounty1.Text)
+            CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
+        Else
+            CasparCGDataCollection.SetData("ccgf0", txtPlayer2.Text)
+            CasparCGDataCollection.SetData("ccgsn1", txtCounty2.Text)
+            CasparCGDataCollection.SetData("ccgloader1", pict2logoball.ImageLocation.Replace("\", "/"))
+        End If
+
+
+        CasparCGDataCollection.SetData("ccgf1", cmbwinningmethodboxing.Text)
+        CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+
+        showtemplate("ng2022/template/boxing/winner", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 End Class
