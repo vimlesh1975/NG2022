@@ -25,9 +25,9 @@ Partial Class ucBoxing
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucBoxing))
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmbSubHeader = New System.Windows.Forms.ComboBox()
         Me.cmbHeader = New System.Windows.Forms.ComboBox()
@@ -112,6 +112,19 @@ Partial Class ucBoxing
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.cmbgames = New System.Windows.Forms.ComboBox()
+        Me.MatchNum = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me._Label2_2 = New System.Windows.Forms.Label()
+        Me._Label2_1 = New System.Windows.Forms.Label()
+        Me.CboGender = New System.Windows.Forms.ComboBox()
+        Me.WEIGHT = New System.Windows.Forms.ComboBox()
+        Me.CboWclass = New System.Windows.Forms.ComboBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.rdoRed = New System.Windows.Forms.RadioButton()
+        Me.rdoBlue = New System.Windows.Forms.RadioButton()
         Me.GroupBox3.SuspendLayout()
         Me.Ball.SuspendLayout()
         Me.gbtstrack.SuspendLayout()
@@ -126,6 +139,7 @@ Partial Class ucBoxing
         CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gamelogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox8.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -232,10 +246,17 @@ Partial Class ucBoxing
         '
         'Ball
         '
+        Me.Ball.Controls.Add(Me.GroupBox2)
+        Me.Ball.Controls.Add(Me.MatchNum)
+        Me.Ball.Controls.Add(Me.Label8)
+        Me.Ball.Controls.Add(Me.Label7)
+        Me.Ball.Controls.Add(Me._Label2_2)
+        Me.Ball.Controls.Add(Me._Label2_1)
+        Me.Ball.Controls.Add(Me.CboGender)
+        Me.Ball.Controls.Add(Me.WEIGHT)
+        Me.Ball.Controls.Add(Me.CboWclass)
         Me.Ball.Controls.Add(Me.cmdCalculate)
         Me.Ball.Controls.Add(Me.txtt2gball)
-        Me.Ball.Controls.Add(Me.cmdwinnerBoxing)
-        Me.Ball.Controls.Add(Me.cmbwinningmethodboxing)
         Me.Ball.Controls.Add(Me.txtt1gball)
         Me.Ball.Controls.Add(Me.cmdFinal)
         Me.Ball.Controls.Add(Me.cmdRound2)
@@ -274,7 +295,7 @@ Partial Class ucBoxing
         Me.cmdwinnerBoxing.BackColor = System.Drawing.Color.Green
         Me.cmdwinnerBoxing.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdwinnerBoxing.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cmdwinnerBoxing.Location = New System.Drawing.Point(291, 399)
+        Me.cmdwinnerBoxing.Location = New System.Drawing.Point(316, 30)
         Me.cmdwinnerBoxing.Name = "cmdwinnerBoxing"
         Me.cmdwinnerBoxing.Size = New System.Drawing.Size(75, 23)
         Me.cmdwinnerBoxing.TabIndex = 1343
@@ -285,11 +306,11 @@ Partial Class ucBoxing
         '
         Me.cmbwinningmethodboxing.FormattingEnabled = True
         Me.cmbwinningmethodboxing.Items.AddRange(New Object() {"WINNER BY POINTS", "WINNER BY Refree Stopped the Contest", "WINNER BY  Technical  Knock Out", "WINNER BY Knock Out", "WINNER ", "WINNER BY Retired", "WINNER BY  DISQ"})
-        Me.cmbwinningmethodboxing.Location = New System.Drawing.Point(36, 401)
+        Me.cmbwinningmethodboxing.Location = New System.Drawing.Point(61, 32)
         Me.cmbwinningmethodboxing.Name = "cmbwinningmethodboxing"
         Me.cmbwinningmethodboxing.Size = New System.Drawing.Size(249, 21)
         Me.cmbwinningmethodboxing.TabIndex = 1342
-        Me.cmbwinningmethodboxing.Text = "WINNER BY POINTS"
+        Me.cmbwinningmethodboxing.Text = "WINNER BY  Technical  Knock Out"
         '
         'txtt1gball
         '
@@ -450,14 +471,14 @@ Partial Class ucBoxing
         Me.dgvtrack.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvtrack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.DataGridViewComboBoxColumn2, Me.DataGridViewTextBoxColumn49, Me.imglocation1, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvtrack.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvtrack.Location = New System.Drawing.Point(6, 76)
         Me.dgvtrack.Name = "dgvtrack"
@@ -517,10 +538,10 @@ Partial Class ucBoxing
         '
         'Column5
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Red
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        Me.Column5.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle1
         Me.Column5.HeaderText = "TOTAL1"
         Me.Column5.Name = "Column5"
         Me.Column5.Width = 50
@@ -545,10 +566,10 @@ Partial Class ucBoxing
         '
         'Column9
         '
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        Me.Column9.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        Me.Column9.DefaultCellStyle = DataGridViewCellStyle2
         Me.Column9.HeaderText = "TOTAL2"
         Me.Column9.Name = "Column9"
         Me.Column9.Width = 50
@@ -574,6 +595,8 @@ Partial Class ucBoxing
         'GroupBox16
         '
         Me.GroupBox16.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox16.Controls.Add(Me.Panel2)
+        Me.GroupBox16.Controls.Add(Me.Panel1)
         Me.GroupBox16.Controls.Add(Me.GroupBox1)
         Me.GroupBox16.Controls.Add(Me.cmdInterChange)
         Me.GroupBox16.Controls.Add(Me.cmdvsball)
@@ -678,7 +701,7 @@ Partial Class ucBoxing
         Me.cmdvsball.BackColor = System.Drawing.Color.Green
         Me.cmdvsball.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdvsball.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cmdvsball.Location = New System.Drawing.Point(283, 36)
+        Me.cmdvsball.Location = New System.Drawing.Point(310, 36)
         Me.cmdvsball.Name = "cmdvsball"
         Me.cmdvsball.Size = New System.Drawing.Size(43, 46)
         Me.cmdvsball.TabIndex = 1244
@@ -687,7 +710,7 @@ Partial Class ucBoxing
         '
         'txtCounty2
         '
-        Me.txtCounty2.Location = New System.Drawing.Point(110, 65)
+        Me.txtCounty2.Location = New System.Drawing.Point(137, 65)
         Me.txtCounty2.Name = "txtCounty2"
         Me.txtCounty2.Size = New System.Drawing.Size(47, 20)
         Me.txtCounty2.TabIndex = 1242
@@ -695,7 +718,7 @@ Partial Class ucBoxing
         '
         'txtCounty1
         '
-        Me.txtCounty1.Location = New System.Drawing.Point(110, 39)
+        Me.txtCounty1.Location = New System.Drawing.Point(137, 39)
         Me.txtCounty1.Name = "txtCounty1"
         Me.txtCounty1.Size = New System.Drawing.Size(47, 20)
         Me.txtCounty1.TabIndex = 1241
@@ -703,7 +726,7 @@ Partial Class ucBoxing
         '
         'txtPlayer2
         '
-        Me.txtPlayer2.Location = New System.Drawing.Point(4, 64)
+        Me.txtPlayer2.Location = New System.Drawing.Point(31, 64)
         Me.txtPlayer2.Name = "txtPlayer2"
         Me.txtPlayer2.Size = New System.Drawing.Size(100, 20)
         Me.txtPlayer2.TabIndex = 1240
@@ -711,7 +734,7 @@ Partial Class ucBoxing
         '
         'txtPlayer1
         '
-        Me.txtPlayer1.Location = New System.Drawing.Point(4, 39)
+        Me.txtPlayer1.Location = New System.Drawing.Point(31, 39)
         Me.txtPlayer1.Name = "txtPlayer1"
         Me.txtPlayer1.Size = New System.Drawing.Size(100, 20)
         Me.txtPlayer1.TabIndex = 1239
@@ -719,7 +742,7 @@ Partial Class ucBoxing
         '
         'cmdplayeridt2ball
         '
-        Me.cmdplayeridt2ball.Location = New System.Drawing.Point(207, 61)
+        Me.cmdplayeridt2ball.Location = New System.Drawing.Point(234, 61)
         Me.cmdplayeridt2ball.Name = "cmdplayeridt2ball"
         Me.cmdplayeridt2ball.Size = New System.Drawing.Size(70, 21)
         Me.cmdplayeridt2ball.TabIndex = 1205
@@ -728,7 +751,7 @@ Partial Class ucBoxing
         '
         'cmdplayeridt1ball
         '
-        Me.cmdplayeridt1ball.Location = New System.Drawing.Point(207, 36)
+        Me.cmdplayeridt1ball.Location = New System.Drawing.Point(234, 36)
         Me.cmdplayeridt1ball.Name = "cmdplayeridt1ball"
         Me.cmdplayeridt1ball.Size = New System.Drawing.Size(70, 22)
         Me.cmdplayeridt1ball.TabIndex = 1204
@@ -812,7 +835,7 @@ Partial Class ucBoxing
         '
         Me.pict2logoball.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.pict2logoball.ImageLocation = "C:/casparcg/NG2022/data/flag/Barbados.png"
-        Me.pict2logoball.Location = New System.Drawing.Point(163, 61)
+        Me.pict2logoball.Location = New System.Drawing.Point(190, 61)
         Me.pict2logoball.Name = "pict2logoball"
         Me.pict2logoball.Size = New System.Drawing.Size(38, 22)
         Me.pict2logoball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -823,7 +846,7 @@ Partial Class ucBoxing
         '
         Me.pict1logoball.BackColor = System.Drawing.SystemColors.Control
         Me.pict1logoball.ImageLocation = "C:/casparcg/NG2022/data/flag/Australia.png"
-        Me.pict1logoball.Location = New System.Drawing.Point(163, 39)
+        Me.pict1logoball.Location = New System.Drawing.Point(190, 39)
         Me.pict1logoball.Name = "pict1logoball"
         Me.pict1logoball.Size = New System.Drawing.Size(38, 20)
         Me.pict1logoball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -932,6 +955,164 @@ Partial Class ucBoxing
         Me.cmbgames.TabIndex = 1202
         Me.cmbgames.Text = "Boxing"
         '
+        'MatchNum
+        '
+        Me.MatchNum.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.MatchNum.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.MatchNum.ForeColor = System.Drawing.Color.Cyan
+        Me.MatchNum.Location = New System.Drawing.Point(999, 36)
+        Me.MatchNum.Name = "MatchNum"
+        Me.MatchNum.Size = New System.Drawing.Size(100, 26)
+        Me.MatchNum.TabIndex = 1387
+        Me.MatchNum.Text = "112"
+        '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label8.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label8.Font = New System.Drawing.Font("Arial Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label8.Location = New System.Drawing.Point(562, 8)
+        Me.Label8.Name = "Label8"
+        Me.Label8.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label8.Size = New System.Drawing.Size(258, 25)
+        Me.Label8.TabIndex = 1394
+        Me.Label8.Text = "Weight class"
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label7.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label7.Font = New System.Drawing.Font("Arial", 13.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label7.Location = New System.Drawing.Point(417, 8)
+        Me.Label7.Name = "Label7"
+        Me.Label7.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label7.Size = New System.Drawing.Size(134, 25)
+        Me.Label7.TabIndex = 1393
+        Me.Label7.Text = "Gender"
+        '
+        '_Label2_2
+        '
+        Me._Label2_2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me._Label2_2.Cursor = System.Windows.Forms.Cursors.Default
+        Me._Label2_2.Font = New System.Drawing.Font("Arial", 13.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me._Label2_2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me._Label2_2.Location = New System.Drawing.Point(997, 8)
+        Me._Label2_2.Name = "_Label2_2"
+        Me._Label2_2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me._Label2_2.Size = New System.Drawing.Size(104, 25)
+        Me._Label2_2.TabIndex = 1392
+        Me._Label2_2.Text = "Match No"
+        Me._Label2_2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        '_Label2_1
+        '
+        Me._Label2_1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me._Label2_1.Cursor = System.Windows.Forms.Cursors.Default
+        Me._Label2_1.Font = New System.Drawing.Font("Arial", 13.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me._Label2_1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me._Label2_1.Location = New System.Drawing.Point(835, 8)
+        Me._Label2_1.Name = "_Label2_1"
+        Me._Label2_1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me._Label2_1.Size = New System.Drawing.Size(149, 25)
+        Me._Label2_1.TabIndex = 1391
+        Me._Label2_1.Text = "Weights"
+        '
+        'CboGender
+        '
+        Me.CboGender.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CboGender.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CboGender.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboGender.ForeColor = System.Drawing.Color.Cyan
+        Me.CboGender.Items.AddRange(New Object() {"MEN", "WOMEN"})
+        Me.CboGender.Location = New System.Drawing.Point(413, 38)
+        Me.CboGender.Name = "CboGender"
+        Me.CboGender.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.CboGender.Size = New System.Drawing.Size(139, 27)
+        Me.CboGender.TabIndex = 1388
+        Me.CboGender.Text = "WOMEN"
+        '
+        'WEIGHT
+        '
+        Me.WEIGHT.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.WEIGHT.Cursor = System.Windows.Forms.Cursors.Default
+        Me.WEIGHT.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WEIGHT.ForeColor = System.Drawing.Color.Cyan
+        Me.WEIGHT.Items.AddRange(New Object() {"48KG", "49KG", "51KG", "52KG", "56KG", "57KG", "60KG", "64KG", "69KG", "75KG", "81KG", "91KG", "OVER 91KG", "", "75KG"})
+        Me.WEIGHT.Location = New System.Drawing.Point(834, 36)
+        Me.WEIGHT.Name = "WEIGHT"
+        Me.WEIGHT.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.WEIGHT.Size = New System.Drawing.Size(149, 27)
+        Me.WEIGHT.TabIndex = 1390
+        Me.WEIGHT.Text = "70"
+        '
+        'CboWclass
+        '
+        Me.CboWclass.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CboWclass.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CboWclass.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboWclass.ForeColor = System.Drawing.Color.Cyan
+        Me.CboWclass.Items.AddRange(New Object() {"45–48 kg (Minimumweight)", "48–50 kg (Light flyweight)", " 50–52 kg (Flyweight)", "52–54 kg (Bantamweight)", "54–57 kg (Featherweight)", "57–60 kg (Lightweight)", "60–63 kg (Light welterweight)", "63–66 kg (Welterweight)", "66–70 kg (Light middleweight)", "70–75 kg (Middleweight)", "75–81 kg (Light heavyweight)", "+81 kg (Heavyweight)"})
+        Me.CboWclass.Location = New System.Drawing.Point(562, 38)
+        Me.CboWclass.Name = "CboWclass"
+        Me.CboWclass.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.CboWclass.Size = New System.Drawing.Size(258, 27)
+        Me.CboWclass.TabIndex = 1389
+        Me.CboWclass.Text = "66–70 kg (Light middleweight)"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Red
+        Me.Panel1.Location = New System.Drawing.Point(7, 39)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(20, 20)
+        Me.Panel1.TabIndex = 1349
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Blue
+        Me.Panel2.Location = New System.Drawing.Point(7, 65)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(20, 20)
+        Me.Panel2.TabIndex = 1350
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.RosyBrown
+        Me.GroupBox2.Controls.Add(Me.rdoBlue)
+        Me.GroupBox2.Controls.Add(Me.rdoRed)
+        Me.GroupBox2.Controls.Add(Me.cmdwinnerBoxing)
+        Me.GroupBox2.Controls.Add(Me.cmbwinningmethodboxing)
+        Me.GroupBox2.Location = New System.Drawing.Point(306, 356)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(401, 76)
+        Me.GroupBox2.TabIndex = 1395
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Winner"
+        '
+        'rdoRed
+        '
+        Me.rdoRed.AutoSize = True
+        Me.rdoRed.Checked = True
+        Me.rdoRed.Location = New System.Drawing.Point(7, 21)
+        Me.rdoRed.Name = "rdoRed"
+        Me.rdoRed.Size = New System.Drawing.Size(45, 17)
+        Me.rdoRed.TabIndex = 1344
+        Me.rdoRed.TabStop = True
+        Me.rdoRed.Text = "Red"
+        Me.rdoRed.UseVisualStyleBackColor = True
+        '
+        'rdoBlue
+        '
+        Me.rdoBlue.AutoSize = True
+        Me.rdoBlue.Location = New System.Drawing.Point(7, 48)
+        Me.rdoBlue.Name = "rdoBlue"
+        Me.rdoBlue.Size = New System.Drawing.Size(46, 17)
+        Me.rdoBlue.TabIndex = 1345
+        Me.rdoBlue.Text = "Blue"
+        Me.rdoBlue.UseVisualStyleBackColor = True
+        '
         'ucBoxing
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -962,6 +1143,8 @@ Partial Class ucBoxing
         CType(Me.gamelogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1049,4 +1232,17 @@ Partial Class ucBoxing
     Friend WithEvents txtt1gball As TextBox
     Friend WithEvents cmdInterChange As Button
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents MatchNum As TextBox
+    Public WithEvents Label8 As Label
+    Public WithEvents Label7 As Label
+    Public WithEvents _Label2_2 As Label
+    Public WithEvents _Label2_1 As Label
+    Public WithEvents CboGender As ComboBox
+    Public WithEvents WEIGHT As ComboBox
+    Public WithEvents CboWclass As ComboBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents rdoBlue As RadioButton
+    Friend WithEvents rdoRed As RadioButton
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel1 As Panel
 End Class

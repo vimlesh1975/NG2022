@@ -827,7 +827,7 @@ Public Class ucBoxing
     Private Sub cmdwinnerBoxing_Click(sender As Object, e As EventArgs) Handles cmdwinnerBoxing.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        If Val(txtt1gball.Text) > Val(txtt2gball.Text) Then
+        If rdoRed.Checked Then
             CasparCGDataCollection.SetData("ccgf0", txtPlayer1.Text)
             CasparCGDataCollection.SetData("ccgsn1", txtCounty1.Text)
             CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
