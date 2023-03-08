@@ -47,11 +47,27 @@
         openimage("C:/casparcg/ng2022/data/event logo/", sender)
     End Sub
     Private Sub cmdstopgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopgym.Click
+        'On Error Resume Next
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(Int(cmblayergames.Text))
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        'Threading.Thread.Sleep(1000)
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+
         On Error Resume Next
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(Int(cmblayergames.Text))
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
-        Threading.Thread.Sleep(1000)
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        If frmNG2022.chkanimation.Checked Then
+            frmNG2022.animation2(Int(cmblayergames.Text))
+        End If
+        If frmNG2022.chkanimation.Checked = False Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
+        Else
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        End If
+
+        If frmNG2022.chkanimation.Checked Then
+            Threading.Thread.Sleep(1000)
+            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        End If
+
     End Sub
     '    Sub animation1(videolayer)
     '        Dim x, y As Decimal
@@ -271,12 +287,27 @@
 
     Private Sub cmdstopscoreball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopscoreball.Click
         On Error Resume Next
-        If frmNG2022.chkanimation.Checked Then CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill -1 0 1 1 50 easeoutexpo")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1)
-        Threading.Thread.Sleep(2000)
+        'If frmNG2022.chkanimation.Checked Then CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill -1 0 1 1 50 easeoutexpo")
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1)
+        'Threading.Thread.Sleep(2000)
+        'If frmNG2022.chkanimation.Checked Then
+        '    CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill .1 0 .8 1 50 easeoutexpo")
+        '    CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill 0 0 1 1 50 easeoutexpo")
+        'End If
+
+        On Error Resume Next
         If frmNG2022.chkanimation.Checked Then
-            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill .1 0 .8 1 50 easeoutexpo")
-            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill 0 0 1 1 50 easeoutexpo")
+            frmNG2022.animation2(Int(cmblayergames.Text) + 1)
+        End If
+        If frmNG2022.chkanimation.Checked = False Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " outAnimation()")
+        Else
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1)
+        End If
+
+        If frmNG2022.chkanimation.Checked Then
+            Threading.Thread.Sleep(1000)
+            frmNG2022.animationtoscreen(Int(cmblayergames.Text) + 1)
         End If
         tmrtimeupdateontemplate.Enabled = False
         tmrupdateontemplateextra.Enabled = False
@@ -743,7 +774,9 @@
 
         CasparCGDataCollection.SetData("ccgteam1color", ColorTranslator.ToHtml(cmdt1colorball.BackColor))
         CasparCGDataCollection.SetData("ccgteam2color", ColorTranslator.ToHtml(cmdt2colorball.BackColor))
-        showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
+        'showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
+        showtemplate("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml, 97)
+
 
 
         tmrtimeupdateontemplate.Enabled = False

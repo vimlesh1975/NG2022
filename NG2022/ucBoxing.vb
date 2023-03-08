@@ -84,7 +84,7 @@ Public Class ucBoxing
             frmNG2022.animation2(Int(cmblayergames.Text))
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outEfeect()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
         Else
             CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
         End If
@@ -796,10 +796,7 @@ Public Class ucBoxing
                 Else
                     txtt2gball.Text = Val(txtt2gball.Text) + 1
                 End If
-
-
             Next
-
         End With
     End Sub
 
@@ -842,5 +839,26 @@ Public Class ucBoxing
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
 
         showtemplate("ng2022/template/boxing/winner", CasparCGDataCollection.ToAMCPEscapedXml)
+    End Sub
+
+    Private Sub cmdReset_Click(sender As Object, e As EventArgs) Handles cmdReset.Click
+        txtt1gball.Text = 0
+        txtt2gball.Text = 0
+
+        With dgvtrack
+            For i = 0 To .RowCount - 2
+                '.Rows(i).Cells(7).Value = Val(.Rows(i).Cells(4).Value) + Val(.Rows(i).Cells(5).Value) + Val(.Rows(i).Cells(6).Value)
+                '.Rows(i).Cells(11).Value = Val(.Rows(i).Cells(8).Value) + Val(.Rows(i).Cells(9).Value) + Val(.Rows(i).Cells(10).Value)
+
+                'If Val(.Rows(i).Cells(7).Value) > Val(.Rows(i).Cells(11).Value) Then
+                '    txtt1gball.Text = Val(txtt1gball.Text) + 1
+                'Else
+                '    txtt2gball.Text = Val(txtt2gball.Text) + 1
+                'End If
+                For j = 4 To .ColumnCount - 1
+                    .Rows(i).Cells(j).Value = 0
+                Next
+            Next
+        End With
     End Sub
 End Class
