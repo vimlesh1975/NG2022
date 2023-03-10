@@ -950,4 +950,32 @@ Public Class ucBoxing
 
         showtemplate("ng2022/template/boxing/previousResult", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
+
+    Private Sub cmdProfile_Click(sender As Object, e As EventArgs) Handles cmdProfile.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+        CasparCGDataCollection.SetData("cmbSubHeader", cmbSubHeader.Text)
+        CasparCGDataCollection.SetData("ccgpr", txtPlayer1.Text)
+        CasparCGDataCollection.SetData("ccgpb", txtPlayer2.Text)
+
+        CasparCGDataCollection.SetData("ccgsn1", txtCounty1.Text)
+        CasparCGDataCollection.SetData("ccgsn2", txtCounty2.Text)
+
+        CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader5", picPlayer1.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader6", picPlayer2.ImageLocation.Replace("\", "/"))
+        showtemplate("ng2022/template/boxing/profile", CasparCGDataCollection.ToAMCPEscapedXml)
+    End Sub
+
+    Private Sub picPlayer1_Click(sender As Object, e As EventArgs) Handles picPlayer1.Click
+        On Error Resume Next
+        txtPlayer1.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+    End Sub
+
+    Private Sub picPlayer2_Click(sender As Object, e As EventArgs) Handles picPlayer2.Click
+        On Error Resume Next
+        txtPlayer2.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+    End Sub
 End Class

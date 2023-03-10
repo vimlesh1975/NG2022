@@ -2247,6 +2247,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_5AFAE5F2267C447580A86A65D7141DF7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5B1A4916649A44E6B6464953F1627D5F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -6208,6 +6214,12 @@
         "Entry"
         {
         "MsmKey" = "8:_F9F3B8705B2344F08E790F5425E9CA61"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FA18085E79CE494986579C45F20111C2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -13906,6 +13918,26 @@
             "TargetName" = "8:United-Arab-Emirates.png"
             "Tag" = "8:"
             "Folder" = "8:_2E27F32CF30449FC895475AB2025ECC2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5AFAE5F2267C447580A86A65D7141DF7"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Boxing\\profile.txt"
+            "TargetName" = "8:profile.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_21824124222E4B838C4467EA1A5122A2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -27144,6 +27176,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA18085E79CE494986579C45F20111C2"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Boxing\\profile.html"
+            "TargetName" = "8:profile.html"
+            "Tag" = "8:"
+            "Folder" = "8:_21824124222E4B838C4467EA1A5122A2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA237F51722541BC85B392EB7BD85600"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\Blank\\Games_Pictogram\\MK.png"
@@ -28386,7 +28438,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NG2022Setup2"
         "ProductCode" = "8:{E2045B7E-BC12-4F05-BA1B-2D8D69120F53}"
-        "PackageCode" = "8:{3EBF212A-8B06-4768-A5AF-3A5BBB1C1708}"
+        "PackageCode" = "8:{5BE003C1-1DEC-43DC-9858-92E708A4D2E9}"
         "UpgradeCode" = "8:{E1DC2E97-BCC4-44B3-AF5D-8AAC08899BFC}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
