@@ -320,7 +320,7 @@ Partial Class frmNG2022
         Me.UcBoxing1.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.UcBoxing1.Location = New System.Drawing.Point(6, 3)
         Me.UcBoxing1.Name = "UcBoxing1"
-        Me.UcBoxing1.Size = New System.Drawing.Size(1137, 776)
+        Me.UcBoxing1.Size = New System.Drawing.Size(1137, 827)
         Me.UcBoxing1.TabIndex = 0
         '
         'Gymnastic
@@ -752,7 +752,7 @@ Partial Class frmNG2022
         Me.Controls.Add(Me.gbPannel)
         Me.Name = "frmNG2022"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "NG_080323_1"
+        Me.Text = "NG_100323_1"
         Me.gbPannel.ResumeLayout(False)
         Me.gbPannel.PerformLayout()
         Me.TabControl1.ResumeLayout(False)

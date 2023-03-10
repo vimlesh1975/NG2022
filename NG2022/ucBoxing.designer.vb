@@ -25,9 +25,9 @@ Partial Class ucBoxing
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucBoxing))
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmbSubHeader = New System.Windows.Forms.ComboBox()
         Me.cmbHeader = New System.Windows.Forms.ComboBox()
@@ -41,6 +41,7 @@ Partial Class ucBoxing
         Me.tmrtimeupdateontemplate = New System.Windows.Forms.Timer(Me.components)
         Me.ofd1 = New System.Windows.Forms.OpenFileDialog()
         Me.Ball = New System.Windows.Forms.TabPage()
+        Me.cmdReset = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.rdoBlue = New System.Windows.Forms.RadioButton()
         Me.rdoRed = New System.Windows.Forms.RadioButton()
@@ -125,7 +126,29 @@ Partial Class ucBoxing
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.cmbgames = New System.Windows.Forms.ComboBox()
-        Me.cmdReset = New System.Windows.Forms.Button()
+        Me.Refree = New System.Windows.Forms.GroupBox()
+        Me.cmdReferee = New System.Windows.Forms.Button()
+        Me.picRefereeCpuntryFlag = New System.Windows.Forms.PictureBox()
+        Me.txtRefereeName = New System.Windows.Forms.TextBox()
+        Me.txtRefereeCountryShortName = New System.Windows.Forms.TextBox()
+        Me.txtRefereeTitle = New System.Windows.Forms.TextBox()
+        Me.cmdPositioninCourt = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtpreviousMatchName = New System.Windows.Forms.TextBox()
+        Me.txtPreviousResultShortName = New System.Windows.Forms.TextBox()
+        Me.txtPreviousPlayerName = New System.Windows.Forms.TextBox()
+        Me.picPreviousCountry = New System.Windows.Forms.PictureBox()
+        Me.cmdPreviuosResult = New System.Windows.Forms.Button()
+        Me.txtPreviousResult = New System.Windows.Forms.TextBox()
+        Me.txtPreviousResultTitle = New System.Windows.Forms.TextBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.txtPreviousResultTitle2 = New System.Windows.Forms.TextBox()
+        Me.txtPreviousResult2 = New System.Windows.Forms.TextBox()
+        Me.txtpreviousMatchName2 = New System.Windows.Forms.TextBox()
+        Me.txtPreviousResultShortName2 = New System.Windows.Forms.TextBox()
+        Me.txtPreviousPlayerName2 = New System.Windows.Forms.TextBox()
+        Me.picPreviousCountry2 = New System.Windows.Forms.PictureBox()
+        Me.cmdPreviuosResult2 = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.Ball.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -141,6 +164,12 @@ Partial Class ucBoxing
         CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gamelogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox8.SuspendLayout()
+        Me.Refree.SuspendLayout()
+        CType(Me.picRefereeCpuntryFlag, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
+        CType(Me.picPreviousCountry, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
+        CType(Me.picPreviousCountry2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -247,6 +276,9 @@ Partial Class ucBoxing
         '
         'Ball
         '
+        Me.Ball.Controls.Add(Me.GroupBox5)
+        Me.Ball.Controls.Add(Me.GroupBox4)
+        Me.Ball.Controls.Add(Me.Refree)
         Me.Ball.Controls.Add(Me.cmdReset)
         Me.Ball.Controls.Add(Me.GroupBox2)
         Me.Ball.Controls.Add(Me.MatchNum)
@@ -271,9 +303,18 @@ Partial Class ucBoxing
         Me.Ball.Controls.Add(Me.GroupBox16)
         Me.Ball.Location = New System.Drawing.Point(4, 22)
         Me.Ball.Name = "Ball"
-        Me.Ball.Size = New System.Drawing.Size(1104, 600)
+        Me.Ball.Size = New System.Drawing.Size(1104, 657)
         Me.Ball.TabIndex = 4
         Me.Ball.UseVisualStyleBackColor = True
+        '
+        'cmdReset
+        '
+        Me.cmdReset.Location = New System.Drawing.Point(87, 309)
+        Me.cmdReset.Name = "cmdReset"
+        Me.cmdReset.Size = New System.Drawing.Size(75, 28)
+        Me.cmdReset.TabIndex = 1396
+        Me.cmdReset.Text = "Reset Score"
+        Me.cmdReset.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -282,7 +323,7 @@ Partial Class ucBoxing
         Me.GroupBox2.Controls.Add(Me.rdoRed)
         Me.GroupBox2.Controls.Add(Me.cmdwinnerBoxing)
         Me.GroupBox2.Controls.Add(Me.cmbwinningmethodboxing)
-        Me.GroupBox2.Location = New System.Drawing.Point(306, 356)
+        Me.GroupBox2.Location = New System.Drawing.Point(306, 332)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(401, 76)
         Me.GroupBox2.TabIndex = 1395
@@ -450,7 +491,7 @@ Partial Class ucBoxing
         '
         'txtt2gball
         '
-        Me.txtt2gball.Location = New System.Drawing.Point(669, 330)
+        Me.txtt2gball.Location = New System.Drawing.Point(669, 316)
         Me.txtt2gball.Name = "txtt2gball"
         Me.txtt2gball.Size = New System.Drawing.Size(38, 20)
         Me.txtt2gball.TabIndex = 1346
@@ -458,7 +499,7 @@ Partial Class ucBoxing
         '
         'txtt1gball
         '
-        Me.txtt1gball.Location = New System.Drawing.Point(669, 309)
+        Me.txtt1gball.Location = New System.Drawing.Point(669, 298)
         Me.txtt1gball.Name = "txtt1gball"
         Me.txtt1gball.Size = New System.Drawing.Size(38, 20)
         Me.txtt1gball.TabIndex = 1345
@@ -469,7 +510,7 @@ Partial Class ucBoxing
         Me.cmdFinal.BackColor = System.Drawing.Color.Green
         Me.cmdFinal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdFinal.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cmdFinal.Location = New System.Drawing.Point(575, 309)
+        Me.cmdFinal.Location = New System.Drawing.Point(575, 298)
         Me.cmdFinal.Name = "cmdFinal"
         Me.cmdFinal.Size = New System.Drawing.Size(75, 28)
         Me.cmdFinal.TabIndex = 1307
@@ -481,7 +522,7 @@ Partial Class ucBoxing
         Me.cmdRound2.BackColor = System.Drawing.Color.Green
         Me.cmdRound2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdRound2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cmdRound2.Location = New System.Drawing.Point(494, 309)
+        Me.cmdRound2.Location = New System.Drawing.Point(494, 298)
         Me.cmdRound2.Name = "cmdRound2"
         Me.cmdRound2.Size = New System.Drawing.Size(75, 28)
         Me.cmdRound2.TabIndex = 1306
@@ -493,7 +534,7 @@ Partial Class ucBoxing
         Me.cmdRound1.BackColor = System.Drawing.Color.Green
         Me.cmdRound1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdRound1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cmdRound1.Location = New System.Drawing.Point(413, 309)
+        Me.cmdRound1.Location = New System.Drawing.Point(413, 298)
         Me.cmdRound1.Name = "cmdRound1"
         Me.cmdRound1.Size = New System.Drawing.Size(75, 28)
         Me.cmdRound1.TabIndex = 1305
@@ -603,7 +644,7 @@ Partial Class ucBoxing
         Me.cmdJudges.BackColor = System.Drawing.Color.Green
         Me.cmdJudges.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdJudges.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cmdJudges.Location = New System.Drawing.Point(330, 309)
+        Me.cmdJudges.Location = New System.Drawing.Point(330, 298)
         Me.cmdJudges.Name = "cmdJudges"
         Me.cmdJudges.Size = New System.Drawing.Size(75, 28)
         Me.cmdJudges.TabIndex = 1303
@@ -615,14 +656,14 @@ Partial Class ucBoxing
         Me.dgvtrack.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvtrack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.DataGridViewComboBoxColumn2, Me.DataGridViewTextBoxColumn49, Me.imglocation1, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle15
         Me.dgvtrack.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvtrack.Location = New System.Drawing.Point(6, 76)
         Me.dgvtrack.Name = "dgvtrack"
@@ -682,10 +723,10 @@ Partial Class ucBoxing
         '
         'Column5
         '
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Red
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        Me.Column5.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.White
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle13
         Me.Column5.HeaderText = "TOTAL1"
         Me.Column5.Name = "Column5"
         Me.Column5.Width = 50
@@ -710,10 +751,10 @@ Partial Class ucBoxing
         '
         'Column9
         '
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        Me.Column9.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        Me.Column9.DefaultCellStyle = DataGridViewCellStyle14
         Me.Column9.HeaderText = "TOTAL2"
         Me.Column9.Name = "Column9"
         Me.Column9.Width = 50
@@ -739,6 +780,7 @@ Partial Class ucBoxing
         'GroupBox16
         '
         Me.GroupBox16.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox16.Controls.Add(Me.cmdPositioninCourt)
         Me.GroupBox16.Controls.Add(Me.Panel2)
         Me.GroupBox16.Controls.Add(Me.Panel1)
         Me.GroupBox16.Controls.Add(Me.GroupBox1)
@@ -793,7 +835,7 @@ Partial Class ucBoxing
         Me.GroupBox1.Controls.Add(Me.cmdadjustsecball)
         Me.GroupBox1.Controls.Add(Me.cmbputminuteball)
         Me.GroupBox1.Controls.Add(Me.cmbputsecondball)
-        Me.GroupBox1.Location = New System.Drawing.Point(9, 118)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 218)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(103, 102)
         Me.GroupBox1.TabIndex = 1348
@@ -921,7 +963,7 @@ Partial Class ucBoxing
         'cmbinfoball
         '
         Me.cmbinfoball.FormattingEnabled = True
-        Me.cmbinfoball.Location = New System.Drawing.Point(163, 165)
+        Me.cmbinfoball.Location = New System.Drawing.Point(164, 265)
         Me.cmbinfoball.Name = "cmbinfoball"
         Me.cmbinfoball.Size = New System.Drawing.Size(93, 21)
         Me.cmbinfoball.TabIndex = 1220
@@ -932,7 +974,7 @@ Partial Class ucBoxing
         Me.cmdscorewithclock.BackColor = System.Drawing.Color.Green
         Me.cmdscorewithclock.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdscorewithclock.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cmdscorewithclock.Location = New System.Drawing.Point(292, 121)
+        Me.cmdscorewithclock.Location = New System.Drawing.Point(293, 221)
         Me.cmdscorewithclock.Name = "cmdscorewithclock"
         Me.cmdscorewithclock.Size = New System.Drawing.Size(48, 97)
         Me.cmdscorewithclock.TabIndex = 1218
@@ -942,7 +984,7 @@ Partial Class ucBoxing
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(136, 170)
+        Me.Label45.Location = New System.Drawing.Point(137, 270)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(25, 13)
         Me.Label45.TabIndex = 1208
@@ -952,7 +994,7 @@ Partial Class ucBoxing
         '
         Me.cmbhalfball.FormattingEnabled = True
         Me.cmbhalfball.Items.AddRange(New Object() {"1st", "2nd", "3rd", "4th", "Ext"})
-        Me.cmbhalfball.Location = New System.Drawing.Point(215, 143)
+        Me.cmbhalfball.Location = New System.Drawing.Point(216, 243)
         Me.cmbhalfball.Name = "cmbhalfball"
         Me.cmbhalfball.Size = New System.Drawing.Size(54, 21)
         Me.cmbhalfball.TabIndex = 626
@@ -962,7 +1004,7 @@ Partial Class ucBoxing
         '
         Me.GroupBox15.Controls.Add(Me.rdodowncounterball)
         Me.GroupBox15.Controls.Add(Me.rdoupcounterball)
-        Me.GroupBox15.Location = New System.Drawing.Point(134, 191)
+        Me.GroupBox15.Location = New System.Drawing.Point(135, 291)
         Me.GroupBox15.Name = "GroupBox15"
         Me.GroupBox15.Size = New System.Drawing.Size(114, 33)
         Me.GroupBox15.TabIndex = 624
@@ -1015,7 +1057,7 @@ Partial Class ucBoxing
         '
         'cmdresetclockball
         '
-        Me.cmdresetclockball.Location = New System.Drawing.Point(230, 118)
+        Me.cmdresetclockball.Location = New System.Drawing.Point(231, 218)
         Me.cmdresetclockball.Name = "cmdresetclockball"
         Me.cmdresetclockball.Size = New System.Drawing.Size(47, 23)
         Me.cmdresetclockball.TabIndex = 611
@@ -1024,7 +1066,7 @@ Partial Class ucBoxing
         '
         'txtsecball
         '
-        Me.txtsecball.Location = New System.Drawing.Point(175, 144)
+        Me.txtsecball.Location = New System.Drawing.Point(176, 244)
         Me.txtsecball.Name = "txtsecball"
         Me.txtsecball.Size = New System.Drawing.Size(38, 20)
         Me.txtsecball.TabIndex = 610
@@ -1032,7 +1074,7 @@ Partial Class ucBoxing
         '
         'txtminball
         '
-        Me.txtminball.Location = New System.Drawing.Point(130, 144)
+        Me.txtminball.Location = New System.Drawing.Point(131, 244)
         Me.txtminball.Name = "txtminball"
         Me.txtminball.Size = New System.Drawing.Size(39, 20)
         Me.txtminball.TabIndex = 609
@@ -1040,7 +1082,7 @@ Partial Class ucBoxing
         '
         'cmdstartclockball
         '
-        Me.cmdstartclockball.Location = New System.Drawing.Point(130, 118)
+        Me.cmdstartclockball.Location = New System.Drawing.Point(131, 218)
         Me.cmdstartclockball.Name = "cmdstartclockball"
         Me.cmdstartclockball.Size = New System.Drawing.Size(39, 23)
         Me.cmdstartclockball.TabIndex = 607
@@ -1050,7 +1092,7 @@ Partial Class ucBoxing
         '
         'cmdpauseclockball
         '
-        Me.cmdpauseclockball.Location = New System.Drawing.Point(175, 118)
+        Me.cmdpauseclockball.Location = New System.Drawing.Point(176, 218)
         Me.cmdpauseclockball.Name = "cmdpauseclockball"
         Me.cmdpauseclockball.Size = New System.Drawing.Size(49, 23)
         Me.cmdpauseclockball.TabIndex = 606
@@ -1063,7 +1105,7 @@ Partial Class ucBoxing
         Me.TabControl1.Location = New System.Drawing.Point(6, 123)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1112, 626)
+        Me.TabControl1.Size = New System.Drawing.Size(1112, 683)
         Me.TabControl1.TabIndex = 0
         '
         'eventlogo
@@ -1101,7 +1143,7 @@ Partial Class ucBoxing
         Me.GroupBox8.Controls.Add(Me.gamelogo)
         Me.GroupBox8.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(1121, 754)
+        Me.GroupBox8.Size = New System.Drawing.Size(1121, 812)
         Me.GroupBox8.TabIndex = 1312
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Boxing"
@@ -1115,14 +1157,239 @@ Partial Class ucBoxing
         Me.cmbgames.TabIndex = 1202
         Me.cmbgames.Text = "Boxing"
         '
-        'cmdReset
+        'Refree
         '
-        Me.cmdReset.Location = New System.Drawing.Point(87, 309)
-        Me.cmdReset.Name = "cmdReset"
-        Me.cmdReset.Size = New System.Drawing.Size(75, 28)
-        Me.cmdReset.TabIndex = 1396
-        Me.cmdReset.Text = "Reset Score"
-        Me.cmdReset.UseVisualStyleBackColor = True
+        Me.Refree.BackColor = System.Drawing.Color.RosyBrown
+        Me.Refree.Controls.Add(Me.txtRefereeTitle)
+        Me.Refree.Controls.Add(Me.txtRefereeCountryShortName)
+        Me.Refree.Controls.Add(Me.txtRefereeName)
+        Me.Refree.Controls.Add(Me.picRefereeCpuntryFlag)
+        Me.Refree.Controls.Add(Me.cmdReferee)
+        Me.Refree.Location = New System.Drawing.Point(306, 413)
+        Me.Refree.Name = "Refree"
+        Me.Refree.Size = New System.Drawing.Size(401, 69)
+        Me.Refree.TabIndex = 1396
+        Me.Refree.TabStop = False
+        Me.Refree.Text = "Refree"
+        '
+        'cmdReferee
+        '
+        Me.cmdReferee.BackColor = System.Drawing.Color.Green
+        Me.cmdReferee.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdReferee.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdReferee.Location = New System.Drawing.Point(320, 16)
+        Me.cmdReferee.Name = "cmdReferee"
+        Me.cmdReferee.Size = New System.Drawing.Size(75, 23)
+        Me.cmdReferee.TabIndex = 1343
+        Me.cmdReferee.Text = "Referee"
+        Me.cmdReferee.UseVisualStyleBackColor = False
+        '
+        'picRefereeCpuntryFlag
+        '
+        Me.picRefereeCpuntryFlag.BackColor = System.Drawing.SystemColors.Control
+        Me.picRefereeCpuntryFlag.ImageLocation = "C:/casparcg/NG2022/data/flag/India.png"
+        Me.picRefereeCpuntryFlag.Location = New System.Drawing.Point(95, 17)
+        Me.picRefereeCpuntryFlag.Name = "picRefereeCpuntryFlag"
+        Me.picRefereeCpuntryFlag.Size = New System.Drawing.Size(38, 20)
+        Me.picRefereeCpuntryFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picRefereeCpuntryFlag.TabIndex = 1351
+        Me.picRefereeCpuntryFlag.TabStop = False
+        '
+        'txtRefereeName
+        '
+        Me.txtRefereeName.Location = New System.Drawing.Point(135, 19)
+        Me.txtRefereeName.Name = "txtRefereeName"
+        Me.txtRefereeName.Size = New System.Drawing.Size(171, 20)
+        Me.txtRefereeName.TabIndex = 1351
+        Me.txtRefereeName.Text = "Viresh Kumar Gupta"
+        '
+        'txtRefereeCountryShortName
+        '
+        Me.txtRefereeCountryShortName.Location = New System.Drawing.Point(10, 17)
+        Me.txtRefereeCountryShortName.Name = "txtRefereeCountryShortName"
+        Me.txtRefereeCountryShortName.Size = New System.Drawing.Size(79, 20)
+        Me.txtRefereeCountryShortName.TabIndex = 1352
+        Me.txtRefereeCountryShortName.Text = "IND"
+        '
+        'txtRefereeTitle
+        '
+        Me.txtRefereeTitle.Location = New System.Drawing.Point(6, 43)
+        Me.txtRefereeTitle.Name = "txtRefereeTitle"
+        Me.txtRefereeTitle.Size = New System.Drawing.Size(90, 20)
+        Me.txtRefereeTitle.TabIndex = 1353
+        Me.txtRefereeTitle.Text = "Referee"
+        '
+        'cmdPositioninCourt
+        '
+        Me.cmdPositioninCourt.BackColor = System.Drawing.Color.Green
+        Me.cmdPositioninCourt.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdPositioninCourt.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdPositioninCourt.Location = New System.Drawing.Point(226, 107)
+        Me.cmdPositioninCourt.Name = "cmdPositioninCourt"
+        Me.cmdPositioninCourt.Size = New System.Drawing.Size(115, 35)
+        Me.cmdPositioninCourt.TabIndex = 1351
+        Me.cmdPositioninCourt.Text = "Position in Court"
+        Me.cmdPositioninCourt.UseVisualStyleBackColor = False
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.BackColor = System.Drawing.Color.RosyBrown
+        Me.GroupBox4.Controls.Add(Me.txtPreviousResultTitle)
+        Me.GroupBox4.Controls.Add(Me.txtPreviousResult)
+        Me.GroupBox4.Controls.Add(Me.txtpreviousMatchName)
+        Me.GroupBox4.Controls.Add(Me.txtPreviousResultShortName)
+        Me.GroupBox4.Controls.Add(Me.txtPreviousPlayerName)
+        Me.GroupBox4.Controls.Add(Me.picPreviousCountry)
+        Me.GroupBox4.Controls.Add(Me.cmdPreviuosResult)
+        Me.GroupBox4.Location = New System.Drawing.Point(306, 488)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(401, 69)
+        Me.GroupBox4.TabIndex = 1397
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Previous Result1"
+        '
+        'txtpreviousMatchName
+        '
+        Me.txtpreviousMatchName.Location = New System.Drawing.Point(133, 45)
+        Me.txtpreviousMatchName.Name = "txtpreviousMatchName"
+        Me.txtpreviousMatchName.Size = New System.Drawing.Size(90, 20)
+        Me.txtpreviousMatchName.TabIndex = 1353
+        Me.txtpreviousMatchName.Text = "RD of 16"
+        '
+        'txtPreviousResultShortName
+        '
+        Me.txtPreviousResultShortName.Location = New System.Drawing.Point(10, 17)
+        Me.txtPreviousResultShortName.Name = "txtPreviousResultShortName"
+        Me.txtPreviousResultShortName.Size = New System.Drawing.Size(79, 20)
+        Me.txtPreviousResultShortName.TabIndex = 1352
+        Me.txtPreviousResultShortName.Text = "IND"
+        '
+        'txtPreviousPlayerName
+        '
+        Me.txtPreviousPlayerName.Location = New System.Drawing.Point(135, 19)
+        Me.txtPreviousPlayerName.Name = "txtPreviousPlayerName"
+        Me.txtPreviousPlayerName.Size = New System.Drawing.Size(171, 20)
+        Me.txtPreviousPlayerName.TabIndex = 1351
+        Me.txtPreviousPlayerName.Text = "Viresh Kumar Gupta"
+        '
+        'picPreviousCountry
+        '
+        Me.picPreviousCountry.BackColor = System.Drawing.SystemColors.Control
+        Me.picPreviousCountry.ImageLocation = "C:/casparcg/NG2022/data/flag/India.png"
+        Me.picPreviousCountry.Location = New System.Drawing.Point(95, 17)
+        Me.picPreviousCountry.Name = "picPreviousCountry"
+        Me.picPreviousCountry.Size = New System.Drawing.Size(38, 20)
+        Me.picPreviousCountry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picPreviousCountry.TabIndex = 1351
+        Me.picPreviousCountry.TabStop = False
+        '
+        'cmdPreviuosResult
+        '
+        Me.cmdPreviuosResult.BackColor = System.Drawing.Color.Green
+        Me.cmdPreviuosResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdPreviuosResult.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdPreviuosResult.Location = New System.Drawing.Point(320, 16)
+        Me.cmdPreviuosResult.Name = "cmdPreviuosResult"
+        Me.cmdPreviuosResult.Size = New System.Drawing.Size(75, 49)
+        Me.cmdPreviuosResult.TabIndex = 1343
+        Me.cmdPreviuosResult.Text = "Previous Result"
+        Me.cmdPreviuosResult.UseVisualStyleBackColor = False
+        '
+        'txtPreviousResult
+        '
+        Me.txtPreviousResult.Location = New System.Drawing.Point(229, 44)
+        Me.txtPreviousResult.Name = "txtPreviousResult"
+        Me.txtPreviousResult.Size = New System.Drawing.Size(90, 20)
+        Me.txtPreviousResult.TabIndex = 1354
+        Me.txtPreviousResult.Text = "5:0"
+        '
+        'txtPreviousResultTitle
+        '
+        Me.txtPreviousResultTitle.Location = New System.Drawing.Point(6, 43)
+        Me.txtPreviousResultTitle.Name = "txtPreviousResultTitle"
+        Me.txtPreviousResultTitle.Size = New System.Drawing.Size(121, 20)
+        Me.txtPreviousResultTitle.TabIndex = 1355
+        Me.txtPreviousResultTitle.Text = "Previous Results"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.BackColor = System.Drawing.Color.RosyBrown
+        Me.GroupBox5.Controls.Add(Me.txtPreviousResultTitle2)
+        Me.GroupBox5.Controls.Add(Me.txtPreviousResult2)
+        Me.GroupBox5.Controls.Add(Me.txtpreviousMatchName2)
+        Me.GroupBox5.Controls.Add(Me.txtPreviousResultShortName2)
+        Me.GroupBox5.Controls.Add(Me.txtPreviousPlayerName2)
+        Me.GroupBox5.Controls.Add(Me.picPreviousCountry2)
+        Me.GroupBox5.Controls.Add(Me.cmdPreviuosResult2)
+        Me.GroupBox5.Location = New System.Drawing.Point(306, 563)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(401, 69)
+        Me.GroupBox5.TabIndex = 1398
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Previous Result 2"
+        '
+        'txtPreviousResultTitle2
+        '
+        Me.txtPreviousResultTitle2.Location = New System.Drawing.Point(6, 43)
+        Me.txtPreviousResultTitle2.Name = "txtPreviousResultTitle2"
+        Me.txtPreviousResultTitle2.Size = New System.Drawing.Size(121, 20)
+        Me.txtPreviousResultTitle2.TabIndex = 1355
+        Me.txtPreviousResultTitle2.Text = "Previous Results"
+        '
+        'txtPreviousResult2
+        '
+        Me.txtPreviousResult2.Location = New System.Drawing.Point(229, 44)
+        Me.txtPreviousResult2.Name = "txtPreviousResult2"
+        Me.txtPreviousResult2.Size = New System.Drawing.Size(90, 20)
+        Me.txtPreviousResult2.TabIndex = 1354
+        Me.txtPreviousResult2.Text = "4:0"
+        '
+        'txtpreviousMatchName2
+        '
+        Me.txtpreviousMatchName2.Location = New System.Drawing.Point(133, 45)
+        Me.txtpreviousMatchName2.Name = "txtpreviousMatchName2"
+        Me.txtpreviousMatchName2.Size = New System.Drawing.Size(90, 20)
+        Me.txtpreviousMatchName2.TabIndex = 1353
+        Me.txtpreviousMatchName2.Text = "RD of 32"
+        '
+        'txtPreviousResultShortName2
+        '
+        Me.txtPreviousResultShortName2.Location = New System.Drawing.Point(10, 17)
+        Me.txtPreviousResultShortName2.Name = "txtPreviousResultShortName2"
+        Me.txtPreviousResultShortName2.Size = New System.Drawing.Size(79, 20)
+        Me.txtPreviousResultShortName2.TabIndex = 1352
+        Me.txtPreviousResultShortName2.Text = "PAK"
+        '
+        'txtPreviousPlayerName2
+        '
+        Me.txtPreviousPlayerName2.Location = New System.Drawing.Point(135, 19)
+        Me.txtPreviousPlayerName2.Name = "txtPreviousPlayerName2"
+        Me.txtPreviousPlayerName2.Size = New System.Drawing.Size(171, 20)
+        Me.txtPreviousPlayerName2.TabIndex = 1351
+        Me.txtPreviousPlayerName2.Text = "Parvej Aalam Jahagir"
+        '
+        'picPreviousCountry2
+        '
+        Me.picPreviousCountry2.BackColor = System.Drawing.SystemColors.Control
+        Me.picPreviousCountry2.ImageLocation = "C:/casparcg/NG2022/data/flag/pakistan.png"
+        Me.picPreviousCountry2.Location = New System.Drawing.Point(95, 17)
+        Me.picPreviousCountry2.Name = "picPreviousCountry2"
+        Me.picPreviousCountry2.Size = New System.Drawing.Size(38, 20)
+        Me.picPreviousCountry2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picPreviousCountry2.TabIndex = 1351
+        Me.picPreviousCountry2.TabStop = False
+        '
+        'cmdPreviuosResult2
+        '
+        Me.cmdPreviuosResult2.BackColor = System.Drawing.Color.Green
+        Me.cmdPreviuosResult2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdPreviuosResult2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.cmdPreviuosResult2.Location = New System.Drawing.Point(320, 16)
+        Me.cmdPreviuosResult2.Name = "cmdPreviuosResult2"
+        Me.cmdPreviuosResult2.Size = New System.Drawing.Size(75, 49)
+        Me.cmdPreviuosResult2.TabIndex = 1343
+        Me.cmdPreviuosResult2.Text = "Previous Result"
+        Me.cmdPreviuosResult2.UseVisualStyleBackColor = False
         '
         'ucBoxing
         '
@@ -1132,7 +1399,7 @@ Partial Class ucBoxing
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Controls.Add(Me.GroupBox8)
         Me.Name = "ucBoxing"
-        Me.Size = New System.Drawing.Size(1137, 776)
+        Me.Size = New System.Drawing.Size(1137, 829)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.Ball.ResumeLayout(False)
@@ -1156,6 +1423,15 @@ Partial Class ucBoxing
         CType(Me.gamelogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
+        Me.Refree.ResumeLayout(False)
+        Me.Refree.PerformLayout()
+        CType(Me.picRefereeCpuntryFlag, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        CType(Me.picPreviousCountry, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        CType(Me.picPreviousCountry2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1257,4 +1533,27 @@ Partial Class ucBoxing
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents cmdReset As Button
+    Friend WithEvents Refree As GroupBox
+    Friend WithEvents txtRefereeTitle As TextBox
+    Friend WithEvents txtRefereeCountryShortName As TextBox
+    Friend WithEvents txtRefereeName As TextBox
+    Friend WithEvents picRefereeCpuntryFlag As PictureBox
+    Friend WithEvents cmdReferee As Button
+    Friend WithEvents cmdPositioninCourt As Button
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents txtPreviousResult As TextBox
+    Friend WithEvents txtpreviousMatchName As TextBox
+    Friend WithEvents txtPreviousResultShortName As TextBox
+    Friend WithEvents txtPreviousPlayerName As TextBox
+    Friend WithEvents picPreviousCountry As PictureBox
+    Friend WithEvents cmdPreviuosResult As Button
+    Friend WithEvents txtPreviousResultTitle As TextBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents txtPreviousResultTitle2 As TextBox
+    Friend WithEvents txtPreviousResult2 As TextBox
+    Friend WithEvents txtpreviousMatchName2 As TextBox
+    Friend WithEvents txtPreviousResultShortName2 As TextBox
+    Friend WithEvents txtPreviousPlayerName2 As TextBox
+    Friend WithEvents picPreviousCountry2 As PictureBox
+    Friend WithEvents cmdPreviuosResult2 As Button
 End Class

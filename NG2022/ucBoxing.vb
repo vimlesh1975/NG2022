@@ -103,8 +103,8 @@ Public Class ucBoxing
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgf0", cmbHeader.Text)
         CasparCGDataCollection.SetData("ccgf1", cmbSubHeader.Text)
-        CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
-        CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
+        'CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+        'CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
 
         showtemplate("ng2022/template/boxing/event_id", CasparCGDataCollection.ToAMCPEscapedXml)
 
@@ -455,8 +455,8 @@ Public Class ucBoxing
                 CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(2).Value)
             Next
 
-            CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
-            CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+            'CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+            'CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
             showtemplate("ng2022/template/boxing/teamlineup", CasparCGDataCollection.ToAMCPEscapedXml)
         End With
 
@@ -767,8 +767,8 @@ Public Class ucBoxing
 
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
-        CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
-        CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
+        'CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+        'CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/boxing/versus", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
@@ -836,7 +836,7 @@ Public Class ucBoxing
 
 
         CasparCGDataCollection.SetData("ccgf1", cmbwinningmethodboxing.Text)
-        CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+        'CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
 
         showtemplate("ng2022/template/boxing/winner", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
@@ -860,5 +860,94 @@ Public Class ucBoxing
                 Next
             Next
         End With
+    End Sub
+
+    Private Sub cmdReferee_Click(sender As Object, e As EventArgs) Handles cmdReferee.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        CasparCGDataCollection.SetData("ccgf0", txtRefereeName.Text)
+        CasparCGDataCollection.SetData("ccgf1", txtRefereeTitle.Text)
+        CasparCGDataCollection.SetData("ccgsn1", txtRefereeCountryShortName.Text)
+
+        CasparCGDataCollection.SetData("ccgloader1", picRefereeCpuntryFlag.ImageLocation.Replace("\", "/"))
+        showtemplate("ng2022/template/boxing/referee", CasparCGDataCollection.ToAMCPEscapedXml)
+    End Sub
+
+    Private Sub picRefereeCpuntryFlag_Click(sender As Object, e As EventArgs) Handles picRefereeCpuntryFlag.Click
+        On Error Resume Next
+        txtRefereeCountryShortName.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+    End Sub
+
+    Private Sub cmdPositioninCourt_Click(sender As Object, e As EventArgs) Handles cmdPositioninCourt.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        'CasparCGDataCollection.SetData("ccgf0", cmbHeader.Text)
+        'CasparCGDataCollection.SetData("ccgf1", cmbSubHeader.Text)
+        CasparCGDataCollection.SetData("ccgf2", txtPlayer1.Text)
+        CasparCGDataCollection.SetData("ccgf3", txtPlayer2.Text)
+        CasparCGDataCollection.SetData("ccgsn1", txtCounty1.Text)
+        CasparCGDataCollection.SetData("ccgsn2", txtCounty2.Text)
+
+        CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
+        'CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
+        'CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
+        showtemplate("ng2022/template/boxing/positionInCourt", CasparCGDataCollection.ToAMCPEscapedXml)
+    End Sub
+
+    Private Sub cmdPreviuosResult_Click(sender As Object, e As EventArgs) Handles cmdPreviuosResult.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+
+        CasparCGDataCollection.SetData("ccgpreviuosResultTitle", txtPreviousResultTitle.Text)
+
+
+        CasparCGDataCollection.SetData("ccgpreviousResultColor", ColorTranslator.ToHtml(Color.Red))
+        CasparCGDataCollection.SetData("ccgsn1", txtCounty1.Text)
+        CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgPlayerName1", txtPlayer1.Text)
+
+        CasparCGDataCollection.SetData("ccgsn2", txtPreviousResultShortName.Text)
+        CasparCGDataCollection.SetData("ccgloader2", picPreviousCountry.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgPlayerName2", txtPreviousPlayerName.Text)
+
+
+        CasparCGDataCollection.SetData("ccgpreviousMatchName", txtpreviousMatchName.Text)
+        CasparCGDataCollection.SetData("ccgPreviousResult", txtPreviousResult.Text)
+
+        showtemplate("ng2022/template/boxing/previousResult", CasparCGDataCollection.ToAMCPEscapedXml)
+    End Sub
+
+    Private Sub picPreviousCountry_Click(sender As Object, e As EventArgs) Handles picPreviousCountry.Click
+        On Error Resume Next
+        txtPreviousResultShortName.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+    End Sub
+
+    Private Sub picPreviousCountry2_Click(sender As Object, e As EventArgs) Handles picPreviousCountry2.Click
+        On Error Resume Next
+        txtPreviousResultShortName2.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+    End Sub
+
+    Private Sub cmdPreviuosResult2_Click(sender As Object, e As EventArgs) Handles cmdPreviuosResult2.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+
+        CasparCGDataCollection.SetData("ccgpreviuosResultTitle", txtPreviousResultTitle.Text)
+
+
+        CasparCGDataCollection.SetData("ccgpreviousResultColor", ColorTranslator.ToHtml(Color.Blue))
+        CasparCGDataCollection.SetData("ccgsn1", txtCounty2.Text)
+        CasparCGDataCollection.SetData("ccgloader1", pict2logoball.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgPlayerName1", txtPlayer2.Text)
+
+        CasparCGDataCollection.SetData("ccgsn2", txtPreviousResultShortName2.Text)
+        CasparCGDataCollection.SetData("ccgloader2", picPreviousCountry2.ImageLocation.Replace("\", "/"))
+        CasparCGDataCollection.SetData("ccgPlayerName2", txtPreviousPlayerName2.Text)
+
+
+        CasparCGDataCollection.SetData("ccgpreviousMatchName", txtpreviousMatchName2.Text)
+        CasparCGDataCollection.SetData("ccgPreviousResult", txtPreviousResult2.Text)
+
+        showtemplate("ng2022/template/boxing/previousResult", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 End Class

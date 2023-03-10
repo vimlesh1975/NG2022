@@ -93,6 +93,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_022A0F2C2B8346908CC79BEB2D813E6D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_023601190A1C4628AE8D549B712E6029"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2001,6 +2007,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_515CE1956D254F7C8949A018ED623428"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_515DB4B1E3E04CCE903B115981B7C474"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2464,6 +2476,12 @@
         "Entry"
         {
         "MsmKey" = "8:_64D8796339B847C0B971A6FF3E6C9EDB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_65082779C765458C89280FBA7A8F5249"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3179,12 +3197,6 @@
         {
         "MsmKey" = "8:_7E9DA781A5454418BEF897C8827AAB42"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7EFC9610AF23BC4DDA9F9578447055AE"
-        "OwnerKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -3993,8 +4005,20 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9D7E03268E5F4573AA2055E4F00CDBD5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9D834B7435CC4D4E9E95767A65982EBB"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9D9106CE29D24C009F057E5145C81D59"
+        "OwnerKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -5925,6 +5949,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_ED23B68EB6B4446D8FF6E34BF185BA3A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_ED3D7430CEB043CA884D85FFD2139762"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -6201,6 +6231,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FAF7B5EE2D7C40D49553176DE71DD440"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FB0A2CDBE3894AC993C1750257CF32DB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -6328,7 +6364,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7EFC9610AF23BC4DDA9F9578447055AE"
+        "OwnerKey" = "8:_9D9106CE29D24C009F057E5145C81D59"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -6690,6 +6726,26 @@
             "TargetName" = "8:Fiji.png"
             "Tag" = "8:"
             "Folder" = "8:_2E27F32CF30449FC895475AB2025ECC2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_022A0F2C2B8346908CC79BEB2D813E6D"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Boxing\\positionInCourt.txt"
+            "TargetName" = "8:positionInCourt.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_21824124222E4B838C4467EA1A5122A2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -13064,6 +13120,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_515CE1956D254F7C8949A018ED623428"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Boxing\\referee.html"
+            "TargetName" = "8:referee.html"
+            "Tag" = "8:"
+            "Folder" = "8:_21824124222E4B838C4467EA1A5122A2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_515DB4B1E3E04CCE903B115981B7C474"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\country\\Meghalaya.png"
@@ -14621,6 +14697,26 @@
             "TargetName" = "8:groupresult1.html"
             "Tag" = "8:"
             "Folder" = "8:_9FD631A45184445AA46A18D495A03093"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_65082779C765458C89280FBA7A8F5249"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Boxing\\previousResult.html"
+            "TargetName" = "8:previousResult.html"
+            "Tag" = "8:"
+            "Folder" = "8:_21824124222E4B838C4467EA1A5122A2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -16993,37 +17089,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7EFC9610AF23BC4DDA9F9578447055AE"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_7EFC9610AF23BC4DDA9F9578447055AE"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Newtonsoft.Json.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7F4623C0D35B4C9896F7BBFC8CF75708"
@@ -19706,6 +19771,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9D7E03268E5F4573AA2055E4F00CDBD5"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Boxing\\previousResult.txt"
+            "TargetName" = "8:previousResult.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_21824124222E4B838C4467EA1A5122A2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9D834B7435CC4D4E9E95767A65982EBB"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\Blank\\Nine plate.png"
@@ -19724,6 +19809,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9D9106CE29D24C009F057E5145C81D59"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9D9106CE29D24C009F057E5145C81D59"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9DB41A57405148BE9ABE74F127A8B01B"
@@ -26148,6 +26264,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED23B68EB6B4446D8FF6E34BF185BA3A"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Boxing\\referee.txt"
+            "TargetName" = "8:referee.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_21824124222E4B838C4467EA1A5122A2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED3D7430CEB043CA884D85FFD2139762"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\NetBall\\silver.txt"
@@ -27054,6 +27190,26 @@
             "TargetName" = "8:roadtofinal.txt"
             "Tag" = "8:"
             "Folder" = "8:_709F31E5FBF9434F8662DFFBD179B5CD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FAF7B5EE2D7C40D49553176DE71DD440"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Boxing\\positionInCourt.html"
+            "TargetName" = "8:positionInCourt.html"
+            "Tag" = "8:"
+            "Folder" = "8:_21824124222E4B838C4467EA1A5122A2"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
