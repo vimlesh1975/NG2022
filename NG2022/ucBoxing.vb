@@ -7,7 +7,7 @@ Public Class ucBoxing
 
 
         initialiseJudgesName()
-
+        initialiseprofile()
 
 
         cmbhalfball.DataSource = New BindingSource(halfText, "")
@@ -24,6 +24,24 @@ Public Class ucBoxing
         cmbSubHeader.Text = "Bronze Medal Match"
 
 
+    End Sub
+    Sub initialiseprofile()
+
+        With dgvprofile
+            .Rows.Add(3)
+            .Rows(0).Cells(0).Value = 45
+            .Rows(0).Cells(1).Value = "AGE"
+            .Rows(0).Cells(2).Value = 50
+
+            .Rows(1).Cells(0).Value = "60KG"
+            .Rows(1).Cells(1).Value = "WEIGHT"
+            .Rows(1).Cells(2).Value = "62KG"
+
+            .Rows(2).Cells(0).Value = "170CM"
+            .Rows(2).Cells(1).Value = "HEIGHT"
+            .Rows(2).Cells(2).Value = "175CM"
+
+        End With
     End Sub
     Private Sub initialiseJudgesName()
         DataGridViewComboBoxColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
@@ -962,6 +980,23 @@ Public Class ucBoxing
         CasparCGDataCollection.SetData("ccgsn1", txtCounty1.Text)
         CasparCGDataCollection.SetData("ccgsn2", txtCounty2.Text)
 
+        With dgvprofile
+            CasparCGDataCollection.SetData("ccgager", .Rows(0).Cells(0).Value)
+            CasparCGDataCollection.SetData("ccgage", .Rows(0).Cells(1).Value)
+            CasparCGDataCollection.SetData("ccgageb", .Rows(0).Cells(2).Value)
+
+            CasparCGDataCollection.SetData("ccgweightr", .Rows(1).Cells(0).Value)
+            CasparCGDataCollection.SetData("ccgweight", .Rows(1).Cells(1).Value)
+            CasparCGDataCollection.SetData("ccgweightb", .Rows(1).Cells(2).Value)
+
+            CasparCGDataCollection.SetData("ccgheightr", .Rows(2).Cells(0).Value)
+            CasparCGDataCollection.SetData("ccgheight", .Rows(2).Cells(1).Value)
+            CasparCGDataCollection.SetData("ccgheightb", .Rows(2).Cells(2).Value)
+
+        End With
+
+
+
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader5", picPlayer1.ImageLocation.Replace("\", "/"))
@@ -977,5 +1012,9 @@ Public Class ucBoxing
     Private Sub picPlayer2_Click(sender As Object, e As EventArgs) Handles picPlayer2.Click
         On Error Resume Next
         txtPlayer2.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+    End Sub
+
+    Private Sub Ball_Click(sender As Object, e As EventArgs) Handles Ball.Click
+
     End Sub
 End Class
