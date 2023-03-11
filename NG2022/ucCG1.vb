@@ -649,7 +649,7 @@ Public Class ucCG1
         On Error Resume Next
         If e.ColumnIndex = 0 Then
             Dim aa As New OpenFileDialog
-            aa.InitialDirectory = "C:\casparcg\NG2022\data\country\"
+            aa.InitialDirectory = "C:\casparcg\NG2022\data\flag\"
             If aa.ShowDialog = Windows.Forms.DialogResult.OK Then
                 With dgvwinner
                     .Rows(e.RowIndex).Cells(0).Value = System.Drawing.Image.FromFile(aa.FileName)

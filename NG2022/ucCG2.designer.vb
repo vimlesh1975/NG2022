@@ -25,10 +25,12 @@ Partial Class ucCG2
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucCG2))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbcg2 = New System.Windows.Forms.GroupBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.cmblayergames = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -68,8 +70,6 @@ Partial Class ucCG2
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.cmblayergames = New System.Windows.Forms.ComboBox()
         Me.osd2 = New System.Windows.Forms.SaveFileDialog()
         Me.gbcg2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -116,6 +116,27 @@ Partial Class ucCG2
         Me.gbcg2.TabIndex = 679
         Me.gbcg2.TabStop = False
         '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(23, 28)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(44, 13)
+        Me.Label30.TabIndex = 1214
+        Me.Label30.Text = "v-f layer"
+        '
+        'cmblayergames
+        '
+        Me.cmblayergames.FormattingEnabled = True
+        Me.cmblayergames.Items.AddRange(New Object() {"96", "97", "98", "99", "100"})
+        Me.cmblayergames.Location = New System.Drawing.Point(66, 27)
+        Me.cmblayergames.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cmblayergames.Name = "cmblayergames"
+        Me.cmblayergames.Size = New System.Drawing.Size(40, 21)
+        Me.cmblayergames.TabIndex = 1213
+        Me.cmblayergames.Text = "96"
+        '
         'MenuStrip1
         '
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
@@ -136,19 +157,19 @@ Partial Class ucCG2
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'cmdNextStepCG2
@@ -183,7 +204,7 @@ Partial Class ucCG2
         'eventlogoforcg2
         '
         Me.eventlogoforcg2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.eventlogoforcg2.ImageLocation = "C:/casparcg/NG2022/data/event logo/ammu_logo.png"
+        Me.eventlogoforcg2.ImageLocation = "C:/casparcg/ng2022/data/event logo/iba2.png"
         Me.eventlogoforcg2.Location = New System.Drawing.Point(207, 27)
         Me.eventlogoforcg2.Name = "eventlogoforcg2"
         Me.eventlogoforcg2.Size = New System.Drawing.Size(52, 38)
@@ -289,7 +310,7 @@ Partial Class ucCG2
         'gamelogoforcg2
         '
         Me.gamelogoforcg2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.gamelogoforcg2.ImageLocation = "C:/casparcg/ng2022/data/games logo/kb.png"
+        Me.gamelogoforcg2.ImageLocation = "C:/casparcg/ng2022/data/games logo/bx.png"
         Me.gamelogoforcg2.Location = New System.Drawing.Point(149, 29)
         Me.gamelogoforcg2.Name = "gamelogoforcg2"
         Me.gamelogoforcg2.Size = New System.Drawing.Size(52, 38)
@@ -452,34 +473,34 @@ Partial Class ucCG2
         '
         'dgvinfocg2
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvinfocg2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvinfocg2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvinfocg2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvinfocg2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column5, Me.Line_no})
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvinfocg2.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvinfocg2.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvinfocg2.Location = New System.Drawing.Point(7, 188)
         Me.dgvinfocg2.Name = "dgvinfocg2"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvinfocg2.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvinfocg2.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvinfocg2.Size = New System.Drawing.Size(541, 513)
         Me.dgvinfocg2.TabIndex = 558
         '
@@ -506,27 +527,6 @@ Partial Class ucCG2
         Me.DataGridViewTextBoxColumn2.HeaderText = "Line"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Width = 30
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(23, 28)
-        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(44, 13)
-        Me.Label30.TabIndex = 1214
-        Me.Label30.Text = "v-f layer"
-        '
-        'cmblayergames
-        '
-        Me.cmblayergames.FormattingEnabled = True
-        Me.cmblayergames.Items.AddRange(New Object() {"96", "97", "98", "99", "100"})
-        Me.cmblayergames.Location = New System.Drawing.Point(66, 27)
-        Me.cmblayergames.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.cmblayergames.Name = "cmblayergames"
-        Me.cmblayergames.Size = New System.Drawing.Size(40, 21)
-        Me.cmblayergames.TabIndex = 1213
-        Me.cmblayergames.Text = "96"
         '
         'ucCG2
         '

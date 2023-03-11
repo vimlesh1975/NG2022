@@ -25,9 +25,9 @@ Partial Class ucBoxing
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucBoxing))
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmbSubHeader = New System.Windows.Forms.ComboBox()
         Me.cmbHeader = New System.Windows.Forms.ComboBox()
@@ -41,6 +41,10 @@ Partial Class ucBoxing
         Me.tmrtimeupdateontemplate = New System.Windows.Forms.Timer(Me.components)
         Me.ofd1 = New System.Windows.Forms.OpenFileDialog()
         Me.Ball = New System.Windows.Forms.TabPage()
+        Me.dgvprofile = New System.Windows.Forms.DataGridView()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.picPlayer2 = New System.Windows.Forms.PictureBox()
         Me.picPlayer1 = New System.Windows.Forms.PictureBox()
         Me.cmdProfile = New System.Windows.Forms.Button()
@@ -152,12 +156,9 @@ Partial Class ucBoxing
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.cmbgames = New System.Windows.Forms.ComboBox()
-        Me.dgvprofile = New System.Windows.Forms.DataGridView()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox3.SuspendLayout()
         Me.Ball.SuspendLayout()
+        CType(Me.dgvprofile, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picPlayer2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pict2logoball, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -179,7 +180,6 @@ Partial Class ucBoxing
         CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gamelogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox8.SuspendLayout()
-        CType(Me.dgvprofile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -324,6 +324,33 @@ Partial Class ucBoxing
         Me.Ball.Size = New System.Drawing.Size(1104, 657)
         Me.Ball.TabIndex = 4
         Me.Ball.UseVisualStyleBackColor = True
+        '
+        'dgvprofile
+        '
+        Me.dgvprofile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvprofile.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column11, Me.Column12})
+        Me.dgvprofile.Location = New System.Drawing.Point(68, 463)
+        Me.dgvprofile.Name = "dgvprofile"
+        Me.dgvprofile.Size = New System.Drawing.Size(281, 116)
+        Me.dgvprofile.TabIndex = 1400
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "Red"
+        Me.Column10.Name = "Column10"
+        Me.Column10.Width = 75
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "Props"
+        Me.Column11.Name = "Column11"
+        Me.Column11.Width = 75
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "Blue"
+        Me.Column12.Name = "Column12"
+        Me.Column12.Width = 75
         '
         'picPlayer2
         '
@@ -711,14 +738,14 @@ Partial Class ucBoxing
         Me.dgvtrack.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton
         Me.dgvtrack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvtrack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column2, Me.DataGridViewComboBoxColumn2, Me.DataGridViewTextBoxColumn49, Me.imglocation1, Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvtrack.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvtrack.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvtrack.Location = New System.Drawing.Point(3, 76)
         Me.dgvtrack.Name = "dgvtrack"
@@ -778,10 +805,10 @@ Partial Class ucBoxing
         '
         'Column5
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Red
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        Me.Column5.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle1
         Me.Column5.HeaderText = "TOTAL1"
         Me.Column5.Name = "Column5"
         Me.Column5.Width = 50
@@ -806,10 +833,10 @@ Partial Class ucBoxing
         '
         'Column9
         '
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        Me.Column9.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        Me.Column9.DefaultCellStyle = DataGridViewCellStyle2
         Me.Column9.HeaderText = "TOTAL2"
         Me.Column9.Name = "Column9"
         Me.Column9.Width = 50
@@ -1393,7 +1420,7 @@ Partial Class ucBoxing
         'eventlogo
         '
         Me.eventlogo.BackColor = System.Drawing.SystemColors.Highlight
-        Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/blk.png"
+        Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/iba2.png"
         Me.eventlogo.Location = New System.Drawing.Point(836, 38)
         Me.eventlogo.Name = "eventlogo"
         Me.eventlogo.Size = New System.Drawing.Size(24, 17)
@@ -1439,33 +1466,6 @@ Partial Class ucBoxing
         Me.cmbgames.TabIndex = 1202
         Me.cmbgames.Text = "Boxing"
         '
-        'dgvprofile
-        '
-        Me.dgvprofile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvprofile.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column11, Me.Column12})
-        Me.dgvprofile.Location = New System.Drawing.Point(68, 463)
-        Me.dgvprofile.Name = "dgvprofile"
-        Me.dgvprofile.Size = New System.Drawing.Size(281, 116)
-        Me.dgvprofile.TabIndex = 1400
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "Red"
-        Me.Column10.Name = "Column10"
-        Me.Column10.Width = 75
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "Props"
-        Me.Column11.Name = "Column11"
-        Me.Column11.Width = 75
-        '
-        'Column12
-        '
-        Me.Column12.HeaderText = "Blue"
-        Me.Column12.Name = "Column12"
-        Me.Column12.Width = 75
-        '
         'ucBoxing
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1479,6 +1479,7 @@ Partial Class ucBoxing
         Me.GroupBox3.PerformLayout()
         Me.Ball.ResumeLayout(False)
         Me.Ball.PerformLayout()
+        CType(Me.dgvprofile, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picPlayer2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pict2logoball, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1509,7 +1510,6 @@ Partial Class ucBoxing
         CType(Me.gamelogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
-        CType(Me.dgvprofile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

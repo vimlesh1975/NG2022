@@ -23,10 +23,11 @@ Partial Class ucCG1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucCG1))
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbvictorytt = New System.Windows.Forms.GroupBox()
+        Me.cmdHeatsToQuaterFinals = New System.Windows.Forms.Button()
         Me.lblfilenamecg = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.cmdupcg = New System.Windows.Forms.Button()
@@ -113,7 +114,6 @@ Partial Class ucCG1
         Me.Label209 = New System.Windows.Forms.Label()
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.cmdstopcg2 = New System.Windows.Forms.Button()
-        Me.cmdHeatsToQuaterFinals = New System.Windows.Forms.Button()
         Me.gbvictorytt.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
         Me.ToolStrip3.SuspendLayout()
@@ -162,6 +162,16 @@ Partial Class ucCG1
         Me.gbvictorytt.TabIndex = 1253
         Me.gbvictorytt.TabStop = False
         Me.gbvictorytt.Text = "Victory ID"
+        '
+        'cmdHeatsToQuaterFinals
+        '
+        Me.cmdHeatsToQuaterFinals.Location = New System.Drawing.Point(343, 137)
+        Me.cmdHeatsToQuaterFinals.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cmdHeatsToQuaterFinals.Name = "cmdHeatsToQuaterFinals"
+        Me.cmdHeatsToQuaterFinals.Size = New System.Drawing.Size(122, 30)
+        Me.cmdHeatsToQuaterFinals.TabIndex = 1257
+        Me.cmdHeatsToQuaterFinals.Text = "HeatsToQuaterFinals"
+        Me.cmdHeatsToQuaterFinals.UseVisualStyleBackColor = True
         '
         'lblfilenamecg
         '
@@ -626,35 +636,35 @@ Partial Class ucCG1
         '
         'dgvwinner
         '
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvwinner.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvwinner.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvwinner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvwinner.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn1, Me.DataGridViewTextBoxColumn25, Me.Column29})
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvwinner.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvwinner.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvwinner.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvwinner.Location = New System.Drawing.Point(12, 77)
         Me.dgvwinner.Name = "dgvwinner"
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvwinner.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvwinner.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvwinner.RowTemplate.Height = 24
         Me.dgvwinner.Size = New System.Drawing.Size(297, 228)
         Me.dgvwinner.TabIndex = 1144
@@ -978,7 +988,7 @@ Partial Class ucCG1
         'eventlogo
         '
         Me.eventlogo.BackColor = System.Drawing.SystemColors.Highlight
-        Me.eventlogo.ImageLocation = "C:/casparcg/NG2022/data/event logo/ammu_logo.png"
+        Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/iba2.png"
         Me.eventlogo.Location = New System.Drawing.Point(765, 89)
         Me.eventlogo.Name = "eventlogo"
         Me.eventlogo.Size = New System.Drawing.Size(52, 38)
@@ -1007,7 +1017,7 @@ Partial Class ucCG1
         'gamelogo
         '
         Me.gamelogo.BackColor = System.Drawing.SystemColors.Highlight
-        Me.gamelogo.ImageLocation = "C:/casparcg/ng2022/data/games logo/kb.png"
+        Me.gamelogo.ImageLocation = "C:/casparcg/ng2022/data/games logo/bx.png"
         Me.gamelogo.Location = New System.Drawing.Point(707, 91)
         Me.gamelogo.Name = "gamelogo"
         Me.gamelogo.Size = New System.Drawing.Size(52, 38)
@@ -1026,16 +1036,6 @@ Partial Class ucCG1
         Me.cmdstopcg2.TabIndex = 1260
         Me.cmdstopcg2.Text = "Stop"
         Me.cmdstopcg2.UseVisualStyleBackColor = False
-        '
-        'cmdHeatsToQuaterFinals
-        '
-        Me.cmdHeatsToQuaterFinals.Location = New System.Drawing.Point(343, 137)
-        Me.cmdHeatsToQuaterFinals.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.cmdHeatsToQuaterFinals.Name = "cmdHeatsToQuaterFinals"
-        Me.cmdHeatsToQuaterFinals.Size = New System.Drawing.Size(122, 30)
-        Me.cmdHeatsToQuaterFinals.TabIndex = 1257
-        Me.cmdHeatsToQuaterFinals.Text = "HeatsToQuaterFinals"
-        Me.cmdHeatsToQuaterFinals.UseVisualStyleBackColor = True
         '
         'ucCG1
         '
