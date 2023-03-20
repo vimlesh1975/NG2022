@@ -466,7 +466,7 @@ Public Class ucBoxing
             CasparCGDataCollection.SetData("ccgsubheader", "Judges")
 
             For i = 0 To .RowCount - 2
-                'CasparCGDataCollection.SetData("ccg_ln" & i, .Rows(i).Cells(0).Value)
+                CasparCGDataCollection.SetData("ccg_ln" & i, i + 1)
                 CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(0).Value)
                 CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(3).Value.Replace("\", "/"))
 
