@@ -1216,12 +1216,6 @@
 
     Private Sub cmdpauseshotball_Click(sender As Object, e As EventArgs) Handles cmdpauseshotball.Click
         On Error Resume Next
-        'Stoptimer30sec.PerformClick()
-        'CasparCGDataCollection.Clear()
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
-        'CasparCGDataCollection.SetData("ccgextra", RaidTime.Text)
-        'CasparCGDataCollection.SetData("ccginfo", dgvt1ball.CurrentCell.Value)
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " pausetimer()")
     End Sub
 

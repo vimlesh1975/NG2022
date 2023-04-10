@@ -138,6 +138,12 @@
     <Compile Include="ucBoxing.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ucArchery.designer.vb">
+      <DependentUpon>ucArchery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucArchery.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucNetBall.designer.vb">
       <DependentUpon>ucNetBall.vb</DependentUpon>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucBoxing.resx">
       <DependentUpon>ucBoxing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucArchery.resx">
+      <DependentUpon>ucArchery.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucNetBall.resx">
       <DependentUpon>ucNetBall.vb</DependentUpon>

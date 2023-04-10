@@ -42,6 +42,7 @@ Partial Class frmNG2022
         Me.lblport = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.Archery = New System.Windows.Forms.TabPage()
         Me.Boxing = New System.Windows.Forms.TabPage()
         Me.UcBoxing1 = New NG2022.ucBoxing()
         Me.Gymnastic = New System.Windows.Forms.TabPage()
@@ -85,8 +86,10 @@ Partial Class frmNG2022
         Me.txtClientID = New System.Windows.Forms.TextBox()
         Me.lblClientID = New System.Windows.Forms.Label()
         Me.UcCasparcgWindow1 = New NG2022.ucCasparcgWindow()
+        Me.UcArchery1 = New NG2022.ucArchery()
         Me.gbPannel.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.Archery.SuspendLayout()
         Me.Boxing.SuspendLayout()
         Me.Gymnastic.SuspendLayout()
         Me.CanoeSlalom.SuspendLayout()
@@ -286,6 +289,7 @@ Partial Class frmNG2022
         '
         'TabControl1
         '
+        Me.TabControl1.Controls.Add(Me.Archery)
         Me.TabControl1.Controls.Add(Me.Boxing)
         Me.TabControl1.Controls.Add(Me.Gymnastic)
         Me.TabControl1.Controls.Add(Me.CanoeSlalom)
@@ -302,6 +306,17 @@ Partial Class frmNG2022
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1143, 928)
         Me.TabControl1.TabIndex = 1340
+        '
+        'Archery
+        '
+        Me.Archery.Controls.Add(Me.UcArchery1)
+        Me.Archery.Location = New System.Drawing.Point(4, 22)
+        Me.Archery.Name = "Archery"
+        Me.Archery.Padding = New System.Windows.Forms.Padding(3)
+        Me.Archery.Size = New System.Drawing.Size(1135, 902)
+        Me.Archery.TabIndex = 11
+        Me.Archery.Text = "Archery"
+        Me.Archery.UseVisualStyleBackColor = True
         '
         'Boxing
         '
@@ -737,6 +752,15 @@ Partial Class frmNG2022
         Me.UcCasparcgWindow1.Size = New System.Drawing.Size(756, 498)
         Me.UcCasparcgWindow1.TabIndex = 1173
         '
+        'UcArchery1
+        '
+        Me.UcArchery1.AutoScroll = True
+        Me.UcArchery1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcArchery1.Location = New System.Drawing.Point(6, 6)
+        Me.UcArchery1.Name = "UcArchery1"
+        Me.UcArchery1.Size = New System.Drawing.Size(1137, 776)
+        Me.UcArchery1.TabIndex = 0
+        '
         'frmNG2022
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -752,10 +776,11 @@ Partial Class frmNG2022
         Me.Controls.Add(Me.gbPannel)
         Me.Name = "frmNG2022"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "NG_230323_1"
+        Me.Text = "NG_100423_1"
         Me.gbPannel.ResumeLayout(False)
         Me.gbPannel.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        Me.Archery.ResumeLayout(False)
         Me.Boxing.ResumeLayout(False)
         Me.Gymnastic.ResumeLayout(False)
         Me.CanoeSlalom.ResumeLayout(False)
@@ -840,4 +865,6 @@ Partial Class frmNG2022
     Friend WithEvents UcGymnastic1 As ucGymnastic
     Friend WithEvents Boxing As TabPage
     Friend WithEvents UcBoxing1 As ucBoxing
+    Friend WithEvents Archery As TabPage
+    Friend WithEvents UcArchery1 As ucArchery
 End Class

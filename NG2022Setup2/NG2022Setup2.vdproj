@@ -273,6 +273,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_0992F721B81442839AD63145F6C92728"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_09C58578FFA946E4A7A3B87EC3349FA5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -693,7 +699,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1EA0F50E03FC422081F2BAB74D5C751D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1EB4F8A62E3444548FC372328DA33902"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1F682BD1408249EBBCCA0ACC2B8CE251"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -958,6 +976,12 @@
         "Entry"
         {
         "MsmKey" = "8:_28FB23737A6149878DF4314278D6C7AC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_295A3DD514F546F0987C9521767ED6B4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1378,6 +1402,12 @@
         "Entry"
         {
         "MsmKey" = "8:_374BCD547A104BB0B5A82B8DA721CB68"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_375E4A9FED4544CF9CFAFFC0F326C1E9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2361,6 +2391,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_5E2480A90C7D4570933F5EF04825931C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5E80A650836541C7A746823E4863B4B8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2416,6 +2452,12 @@
         "Entry"
         {
         "MsmKey" = "8:_5FFB446634684B8CA29CD95CB6CD6F48"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_604FE569D74F47DB96953C9DC0D8E9E1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2607,12 +2649,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_66DDF6156CEFD29982707321D0E26BA3"
-        "OwnerKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_67B09D8F05DF43B4A3B16476D874215A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2739,6 +2775,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6B797ED9107C4EA39F744A2F74E6EC85"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6B82D49E2D12480C8CD415F1DCE2166D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2836,6 +2878,12 @@
         "Entry"
         {
         "MsmKey" = "8:_6F94CDA0DEF54066BF8EA6A084D16382"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_700A32794A0D4B0DB0009F222143F977"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3255,6 +3303,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7D2E1D3360314049807252196D422B4D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7DE98EDCEEA04A978472D9D8C2452D90"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3370,6 +3424,12 @@
         "Entry"
         {
         "MsmKey" = "8:_836E8F48D67A47759D50D80ADBC2379E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_83B5951ED83043579B717D4C1A4F68E2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3645,6 +3705,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_8BED37E2075B4ED2AAB33896A29290AC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8C5316F7EDCB4529B5FE71575D31E85F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3898,6 +3964,12 @@
         "Entry"
         {
         "MsmKey" = "8:_95AA976C1DA34821B803B4A815F54024"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_95DA57C7DBE64B3AB49CD9A91EE3877A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -4209,6 +4281,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A366019D05824B808DAC3094CE443463"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A3CF35C4BEBF49B9AEE8B08FB5D29974"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -4408,6 +4486,18 @@
         "Entry"
         {
         "MsmKey" = "8:_AB4B694E287C44F29D9F36F67530D0C2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_ABEDDD795DFB47D3A6C37F997FD128BE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AC20E7657C8A413CA996F1FA1F1F6F57"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -4725,6 +4815,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_B93FE362C6F64C8EA281B5B63F5A2027"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B97E0C49DAB0464B8C6931DFBF6257DD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -4797,6 +4893,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_BC1229D927830F5CAD6093664F194EEE"
+        "OwnerKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BC1F8A3941874407855445656BEDC9D8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -4858,6 +4960,12 @@
         "Entry"
         {
         "MsmKey" = "8:_BE97CFE9090943BBBCBABDAE6892D391"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BEA34371E8D5451CBEDF18542003D64F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -5319,6 +5427,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D01BB2A38F0247CAB48F4E27C65C1FFB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D02FD9FC55D14D3EB8AA099D67D7A56B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -5464,6 +5578,12 @@
         "Entry"
         {
         "MsmKey" = "8:_D452ED1F9DAD4E648C435CF818624E5F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D47A8B79ED534E5A92AF5AD39CD4CED7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -5667,6 +5787,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DE195186D8264364B4A26A4981B8DE29"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DE99F1BD24B34C9F9708A4A1B868CC28"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -5686,6 +5812,12 @@
         "Entry"
         {
         "MsmKey" = "8:_DF77CED27F56409A89A84EF8D63013D9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DF7F5CA032D34656A72606744E634F62"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -6513,6 +6645,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FFD96A34960D4292989E0104284C36E7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
         "MsmSig" = "8:_UNDEFINED"
@@ -6520,7 +6658,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_66DDF6156CEFD29982707321D0E26BA3"
+        "OwnerKey" = "8:_BC1229D927830F5CAD6093664F194EEE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -7482,6 +7620,26 @@
             "TargetName" = "8:versus.txt"
             "Tag" = "8:"
             "Folder" = "8:_4B70EF10597F43D3B23F0D01813002B7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0992F721B81442839AD63145F6C92728"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\score.css"
+            "TargetName" = "8:score.css"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -8896,12 +9054,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1EA0F50E03FC422081F2BAB74D5C751D"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\score.js"
+            "TargetName" = "8:score.js"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1EB4F8A62E3444548FC372328DA33902"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\Blank\\Games_Pictogram\\ST.png"
             "TargetName" = "8:ST.png"
             "Tag" = "8:"
             "Folder" = "8:_C3A0CABF847B44439B21FA761BC2ABBC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1F682BD1408249EBBCCA0ACC2B8CE251"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\set7.txt"
+            "TargetName" = "8:set7.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -9782,6 +9980,26 @@
             "TargetName" = "8:Benin.png"
             "Tag" = "8:"
             "Folder" = "8:_2E27F32CF30449FC895475AB2025ECC2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_295A3DD514F546F0987C9521767ED6B4"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\main.css"
+            "TargetName" = "8:main.css"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -11182,6 +11400,26 @@
             "TargetName" = "8:main2.js"
             "Tag" = "8:"
             "Folder" = "8:_3E58DB7A6FEA40799916581FC652DC70"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_375E4A9FED4544CF9CFAFFC0F326C1E9"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\player_id.html"
+            "TargetName" = "8:player_id.html"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -14456,6 +14694,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5E2480A90C7D4570933F5EF04825931C"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\score.html"
+            "TargetName" = "8:score.html"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5E80A650836541C7A746823E4863B4B8"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Gymnastics\\PlayerScorecard2.html"
@@ -14653,6 +14911,26 @@
             "TargetName" = "8:Croatia.png"
             "Tag" = "8:"
             "Folder" = "8:_2E27F32CF30449FC895475AB2025ECC2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_604FE569D74F47DB96953C9DC0D8E9E1"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\Raider2.html"
+            "TargetName" = "8:Raider2.html"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -15287,37 +15565,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_66DDF6156CEFD29982707321D0E26BA3"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_66DDF6156CEFD29982707321D0E26BA3"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Newtonsoft.Json.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_67B09D8F05DF43B4A3B16476D874215A"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\flag\\Mozambique.png"
@@ -15738,6 +15985,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B797ED9107C4EA39F744A2F74E6EC85"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\winner.html"
+            "TargetName" = "8:winner.html"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B82D49E2D12480C8CD415F1DCE2166D"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\flag\\Uganda.png"
@@ -16064,6 +16331,26 @@
             "TargetName" = "8:score.js"
             "Tag" = "8:"
             "Folder" = "8:_21824124222E4B838C4467EA1A5122A2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_700A32794A0D4B0DB0009F222143F977"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\main2.js"
+            "TargetName" = "8:main2.js"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -17438,6 +17725,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D2E1D3360314049807252196D422B4D"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\event_id.html"
+            "TargetName" = "8:event_id.html"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7DE98EDCEEA04A978472D9D8C2452D90"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\ball\\score.css"
@@ -17824,6 +18131,26 @@
             "TargetName" = "8:teamlineup.txt"
             "Tag" = "8:"
             "Folder" = "8:_4B70EF10597F43D3B23F0D01813002B7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_83B5951ED83043579B717D4C1A4F68E2"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\player_id.txt"
+            "TargetName" = "8:player_id.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -18738,6 +19065,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8BED37E2075B4ED2AAB33896A29290AC"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\listArchery.txt"
+            "TargetName" = "8:listArchery.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8C5316F7EDCB4529B5FE71575D31E85F"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\flag\\Timor-Leste.png"
@@ -19584,6 +19931,26 @@
             "TargetName" = "8:WB.png"
             "Tag" = "8:"
             "Folder" = "8:_349979CA0E904990AA5BE68ACE652EA6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_95DA57C7DBE64B3AB49CD9A91EE3877A"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\winner.txt"
+            "TargetName" = "8:winner.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -20618,6 +20985,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A366019D05824B808DAC3094CE443463"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\main.js"
+            "TargetName" = "8:main.js"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A3CF35C4BEBF49B9AEE8B08FB5D29974"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\flag\\Netherlands.png"
@@ -21275,6 +21662,46 @@
             "TargetName" = "8:Raider2.txt"
             "Tag" = "8:"
             "Folder" = "8:_3E58DB7A6FEA40799916581FC652DC70"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ABEDDD795DFB47D3A6C37F997FD128BE"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\versus.html"
+            "TargetName" = "8:versus.html"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC20E7657C8A413CA996F1FA1F1F6F57"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\Raider2.txt"
+            "TargetName" = "8:Raider2.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -22329,6 +22756,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B93FE362C6F64C8EA281B5B63F5A2027"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\teamlineup.html"
+            "TargetName" = "8:teamlineup.html"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B97E0C49DAB0464B8C6931DFBF6257DD"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\flag\\China.png"
@@ -22569,6 +23016,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BC1229D927830F5CAD6093664F194EEE"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_BC1229D927830F5CAD6093664F194EEE"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BC1F8A3941874407855445656BEDC9D8"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\Blank\\State_Short_Cut\\HAR.png"
@@ -22775,6 +23253,26 @@
             "TargetName" = "8:Mexico.png"
             "Tag" = "8:"
             "Folder" = "8:_2E27F32CF30449FC895475AB2025ECC2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BEA34371E8D5451CBEDF18542003D64F"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\teamlineup.txt"
+            "TargetName" = "8:teamlineup.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -24309,6 +24807,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D01BB2A38F0247CAB48F4E27C65C1FFB"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\event_id.txt"
+            "TargetName" = "8:event_id.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D02FD9FC55D14D3EB8AA099D67D7A56B"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\ball\\out.txt"
@@ -24795,6 +25313,26 @@
             "TargetName" = "8:7line.txt"
             "Tag" = "8:"
             "Folder" = "8:_4A201431A94C472DA433D5C92018E216"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D47A8B79ED534E5A92AF5AD39CD4CED7"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\score.txt"
+            "TargetName" = "8:score.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -25480,6 +26018,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE195186D8264364B4A26A4981B8DE29"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\versus.txt"
+            "TargetName" = "8:versus.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE99F1BD24B34C9F9708A4A1B868CC28"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Gymnastics\\player_score.html"
@@ -25546,6 +26104,26 @@
             "TargetName" = "8:score.css"
             "Tag" = "8:"
             "Folder" = "8:_3E58DB7A6FEA40799916581FC652DC70"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DF7F5CA032D34656A72606744E634F62"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\set7.html"
+            "TargetName" = "8:set7.html"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -28300,6 +28878,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FFD96A34960D4292989E0104284C36E7"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Archery\\main2.css"
+            "TargetName" = "8:main2.css"
+            "Tag" = "8:"
+            "Folder" = "8:_6A856EB0943F426097DDC29011747040"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -28430,6 +29028,17 @@
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
                                     "Property" = "8:_DF6937C2CA3244B69AE3912002866943"
+                                        "Folders"
+                                        {
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_6A856EB0943F426097DDC29011747040"
+                                    {
+                                    "Name" = "8:Archery"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_172AC2C086804154B2CCA5FB53DD4145"
                                         "Folders"
                                         {
                                         }
