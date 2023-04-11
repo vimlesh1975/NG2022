@@ -104,6 +104,10 @@ Partial Class ucArchery
         Me.dgvt1ball = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox16 = New System.Windows.Forms.GroupBox()
+        Me.cmd8 = New System.Windows.Forms.Button()
+        Me.cmd7 = New System.Windows.Forms.Button()
+        Me.cmd9 = New System.Windows.Forms.Button()
+        Me.cmd10 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -147,6 +151,11 @@ Partial Class ucArchery
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.cmbgames = New System.Windows.Forms.ComboBox()
+        Me.arr26 = New System.Windows.Forms.TextBox()
+        Me.arr16 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.cmbShowArrow = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox3.SuspendLayout()
         Me.Ball.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -912,6 +921,15 @@ Partial Class ucArchery
         'GroupBox16
         '
         Me.GroupBox16.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox16.Controls.Add(Me.Label10)
+        Me.GroupBox16.Controls.Add(Me.cmbShowArrow)
+        Me.GroupBox16.Controls.Add(Me.Label9)
+        Me.GroupBox16.Controls.Add(Me.arr26)
+        Me.GroupBox16.Controls.Add(Me.arr16)
+        Me.GroupBox16.Controls.Add(Me.cmd8)
+        Me.GroupBox16.Controls.Add(Me.cmd7)
+        Me.GroupBox16.Controls.Add(Me.cmd9)
+        Me.GroupBox16.Controls.Add(Me.cmd10)
         Me.GroupBox16.Controls.Add(Me.Label8)
         Me.GroupBox16.Controls.Add(Me.Label7)
         Me.GroupBox16.Controls.Add(Me.Label6)
@@ -953,6 +971,42 @@ Partial Class ucArchery
         Me.GroupBox16.TabStop = False
         Me.GroupBox16.Text = "Score"
         '
+        'cmd8
+        '
+        Me.cmd8.Location = New System.Drawing.Point(418, 114)
+        Me.cmd8.Name = "cmd8"
+        Me.cmd8.Size = New System.Drawing.Size(42, 23)
+        Me.cmd8.TabIndex = 1275
+        Me.cmd8.Text = "8"
+        Me.cmd8.UseVisualStyleBackColor = True
+        '
+        'cmd7
+        '
+        Me.cmd7.Location = New System.Drawing.Point(466, 114)
+        Me.cmd7.Name = "cmd7"
+        Me.cmd7.Size = New System.Drawing.Size(34, 23)
+        Me.cmd7.TabIndex = 1273
+        Me.cmd7.Text = "7"
+        Me.cmd7.UseVisualStyleBackColor = True
+        '
+        'cmd9
+        '
+        Me.cmd9.Location = New System.Drawing.Point(381, 114)
+        Me.cmd9.Name = "cmd9"
+        Me.cmd9.Size = New System.Drawing.Size(37, 23)
+        Me.cmd9.TabIndex = 1272
+        Me.cmd9.Text = "9"
+        Me.cmd9.UseVisualStyleBackColor = True
+        '
+        'cmd10
+        '
+        Me.cmd10.Location = New System.Drawing.Point(347, 114)
+        Me.cmd10.Name = "cmd10"
+        Me.cmd10.Size = New System.Drawing.Size(34, 23)
+        Me.cmd10.TabIndex = 1271
+        Me.cmd10.Text = "10"
+        Me.cmd10.UseVisualStyleBackColor = True
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -965,7 +1019,7 @@ Partial Class ucArchery
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(355, 40)
+        Me.Label7.Location = New System.Drawing.Point(355, 36)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(20, 13)
         Me.Label7.TabIndex = 1268
@@ -974,7 +1028,7 @@ Partial Class ucArchery
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(397, 36)
+        Me.Label6.Location = New System.Drawing.Point(441, 36)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(14, 13)
         Me.Label6.TabIndex = 1267
@@ -992,7 +1046,7 @@ Partial Class ucArchery
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(255, 40)
+        Me.Label4.Location = New System.Drawing.Point(255, 36)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(20, 13)
         Me.Label4.TabIndex = 1265
@@ -1001,7 +1055,7 @@ Partial Class ucArchery
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(219, 37)
+        Me.Label3.Location = New System.Drawing.Point(219, 36)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(20, 13)
         Me.Label3.TabIndex = 1264
@@ -1207,7 +1261,7 @@ Partial Class ucArchery
         '
         'cmdPenaltyUpdate
         '
-        Me.cmdPenaltyUpdate.Location = New System.Drawing.Point(430, 41)
+        Me.cmdPenaltyUpdate.Location = New System.Drawing.Point(474, 41)
         Me.cmdPenaltyUpdate.Name = "cmdPenaltyUpdate"
         Me.cmdPenaltyUpdate.Size = New System.Drawing.Size(53, 67)
         Me.cmdPenaltyUpdate.TabIndex = 1226
@@ -1225,7 +1279,7 @@ Partial Class ucArchery
         '
         'cmdscorewithclock
         '
-        Me.cmdscorewithclock.Location = New System.Drawing.Point(485, 43)
+        Me.cmdscorewithclock.Location = New System.Drawing.Point(529, 43)
         Me.cmdscorewithclock.Name = "cmdscorewithclock"
         Me.cmdscorewithclock.Size = New System.Drawing.Size(48, 63)
         Me.cmdscorewithclock.TabIndex = 1218
@@ -1264,7 +1318,7 @@ Partial Class ucArchery
         '
         'txtt2gball
         '
-        Me.txtt2gball.Location = New System.Drawing.Point(392, 76)
+        Me.txtt2gball.Location = New System.Drawing.Point(436, 76)
         Me.txtt2gball.Name = "txtt2gball"
         Me.txtt2gball.Size = New System.Drawing.Size(29, 20)
         Me.txtt2gball.TabIndex = 617
@@ -1272,7 +1326,7 @@ Partial Class ucArchery
         '
         'txtt1gball
         '
-        Me.txtt1gball.Location = New System.Drawing.Point(392, 55)
+        Me.txtt1gball.Location = New System.Drawing.Point(436, 55)
         Me.txtt1gball.Name = "txtt1gball"
         Me.txtt1gball.Size = New System.Drawing.Size(29, 20)
         Me.txtt1gball.TabIndex = 615
@@ -1335,6 +1389,50 @@ Partial Class ucArchery
         Me.cmbgames.Size = New System.Drawing.Size(113, 21)
         Me.cmbgames.TabIndex = 1202
         Me.cmbgames.Text = "Archery"
+        '
+        'arr26
+        '
+        Me.arr26.Location = New System.Drawing.Point(395, 78)
+        Me.arr26.Name = "arr26"
+        Me.arr26.Size = New System.Drawing.Size(29, 20)
+        Me.arr26.TabIndex = 1277
+        Me.arr26.Text = "4"
+        '
+        'arr16
+        '
+        Me.arr16.Location = New System.Drawing.Point(395, 52)
+        Me.arr16.Name = "arr16"
+        Me.arr16.Size = New System.Drawing.Size(29, 20)
+        Me.arr16.TabIndex = 1276
+        Me.arr16.Text = "5"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(395, 36)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(20, 13)
+        Me.Label9.TabIndex = 1278
+        Me.Label9.Text = "A6"
+        '
+        'cmbShowArrow
+        '
+        Me.cmbShowArrow.FormattingEnabled = True
+        Me.cmbShowArrow.Items.AddRange(New Object() {"2", "3", "4", "5", "6"})
+        Me.cmbShowArrow.Location = New System.Drawing.Point(528, 9)
+        Me.cmbShowArrow.Name = "cmbShowArrow"
+        Me.cmbShowArrow.Size = New System.Drawing.Size(45, 21)
+        Me.cmbShowArrow.TabIndex = 1279
+        Me.cmbShowArrow.Text = "2"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(489, 11)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(34, 13)
+        Me.Label10.TabIndex = 1280
+        Me.Label10.Text = "Arrow"
         '
         'ucArchery
         '
@@ -1500,4 +1598,13 @@ Partial Class ucArchery
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents cmd10 As Button
+    Friend WithEvents cmd8 As Button
+    Friend WithEvents cmd7 As Button
+    Friend WithEvents cmd9 As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents arr26 As TextBox
+    Friend WithEvents arr16 As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents cmbShowArrow As ComboBox
 End Class

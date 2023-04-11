@@ -21,6 +21,12 @@
         cmbSubHeader.Text = "Bronze Medal Match"
 
 
+        ' Add event handlers for all controls whose name starts with "arr"
+        For Each ctrl As Control In GroupBox16.Controls.OfType(Of Control)().Where(Function(c) c.Name.StartsWith("arr"))
+            AddHandler ctrl.Click, AddressOf ArrControls_Click
+        Next
+
+
     End Sub
     Private Sub initialisesetscoreball()
         dgvsetscoreball.Rows.Add(3)
@@ -461,6 +467,11 @@
         CasparCGDataCollection.SetData("ccg_arr23", arr23.Text)
         CasparCGDataCollection.SetData("ccg_arr24", arr24.Text)
 
+        CasparCGDataCollection.SetData("ccg_arr15", arr15.Text)
+        CasparCGDataCollection.SetData("ccg_arr16", arr16.Text)
+        CasparCGDataCollection.SetData("ccg_arr25", arr25.Text)
+        CasparCGDataCollection.SetData("ccg_arr26", arr26.Text)
+
 
 
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
@@ -468,8 +479,12 @@
 
 
 
-        CasparCGDataCollection.SetData("showccgccgTimeStrip", 1)
-        CasparCGDataCollection.SetData("showClockAndhalf", 1)
+        'CasparCGDataCollection.SetData("showccgccgTimeStrip", 1)
+        'CasparCGDataCollection.SetData("showClockAndhalf", 1)
+
+        CasparCGDataCollection.SetData("ccgextra", RaidTime.Text)
+        CasparCGDataCollection.SetData("ccgextra2", RaidTime2.Text)
+
 
         showtemplate("ng2022/template/archery/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
@@ -478,10 +493,22 @@
                 CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
             Else
                 CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('1')" & """")
-
             End If
         End If
 
+        If cmbShowArrow.Text = 2 Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show2()" & """")
+        ElseIf cmbShowArrow.Text = 3 Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show3()" & """")
+
+        ElseIf cmbShowArrow.Text = 4 Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show4()" & """")
+
+        ElseIf cmbShowArrow.Text = 5 Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show5()" & """")
+        ElseIf cmbShowArrow.Text = 6 Then
+            'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show6()" & """")
+        End If
 
     End Sub
 
@@ -728,32 +755,40 @@
 
 
         CasparCGDataCollection.SetData("ccg_sp1", sp1.Text)
+        CasparCGDataCollection.SetData("ccg_sp2", sp2.Text)
+
 
         CasparCGDataCollection.SetData("ccg_arr11", arr11.Text)
         CasparCGDataCollection.SetData("ccg_arr12", arr12.Text)
-        CasparCGDataCollection.SetData("ccg_arr13", arr13.Text)
-        CasparCGDataCollection.SetData("ccg_arr14", arr14.Text)
-
-
-        CasparCGDataCollection.SetData("ccg_sp2", sp2.Text)
-
         CasparCGDataCollection.SetData("ccg_arr21", arr21.Text)
         CasparCGDataCollection.SetData("ccg_arr22", arr22.Text)
-        CasparCGDataCollection.SetData("ccg_arr23", arr23.Text)
-        CasparCGDataCollection.SetData("ccg_arr24", arr24.Text)
 
 
+        If cmbShowArrow.Text = 3 Then
+            CasparCGDataCollection.SetData("ccg_arr13", arr13.Text)
+            CasparCGDataCollection.SetData("ccg_arr23", arr23.Text)
+        End If
+
+        If cmbShowArrow.Text = 4 Then
+            CasparCGDataCollection.SetData("ccg_arr14", arr14.Text)
+            CasparCGDataCollection.SetData("ccg_arr24", arr24.Text)
+        End If
+
+
+        If cmbShowArrow.Text = 5 Then
+            CasparCGDataCollection.SetData("ccg_arr15", arr15.Text)
+            CasparCGDataCollection.SetData("ccg_arr25", arr25.Text)
+        End If
+
+        If cmbShowArrow.Text = 6 Then
+            CasparCGDataCollection.SetData("ccg_arr16", arr16.Text)
+            CasparCGDataCollection.SetData("ccg_arr26", arr26.Text)
+        End If
 
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
 
-
-
-        CasparCGDataCollection.SetData("showccgccgTimeStrip", 1)
-        CasparCGDataCollection.SetData("showClockAndhalf", 1)
-
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
-
 
         If chkShowService.Checked Then
             If rdoServiceT1.Checked Then
@@ -764,8 +799,6 @@
                 CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('1')" & """")
             End If
         End If
-
-
 
     End Sub
 
@@ -946,5 +979,50 @@
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgf5", cmbhalfball.Text)
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
+    End Sub
+
+
+    Private clickedTextBox As TextBox = Nothing
+
+    Private Sub ArrControls_Click(sender As Object, e As EventArgs)
+        clickedTextBox = CType(sender, Control)
+
+        For Each ctrl As Control In GroupBox16.Controls
+            If ctrl.Name.StartsWith("arr") Then
+                ctrl.BackColor = Color.White
+                ctrl.ForeColor = Color.Black
+            End If
+        Next
+
+        clickedTextBox.BackColor = Color.Red
+        clickedTextBox.ForeColor = Color.White
+    End Sub
+
+    Private Sub cmd10_Click(sender As Object, e As EventArgs) Handles cmd10.Click, cmd9.Click, cmd8.Click, cmd7.Click
+        On Error Resume Next
+        If clickedTextBox IsNot Nothing Then
+            clickedTextBox.Text = sender.Text
+        End If
+
+    End Sub
+
+    Private Sub arr23_TextChanged(sender As Object, e As EventArgs) Handles arr23.TextChanged
+
+    End Sub
+
+    Private Sub cmbShowArrow_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbShowArrow.SelectedIndexChanged
+        'If cmbShowArrow.Text = 2 Then
+        '    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show2()" & """")
+        'ElseIf cmbShowArrow.Text = 3 Then
+        '    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show3()" & """")
+
+        'ElseIf cmbShowArrow.Text = 4 Then
+        '    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show4()" & """")
+
+        'ElseIf cmbShowArrow.Text = 5 Then
+        '    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show5()" & """")
+        'ElseIf cmbShowArrow.Text = 6 Then
+        '    'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show6()" & """")
+        'End If
     End Sub
 End Class
