@@ -1011,18 +1011,20 @@
     End Sub
 
     Private Sub cmbShowArrow_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbShowArrow.SelectedIndexChanged
-        'If cmbShowArrow.Text = 2 Then
-        '    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show2()" & """")
-        'ElseIf cmbShowArrow.Text = 3 Then
-        '    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show3()" & """")
-
-        'ElseIf cmbShowArrow.Text = 4 Then
-        '    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show4()" & """")
-
-        'ElseIf cmbShowArrow.Text = 5 Then
-        '    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show5()" & """")
-        'ElseIf cmbShowArrow.Text = 6 Then
-        '    'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show6()" & """")
-        'End If
+        If cmbShowArrow.Text = 2 Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showAll()" & """")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show2()" & """")
+        ElseIf cmbShowArrow.Text = 3 Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showAll()" & """")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show3()" & """")
+        ElseIf cmbShowArrow.Text = 4 Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showAll()" & """")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show4()" & """")
+        ElseIf cmbShowArrow.Text = 5 Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showAll()" & """")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "show5()" & """")
+        ElseIf cmbShowArrow.Text = 6 Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showAll()" & """")
+        End If
     End Sub
 End Class

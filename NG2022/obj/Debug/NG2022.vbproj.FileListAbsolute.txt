@@ -57,3 +57,4 @@ C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.vbproj.Co
 C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.exe
 C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.xml
 C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.pdb
+C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucArchery.resources
