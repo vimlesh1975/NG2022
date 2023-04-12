@@ -1311,6 +1311,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_35351251AFF94249988D2BF040976A7C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1649,6 +1655,12 @@
         {
         "MsmKey" = "8:_4047CD60F2EA43EF947A3D8099C3659B"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_404DC51831995E84F7BCF09CACF5B7E9"
+        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2410,7 +2422,7 @@
         "Entry"
         {
         "MsmKey" = "8:_5EA3CB20EF2877720734C08AB62814EE"
-        "OwnerKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
+        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -3106,12 +3118,6 @@
         "Entry"
         {
         "MsmKey" = "8:_7639B610A99F4C3FA7CD4CD8DE331ACE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -4384,7 +4390,7 @@
         "Entry"
         {
         "MsmKey" = "8:_A760D3985ED812F7A18C18C11E3A27B5"
-        "OwnerKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
+        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -4889,12 +4895,6 @@
         {
         "MsmKey" = "8:_BBF33145EF874B10A53838148FC67B83"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BC1229D927830F5CAD6093664F194EEE"
-        "OwnerKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -5752,7 +5752,7 @@
         "Entry"
         {
         "MsmKey" = "8:_DCA711A9813CED81E110EFC39951C10B"
-        "OwnerKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
+        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -6652,13 +6652,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_764F0A1D6B944996981AC89F1958EF1A"
+        "OwnerKey" = "8:_A760D3985ED812F7A18C18C11E3A27B5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BC1229D927830F5CAD6093664F194EEE"
+        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_404DC51831995E84F7BCF09CACF5B7E9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -6671,12 +6677,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_5EA3CB20EF2877720734C08AB62814EE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A760D3985ED812F7A18C18C11E3A27B5"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -12232,6 +12232,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_404DC51831995E84F7BCF09CACF5B7E9"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_404DC51831995E84F7BCF09CACF5B7E9"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4083BBC46CE644A5A20B9DA7B4120720"
@@ -23016,37 +23047,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BC1229D927830F5CAD6093664F194EEE"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_BC1229D927830F5CAD6093664F194EEE"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Newtonsoft.Json.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BC1F8A3941874407855445656BEDC9D8"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\Blank\\State_Short_Cut\\HAR.png"
@@ -29802,15 +29802,15 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BB6CCCDD0A3C4759873966329C99E2B2"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_62C45D48CF0045AABA7E079E4D5CE38E"
             {
-            "Name" = "8:NG2022_2"
+            "Name" = "8:Shortcut to NG2022"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_764F0A1D6B944996981AC89F1958EF1A"
+            "Target" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
             "Folder" = "8:_492F8AA7ADA74928B0843C5AE4AA3F5B"
             "WorkingFolder" = "8:_192D61A418B54402BD499C6A355F176E"
             "Icon" = "8:"
@@ -30215,9 +30215,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_764F0A1D6B944996981AC89F1958EF1A"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_34FF02E228FA41F6BD856FBCED9281B4"
             {
-            "SourcePath" = "8:..\\NG2022\\obj\\x64\\Debug\\NG2022.exe"
+            "SourcePath" = "8:..\\NG2022\\obj\\x64\\Release\\NG2022.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
@@ -30235,7 +30235,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:Debug|x64"
+            "OutputConfiguration" = "8:Release|x64"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{48EE0C20-EE2C-42F7-91F9-7FFA6373A1BE}"
             "ShowKeyOutput" = "11:TRUE"

@@ -24,9 +24,9 @@ Partial Class ucArchery
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucArchery))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmbSubHeader = New System.Windows.Forms.ComboBox()
@@ -104,6 +104,11 @@ Partial Class ucArchery
         Me.dgvt1ball = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox16 = New System.Windows.Forms.GroupBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.cmbShowArrow = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.arr26 = New System.Windows.Forms.TextBox()
+        Me.arr16 = New System.Windows.Forms.TextBox()
         Me.cmd8 = New System.Windows.Forms.Button()
         Me.cmd7 = New System.Windows.Forms.Button()
         Me.cmd9 = New System.Windows.Forms.Button()
@@ -151,11 +156,7 @@ Partial Class ucArchery
         Me.gamelogo = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.cmbgames = New System.Windows.Forms.ComboBox()
-        Me.arr26 = New System.Windows.Forms.TextBox()
-        Me.arr16 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.cmbShowArrow = New System.Windows.Forms.ComboBox()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.cmdReset = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.Ball.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -302,12 +303,12 @@ Partial Class ucArchery
         Me.GroupBox4.Controls.Add(Me.RaidTime2)
         Me.GroupBox4.Controls.Add(Me.Stoptimer30sec2)
         Me.GroupBox4.Controls.Add(Me.cmdRaider2)
-        Me.GroupBox4.Location = New System.Drawing.Point(786, 272)
+        Me.GroupBox4.Location = New System.Drawing.Point(797, 258)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(293, 40)
         Me.GroupBox4.TabIndex = 1244
         Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Shot Timer"
+        Me.GroupBox4.Text = "Arrow Timer"
         '
         'cmdResumeShotClock2
         '
@@ -364,12 +365,12 @@ Partial Class ucArchery
         Me.GroupBox1.Controls.Add(Me.RaidTime)
         Me.GroupBox1.Controls.Add(Me.Stoptimer30sec)
         Me.GroupBox1.Controls.Add(Me.cmdRaider1)
-        Me.GroupBox1.Location = New System.Drawing.Point(783, 226)
+        Me.GroupBox1.Location = New System.Drawing.Point(794, 212)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(293, 40)
         Me.GroupBox1.TabIndex = 1232
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Shot Timer"
+        Me.GroupBox1.Text = "Arrow Timer"
         '
         'cmdResumeShotClock
         '
@@ -442,7 +443,7 @@ Partial Class ucArchery
         Me.gbsetscoreball.Controls.Add(Me.cmdscoreresetball)
         Me.gbsetscoreball.Controls.Add(Me.cmdshowsetscoreball)
         Me.gbsetscoreball.Controls.Add(Me.dgvsetscoreball)
-        Me.gbsetscoreball.Location = New System.Drawing.Point(446, 347)
+        Me.gbsetscoreball.Location = New System.Drawing.Point(443, 215)
         Me.gbsetscoreball.Name = "gbsetscoreball"
         Me.gbsetscoreball.Size = New System.Drawing.Size(324, 132)
         Me.gbsetscoreball.TabIndex = 1221
@@ -472,35 +473,35 @@ Partial Class ucArchery
         Me.dgvsetscoreball.AllowUserToAddRows = False
         Me.dgvsetscoreball.AllowUserToResizeColumns = False
         Me.dgvsetscoreball.AllowUserToResizeRows = False
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvsetscoreball.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvsetscoreball.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvsetscoreball.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvsetscoreball.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn34})
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvsetscoreball.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvsetscoreball.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvsetscoreball.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.dgvsetscoreball.Location = New System.Drawing.Point(8, 14)
         Me.dgvsetscoreball.Name = "dgvsetscoreball"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvsetscoreball.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvsetscoreball.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvsetscoreball.Size = New System.Drawing.Size(251, 112)
         Me.dgvsetscoreball.TabIndex = 661
         '
@@ -921,6 +922,7 @@ Partial Class ucArchery
         'GroupBox16
         '
         Me.GroupBox16.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox16.Controls.Add(Me.cmdReset)
         Me.GroupBox16.Controls.Add(Me.Label10)
         Me.GroupBox16.Controls.Add(Me.cmbShowArrow)
         Me.GroupBox16.Controls.Add(Me.Label9)
@@ -966,10 +968,56 @@ Partial Class ucArchery
         Me.GroupBox16.Controls.Add(Me.txtt1gball)
         Me.GroupBox16.Location = New System.Drawing.Point(447, 46)
         Me.GroupBox16.Name = "GroupBox16"
-        Me.GroupBox16.Size = New System.Drawing.Size(640, 174)
+        Me.GroupBox16.Size = New System.Drawing.Size(640, 163)
         Me.GroupBox16.TabIndex = 625
         Me.GroupBox16.TabStop = False
         Me.GroupBox16.Text = "Score"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(489, 11)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(34, 13)
+        Me.Label10.TabIndex = 1280
+        Me.Label10.Text = "Arrow"
+        '
+        'cmbShowArrow
+        '
+        Me.cmbShowArrow.FormattingEnabled = True
+        Me.cmbShowArrow.Items.AddRange(New Object() {"2", "3", "4", "5", "6"})
+        Me.cmbShowArrow.Location = New System.Drawing.Point(528, 9)
+        Me.cmbShowArrow.Name = "cmbShowArrow"
+        Me.cmbShowArrow.Size = New System.Drawing.Size(45, 21)
+        Me.cmbShowArrow.TabIndex = 1279
+        Me.cmbShowArrow.Text = "2"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(395, 36)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(20, 13)
+        Me.Label9.TabIndex = 1278
+        Me.Label9.Text = "A6"
+        '
+        'arr26
+        '
+        Me.arr26.Location = New System.Drawing.Point(395, 78)
+        Me.arr26.Name = "arr26"
+        Me.arr26.Size = New System.Drawing.Size(29, 20)
+        Me.arr26.TabIndex = 1277
+        Me.arr26.Text = "4"
+        Me.arr26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'arr16
+        '
+        Me.arr16.Location = New System.Drawing.Point(395, 52)
+        Me.arr16.Name = "arr16"
+        Me.arr16.Size = New System.Drawing.Size(29, 20)
+        Me.arr16.TabIndex = 1276
+        Me.arr16.Text = "5"
+        Me.arr16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmd8
         '
@@ -1077,6 +1125,7 @@ Partial Class ucArchery
         Me.arr25.Size = New System.Drawing.Size(29, 20)
         Me.arr25.TabIndex = 1263
         Me.arr25.Text = "10"
+        Me.arr25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'arr15
         '
@@ -1085,14 +1134,18 @@ Partial Class ucArchery
         Me.arr15.Size = New System.Drawing.Size(29, 20)
         Me.arr15.TabIndex = 1262
         Me.arr15.Text = "6"
+        Me.arr15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'sp2
         '
-        Me.sp2.Location = New System.Drawing.Point(182, 78)
+        Me.sp2.BackColor = System.Drawing.Color.DarkRed
+        Me.sp2.ForeColor = System.Drawing.SystemColors.Window
+        Me.sp2.Location = New System.Drawing.Point(178, 78)
         Me.sp2.Name = "sp2"
         Me.sp2.Size = New System.Drawing.Size(29, 20)
         Me.sp2.TabIndex = 1261
         Me.sp2.Text = "2"
+        Me.sp2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'arr21
         '
@@ -1101,6 +1154,7 @@ Partial Class ucArchery
         Me.arr21.Size = New System.Drawing.Size(29, 20)
         Me.arr21.TabIndex = 1260
         Me.arr21.Text = "6"
+        Me.arr21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'arr22
         '
@@ -1109,6 +1163,7 @@ Partial Class ucArchery
         Me.arr22.Size = New System.Drawing.Size(29, 20)
         Me.arr22.TabIndex = 1259
         Me.arr22.Text = "7"
+        Me.arr22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'arr23
         '
@@ -1117,6 +1172,7 @@ Partial Class ucArchery
         Me.arr23.Size = New System.Drawing.Size(29, 20)
         Me.arr23.TabIndex = 1258
         Me.arr23.Text = "8"
+        Me.arr23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'arr24
         '
@@ -1125,14 +1181,18 @@ Partial Class ucArchery
         Me.arr24.Size = New System.Drawing.Size(29, 20)
         Me.arr24.TabIndex = 1257
         Me.arr24.Text = "9"
+        Me.arr24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'sp1
         '
-        Me.sp1.Location = New System.Drawing.Point(182, 53)
+        Me.sp1.BackColor = System.Drawing.Color.DarkRed
+        Me.sp1.ForeColor = System.Drawing.SystemColors.Window
+        Me.sp1.Location = New System.Drawing.Point(178, 53)
         Me.sp1.Name = "sp1"
         Me.sp1.Size = New System.Drawing.Size(29, 20)
         Me.sp1.TabIndex = 1256
         Me.sp1.Text = "1"
+        Me.sp1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'arr11
         '
@@ -1141,6 +1201,7 @@ Partial Class ucArchery
         Me.arr11.Size = New System.Drawing.Size(29, 20)
         Me.arr11.TabIndex = 1255
         Me.arr11.Text = "10"
+        Me.arr11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'arr12
         '
@@ -1149,6 +1210,7 @@ Partial Class ucArchery
         Me.arr12.Size = New System.Drawing.Size(29, 20)
         Me.arr12.TabIndex = 1254
         Me.arr12.Text = "9"
+        Me.arr12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'arr13
         '
@@ -1157,6 +1219,7 @@ Partial Class ucArchery
         Me.arr13.Size = New System.Drawing.Size(29, 20)
         Me.arr13.TabIndex = 1253
         Me.arr13.Text = "8"
+        Me.arr13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'arr14
         '
@@ -1165,6 +1228,7 @@ Partial Class ucArchery
         Me.arr14.Size = New System.Drawing.Size(29, 20)
         Me.arr14.TabIndex = 1252
         Me.arr14.Text = "7"
+        Me.arr14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmdRemoveinfo
         '
@@ -1318,19 +1382,25 @@ Partial Class ucArchery
         '
         'txtt2gball
         '
+        Me.txtt2gball.BackColor = System.Drawing.Color.Teal
+        Me.txtt2gball.ForeColor = System.Drawing.SystemColors.Window
         Me.txtt2gball.Location = New System.Drawing.Point(436, 76)
         Me.txtt2gball.Name = "txtt2gball"
         Me.txtt2gball.Size = New System.Drawing.Size(29, 20)
         Me.txtt2gball.TabIndex = 617
         Me.txtt2gball.Text = "13"
+        Me.txtt2gball.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtt1gball
         '
+        Me.txtt1gball.BackColor = System.Drawing.Color.Teal
+        Me.txtt1gball.ForeColor = System.Drawing.SystemColors.Window
         Me.txtt1gball.Location = New System.Drawing.Point(436, 55)
         Me.txtt1gball.Name = "txtt1gball"
         Me.txtt1gball.Size = New System.Drawing.Size(29, 20)
         Me.txtt1gball.TabIndex = 615
-        Me.txtt1gball.Text = "15"
+        Me.txtt1gball.Text = "19"
+        Me.txtt1gball.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TabControl1
         '
@@ -1390,49 +1460,14 @@ Partial Class ucArchery
         Me.cmbgames.TabIndex = 1202
         Me.cmbgames.Text = "Archery"
         '
-        'arr26
+        'cmdReset
         '
-        Me.arr26.Location = New System.Drawing.Point(395, 78)
-        Me.arr26.Name = "arr26"
-        Me.arr26.Size = New System.Drawing.Size(29, 20)
-        Me.arr26.TabIndex = 1277
-        Me.arr26.Text = "4"
-        '
-        'arr16
-        '
-        Me.arr16.Location = New System.Drawing.Point(395, 52)
-        Me.arr16.Name = "arr16"
-        Me.arr16.Size = New System.Drawing.Size(29, 20)
-        Me.arr16.TabIndex = 1276
-        Me.arr16.Text = "5"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(395, 36)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(20, 13)
-        Me.Label9.TabIndex = 1278
-        Me.Label9.Text = "A6"
-        '
-        'cmbShowArrow
-        '
-        Me.cmbShowArrow.FormattingEnabled = True
-        Me.cmbShowArrow.Items.AddRange(New Object() {"2", "3", "4", "5", "6"})
-        Me.cmbShowArrow.Location = New System.Drawing.Point(528, 9)
-        Me.cmbShowArrow.Name = "cmbShowArrow"
-        Me.cmbShowArrow.Size = New System.Drawing.Size(45, 21)
-        Me.cmbShowArrow.TabIndex = 1279
-        Me.cmbShowArrow.Text = "2"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(489, 11)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(34, 13)
-        Me.Label10.TabIndex = 1280
-        Me.Label10.Text = "Arrow"
+        Me.cmdReset.Location = New System.Drawing.Point(233, 100)
+        Me.cmdReset.Name = "cmdReset"
+        Me.cmdReset.Size = New System.Drawing.Size(61, 23)
+        Me.cmdReset.TabIndex = 1245
+        Me.cmdReset.Text = "Reset"
+        Me.cmdReset.UseVisualStyleBackColor = True
         '
         'ucArchery
         '
@@ -1607,4 +1642,5 @@ Partial Class ucArchery
     Friend WithEvents arr16 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents cmbShowArrow As ComboBox
+    Friend WithEvents cmdReset As Button
 End Class
