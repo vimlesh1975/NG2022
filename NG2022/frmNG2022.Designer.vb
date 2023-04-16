@@ -43,6 +43,7 @@ Partial Class frmNG2022
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Archery = New System.Windows.Forms.TabPage()
+        Me.UcArchery1 = New NG2022.ucArchery()
         Me.Boxing = New System.Windows.Forms.TabPage()
         Me.UcBoxing1 = New NG2022.ucBoxing()
         Me.Gymnastic = New System.Windows.Forms.TabPage()
@@ -86,7 +87,8 @@ Partial Class frmNG2022
         Me.txtClientID = New System.Windows.Forms.TextBox()
         Me.lblClientID = New System.Windows.Forms.Label()
         Me.UcCasparcgWindow1 = New NG2022.ucCasparcgWindow()
-        Me.UcArchery1 = New NG2022.ucArchery()
+        Me.Shooting = New System.Windows.Forms.TabPage()
+        Me.UcShooting1 = New NG2022.ucShooting()
         Me.gbPannel.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.Archery.SuspendLayout()
@@ -104,6 +106,7 @@ Partial Class frmNG2022
         Me.GroupBox12.SuspendLayout()
         Me.gbOutAnimation.SuspendLayout()
         Me.gbINAnimation.SuspendLayout()
+        Me.Shooting.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbPannel
@@ -289,6 +292,7 @@ Partial Class frmNG2022
         '
         'TabControl1
         '
+        Me.TabControl1.Controls.Add(Me.Shooting)
         Me.TabControl1.Controls.Add(Me.Archery)
         Me.TabControl1.Controls.Add(Me.Boxing)
         Me.TabControl1.Controls.Add(Me.Gymnastic)
@@ -317,6 +321,15 @@ Partial Class frmNG2022
         Me.Archery.TabIndex = 11
         Me.Archery.Text = "Archery"
         Me.Archery.UseVisualStyleBackColor = True
+        '
+        'UcArchery1
+        '
+        Me.UcArchery1.AutoScroll = True
+        Me.UcArchery1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcArchery1.Location = New System.Drawing.Point(6, 6)
+        Me.UcArchery1.Name = "UcArchery1"
+        Me.UcArchery1.Size = New System.Drawing.Size(1137, 776)
+        Me.UcArchery1.TabIndex = 0
         '
         'Boxing
         '
@@ -752,14 +765,24 @@ Partial Class frmNG2022
         Me.UcCasparcgWindow1.Size = New System.Drawing.Size(756, 498)
         Me.UcCasparcgWindow1.TabIndex = 1173
         '
-        'UcArchery1
+        'Shooting
         '
-        Me.UcArchery1.AutoScroll = True
-        Me.UcArchery1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcArchery1.Location = New System.Drawing.Point(6, 6)
-        Me.UcArchery1.Name = "UcArchery1"
-        Me.UcArchery1.Size = New System.Drawing.Size(1137, 776)
-        Me.UcArchery1.TabIndex = 0
+        Me.Shooting.Controls.Add(Me.UcShooting1)
+        Me.Shooting.Location = New System.Drawing.Point(4, 22)
+        Me.Shooting.Name = "Shooting"
+        Me.Shooting.Padding = New System.Windows.Forms.Padding(3)
+        Me.Shooting.Size = New System.Drawing.Size(1135, 902)
+        Me.Shooting.TabIndex = 12
+        Me.Shooting.Text = "Shooting"
+        Me.Shooting.UseVisualStyleBackColor = True
+        '
+        'UcShooting1
+        '
+        Me.UcShooting1.BackColor = System.Drawing.Color.Gainsboro
+        Me.UcShooting1.Location = New System.Drawing.Point(11, 7)
+        Me.UcShooting1.Name = "UcShooting1"
+        Me.UcShooting1.Size = New System.Drawing.Size(1543, 905)
+        Me.UcShooting1.TabIndex = 0
         '
         'frmNG2022
         '
@@ -798,6 +821,7 @@ Partial Class frmNG2022
         Me.gbOutAnimation.PerformLayout()
         Me.gbINAnimation.ResumeLayout(False)
         Me.gbINAnimation.PerformLayout()
+        Me.Shooting.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -867,4 +891,6 @@ Partial Class frmNG2022
     Friend WithEvents UcBoxing1 As ucBoxing
     Friend WithEvents Archery As TabPage
     Friend WithEvents UcArchery1 As ucArchery
+    Friend WithEvents Shooting As TabPage
+    Friend WithEvents UcShooting1 As ucShooting
 End Class

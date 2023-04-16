@@ -429,7 +429,7 @@ Public Class ucTrack
             aa.InitialDirectory = "C:\casparcg\NG2022\data\flag\"
             If aa.ShowDialog = DialogResult.OK Then
                 dgvtrack.CurrentCell.Value = Image.FromFile(aa.FileName)
-                dgvtrack.CurrentRow.Cells(6).Value = aa.FileName
+                dgvtrack.CurrentRow.Cells(3).Value = aa.FileName
             End If
         End If
     End Sub

@@ -126,6 +126,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ucShooting.Designer.vb">
+      <DependentUpon>ucShooting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucShooting.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucGymnastic.Designer.vb">
       <DependentUpon>ucGymnastic.vb</DependentUpon>
     </Compile>
@@ -214,6 +220,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucShooting.resx">
+      <DependentUpon>ucShooting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucGymnastic.resx">
       <DependentUpon>ucGymnastic.vb</DependentUpon>

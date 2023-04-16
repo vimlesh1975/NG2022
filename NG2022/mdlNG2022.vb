@@ -113,6 +113,7 @@ Module mdlNG2022
         If gametxt = "Rowing" Then gamelogoImageLocation = "C:\casparcg\ng2022\data\games logo\RW" & ".png"
         If gametxt = "Squash" Then gamelogoImageLocation = "C:\casparcg\ng2022\data\games logo\SQ" & ".png"
         If gametxt = "Swimming" Then gamelogoImageLocation = "C:\casparcg\ng2022\data\games logo\SW" & ".png"
+        If gametxt = "Shooting" Then gamelogoImageLocation = "C:\casparcg\ng2022\data\games logo\Sh" & ".png"
         If gametxt = "TableTennis" Then gamelogoImageLocation = "C:\casparcg\ng2022\data\games logo\TT" & ".png"
         If gametxt = "Taekwondo" Then gamelogoImageLocation = "C:\casparcg\ng2022\data\games logo\TK" & ".png"
         If gametxt = "Tennis" Then gamelogoImageLocation = "C:\casparcg\ng2022\data\games logo\TE" & ".png"
