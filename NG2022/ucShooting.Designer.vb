@@ -70,6 +70,8 @@ Partial Class ucShooting
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.downrowtrack = New System.Windows.Forms.Button()
         Me.addrowtrack = New System.Windows.Forms.Button()
+        Me.cmdstartlisttrack = New System.Windows.Forms.Button()
+        Me.cmdStanding = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gamelogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -399,7 +401,7 @@ Partial Class ucShooting
         '
         Me.cmbSeries.FormattingEnabled = True
         Me.cmbSeries.Items.AddRange(New Object() {"Series 1", "Series 2", "Series 3", "Series 4", "Series 5", "Series 6", "Series 7", "Series 8", "Series 9", "Series 10"})
-        Me.cmbSeries.Location = New System.Drawing.Point(253, 172)
+        Me.cmbSeries.Location = New System.Drawing.Point(346, 180)
         Me.cmbSeries.Name = "cmbSeries"
         Me.cmbSeries.Size = New System.Drawing.Size(96, 21)
         Me.cmbSeries.TabIndex = 1337
@@ -503,11 +505,31 @@ Partial Class ucShooting
         Me.addrowtrack.TabIndex = 1197
         Me.addrowtrack.UseVisualStyleBackColor = True
         '
+        'cmdstartlisttrack
+        '
+        Me.cmdstartlisttrack.Location = New System.Drawing.Point(640, 180)
+        Me.cmdstartlisttrack.Name = "cmdstartlisttrack"
+        Me.cmdstartlisttrack.Size = New System.Drawing.Size(75, 23)
+        Me.cmdstartlisttrack.TabIndex = 1340
+        Me.cmdstartlisttrack.Text = "Satrt List"
+        Me.cmdstartlisttrack.UseVisualStyleBackColor = True
+        '
+        'cmdStanding
+        '
+        Me.cmdStanding.Location = New System.Drawing.Point(223, 178)
+        Me.cmdStanding.Name = "cmdStanding"
+        Me.cmdStanding.Size = New System.Drawing.Size(117, 23)
+        Me.cmdStanding.TabIndex = 1341
+        Me.cmdStanding.Text = "Satanding After"
+        Me.cmdStanding.UseVisualStyleBackColor = True
+        '
         'ucShooting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.Controls.Add(Me.cmdStanding)
+        Me.Controls.Add(Me.cmdstartlisttrack)
         Me.Controls.Add(Me.gbtstrack)
         Me.Controls.Add(Me.cmbSeries)
         Me.Controls.Add(Me.Score)
@@ -583,4 +605,6 @@ Partial Class ucShooting
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
     Friend WithEvents downrowtrack As Button
     Friend WithEvents addrowtrack As Button
+    Friend WithEvents cmdstartlisttrack As Button
+    Friend WithEvents cmdStanding As Button
 End Class

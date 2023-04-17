@@ -189,7 +189,7 @@ Public Class ucShooting
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
 
-        showtemplate("ng2022/template/Gymnastics/event_id", CasparCGDataCollection.ToAMCPEscapedXml)
+        showtemplate("ng2022/template/Shooting/event_id", CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
 
@@ -420,4 +420,54 @@ Public Class ucShooting
         End If
     End Sub
 
+
+    Private Sub cmdstartlisttrack_Click(sender As Object, e As EventArgs) Handles cmdstartlisttrack.Click
+        startlist(dgvtrack)
+    End Sub
+    Sub startlist(dgv As DataGridView)
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        With dgv
+
+            CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+            CasparCGDataCollection.SetData("ccgsubheader", "Starting Lineup- " + cmbSubHeader.Text)
+
+            For i = 0 To .RowCount - 2
+                CasparCGDataCollection.SetData("ccg_ln" & i, .Rows(i).Cells(0).Value)
+                CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(1).Value)
+                CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(3).Value.Replace("\", "/"))
+
+                CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(4).Value)
+            Next
+
+            CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+            showtemplate("ng2022/template/shooting/teamlineup", CasparCGDataCollection.ToAMCPEscapedXml)
+        End With
+
+    End Sub
+
+    Private Sub cmdStanding_Click(sender As Object, e As EventArgs) Handles cmdStanding.Click
+        On Error Resume Next
+        CasparCGDataCollection.Clear()
+        With dgvtrack
+
+            CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
+            CasparCGDataCollection.SetData("ccgsubheader", "Standings After - " + cmbSeries.Text)
+
+            For i = 0 To .RowCount - 2
+                CasparCGDataCollection.SetData("ccg_ln" & i, i + 1)
+                CasparCGDataCollection.SetData("ccg_code" & i, .Rows(i).Cells(1).Value)
+                CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(3).Value.Replace("\", "/"))
+
+                CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(4).Value)
+                CasparCGDataCollection.SetData("ccgscore" & i, .Rows(i).Cells(12).Value)
+            Next
+
+            CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
+            CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
+            showtemplate("ng2022/template/shooting/standing", CasparCGDataCollection.ToAMCPEscapedXml)
+        End With
+
+    End Sub
 End Class
