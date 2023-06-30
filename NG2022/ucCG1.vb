@@ -21,19 +21,11 @@ Public Class ucCG1
 
     Private Sub cmDvenueid1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmDvenueid1.Click
         On Error Resume Next
-
-
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgf0", txtvenueid1.Text)
-
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
-
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/cg/venue_id", True, CasparCGDataCollection.ToAMCPEscapedXml)
-        'Threading.Thread.Sleep(1300)
-        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
         showtemplate("ng2022/template/cg/venue_id", CasparCGDataCollection.ToAMCPEscapedXml)
-
     End Sub
 
 

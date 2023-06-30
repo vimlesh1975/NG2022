@@ -230,4 +230,8 @@ Public Class frmNG2022
     Private Sub UcBoxing1_Load(sender As Object, e As EventArgs) Handles UcBoxing1.Load
 
     End Sub
+
+    Private Sub UcScroll1_Load(sender As Object, e As EventArgs) Handles UcScroll1.Load
+
+    End Sub
 End Class

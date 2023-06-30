@@ -126,6 +126,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ucScroll.Designer.vb">
+      <DependentUpon>ucScroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucScroll.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucShooting.Designer.vb">
       <DependentUpon>ucShooting.vb</DependentUpon>
     </Compile>
@@ -220,6 +226,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucScroll.resx">
+      <DependentUpon>ucScroll.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucShooting.resx">
       <DependentUpon>ucShooting.vb</DependentUpon>
