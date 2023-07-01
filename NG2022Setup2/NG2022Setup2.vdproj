@@ -1563,6 +1563,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_39A2DBE43E4B457FB1C5FCDF9F970011"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_39C91040AE25424C9F59C78F53FF7797"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1660,6 +1666,12 @@
         "Entry"
         {
         "MsmKey" = "8:_3D1DBE9CD46A424A99A8997E4A278BB6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3D782F9D69AA461A9EA57C136D57EF6A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2147,12 +2159,6 @@
         {
         "MsmKey" = "8:_4F764AEDFA094FD68A15CE2A0ABED5AB"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4F941183C3670DB33243DCE8CEA57843"
-        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -3441,6 +3447,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7BE4996C8CA34F288056081E90C5D508"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7BEE92764B104EA7A922A5ADD356E219"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3731,6 +3743,12 @@
         {
         "MsmKey" = "8:_8733227412074CF8A8F86A12BAC4EF3A"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_877E132587FD3599BCFE46767860A383"
+        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -5673,6 +5691,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CEA0FDE879CA4130B11C35514C3EFF72"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_CECB754FA0AF4F39803B742A45B679EB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -7060,7 +7084,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4F941183C3670DB33243DCE8CEA57843"
+        "OwnerKey" = "8:_877E132587FD3599BCFE46767860A383"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -12316,6 +12340,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_39A2DBE43E4B457FB1C5FCDF9F970011"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\news\\Scroll\\03.08.17.txt"
+            "TargetName" = "8:03.08.17.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0D6889DA6C8040DA8ADE8706BE7CAD91"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_39C91040AE25424C9F59C78F53FF7797"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\flag\\Oman.png"
@@ -12642,6 +12686,26 @@
             "TargetName" = "8:MatchStatics.txt"
             "Tag" = "8:"
             "Folder" = "8:_4B70EF10597F43D3B23F0D01813002B7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3D782F9D69AA461A9EA57C136D57EF6A"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\news\\Scroll\\all.txt"
+            "TargetName" = "8:all.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0D6889DA6C8040DA8ADE8706BE7CAD91"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -14274,37 +14338,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4F941183C3670DB33243DCE8CEA57843"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_4F941183C3670DB33243DCE8CEA57843"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Newtonsoft.Json.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4F9D9111914048E08E857059F5F7CAEB"
@@ -18598,6 +18631,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7BE4996C8CA34F288056081E90C5D508"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\news\\Scroll\\05.08.17.txt"
+            "TargetName" = "8:05.08.17.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0D6889DA6C8040DA8ADE8706BE7CAD91"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7BEE92764B104EA7A922A5ADD356E219"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\khokho\\set7Boxing.html"
@@ -19576,6 +19629,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_877E132587FD3599BCFE46767860A383"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_877E132587FD3599BCFE46767860A383"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_877FABB14F9548419529C518872781AC"
@@ -26029,6 +26113,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CEA0FDE879CA4130B11C35514C3EFF72"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\news\\Scroll\\04.08.17.txt"
+            "TargetName" = "8:04.08.17.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0D6889DA6C8040DA8ADE8706BE7CAD91"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CECB754FA0AF4F39803B742A45B679EB"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\kabaddi\\set7.html"
@@ -31333,6 +31437,28 @@
                                     "Property" = "8:_A4AF298F09004818A6F0B5C2F1BE34F1"
                                         "Folders"
                                         {
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_846A4F664B7A44CDB2B72D7B4C10ECFD"
+                                    {
+                                    "Name" = "8:news"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_0E854EC9E19748A1960E76238B7880BA"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_0D6889DA6C8040DA8ADE8706BE7CAD91"
+                                            {
+                                            "Name" = "8:Scroll"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_5B896F01DE0F44298BC0A110FC3A9778"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
                                         }
                                     }
                                     "{9EF0B969-E518-4E46-987F-47570745A589}:_95A528F8A1F44824BDE0D34DC268B2B1"
