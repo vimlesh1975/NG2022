@@ -29,6 +29,10 @@ Partial Class ucScroll
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbscroll = New System.Windows.Forms.GroupBox()
+        Me.cmdStopImmediate = New System.Windows.Forms.Button()
+        Me.txtGap = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmdUpdateData = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmdcolor = New System.Windows.Forms.Button()
@@ -59,15 +63,12 @@ Partial Class ucScroll
         Me.cmddowntsscroll = New System.Windows.Forms.Button()
         Me.cmdinserttsscroll = New System.Windows.Forms.Button()
         Me.dgvscroll = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.nspeedscroll = New System.Windows.Forms.NumericUpDown()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.cmblayerscroll = New System.Windows.Forms.ComboBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.cmdUpdateData = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtGap = New System.Windows.Forms.TextBox()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.gbscroll.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvscroll, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,6 +78,7 @@ Partial Class ucScroll
         'gbscroll
         '
         Me.gbscroll.BackColor = System.Drawing.Color.Bisque
+        Me.gbscroll.Controls.Add(Me.cmdStopImmediate)
         Me.gbscroll.Controls.Add(Me.txtGap)
         Me.gbscroll.Controls.Add(Me.Label1)
         Me.gbscroll.Controls.Add(Me.cmdUpdateData)
@@ -106,10 +108,50 @@ Partial Class ucScroll
         Me.gbscroll.Controls.Add(Me.Label21)
         Me.gbscroll.Location = New System.Drawing.Point(4, 3)
         Me.gbscroll.Name = "gbscroll"
-        Me.gbscroll.Size = New System.Drawing.Size(1106, 460)
+        Me.gbscroll.Size = New System.Drawing.Size(1106, 885)
         Me.gbscroll.TabIndex = 534
         Me.gbscroll.TabStop = False
         Me.gbscroll.Text = "Scroll And Clock"
+        '
+        'cmdStopImmediate
+        '
+        Me.cmdStopImmediate.BackColor = System.Drawing.Color.Red
+        Me.cmdStopImmediate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdStopImmediate.ForeColor = System.Drawing.Color.White
+        Me.cmdStopImmediate.Location = New System.Drawing.Point(874, 71)
+        Me.cmdStopImmediate.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cmdStopImmediate.Name = "cmdStopImmediate"
+        Me.cmdStopImmediate.Size = New System.Drawing.Size(124, 30)
+        Me.cmdStopImmediate.TabIndex = 1184
+        Me.cmdStopImmediate.Text = "Stop Immediate"
+        Me.cmdStopImmediate.UseVisualStyleBackColor = False
+        '
+        'txtGap
+        '
+        Me.txtGap.Location = New System.Drawing.Point(362, 79)
+        Me.txtGap.Name = "txtGap"
+        Me.txtGap.Size = New System.Drawing.Size(39, 20)
+        Me.txtGap.TabIndex = 1183
+        Me.txtGap.Text = "-50"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(257, 82)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(98, 13)
+        Me.Label1.TabIndex = 1182
+        Me.Label1.Text = "Gap between items"
+        '
+        'cmdUpdateData
+        '
+        Me.cmdUpdateData.Location = New System.Drawing.Point(437, 71)
+        Me.cmdUpdateData.Name = "cmdUpdateData"
+        Me.cmdUpdateData.Size = New System.Drawing.Size(76, 23)
+        Me.cmdUpdateData.TabIndex = 1181
+        Me.cmdUpdateData.Text = "Update Data"
+        Me.cmdUpdateData.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -175,31 +217,31 @@ Partial Class ucScroll
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'SaveAsToolStripMenuItem
         '
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.SaveAsToolStripMenuItem.Text = "Save as"
         '
         'InsertToolStripMenuItem
         '
         Me.InsertToolStripMenuItem.Name = "InsertToolStripMenuItem"
-        Me.InsertToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InsertToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.InsertToolStripMenuItem.Text = "Insert"
         '
         'EditToolStripMenuItem
@@ -212,19 +254,19 @@ Partial Class ucScroll
         'CutToolStripMenuItem
         '
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
         Me.CutToolStripMenuItem.Text = "Cut"
         '
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'Label2
@@ -319,7 +361,7 @@ Partial Class ucScroll
         Me.cmdstopscroll.BackColor = System.Drawing.Color.Red
         Me.cmdstopscroll.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdstopscroll.ForeColor = System.Drawing.Color.White
-        Me.cmdstopscroll.Location = New System.Drawing.Point(940, 72)
+        Me.cmdstopscroll.Location = New System.Drawing.Point(808, 73)
         Me.cmdstopscroll.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmdstopscroll.Name = "cmdstopscroll"
         Me.cmdstopscroll.Size = New System.Drawing.Size(58, 30)
@@ -402,8 +444,30 @@ Partial Class ucScroll
         Me.dgvscroll.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvscroll.RowHeadersWidth = 60
         Me.dgvscroll.RowTemplate.Height = 30
-        Me.dgvscroll.Size = New System.Drawing.Size(1094, 347)
+        Me.dgvscroll.Size = New System.Drawing.Size(1094, 773)
         Me.dgvscroll.TabIndex = 492
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridViewTextBoxColumn2.Frozen = True
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Scroll"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 540
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn2.Width = 980
+        '
+        'DataGridViewCheckBoxColumn2
+        '
+        Me.DataGridViewCheckBoxColumn2.FalseValue = "0"
+        Me.DataGridViewCheckBoxColumn2.FillWeight = 20.0!
+        Me.DataGridViewCheckBoxColumn2.HeaderText = ""
+        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
+        Me.DataGridViewCheckBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewCheckBoxColumn2.TrueValue = "1"
+        Me.DataGridViewCheckBoxColumn2.Width = 30
         '
         'nspeedscroll
         '
@@ -448,62 +512,13 @@ Partial Class ucScroll
         Me.Label21.TabIndex = 449
         Me.Label21.Text = "video layer-flash layer"
         '
-        'cmdUpdateData
-        '
-        Me.cmdUpdateData.Location = New System.Drawing.Point(437, 71)
-        Me.cmdUpdateData.Name = "cmdUpdateData"
-        Me.cmdUpdateData.Size = New System.Drawing.Size(76, 23)
-        Me.cmdUpdateData.TabIndex = 1181
-        Me.cmdUpdateData.Text = "Update Data"
-        Me.cmdUpdateData.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(257, 82)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 13)
-        Me.Label1.TabIndex = 1182
-        Me.Label1.Text = "Gap between items"
-        '
-        'txtGap
-        '
-        Me.txtGap.Location = New System.Drawing.Point(362, 79)
-        Me.txtGap.Name = "txtGap"
-        Me.txtGap.Size = New System.Drawing.Size(39, 20)
-        Me.txtGap.TabIndex = 1183
-        Me.txtGap.Text = "-50"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridViewTextBoxColumn2.Frozen = True
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Scroll"
-        Me.DataGridViewTextBoxColumn2.MinimumWidth = 540
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.DataGridViewTextBoxColumn2.Width = 980
-        '
-        'DataGridViewCheckBoxColumn2
-        '
-        Me.DataGridViewCheckBoxColumn2.FalseValue = "0"
-        Me.DataGridViewCheckBoxColumn2.FillWeight = 20.0!
-        Me.DataGridViewCheckBoxColumn2.HeaderText = ""
-        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
-        Me.DataGridViewCheckBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewCheckBoxColumn2.TrueValue = "1"
-        Me.DataGridViewCheckBoxColumn2.Width = 30
-        '
         'ucScroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.gbscroll)
         Me.Name = "ucScroll"
-        Me.Size = New System.Drawing.Size(1119, 470)
+        Me.Size = New System.Drawing.Size(1119, 967)
         Me.gbscroll.ResumeLayout(False)
         Me.gbscroll.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
@@ -553,4 +568,5 @@ Partial Class ucScroll
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
+    Friend WithEvents cmdStopImmediate As Button
 End Class

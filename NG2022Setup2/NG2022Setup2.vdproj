@@ -729,6 +729,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1D3021B4BFF1463F96389A80557B056B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1DBCF680F50B44258ABA40FA5966C3F6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -856,6 +862,12 @@
         "Entry"
         {
         "MsmKey" = "8:_2303F3E9D8974E4DBD9C9DF63CC205F6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_232D0A9673FB43E486B247FDC8580B9E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1083,6 +1095,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2B1E77C0D7D64A8494EDC5FB910B92B0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2B3DAA6DA3B94F1896B148830CEC2E10"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1192,6 +1210,12 @@
         "Entry"
         {
         "MsmKey" = "8:_2DEB598497154E79B055ABC473C650BA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2E0D3FCF62D64059B6ED6D908D00D221"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1641,6 +1665,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3C8D6834B04E4CC7B27CB8E0AB63CDD2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3C8DD4AC0B6A46E79ADDD9E53A433505"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1720,6 +1750,12 @@
         "Entry"
         {
         "MsmKey" = "8:_3ECDF62D4FAD47CA80AC4CF3FAFB66B0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3EE1285F609243728787D9223C994DA6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1805,6 +1841,12 @@
         {
         "MsmKey" = "8:_41C32700903B49219A6C482CB588A042"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4213E5EF1A41EADC231FF40A994C2A67"
+        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -3743,12 +3785,6 @@
         {
         "MsmKey" = "8:_8733227412074CF8A8F86A12BAC4EF3A"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_877E132587FD3599BCFE46767860A383"
-        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -6267,6 +6303,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E36367343B5A458FAED028E424952139"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E373B91113D44210BA523A1392D4AEF8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -6795,6 +6837,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_F5B01D7572764A6996B8680524C64D82"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F5D2E77E3A4544B0AF96BD0250619476"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -7084,7 +7132,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_877E132587FD3599BCFE46767860A383"
+        "OwnerKey" = "8:_4213E5EF1A41EADC231FF40A994C2A67"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -9580,6 +9628,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1D3021B4BFF1463F96389A80557B056B"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\News\\clock\\clock1.html"
+            "TargetName" = "8:clock1.html"
+            "Tag" = "8:"
+            "Folder" = "8:_CB898F2905DF4B8A8FE4CB57728905B9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1DBCF680F50B44258ABA40FA5966C3F6"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\Boxing\\versus.html"
@@ -10006,6 +10074,26 @@
             "TargetName" = "8:Solid_Singel Plate.png"
             "Tag" = "8:"
             "Folder" = "8:_3D01F094FC6A4BED8BD8F89A0C644A0B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_232D0A9673FB43E486B247FDC8580B9E"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\News\\clock\\main.js"
+            "TargetName" = "8:main.js"
+            "Tag" = "8:"
+            "Folder" = "8:_CB898F2905DF4B8A8FE4CB57728905B9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -10760,6 +10848,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2B1E77C0D7D64A8494EDC5FB910B92B0"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\News\\clock\\clock1.txt"
+            "TargetName" = "8:clock1.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_CB898F2905DF4B8A8FE4CB57728905B9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2B3DAA6DA3B94F1896B148830CEC2E10"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\Blank\\Cronch_Plate Med._clock.png"
@@ -11126,6 +11234,26 @@
             "TargetName" = "8:Medal ID G.png"
             "Tag" = "8:"
             "Folder" = "8:_3D01F094FC6A4BED8BD8F89A0C644A0B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2E0D3FCF62D64059B6ED6D908D00D221"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\News\\clock\\main.css"
+            "TargetName" = "8:main.css"
+            "Tag" = "8:"
+            "Folder" = "8:_CB898F2905DF4B8A8FE4CB57728905B9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -12600,6 +12728,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3C8D6834B04E4CC7B27CB8E0AB63CDD2"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\News\\clock\\main2.css"
+            "TargetName" = "8:main2.css"
+            "Tag" = "8:"
+            "Folder" = "8:_CB898F2905DF4B8A8FE4CB57728905B9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3C8DD4AC0B6A46E79ADDD9E53A433505"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\ball\\main.css"
@@ -12866,6 +13014,26 @@
             "TargetName" = "8:YOG.png"
             "Tag" = "8:"
             "Folder" = "8:_C3A0CABF847B44439B21FA761BC2ABBC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3EE1285F609243728787D9223C994DA6"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\News\\BreakingNews\\BreakingNews1.txt"
+            "TargetName" = "8:BreakingNews1.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_2DA8E20A93D245C28ADED0F723D063C3"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -13158,6 +13326,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4213E5EF1A41EADC231FF40A994C2A67"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_4213E5EF1A41EADC231FF40A994C2A67"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_423EAB5F203C4EB79E55C30F7D9803CA"
@@ -19629,37 +19828,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_877E132587FD3599BCFE46767860A383"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_877E132587FD3599BCFE46767860A383"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Newtonsoft.Json.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_877FABB14F9548419529C518872781AC"
@@ -28044,6 +28212,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E36367343B5A458FAED028E424952139"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\News\\BreakingNews\\BreakingNews1.html"
+            "TargetName" = "8:BreakingNews1.html"
+            "Tag" = "8:"
+            "Folder" = "8:_2DA8E20A93D245C28ADED0F723D063C3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E373B91113D44210BA523A1392D4AEF8"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\Kabaddi\\1st day\\t1.txt"
@@ -29804,6 +29992,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5B01D7572764A6996B8680524C64D82"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\News\\clock\\main2.js"
+            "TargetName" = "8:main2.js"
+            "Tag" = "8:"
+            "Folder" = "8:_CB898F2905DF4B8A8FE4CB57728905B9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5D2E77E3A4544B0AF96BD0250619476"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\flag\\Chile.png"
@@ -30887,6 +31095,28 @@
                                     "Property" = "8:_AB8A0658D9984AD487EE441E4AF17FDB"
                                         "Folders"
                                         {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_2DA8E20A93D245C28ADED0F723D063C3"
+                                            {
+                                            "Name" = "8:BreakingNews"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_A729670A49A549168D78F11C9A114F4E"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_CB898F2905DF4B8A8FE4CB57728905B9"
+                                            {
+                                            "Name" = "8:clock"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_E0418901441640A398174D8C0FD2467A"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
                                             "{9EF0B969-E518-4E46-987F-47570745A589}:_E81A85C799DB4FE7B7520EB1E2F973B1"
                                             {
                                             "Name" = "8:Scroll"

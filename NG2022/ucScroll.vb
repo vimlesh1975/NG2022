@@ -343,4 +343,9 @@ Public Class ucScroll
             'Me.dgvscroll.Columns(0).HeaderText = ofd2.FileName
         End If
     End Sub
+
+    Private Sub cmdStopImmediate_Click(sender As Object, e As EventArgs) Handles cmdStopImmediate.Click
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Remove(Int(cmblayerscroll.Text), Int(cmblayerscroll.Text))
+
+    End Sub
 End Class

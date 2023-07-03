@@ -42,6 +42,7 @@ Partial Class frmNG2022
         Me.lblport = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.NewsScroll = New System.Windows.Forms.TabPage()
         Me.Shooting = New System.Windows.Forms.TabPage()
         Me.Archery = New System.Windows.Forms.TabPage()
         Me.Boxing = New System.Windows.Forms.TabPage()
@@ -55,6 +56,7 @@ Partial Class frmNG2022
         Me.Kabaddi = New System.Windows.Forms.TabPage()
         Me.KhoKho = New System.Windows.Forms.TabPage()
         Me.Football_Hockey = New System.Windows.Forms.TabPage()
+        Me.BreakineNews = New System.Windows.Forms.TabPage()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.gbOutAnimation = New System.Windows.Forms.GroupBox()
         Me.rdoSqueezeOut = New System.Windows.Forms.RadioButton()
@@ -75,7 +77,6 @@ Partial Class frmNG2022
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtClientID = New System.Windows.Forms.TextBox()
         Me.lblClientID = New System.Windows.Forms.Label()
-        Me.NewsScroll = New System.Windows.Forms.TabPage()
         Me.UcScroll1 = New NG2022.ucScroll()
         Me.UcShooting1 = New NG2022.ucShooting()
         Me.UcArchery1 = New NG2022.ucArchery()
@@ -90,9 +91,11 @@ Partial Class frmNG2022
         Me.UcKabaddi1 = New NG2022.ucKabaddi()
         Me.UcKhoKho1 = New NG2022.ucKhoKho()
         Me.UcRccBall1 = New NG2022.ucRccBall()
+        Me.UcBreakingNews1 = New NG2022.ucBreakingNews()
         Me.UcCasparcgWindow1 = New NG2022.ucCasparcgWindow()
         Me.gbPannel.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.NewsScroll.SuspendLayout()
         Me.Shooting.SuspendLayout()
         Me.Archery.SuspendLayout()
         Me.Boxing.SuspendLayout()
@@ -106,10 +109,10 @@ Partial Class frmNG2022
         Me.Kabaddi.SuspendLayout()
         Me.KhoKho.SuspendLayout()
         Me.Football_Hockey.SuspendLayout()
+        Me.BreakineNews.SuspendLayout()
         Me.GroupBox12.SuspendLayout()
         Me.gbOutAnimation.SuspendLayout()
         Me.gbINAnimation.SuspendLayout()
-        Me.NewsScroll.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbPannel
@@ -295,6 +298,7 @@ Partial Class frmNG2022
         '
         'TabControl1
         '
+        Me.TabControl1.Controls.Add(Me.BreakineNews)
         Me.TabControl1.Controls.Add(Me.NewsScroll)
         Me.TabControl1.Controls.Add(Me.Shooting)
         Me.TabControl1.Controls.Add(Me.Archery)
@@ -314,6 +318,17 @@ Partial Class frmNG2022
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1143, 928)
         Me.TabControl1.TabIndex = 1340
+        '
+        'NewsScroll
+        '
+        Me.NewsScroll.Controls.Add(Me.UcScroll1)
+        Me.NewsScroll.Location = New System.Drawing.Point(4, 22)
+        Me.NewsScroll.Name = "NewsScroll"
+        Me.NewsScroll.Padding = New System.Windows.Forms.Padding(3)
+        Me.NewsScroll.Size = New System.Drawing.Size(1135, 902)
+        Me.NewsScroll.TabIndex = 13
+        Me.NewsScroll.Text = "Scroll"
+        Me.NewsScroll.UseVisualStyleBackColor = True
         '
         'Shooting
         '
@@ -452,6 +467,17 @@ Partial Class frmNG2022
         Me.Football_Hockey.TabIndex = 2
         Me.Football_Hockey.Text = "Football/Hockey/ Rugby 7s"
         Me.Football_Hockey.UseVisualStyleBackColor = True
+        '
+        'BreakineNews
+        '
+        Me.BreakineNews.Controls.Add(Me.UcBreakingNews1)
+        Me.BreakineNews.Location = New System.Drawing.Point(4, 22)
+        Me.BreakineNews.Name = "BreakineNews"
+        Me.BreakineNews.Padding = New System.Windows.Forms.Padding(3)
+        Me.BreakineNews.Size = New System.Drawing.Size(1135, 902)
+        Me.BreakineNews.TabIndex = 14
+        Me.BreakineNews.Text = "Breaking News"
+        Me.BreakineNews.UseVisualStyleBackColor = True
         '
         'GroupBox12
         '
@@ -641,6 +667,7 @@ Partial Class frmNG2022
         Me.chkSendToHtml.TabIndex = 1315
         Me.chkSendToHtml.Text = "Send To HTML http://localhost:10000/ReactCasparClient/html"
         Me.chkSendToHtml.UseVisualStyleBackColor = True
+        Me.chkSendToHtml.Visible = False
         '
         'Button1
         '
@@ -659,6 +686,7 @@ Partial Class frmNG2022
         Me.txtClientID.Size = New System.Drawing.Size(113, 20)
         Me.txtClientID.TabIndex = 1317
         Me.txtClientID.Text = "1234"
+        Me.txtClientID.Visible = False
         '
         'lblClientID
         '
@@ -668,23 +696,13 @@ Partial Class frmNG2022
         Me.lblClientID.Size = New System.Drawing.Size(42, 13)
         Me.lblClientID.TabIndex = 1318
         Me.lblClientID.Text = "ClientId"
-        '
-        'NewsScroll
-        '
-        Me.NewsScroll.Controls.Add(Me.UcScroll1)
-        Me.NewsScroll.Location = New System.Drawing.Point(4, 22)
-        Me.NewsScroll.Name = "NewsScroll"
-        Me.NewsScroll.Padding = New System.Windows.Forms.Padding(3)
-        Me.NewsScroll.Size = New System.Drawing.Size(1135, 902)
-        Me.NewsScroll.TabIndex = 13
-        Me.NewsScroll.Text = "Scroll"
-        Me.NewsScroll.UseVisualStyleBackColor = True
+        Me.lblClientID.Visible = False
         '
         'UcScroll1
         '
         Me.UcScroll1.Location = New System.Drawing.Point(6, 6)
         Me.UcScroll1.Name = "UcScroll1"
-        Me.UcScroll1.Size = New System.Drawing.Size(1115, 688)
+        Me.UcScroll1.Size = New System.Drawing.Size(1115, 890)
         Me.UcScroll1.TabIndex = 0
         '
         'UcShooting1
@@ -796,6 +814,14 @@ Partial Class frmNG2022
         Me.UcRccBall1.Size = New System.Drawing.Size(1129, 780)
         Me.UcRccBall1.TabIndex = 0
         '
+        'UcBreakingNews1
+        '
+        Me.UcBreakingNews1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcBreakingNews1.Location = New System.Drawing.Point(6, 6)
+        Me.UcBreakingNews1.Name = "UcBreakingNews1"
+        Me.UcBreakingNews1.Size = New System.Drawing.Size(1091, 865)
+        Me.UcBreakingNews1.TabIndex = 0
+        '
         'UcCasparcgWindow1
         '
         Me.UcCasparcgWindow1.AllowDrop = True
@@ -825,6 +851,7 @@ Partial Class frmNG2022
         Me.gbPannel.ResumeLayout(False)
         Me.gbPannel.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        Me.NewsScroll.ResumeLayout(False)
         Me.Shooting.ResumeLayout(False)
         Me.Archery.ResumeLayout(False)
         Me.Boxing.ResumeLayout(False)
@@ -838,13 +865,13 @@ Partial Class frmNG2022
         Me.Kabaddi.ResumeLayout(False)
         Me.KhoKho.ResumeLayout(False)
         Me.Football_Hockey.ResumeLayout(False)
+        Me.BreakineNews.ResumeLayout(False)
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
         Me.gbOutAnimation.ResumeLayout(False)
         Me.gbOutAnimation.PerformLayout()
         Me.gbINAnimation.ResumeLayout(False)
         Me.gbINAnimation.PerformLayout()
-        Me.NewsScroll.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -918,4 +945,6 @@ Partial Class frmNG2022
     Friend WithEvents UcShooting1 As ucShooting
     Friend WithEvents NewsScroll As TabPage
     Friend WithEvents UcScroll1 As ucScroll
+    Friend WithEvents BreakineNews As TabPage
+    Friend WithEvents UcBreakingNews1 As ucBreakingNews
 End Class

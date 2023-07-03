@@ -11,7 +11,7 @@ Module mdlNG2022
     'Declaring some constants to use with the SendMessage API
     Public Const WM_SYSCOMMAND As Integer = 274
     Public Const SC_MAXIMIZE As Integer = 61488
-
+    'Public osd2 As New SaveFileDialog
     Public screenConsumres = (New Object() {
     "Screen consumer [1|PAL]",
      "Screen consumer [2|PAL]",

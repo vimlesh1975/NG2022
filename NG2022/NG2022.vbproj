@@ -126,6 +126,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ucBreakingNews.designer.vb">
+      <DependentUpon>ucBreakingNews.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucBreakingNews.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucScroll.Designer.vb">
       <DependentUpon>ucScroll.vb</DependentUpon>
     </Compile>
@@ -226,6 +232,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBreakingNews.resx">
+      <DependentUpon>ucBreakingNews.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucScroll.resx">
       <DependentUpon>ucScroll.vb</DependentUpon>
