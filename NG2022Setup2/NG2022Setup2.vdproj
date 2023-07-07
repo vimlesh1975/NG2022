@@ -1845,12 +1845,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4213E5EF1A41EADC231FF40A994C2A67"
-        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_423EAB5F203C4EB79E55C30F7D9803CA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2560,6 +2554,12 @@
         "Entry"
         {
         "MsmKey" = "8:_5C6BEB0059194D27B9870AF07A34B946"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5CFA2827F36B411990C73959D438D9CC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -5715,6 +5715,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CD57FD393E186B04D3B6C282A02AB7BA"
+        "OwnerKey" = "8:_34FF02E228FA41F6BD856FBCED9281B4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_CDBD31285CEE4DCD86A6F0795B0A6CE3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -5722,6 +5728,12 @@
         "Entry"
         {
         "MsmKey" = "8:_CDE8317E2BD74C9586268C2221A82F9C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CDFB5B164E1148518DA65478C950A8B0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -7132,7 +7144,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4213E5EF1A41EADC231FF40A994C2A67"
+        "OwnerKey" = "8:_CD57FD393E186B04D3B6C282A02AB7BA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -13328,37 +13340,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4213E5EF1A41EADC231FF40A994C2A67"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_4213E5EF1A41EADC231FF40A994C2A67"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Newtonsoft.Json.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_423EAB5F203C4EB79E55C30F7D9803CA"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\khokho\\groupresult1.txt"
@@ -15725,6 +15706,26 @@
             "TargetName" = "8:event_id.txt"
             "Tag" = "8:"
             "Folder" = "8:_21824124222E4B838C4467EA1A5122A2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5CFA2827F36B411990C73959D438D9CC"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\news\\breakingnews\\05.08.17.txt"
+            "TargetName" = "8:05.08.17.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5999A759D99448E8B4E1CED6CC337153"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -26241,6 +26242,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CD57FD393E186B04D3B6C282A02AB7BA"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_CD57FD393E186B04D3B6C282A02AB7BA"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_192D61A418B54402BD499C6A355F176E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CDBD31285CEE4DCD86A6F0795B0A6CE3"
             {
             "SourcePath" = "8:C:\\casparcg\\NG2022\\template\\cg\\commentators.txt"
@@ -26267,6 +26299,26 @@
             "TargetName" = "8:Haiti.png"
             "Tag" = "8:"
             "Folder" = "8:_2E27F32CF30449FC895475AB2025ECC2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CDFB5B164E1148518DA65478C950A8B0"
+            {
+            "SourcePath" = "8:C:\\casparcg\\NG2022\\data\\news\\breakingnews\\04.08.17.txt"
+            "TargetName" = "8:04.08.17.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_5999A759D99448E8B4E1CED6CC337153"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -31685,6 +31737,17 @@
                                             "Condition" = "8:"
                                             "Transitive" = "11:FALSE"
                                             "Property" = "8:_5B896F01DE0F44298BC0A110FC3A9778"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_5999A759D99448E8B4E1CED6CC337153"
+                                            {
+                                            "Name" = "8:breakingnews"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_8426BD0E47CE4813904E03B702018467"
                                                 "Folders"
                                                 {
                                                 }

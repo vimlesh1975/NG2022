@@ -69,6 +69,36 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Google.Api.Gax">
+      <HintPath>C:\Program Files (x86)\Doordarshan\CasparMediaPlaybackSetup\Google.Api.Gax.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Gax.Rest">
+      <HintPath>C:\Program Files (x86)\Doordarshan\CasparMediaPlaybackSetup\Google.Api.Gax.Rest.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis">
+      <HintPath>C:\Program Files (x86)\Doordarshan\CasparMediaPlaybackSetup\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth">
+      <HintPath>C:\Program Files (x86)\Doordarshan\CasparMediaPlaybackSetup\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices">
+      <HintPath>C:\Program Files (x86)\Doordarshan\CasparMediaPlaybackSetup\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core">
+      <HintPath>C:\Program Files (x86)\Doordarshan\CasparMediaPlaybackSetup\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices">
+      <HintPath>C:\Program Files (x86)\Doordarshan\CasparMediaPlaybackSetup\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Translate.v2">
+      <HintPath>C:\Program Files (x86)\Doordarshan\CasparMediaPlaybackSetup\Google.Apis.Translate.v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.YouTube.v3">
+      <HintPath>C:\Program Files (x86)\Doordarshan\CasparMediaPlaybackSetup\Google.Apis.YouTube.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Cloud.Translation.V2">
+      <HintPath>C:\Program Files (x86)\Doordarshan\CasparMediaPlaybackSetup\Google.Cloud.Translation.V2.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -130,6 +160,12 @@
       <DependentUpon>ucBreakingNews.vb</DependentUpon>
     </Compile>
     <Compile Include="ucBreakingNews.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOneLiner.designer.vb">
+      <DependentUpon>ucOneLiner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucOneLiner.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucScroll.Designer.vb">
@@ -235,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucBreakingNews.resx">
       <DependentUpon>ucBreakingNews.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucOneLiner.resx">
+      <DependentUpon>ucOneLiner.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucScroll.resx">
       <DependentUpon>ucScroll.vb</DependentUpon>

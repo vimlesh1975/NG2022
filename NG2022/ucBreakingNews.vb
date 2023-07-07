@@ -18,20 +18,13 @@ Public Class ucBreakingNews
     Dim conn
     Dim servertype As String
 
-    Public tempRow As DataGridViewRow
-    Public osd2 As New SaveFileDialog
+
+    'Public osd2 As New SaveFileDialog
 
     Private Sub cmdhidebreakingnews_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
-    Public Sub MakeMenuDropDownWhenParrented(ByVal sender As Object)
-        'Dim m As New ToolStripMenuItem
-        'm = CType(sender, ToolStripMenuItem)
-        'm.ShowDropDown()
 
-        sender.Focus()
-        SendKeys.Send("{DOWN}")
-    End Sub
     Private Sub MenuStrip1_MouseHover(sender As Object, e As EventArgs) Handles MenuStrip1.MouseHover
         MakeMenuDropDownWhenParrented(sender)
     End Sub
@@ -186,7 +179,6 @@ Public Class ucBreakingNews
     End Sub
     Sub openfilebreakingnews()
         On Error Resume Next
-        Dim ofd2 As New OpenFileDialog
         ofd2.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
         ofd2.InitialDirectory = "c:\casparcg\ng2022\data\news\breakingnews\"
         If (ofd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
@@ -214,8 +206,7 @@ Public Class ucBreakingNews
         End If
     End Sub
     Sub insertfilebreakingnews()
-        'On Error Resume Next
-        Dim ofd2 As New OpenFileDialog
+        On Error Resume Next
         ofd2.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
         ofd2.InitialDirectory = "c:\casparcg\ng2022\data\news\breakingnews\"
         If (ofd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then

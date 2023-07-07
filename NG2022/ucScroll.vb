@@ -3,8 +3,7 @@ Imports System.IO
 Imports System.Threading
 
 Public Class ucScroll
-    Public tempRow As DataGridViewRow
-    Public osd2 As New SaveFileDialog
+
 
     Sub UpdateData()
         On Error Resume Next
@@ -48,7 +47,9 @@ Public Class ucScroll
 
 
     End Sub
-
+    Private Sub MenuStrip1_MouseHover(sender As Object, e As EventArgs) Handles MenuStrip1.MouseHover
+        MakeMenuDropDownWhenParrented(sender)
+    End Sub
     Private Sub ucScroll_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         initialisescrolldata()
 
@@ -239,7 +240,7 @@ Public Class ucScroll
     End Sub
     Sub openfilescroll()
         On Error Resume Next
-        Dim ofd2 As New OpenFileDialog
+
         ofd2.InitialDirectory = "c:\casparcg\ng2022\data\news\scroll\"
         ofd2.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
         If (ofd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
@@ -320,7 +321,7 @@ Public Class ucScroll
     End Sub
     Sub insertfilescroll()
         On Error Resume Next
-        Dim ofd2 As New OpenFileDialog
+
         ofd2.InitialDirectory = "c:\casparcg\ng2022\data\news\scroll\"
         ofd2.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"
         If (ofd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
