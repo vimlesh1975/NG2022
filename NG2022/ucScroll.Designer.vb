@@ -69,6 +69,8 @@ Partial Class ucScroll
         Me.Label20 = New System.Windows.Forms.Label()
         Me.cmblayerscroll = New System.Windows.Forms.ComboBox()
         Me.Label21 = New System.Windows.Forms.Label()
+        Me.chkltr = New System.Windows.Forms.CheckBox()
+        Me.chkChangeColor = New System.Windows.Forms.CheckBox()
         Me.gbscroll.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvscroll, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,6 +80,8 @@ Partial Class ucScroll
         'gbscroll
         '
         Me.gbscroll.BackColor = System.Drawing.Color.Bisque
+        Me.gbscroll.Controls.Add(Me.chkChangeColor)
+        Me.gbscroll.Controls.Add(Me.chkltr)
         Me.gbscroll.Controls.Add(Me.cmdStopImmediate)
         Me.gbscroll.Controls.Add(Me.txtGap)
         Me.gbscroll.Controls.Add(Me.Label1)
@@ -512,6 +516,26 @@ Partial Class ucScroll
         Me.Label21.TabIndex = 449
         Me.Label21.Text = "video layer-flash layer"
         '
+        'chkltr
+        '
+        Me.chkltr.AutoSize = True
+        Me.chkltr.Location = New System.Drawing.Point(550, 79)
+        Me.chkltr.Name = "chkltr"
+        Me.chkltr.Size = New System.Drawing.Size(84, 17)
+        Me.chkltr.TabIndex = 1185
+        Me.chkltr.Text = "Left to Right"
+        Me.chkltr.UseVisualStyleBackColor = True
+        '
+        'chkChangeColor
+        '
+        Me.chkChangeColor.AutoSize = True
+        Me.chkChangeColor.Location = New System.Drawing.Point(796, 17)
+        Me.chkChangeColor.Name = "chkChangeColor"
+        Me.chkChangeColor.Size = New System.Drawing.Size(90, 17)
+        Me.chkChangeColor.TabIndex = 1186
+        Me.chkChangeColor.Text = "Change Color"
+        Me.chkChangeColor.UseVisualStyleBackColor = True
+        '
         'ucScroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -569,4 +593,6 @@ Partial Class ucScroll
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
     Friend WithEvents cmdStopImmediate As Button
+    Friend WithEvents chkltr As CheckBox
+    Friend WithEvents chkChangeColor As CheckBox
 End Class

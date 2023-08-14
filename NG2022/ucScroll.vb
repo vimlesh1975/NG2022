@@ -36,12 +36,17 @@ Public Class ucScroll
         UpdateData()
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "_speed=" & nspeedscroll.Value & """")
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "_gap=" & txtGap.Text & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "_ltr=" & If(chkltr.Checked, "true", "false") & """")
         'Thread.Sleep(100)
-        Dim fontColor = "document.getElementById('scroll').getElementsByTagName('text')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B) + "'"
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & fontColor & """")
 
-        Dim stripColor = "document.getElementById('scroll_strip').getElementsByTagName('rect')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B) + "'"
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & stripColor & """")
+        If chkChangeColor.Checked Then
+            Dim fontColor = "document.getElementById('scroll').getElementsByTagName('text')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B) + "'"
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & fontColor & """")
+
+            Dim stripColor = "document.getElementById('scroll_strip').getElementsByTagName('rect')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B) + "'"
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & stripColor & """")
+
+        End If
 
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "window.start()" & """")
 
@@ -89,30 +94,37 @@ Public Class ucScroll
 
     Private Sub cmdstripcolor_Click(sender As Object, e As EventArgs) Handles cmdstripcolor.Click
         On Error Resume Next
-        Dim cd1 As New ColorDialog
+        If chkChangeColor.Checked Then
+            Dim cd1 As New ColorDialog
 
-        If (cd1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            cmdstripcolor.BackColor = cd1.Color
-            cmdcolor.BackColor = cd1.Color
-            CasparCGDataCollection.Clear() 'cgData.Clear()
-            CasparCGDataCollection.SetData("stripcolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B))
-            Dim stripColor = "document.getElementById('scroll_strip').getElementsByTagName('rect')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B) + "'"
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & stripColor & """")
+            If (cd1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+                cmdstripcolor.BackColor = cd1.Color
+                cmdcolor.BackColor = cd1.Color
+                CasparCGDataCollection.Clear() 'cgData.Clear()
+                CasparCGDataCollection.SetData("stripcolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B))
+                Dim stripColor = "document.getElementById('scroll_strip').getElementsByTagName('rect')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B) + "'"
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & stripColor & """")
+            End If
         End If
+
     End Sub
 
     Private Sub cmdcolor_Click(sender As Object, e As EventArgs) Handles cmdcolor.Click
         On Error Resume Next
-        Dim cd1 As New ColorDialog
+        If chkChangeColor.Checked Then
+            Dim cd1 As New ColorDialog
 
-        If (cd1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            cmdstripcolor.ForeColor = cd1.Color
-            cmdcolor.ForeColor = cd1.Color
-            CasparCGDataCollection.Clear() 'cgData.Clear()
-            'CasparCGDataCollection.SetData("stripcolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B))
-            Dim fontColor = "document.getElementById('scroll').getElementsByTagName('text')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B) + "'"
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & fontColor & """")
+            If (cd1.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+                cmdstripcolor.ForeColor = cd1.Color
+                cmdcolor.ForeColor = cd1.Color
+                CasparCGDataCollection.Clear() 'cgData.Clear()
+                'CasparCGDataCollection.SetData("stripcolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B))
+                Dim fontColor = "document.getElementById('scroll').getElementsByTagName('text')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B) + "'"
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & fontColor & """")
+            End If
         End If
+
+
     End Sub
 
     Private Sub nspeedscroll_ValueChanged(sender As Object, e As EventArgs) Handles nspeedscroll.ValueChanged
