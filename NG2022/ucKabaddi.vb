@@ -578,6 +578,7 @@
     Private Sub cmdadd1t2ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdadd1t2ball.Click
         On Error Resume Next
         txtt2gball.Text += 1
+        If TeamStatus2.Value < 7 Then TeamStatus2.Value += 1
         TeamStatus1.Value -= 1
         If TeamStatus1.Value = 0 Then
             TeamStatus1.Value = 7
@@ -590,6 +591,7 @@
     Private Sub cmdadd1t1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdadd1t1ball.Click
         On Error Resume Next
         txtt1gball.Text += 1
+        If TeamStatus1.Value < 7 Then TeamStatus1.Value += 1
         TeamStatus2.Value -= 1
 
         If TeamStatus2.Value = 0 Then
@@ -1215,6 +1217,7 @@
     Private Sub cmdOut_Click(sender As Object, e As EventArgs) Handles cmdOut.Click
         On Error Resume Next
         TeamStatus1.Value -= 1
+        If TeamStatus2.Value < 7 Then TeamStatus2.Value += 1
         txtt2gball.Text += 1
         If TeamStatus1.Value = 0 Then
             TeamStatus1.Value = 7
@@ -1242,6 +1245,7 @@
     Private Sub cmdOut2_Click(sender As Object, e As EventArgs) Handles cmdOut2.Click
         On Error Resume Next
         TeamStatus2.Value -= 1
+        If TeamStatus1.Value < 7 Then TeamStatus1.Value += 1
         txtt1gball.Text += 1
         If TeamStatus2.Value = 0 Then
             TeamStatus2.Value = 7
