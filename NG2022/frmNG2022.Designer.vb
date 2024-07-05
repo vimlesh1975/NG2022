@@ -42,10 +42,18 @@ Partial Class frmNG2022
         Me.lblport = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.Scroll2 = New System.Windows.Forms.TabPage()
+        Me.UcScrollWithTopic1 = New NG2022.ucScrollWithTopic()
+        Me.Scroll1 = New System.Windows.Forms.TabPage()
+        Me.UcScroll1 = New NG2022.ucScroll()
         Me.BreakineNews = New System.Windows.Forms.TabPage()
         Me.UcBreakingNews1 = New NG2022.ucBreakingNews()
-        Me.NewsScroll = New System.Windows.Forms.TabPage()
-        Me.UcScroll1 = New NG2022.ucScroll()
+        Me.Election = New System.Windows.Forms.TabPage()
+        Me.UcElection1 = New NG2022.ucElection()
+        Me.CG1 = New System.Windows.Forms.TabPage()
+        Me.UcCG11 = New NG2022.ucCG1()
+        Me.CG2 = New System.Windows.Forms.TabPage()
+        Me.UcCG21 = New NG2022.ucCG2()
         Me.Shooting = New System.Windows.Forms.TabPage()
         Me.UcShooting1 = New NG2022.ucShooting()
         Me.Archery = New System.Windows.Forms.TabPage()
@@ -62,10 +70,6 @@ Partial Class frmNG2022
         Me.UcNetBall1 = New NG2022.ucNetBall()
         Me.BasketBall = New System.Windows.Forms.TabPage()
         Me.UcBasketBall1 = New NG2022.ucBasketBall()
-        Me.CG1 = New System.Windows.Forms.TabPage()
-        Me.UcCG11 = New NG2022.ucCG1()
-        Me.CG2 = New System.Windows.Forms.TabPage()
-        Me.UcCG21 = New NG2022.ucCG2()
         Me.Kabaddi = New System.Windows.Forms.TabPage()
         Me.UcKabaddi1 = New NG2022.ucKabaddi()
         Me.KhoKho = New System.Windows.Forms.TabPage()
@@ -95,8 +99,12 @@ Partial Class frmNG2022
         Me.UcCasparcgWindow1 = New NG2022.ucCasparcgWindow()
         Me.gbPannel.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.Scroll2.SuspendLayout()
+        Me.Scroll1.SuspendLayout()
         Me.BreakineNews.SuspendLayout()
-        Me.NewsScroll.SuspendLayout()
+        Me.Election.SuspendLayout()
+        Me.CG1.SuspendLayout()
+        Me.CG2.SuspendLayout()
         Me.Shooting.SuspendLayout()
         Me.Archery.SuspendLayout()
         Me.Boxing.SuspendLayout()
@@ -105,8 +113,6 @@ Partial Class frmNG2022
         Me.Rowing.SuspendLayout()
         Me.NetBall.SuspendLayout()
         Me.BasketBall.SuspendLayout()
-        Me.CG1.SuspendLayout()
-        Me.CG2.SuspendLayout()
         Me.Kabaddi.SuspendLayout()
         Me.KhoKho.SuspendLayout()
         Me.Football_Hockey.SuspendLayout()
@@ -298,8 +304,12 @@ Partial Class frmNG2022
         '
         'TabControl1
         '
+        Me.TabControl1.Controls.Add(Me.Scroll2)
+        Me.TabControl1.Controls.Add(Me.Scroll1)
         Me.TabControl1.Controls.Add(Me.BreakineNews)
-        Me.TabControl1.Controls.Add(Me.NewsScroll)
+        Me.TabControl1.Controls.Add(Me.Election)
+        Me.TabControl1.Controls.Add(Me.CG1)
+        Me.TabControl1.Controls.Add(Me.CG2)
         Me.TabControl1.Controls.Add(Me.Shooting)
         Me.TabControl1.Controls.Add(Me.Archery)
         Me.TabControl1.Controls.Add(Me.Boxing)
@@ -308,8 +318,6 @@ Partial Class frmNG2022
         Me.TabControl1.Controls.Add(Me.Rowing)
         Me.TabControl1.Controls.Add(Me.NetBall)
         Me.TabControl1.Controls.Add(Me.BasketBall)
-        Me.TabControl1.Controls.Add(Me.CG1)
-        Me.TabControl1.Controls.Add(Me.CG2)
         Me.TabControl1.Controls.Add(Me.Kabaddi)
         Me.TabControl1.Controls.Add(Me.KhoKho)
         Me.TabControl1.Controls.Add(Me.Football_Hockey)
@@ -318,6 +326,42 @@ Partial Class frmNG2022
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1143, 928)
         Me.TabControl1.TabIndex = 1340
+        '
+        'Scroll2
+        '
+        Me.Scroll2.Controls.Add(Me.UcScrollWithTopic1)
+        Me.Scroll2.Location = New System.Drawing.Point(4, 22)
+        Me.Scroll2.Name = "Scroll2"
+        Me.Scroll2.Padding = New System.Windows.Forms.Padding(3)
+        Me.Scroll2.Size = New System.Drawing.Size(1135, 902)
+        Me.Scroll2.TabIndex = 16
+        Me.Scroll2.Text = "Scroll2"
+        Me.Scroll2.UseVisualStyleBackColor = True
+        '
+        'UcScrollWithTopic1
+        '
+        Me.UcScrollWithTopic1.Location = New System.Drawing.Point(7, 7)
+        Me.UcScrollWithTopic1.Name = "UcScrollWithTopic1"
+        Me.UcScrollWithTopic1.Size = New System.Drawing.Size(1119, 967)
+        Me.UcScrollWithTopic1.TabIndex = 0
+        '
+        'Scroll1
+        '
+        Me.Scroll1.Controls.Add(Me.UcScroll1)
+        Me.Scroll1.Location = New System.Drawing.Point(4, 22)
+        Me.Scroll1.Name = "Scroll1"
+        Me.Scroll1.Padding = New System.Windows.Forms.Padding(3)
+        Me.Scroll1.Size = New System.Drawing.Size(1135, 902)
+        Me.Scroll1.TabIndex = 13
+        Me.Scroll1.Text = "Scroll1"
+        Me.Scroll1.UseVisualStyleBackColor = True
+        '
+        'UcScroll1
+        '
+        Me.UcScroll1.Location = New System.Drawing.Point(6, 6)
+        Me.UcScroll1.Name = "UcScroll1"
+        Me.UcScroll1.Size = New System.Drawing.Size(1115, 890)
+        Me.UcScroll1.TabIndex = 0
         '
         'BreakineNews
         '
@@ -338,23 +382,59 @@ Partial Class frmNG2022
         Me.UcBreakingNews1.Size = New System.Drawing.Size(1091, 865)
         Me.UcBreakingNews1.TabIndex = 0
         '
-        'NewsScroll
+        'Election
         '
-        Me.NewsScroll.Controls.Add(Me.UcScroll1)
-        Me.NewsScroll.Location = New System.Drawing.Point(4, 22)
-        Me.NewsScroll.Name = "NewsScroll"
-        Me.NewsScroll.Padding = New System.Windows.Forms.Padding(3)
-        Me.NewsScroll.Size = New System.Drawing.Size(1135, 902)
-        Me.NewsScroll.TabIndex = 13
-        Me.NewsScroll.Text = "Scroll"
-        Me.NewsScroll.UseVisualStyleBackColor = True
+        Me.Election.Controls.Add(Me.UcElection1)
+        Me.Election.Location = New System.Drawing.Point(4, 22)
+        Me.Election.Name = "Election"
+        Me.Election.Size = New System.Drawing.Size(1135, 902)
+        Me.Election.TabIndex = 15
+        Me.Election.Text = "Election"
+        Me.Election.UseVisualStyleBackColor = True
         '
-        'UcScroll1
+        'UcElection1
         '
-        Me.UcScroll1.Location = New System.Drawing.Point(6, 6)
-        Me.UcScroll1.Name = "UcScroll1"
-        Me.UcScroll1.Size = New System.Drawing.Size(1115, 890)
-        Me.UcScroll1.TabIndex = 0
+        Me.UcElection1.Location = New System.Drawing.Point(11, 4)
+        Me.UcElection1.Name = "UcElection1"
+        Me.UcElection1.Size = New System.Drawing.Size(1172, 830)
+        Me.UcElection1.TabIndex = 0
+        '
+        'CG1
+        '
+        Me.CG1.Controls.Add(Me.UcCG11)
+        Me.CG1.Location = New System.Drawing.Point(4, 22)
+        Me.CG1.Name = "CG1"
+        Me.CG1.Padding = New System.Windows.Forms.Padding(3)
+        Me.CG1.Size = New System.Drawing.Size(1135, 902)
+        Me.CG1.TabIndex = 4
+        Me.CG1.Text = "CG1"
+        Me.CG1.UseVisualStyleBackColor = True
+        '
+        'UcCG11
+        '
+        Me.UcCG11.Location = New System.Drawing.Point(6, 6)
+        Me.UcCG11.Name = "UcCG11"
+        Me.UcCG11.Size = New System.Drawing.Size(874, 731)
+        Me.UcCG11.TabIndex = 0
+        '
+        'CG2
+        '
+        Me.CG2.Controls.Add(Me.UcCG21)
+        Me.CG2.Location = New System.Drawing.Point(4, 22)
+        Me.CG2.Name = "CG2"
+        Me.CG2.Size = New System.Drawing.Size(1135, 902)
+        Me.CG2.TabIndex = 3
+        Me.CG2.Text = "CG2"
+        Me.CG2.UseVisualStyleBackColor = True
+        '
+        'UcCG21
+        '
+        Me.UcCG21.AutoScroll = True
+        Me.UcCG21.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcCG21.Location = New System.Drawing.Point(3, 3)
+        Me.UcCG21.Name = "UcCG21"
+        Me.UcCG21.Size = New System.Drawing.Size(789, 718)
+        Me.UcCG21.TabIndex = 0
         '
         'Shooting
         '
@@ -505,43 +585,6 @@ Partial Class frmNG2022
         Me.UcBasketBall1.Name = "UcBasketBall1"
         Me.UcBasketBall1.Size = New System.Drawing.Size(1137, 776)
         Me.UcBasketBall1.TabIndex = 0
-        '
-        'CG1
-        '
-        Me.CG1.Controls.Add(Me.UcCG11)
-        Me.CG1.Location = New System.Drawing.Point(4, 22)
-        Me.CG1.Name = "CG1"
-        Me.CG1.Padding = New System.Windows.Forms.Padding(3)
-        Me.CG1.Size = New System.Drawing.Size(1135, 902)
-        Me.CG1.TabIndex = 4
-        Me.CG1.Text = "CG1"
-        Me.CG1.UseVisualStyleBackColor = True
-        '
-        'UcCG11
-        '
-        Me.UcCG11.Location = New System.Drawing.Point(6, 6)
-        Me.UcCG11.Name = "UcCG11"
-        Me.UcCG11.Size = New System.Drawing.Size(874, 731)
-        Me.UcCG11.TabIndex = 0
-        '
-        'CG2
-        '
-        Me.CG2.Controls.Add(Me.UcCG21)
-        Me.CG2.Location = New System.Drawing.Point(4, 22)
-        Me.CG2.Name = "CG2"
-        Me.CG2.Size = New System.Drawing.Size(1135, 902)
-        Me.CG2.TabIndex = 3
-        Me.CG2.Text = "CG2"
-        Me.CG2.UseVisualStyleBackColor = True
-        '
-        'UcCG21
-        '
-        Me.UcCG21.AutoScroll = True
-        Me.UcCG21.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.UcCG21.Location = New System.Drawing.Point(3, 3)
-        Me.UcCG21.Name = "UcCG21"
-        Me.UcCG21.Size = New System.Drawing.Size(789, 718)
-        Me.UcCG21.TabIndex = 0
         '
         'Kabaddi
         '
@@ -847,12 +890,16 @@ Partial Class frmNG2022
         Me.Controls.Add(Me.gbPannel)
         Me.Name = "frmNG2022"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "NG_010424_1"
+        Me.Text = "NG_050724_1"
         Me.gbPannel.ResumeLayout(False)
         Me.gbPannel.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        Me.Scroll2.ResumeLayout(False)
+        Me.Scroll1.ResumeLayout(False)
         Me.BreakineNews.ResumeLayout(False)
-        Me.NewsScroll.ResumeLayout(False)
+        Me.Election.ResumeLayout(False)
+        Me.CG1.ResumeLayout(False)
+        Me.CG2.ResumeLayout(False)
         Me.Shooting.ResumeLayout(False)
         Me.Archery.ResumeLayout(False)
         Me.Boxing.ResumeLayout(False)
@@ -861,8 +908,6 @@ Partial Class frmNG2022
         Me.Rowing.ResumeLayout(False)
         Me.NetBall.ResumeLayout(False)
         Me.BasketBall.ResumeLayout(False)
-        Me.CG1.ResumeLayout(False)
-        Me.CG2.ResumeLayout(False)
         Me.Kabaddi.ResumeLayout(False)
         Me.KhoKho.ResumeLayout(False)
         Me.Football_Hockey.ResumeLayout(False)
@@ -943,8 +988,12 @@ Partial Class frmNG2022
     Friend WithEvents UcArchery1 As ucArchery
     Friend WithEvents Shooting As TabPage
     Friend WithEvents UcShooting1 As ucShooting
-    Friend WithEvents NewsScroll As TabPage
+    Friend WithEvents Scroll1 As TabPage
     Friend WithEvents UcScroll1 As ucScroll
     Friend WithEvents BreakineNews As TabPage
     Friend WithEvents UcBreakingNews1 As ucBreakingNews
+    Friend WithEvents Election As TabPage
+    Friend WithEvents UcElection1 As ucElection
+    Friend WithEvents Scroll2 As TabPage
+    Friend WithEvents UcScrollWithTopic1 As ucScrollWithTopic
 End Class

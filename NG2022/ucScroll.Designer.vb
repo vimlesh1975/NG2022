@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucScroll
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,17 @@ Partial Class ucScroll
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucScroll))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbscroll = New System.Windows.Forms.GroupBox()
+        Me.chkChangeColor = New System.Windows.Forms.CheckBox()
+        Me.chkltr = New System.Windows.Forms.CheckBox()
         Me.cmdStopImmediate = New System.Windows.Forms.Button()
         Me.txtGap = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -69,17 +71,20 @@ Partial Class ucScroll
         Me.Label20 = New System.Windows.Forms.Label()
         Me.cmblayerscroll = New System.Windows.Forms.ComboBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.chkltr = New System.Windows.Forms.CheckBox()
-        Me.chkChangeColor = New System.Windows.Forms.CheckBox()
+        Me.eventlogo = New System.Windows.Forms.PictureBox()
+        Me.chkUseImage = New System.Windows.Forms.CheckBox()
         Me.gbscroll.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvscroll, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nspeedscroll, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gbscroll
         '
         Me.gbscroll.BackColor = System.Drawing.Color.Bisque
+        Me.gbscroll.Controls.Add(Me.chkUseImage)
+        Me.gbscroll.Controls.Add(Me.eventlogo)
         Me.gbscroll.Controls.Add(Me.chkChangeColor)
         Me.gbscroll.Controls.Add(Me.chkltr)
         Me.gbscroll.Controls.Add(Me.cmdStopImmediate)
@@ -117,6 +122,26 @@ Partial Class ucScroll
         Me.gbscroll.TabStop = False
         Me.gbscroll.Text = "Scroll And Clock"
         '
+        'chkChangeColor
+        '
+        Me.chkChangeColor.AutoSize = True
+        Me.chkChangeColor.Location = New System.Drawing.Point(796, 17)
+        Me.chkChangeColor.Name = "chkChangeColor"
+        Me.chkChangeColor.Size = New System.Drawing.Size(90, 17)
+        Me.chkChangeColor.TabIndex = 1186
+        Me.chkChangeColor.Text = "Change Color"
+        Me.chkChangeColor.UseVisualStyleBackColor = True
+        '
+        'chkltr
+        '
+        Me.chkltr.AutoSize = True
+        Me.chkltr.Location = New System.Drawing.Point(550, 79)
+        Me.chkltr.Name = "chkltr"
+        Me.chkltr.Size = New System.Drawing.Size(84, 17)
+        Me.chkltr.TabIndex = 1185
+        Me.chkltr.Text = "Left to Right"
+        Me.chkltr.UseVisualStyleBackColor = True
+        '
         'cmdStopImmediate
         '
         Me.cmdStopImmediate.BackColor = System.Drawing.Color.Red
@@ -136,7 +161,7 @@ Partial Class ucScroll
         Me.txtGap.Name = "txtGap"
         Me.txtGap.Size = New System.Drawing.Size(39, 20)
         Me.txtGap.TabIndex = 1183
-        Me.txtGap.Text = "-50"
+        Me.txtGap.Text = "25"
         '
         'Label1
         '
@@ -414,38 +439,38 @@ Partial Class ucScroll
         '
         Me.dgvscroll.AllowDrop = True
         Me.dgvscroll.AllowUserToOrderColumns = True
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvscroll.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvscroll.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvscroll.BackgroundColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvscroll.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvscroll.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvscroll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvscroll.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewCheckBoxColumn2})
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvscroll.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvscroll.DefaultCellStyle = DataGridViewCellStyle9
         Me.dgvscroll.Location = New System.Drawing.Point(4, 106)
         Me.dgvscroll.MultiSelect = False
         Me.dgvscroll.Name = "dgvscroll"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvscroll.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvscroll.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.dgvscroll.RowHeadersWidth = 60
         Me.dgvscroll.RowTemplate.Height = 30
         Me.dgvscroll.Size = New System.Drawing.Size(1094, 773)
@@ -453,8 +478,8 @@ Partial Class ucScroll
         '
         'DataGridViewTextBoxColumn2
         '
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridViewTextBoxColumn2.Frozen = True
         Me.DataGridViewTextBoxColumn2.HeaderText = "Scroll"
         Me.DataGridViewTextBoxColumn2.MinimumWidth = 540
@@ -516,25 +541,28 @@ Partial Class ucScroll
         Me.Label21.TabIndex = 449
         Me.Label21.Text = "video layer-flash layer"
         '
-        'chkltr
+        'eventlogo
         '
-        Me.chkltr.AutoSize = True
-        Me.chkltr.Location = New System.Drawing.Point(550, 79)
-        Me.chkltr.Name = "chkltr"
-        Me.chkltr.Size = New System.Drawing.Size(84, 17)
-        Me.chkltr.TabIndex = 1185
-        Me.chkltr.Text = "Left to Right"
-        Me.chkltr.UseVisualStyleBackColor = True
+        Me.eventlogo.BackColor = System.Drawing.SystemColors.Highlight
+        Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/ammu_logo.png"
+        Me.eventlogo.Location = New System.Drawing.Point(446, 50)
+        Me.eventlogo.Name = "eventlogo"
+        Me.eventlogo.Size = New System.Drawing.Size(24, 17)
+        Me.eventlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.eventlogo.TabIndex = 1187
+        Me.eventlogo.TabStop = False
         '
-        'chkChangeColor
+        'chkUseImage
         '
-        Me.chkChangeColor.AutoSize = True
-        Me.chkChangeColor.Location = New System.Drawing.Point(796, 17)
-        Me.chkChangeColor.Name = "chkChangeColor"
-        Me.chkChangeColor.Size = New System.Drawing.Size(90, 17)
-        Me.chkChangeColor.TabIndex = 1186
-        Me.chkChangeColor.Text = "Change Color"
-        Me.chkChangeColor.UseVisualStyleBackColor = True
+        Me.chkUseImage.AutoSize = True
+        Me.chkUseImage.Checked = True
+        Me.chkUseImage.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkUseImage.Location = New System.Drawing.Point(477, 53)
+        Me.chkUseImage.Name = "chkUseImage"
+        Me.chkUseImage.Size = New System.Drawing.Size(77, 17)
+        Me.chkUseImage.TabIndex = 1188
+        Me.chkUseImage.Text = "Use Image"
+        Me.chkUseImage.UseVisualStyleBackColor = True
         '
         'ucScroll
         '
@@ -549,6 +577,7 @@ Partial Class ucScroll
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgvscroll, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nspeedscroll, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -595,4 +624,6 @@ Partial Class ucScroll
     Friend WithEvents cmdStopImmediate As Button
     Friend WithEvents chkltr As CheckBox
     Friend WithEvents chkChangeColor As CheckBox
+    Friend WithEvents eventlogo As PictureBox
+    Friend WithEvents chkUseImage As CheckBox
 End Class

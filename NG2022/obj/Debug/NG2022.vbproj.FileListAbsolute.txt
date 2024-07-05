@@ -1,60 +1,37 @@
-D:\NG310123_2 - Copy\NG2022\bin\Debug\NG2022.exe.config
-D:\NG310123_2 - Copy\NG2022\bin\Debug\NG2022.exe
-D:\NG310123_2 - Copy\NG2022\bin\Debug\NG2022.pdb
-D:\NG310123_2 - Copy\NG2022\bin\Debug\NG2022.xml
-D:\NG310123_2 - Copy\NG2022\bin\Debug\Newtonsoft.Json.dll
-D:\NG310123_2 - Copy\NG2022\bin\Debug\Svt.Caspar.dll
-D:\NG310123_2 - Copy\NG2022\bin\Debug\Svt.Network.dll
-D:\NG310123_2 - Copy\NG2022\bin\Debug\Newtonsoft.Json.xml
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.vbproj.AssemblyReference.cache
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.vbproj.SuggestedBindingRedirects.cache
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.frmNG2022.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.Resources.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucGymnastic.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucNetBall.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucCasparcgWindow.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucCG1.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucCG2.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucBasketBall.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucKhoKho.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucKabaddi.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucRccBall.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucCanoeSlalom.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.ucTrack.resources
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.vbproj.GenerateResource.cache
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.vbproj.CoreCompileInputs.cache
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.vbproj.CopyComplete
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.exe
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.xml
-D:\NG310123_2 - Copy\NG2022\obj\Debug\NG2022.pdb
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\bin\Debug\NG2022.exe.config
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\bin\Debug\NG2022.exe
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\bin\Debug\NG2022.pdb
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\bin\Debug\NG2022.xml
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\bin\Debug\Svt.Caspar.dll
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\bin\Debug\Svt.Network.dll
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.vbproj.AssemblyReference.cache
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.vbproj.SuggestedBindingRedirects.cache
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.frmNG2022.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.Resources.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucGymnastic.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucBoxing.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucNetBall.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucCasparcgWindow.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucCG1.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucCG2.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucBasketBall.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucKhoKho.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucKabaddi.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucRccBall.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucCanoeSlalom.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucTrack.resources
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.vbproj.GenerateResource.cache
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.vbproj.CoreCompileInputs.cache
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.vbproj.CopyComplete
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.exe
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.xml
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.pdb
-C:\Users\Administrator\Documents\GitHub\NG2022\NG2022\obj\Debug\NG2022.ucArchery.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\bin\Debug\NG2022.exe.config
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\bin\Debug\NG2022.exe
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\bin\Debug\NG2022.pdb
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\bin\Debug\NG2022.xml
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\bin\Debug\Newtonsoft.Json.dll
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\bin\Debug\Svt.Caspar.dll
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\bin\Debug\Svt.Network.dll
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\bin\Debug\Newtonsoft.Json.xml
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.vbproj.AssemblyReference.cache
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.frmNG2022.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.Resources.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucBreakingNews.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucElection.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucPhoto1.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucScrollWithTopic.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucScroll.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucShooting.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucGymnastic.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucBoxing.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucArchery.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucNetBall.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucCasparcgWindow.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucCG1.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucCG2.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucBasketBall.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucKhoKho.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucKabaddi.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucRccBall.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucCanoeSlalom.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucTally1.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.ucTrack.resources
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.vbproj.GenerateResource.cache
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.vbproj.CoreCompileInputs.cache
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.vbproj.Up2Date
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.exe
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.xml
+E:\__00vimlesh\___ng\NG2022_040724_2\NG2022\obj\Debug\NG2022.pdb

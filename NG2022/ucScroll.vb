@@ -35,12 +35,19 @@ Public Class ucScroll
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayerscroll.Text), Int(cmblayerscroll.Text), txtScrollTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
         UpdateData()
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "_speed=" & nspeedscroll.Value & """")
+
+        If chkUseImage.Checked Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "updateimage('ccg_image', '" + Replace(eventlogo.ImageLocation, "\", "/") + "')" & """")
+        Else
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "putImage=false" & """")
+        End If
+
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "_gap=" & txtGap.Text & """")
         CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "_ltr=" & If(chkltr.Checked, "true", "false") & """")
         'Thread.Sleep(100)
 
         If chkChangeColor.Checked Then
-            Dim fontColor = "document.getElementById('scroll').getElementsByTagName('text')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B) + "'"
+            Dim fontColor = "document.getElementById('ccg_scroll').getElementsByTagName('text')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B) + "'"
             CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & fontColor & """")
 
             Dim stripColor = "document.getElementById('scroll_strip').getElementsByTagName('rect')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B) + "'"
@@ -119,7 +126,7 @@ Public Class ucScroll
                 cmdcolor.ForeColor = cd1.Color
                 CasparCGDataCollection.Clear() 'cgData.Clear()
                 'CasparCGDataCollection.SetData("stripcolor", "0x" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.BackColor.R, cmdstripcolor.BackColor.G, cmdstripcolor.BackColor.B))
-                Dim fontColor = "document.getElementById('scroll').getElementsByTagName('text')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B) + "'"
+                Dim fontColor = "document.getElementById('ccg_scroll').getElementsByTagName('text')[0].style.fill=" + "'#" & String.Format("{0:X2}{1:X2}{2:X2}", cmdstripcolor.ForeColor.R, cmdstripcolor.ForeColor.G, cmdstripcolor.ForeColor.B) + "'"
                 CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & fontColor & """")
             End If
         End If
@@ -360,5 +367,25 @@ Public Class ucScroll
     Private Sub cmdStopImmediate_Click(sender As Object, e As EventArgs) Handles cmdStopImmediate.Click
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Remove(Int(cmblayerscroll.Text), Int(cmblayerscroll.Text))
 
+    End Sub
+
+    Private Sub eventlogo_Click(sender As Object, e As EventArgs) Handles eventlogo.Click
+        openimage("C:/casparcg/ng2022/data/event logo/", sender)
+        If chkUseImage.Checked Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "putImage=true" & """")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "updateimage('ccg_image', '" + Replace(eventlogo.ImageLocation, "\", "/") + "')" & """")
+        Else
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "putImage=false" & """")
+        End If
+
+    End Sub
+
+    Private Sub chkUseImage_CheckedChanged(sender As Object, e As EventArgs) Handles chkUseImage.CheckedChanged
+        If chkUseImage.Checked Then
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "putImage=true" & """")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "updateimage('ccg_image', '" + Replace(eventlogo.ImageLocation, "\", "/") + "')" & """")
+        Else
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "putImage=false" & """")
+        End If
     End Sub
 End Class
