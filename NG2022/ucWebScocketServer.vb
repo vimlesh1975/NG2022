@@ -26,7 +26,10 @@ Partial Public Class ucWebScocketServer
     Private Sub ucWebScocketServer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         webSocketServer.StartWebSocketServer()
         CheckServerStatus()
+
+        SetReady()
     End Sub
 End Class
+
 
 

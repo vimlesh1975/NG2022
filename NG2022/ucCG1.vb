@@ -165,39 +165,39 @@ Partial Public Class ucCG1
         With dgvwinner
             .Rows.Add(8)
 
-            .Rows(0).Cells(0).Value = Image.FromFile("C:\casparcg\ng2022\data\country\Chandigarh.png")
+            .Rows(0).Cells(0).Value = Image.FromFile(AppSettings.CountryPath & "Chandigarh.png")
             .Rows(0).Cells(1).Value = "Chandigarh"
-            .Rows(0).Cells(2).Value = "C:\casparcg\ng2022\data\country\Chandigarh.png"
+            .Rows(0).Cells(2).Value = AppSettings.CountryPath & "Chandigarh.png"
 
-            .Rows(1).Cells(0).Value = Image.FromFile("C:\casparcg\ng2022\data\country\GOA.png")
+            .Rows(1).Cells(0).Value = Image.FromFile(AppSettings.CountryPath & "GOA.png")
             .Rows(1).Cells(1).Value = "GOA"
-            .Rows(1).Cells(2).Value = "C:\casparcg\ng2022\data\country\GOA.png"
+            .Rows(1).Cells(2).Value = AppSettings.CountryPath & "GOA.png"
 
-            .Rows(2).Cells(0).Value = Image.FromFile("C:\casparcg\ng2022\data\country\Karnataka.png")
+            .Rows(2).Cells(0).Value = Image.FromFile(AppSettings.CountryPath & "Karnataka.png")
             .Rows(2).Cells(1).Value = "Karnataka"
-            .Rows(2).Cells(2).Value = "C:\casparcg\ng2022\data\country\Karnataka.png"
+            .Rows(2).Cells(2).Value = AppSettings.CountryPath & "Karnataka.png"
 
-            .Rows(3).Cells(0).Value = Image.FromFile("C:\casparcg\ng2022\data\country\Himachal Pradesh.png")
+            .Rows(3).Cells(0).Value = Image.FromFile(AppSettings.CountryPath & "Himachal Pradesh.png")
             .Rows(3).Cells(1).Value = "Himachal Pradesh"
-            .Rows(3).Cells(2).Value = "C:\casparcg\ng2022\data\country\Himachal Pradesh.png"
+            .Rows(3).Cells(2).Value = AppSettings.CountryPath & "Himachal Pradesh.png"
 
-            .Rows(4).Cells(0).Value = Image.FromFile("C:\casparcg\ng2022\data\country\Jammu Kashmir.png")
+            .Rows(4).Cells(0).Value = Image.FromFile(AppSettings.CountryPath & "Jammu Kashmir.png")
             .Rows(4).Cells(1).Value = "Jammu Kashmir"
-            .Rows(4).Cells(2).Value = "C:\casparcg\ng2022\data\country\Jammu Kashmir.png"
+            .Rows(4).Cells(2).Value = AppSettings.CountryPath & "Jammu Kashmir.png"
 
-            .Rows(5).Cells(0).Value = Image.FromFile("C:\casparcg\ng2022\data\country\Jharkhand.png")
+            .Rows(5).Cells(0).Value = Image.FromFile(AppSettings.CountryPath & "Jharkhand.png")
             .Rows(5).Cells(1).Value = "Jharkhand"
-            .Rows(5).Cells(2).Value = "C:\casparcg\ng2022\data\country\Jharkhand.png"
+            .Rows(5).Cells(2).Value = AppSettings.CountryPath & "Jharkhand.png"
 
 
 
-            .Rows(6).Cells(0).Value = Image.FromFile("C:\casparcg\ng2022\data\country\Maharashtra.png")
+            .Rows(6).Cells(0).Value = Image.FromFile(AppSettings.CountryPath & "Maharashtra.png")
             .Rows(6).Cells(1).Value = "Maharashtra"
-            .Rows(6).Cells(2).Value = "C:\casparcg\ng2022\data\country\Maharashtra.png"
+            .Rows(6).Cells(2).Value = AppSettings.CountryPath & "Maharashtra.png"
 
-            .Rows(7).Cells(0).Value = Image.FromFile("C:\casparcg\ng2022\data\country\Madhya Pradesh.png")
+            .Rows(7).Cells(0).Value = Image.FromFile(AppSettings.CountryPath & "Madhya Pradesh.png")
             .Rows(7).Cells(1).Value = "Madhya Pradesh"
-            .Rows(7).Cells(2).Value = "C:\casparcg\ng2022\data\country\Madhya Pradesh.png"
+            .Rows(7).Cells(2).Value = AppSettings.CountryPath & "Madhya Pradesh.png"
         End With
     End Sub
 
@@ -207,6 +207,8 @@ Partial Public Class ucCG1
         cmbheadercg.Text = "World Rowing Cup 2023"
         cmbsubheadercg.DataSource = New BindingSource(subHeader, "")
         cmbsubheadercg.Text = "Men's Single Sculls"
+
+        SetReady()
     End Sub
 
     Private Sub cmdstopcg2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopcg2.Click
@@ -509,12 +511,12 @@ Partial Public Class ucCG1
 
     Private Sub eventlogo_Click(sender As Object, e As EventArgs) Handles eventlogo.Click
         On Error Resume Next
-        openimage("C:\casparcg\ng2022\data\event logo\", sender)
+        openimage(AppSettings.EventLogoPath, sender)
     End Sub
 
     Private Sub gamelogo_Click(sender As Object, e As EventArgs) Handles gamelogo.Click
         On Error Resume Next
-        openimage("C:\casparcg\ng2022\data\games logo\", sender)
+        openimage(AppSettings.GamesLogoPath, sender)
     End Sub
 
     Private Sub cmdupcg_Click(sender As Object, e As EventArgs) Handles cmdupcg.Click
@@ -642,7 +644,7 @@ Partial Public Class ucCG1
         On Error Resume Next
         If e.ColumnIndex = 0 Then
             Dim aa As New OpenFileDialog
-            aa.InitialDirectory = "C:\casparcg\NG2022\data\flag\"
+            aa.InitialDirectory = AppSettings.FlagPath
             If aa.ShowDialog = Windows.Forms.DialogResult.OK Then
                 With dgvwinner
                     .Rows(e.RowIndex).Cells(0).Value = System.Drawing.Image.FromFile(aa.FileName)
@@ -672,4 +674,6 @@ Partial Public Class ucCG1
         showtemplate("ng2022/template/cg/HeatsToQuaterFinals", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 End Class
+
+
 

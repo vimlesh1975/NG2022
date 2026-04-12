@@ -13,6 +13,8 @@ Partial Public Class ucCanoeSlalom
         cmbHeader.Text = "World Canoe Slalom Cup 2023"
         cmbSubHeader.DataSource = New BindingSource(subHeader, "")
         cmbSubHeader.Text = "Men's Canoe Single - Final"
+
+        SetReady()
     End Sub
     Sub defauttrackdata()
         DataGridViewComboBoxColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
@@ -23,98 +25,98 @@ Partial Public Class ucCanoeSlalom
 
             .Rows(0).Cells(0).Value = 1
             .Rows(0).Cells(1).Value = "IND"
-            .Rows(0).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/india.png")
+            .Rows(0).Cells(2).Value = Image.FromFile(AppSettings.FlagPath & "india.png")
             .Rows(0).Cells(3).Value = "MOHAMAD ALGARNI"
             .Rows(0).Cells(4).Value = 87.2
-            .Rows(0).Cells(6).Value = "C:/casparcg/NG2022/data/flag/india.png"
+            .Rows(0).Cells(6).Value = AppSettings.FlagPath & "india.png"
             .Rows(0).Cells(7).Value = 2
             .Rows(0).Cells(8).Value = 50
 
 
             .Rows(1).Cells(0).Value = 2
             .Rows(1).Cells(1).Value = "AFG"
-            .Rows(1).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Afghanistan.png")
+            .Rows(1).Cells(2).Value = Image.FromFile(AppSettings.FlagPath & "Afghanistan.png")
             .Rows(1).Cells(3).Value = "SANDEEP KARAN SINGH"
             .Rows(1).Cells(4).Value = 77.33
-            .Rows(1).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Afghanistan.png"
+            .Rows(1).Cells(6).Value = AppSettings.FlagPath & "Afghanistan.png"
             .Rows(1).Cells(7).Value = 3
             .Rows(1).Cells(8).Value = 100
 
             .Rows(2).Cells(0).Value = 3
             .Rows(2).Cells(1).Value = "PAK"
-            .Rows(2).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Pakistan.png")
+            .Rows(2).Cells(2).Value = Image.FromFile(AppSettings.FlagPath & "Pakistan.png")
             .Rows(2).Cells(3).Value = "EMAD HAMED NOUR"
             .Rows(2).Cells(4).Value = 97.1
             .Rows(2).Cells(5).Value = 2
-            .Rows(2).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Pakistan.png"
+            .Rows(2).Cells(6).Value = AppSettings.FlagPath & "Pakistan.png"
             .Rows(2).Cells(7).Value = 7
             .Rows(2).Cells(8).Value = 50
 
             .Rows(3).Cells(0).Value = 4
             .Rows(3).Cells(1).Value = "NEP"
-            .Rows(3).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Nepal.png")
+            .Rows(3).Cells(2).Value = Image.FromFile(AppSettings.FlagPath & "Nepal.png")
             .Rows(3).Cells(3).Value = "RASHEED RAMZI"
             .Rows(3).Cells(4).Value = 107.11
             .Rows(3).Cells(5).Value = 3
-            .Rows(3).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Nepal.png"
+            .Rows(3).Cells(6).Value = AppSettings.FlagPath & "Nepal.png"
             .Rows(3).Cells(7).Value = 3
             .Rows(3).Cells(8).Value = 0
 
 
             .Rows(4).Cells(0).Value = 5
             .Rows(4).Cells(1).Value = "SRI"
-            .Rows(4).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Sri-Lanka.png")
+            .Rows(4).Cells(2).Value = Image.FromFile(AppSettings.FlagPath & "Sri-Lanka.png")
             .Rows(4).Cells(3).Value = "HAMZA DRIOUCH"
             .Rows(4).Cells(4).Value = 105.32
-            .Rows(4).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Sri-Lanka.png"
+            .Rows(4).Cells(6).Value = AppSettings.FlagPath & "Sri-Lanka.png"
             .Rows(4).Cells(7).Value = 0
             .Rows(4).Cells(8).Value = 100
 
             .Rows(5).Cells(0).Value = 6
             .Rows(5).Cells(1).Value = "BHU"
-            .Rows(5).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Bhutan.png")
+            .Rows(5).Cells(2).Value = Image.FromFile(AppSettings.FlagPath & "Bhutan.png")
             .Rows(5).Cells(3).Value = "RAM PRASAD SAHANI"
             .Rows(5).Cells(4).Value = 96.35
-            .Rows(5).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Bhutan.png"
+            .Rows(5).Cells(6).Value = AppSettings.FlagPath & "Bhutan.png"
             .Rows(5).Cells(7).Value = 3
             .Rows(5).Cells(8).Value = 150
 
             .Rows(6).Cells(0).Value = 7
             .Rows(6).Cells(1).Value = "MDV"
-            .Rows(6).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Maldives.png")
+            .Rows(6).Cells(2).Value = Image.FromFile(AppSettings.FlagPath & "Maldives.png")
             .Rows(6).Cells(3).Value = "ABDULLAH OBAID"
             .Rows(6).Cells(4).Value = 106.18
-            .Rows(6).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Maldives.png"
+            .Rows(6).Cells(6).Value = AppSettings.FlagPath & "Maldives.png"
             .Rows(6).Cells(7).Value = 2
             .Rows(6).Cells(8).Value = 50
 
 
             .Rows(7).Cells(0).Value = 8
             .Rows(7).Cells(1).Value = "BAN"
-            .Rows(7).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Bangladesh.png")
+            .Rows(7).Cells(2).Value = Image.FromFile(AppSettings.FlagPath & "Bangladesh.png")
             .Rows(7).Cells(3).Value = "VIMLESH KUMAR"
             .Rows(7).Cells(4).Value = 85.06
             .Rows(7).Cells(5).Value = 1
-            .Rows(7).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Bangladesh.png"
+            .Rows(7).Cells(6).Value = AppSettings.FlagPath & "Bangladesh.png"
             .Rows(7).Cells(7).Value = 4
             .Rows(7).Cells(8).Value = 150
 
             .Rows(8).Cells(0).Value = 9
             .Rows(8).Cells(1).Value = "ITA"
-            .Rows(8).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Italy.png")
+            .Rows(8).Cells(2).Value = Image.FromFile(AppSettings.FlagPath & "Italy.png")
             .Rows(8).Cells(3).Value = "PREM LAL GUPTA"
             .Rows(8).Cells(4).Value = 84.45
-            .Rows(8).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Italy.png"
+            .Rows(8).Cells(6).Value = AppSettings.FlagPath & "Italy.png"
             .Rows(8).Cells(7).Value = 5
             .Rows(8).Cells(8).Value = 200
 
 
             .Rows(9).Cells(0).Value = 10
             .Rows(9).Cells(1).Value = "AUS"
-            .Rows(9).Cells(2).Value = Image.FromFile("C:/casparcg/NG2022/data/flag/Australia.png")
+            .Rows(9).Cells(2).Value = Image.FromFile(AppSettings.FlagPath & "Australia.png")
             .Rows(9).Cells(3).Value = "NITIN V SUMANTH"
             .Rows(9).Cells(4).Value = 108.48
-            .Rows(9).Cells(6).Value = "C:/casparcg/NG2022/data/flag/Australia.png"
+            .Rows(9).Cells(6).Value = AppSettings.FlagPath & "Australia.png"
             .Rows(9).Cells(7).Value = 4
             .Rows(9).Cells(8).Value = 250
 
@@ -170,7 +172,7 @@ Partial Public Class ucCanoeSlalom
     '            Dim targetRow = CType(sourceRow.Clone(), DataGridViewRow)
     '            For Each cell As DataGridViewCell In sourceRow.Cells
     '                If cell.Value = vbNullString And cell.ColumnIndex = columntosort Then
-    '                    targetRow.Cells(cell.ColumnIndex).Value = Int(8)
+    '                    targetRow.Cells(cell.ColumnIndex).Value = CInt(8)
     '                Else
     '                    targetRow.Cells(cell.ColumnIndex).Value = cell.Value
     '                End If
@@ -449,7 +451,7 @@ Partial Public Class ucCanoeSlalom
         If e.ColumnIndex = 2 Then
 
             Dim aa As New OpenFileDialog
-            aa.InitialDirectory = "C:\casparcg\NG2022\data\flag\"
+            aa.InitialDirectory = AppSettings.FlagPath
             If aa.ShowDialog = DialogResult.OK Then
                 dgvtrack.CurrentCell.Value = Image.FromFile(aa.FileName)
                 dgvtrack.CurrentRow.Cells(6).Value = aa.FileName
@@ -460,7 +462,7 @@ Partial Public Class ucCanoeSlalom
     Private Sub dgvtrackresult_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvtrackresult.CellContentClick
         If e.ColumnIndex = 2 Then
             Dim aa As New OpenFileDialog
-            aa.InitialDirectory = "C:\casparcg\NG2022\data\flag\"
+            aa.InitialDirectory = AppSettings.FlagPath
             If aa.ShowDialog = DialogResult.OK Then
                 dgvtrackresult.CurrentCell.Value = Image.FromFile(aa.FileName)
                 dgvtrackresult.CurrentRow.Cells(6).Value = aa.FileName
@@ -566,12 +568,12 @@ Partial Public Class ucCanoeSlalom
 
     Private Sub gamelogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gamelogo.Click
         On Error Resume Next
-        openimage("C:\casparcg\ng2022\data\games logo\", sender)
+        openimage(AppSettings.GamesLogoPath, sender)
     End Sub
 
     Private Sub eventlogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles eventlogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/event logo/", sender)
+        openimage(AppSettings.EventLogoPath, sender)
     End Sub
 
     Private Sub cmdRemoveLap_Click(sender As Object, e As EventArgs) Handles cmdRemoveLap.Click
@@ -729,4 +731,7 @@ Partial Public Class ucCanoeSlalom
 
     End Sub
 End Class
+
+
+
 

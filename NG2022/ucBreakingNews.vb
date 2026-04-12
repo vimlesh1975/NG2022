@@ -36,6 +36,8 @@ Partial Public Class ucBreakingNews
         End If
 
 
+
+        SetReady()
     End Sub
     Sub initialisebreakingnewsdata()
         On Error Resume Next
@@ -67,7 +69,7 @@ Partial Public Class ucBreakingNews
         flash = 1
         makearray()
         setdataofbreakingnews()
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), txtbnTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) , txtbnTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
         tmrshowdata.Interval = SafeVal(txtbreakingnewsupdateinterval.Text)
         tmrshowdata.Enabled = True
 
@@ -117,13 +119,13 @@ Partial Public Class ucBreakingNews
         On Error Resume Next
         If String.IsNullOrWhiteSpace(cmblayerbreakingnews.Text) Then Exit Sub
         setdataofbreakingnews()
-        'CasparDevice.Channels(cmbchannel.Text-1).CG.Invoke(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), "loop")
+        'CasparDevice.Channels(cmbchannel.Text-1).CG.Invoke( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) , "loop")
 
         If flash = 1 Then
             Dim aa = "sheet.sequence.position = 0;sheet.sequence.play({ range: [0, 4] });"
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerbreakingnews.Text) & " " & """" & aa & """")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" &  SafeInt(cmblayerbreakingnews.Text)  & " " & """" & aa & """")
 
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), CasparCGDataCollection)
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) , CasparCGDataCollection)
 
         Else
 
@@ -147,12 +149,12 @@ Partial Public Class ucBreakingNews
     Private Sub cmdstopbrekingnews_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopbrekingnews.Click
         On Error Resume Next
         If String.IsNullOrWhiteSpace(cmblayerbreakingnews.Text) Then Exit Sub
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Invoke(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), "out")
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Invoke( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) , "out")
         Threading.Thread.Sleep(500)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text))
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) )
         tmrshowdata.Enabled = False
 
-        CasparDevice.SendString("Stop " & g_int_ChannelNumber & "-" & Int(cmblayerbreakingnews.Text))
+        CasparDevice.SendString("Stop " & g_int_ChannelNumber & "-" &  SafeInt(cmblayerbreakingnews.Text) )
     End Sub
 
     Private Sub tmrshowdata_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tmrshowdata.Tick
@@ -380,15 +382,15 @@ Partial Public Class ucBreakingNews
     Private Sub cmdshowtime_Click(sender As Object, e As EventArgs) Handles cmdshowtime.Click
         On Error Resume Next
         If String.IsNullOrWhiteSpace(cmblayertime.Text) Then Exit Sub
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayertime.Text), Int(cmblayertime.Text), txtclockTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) , txtclockTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
 
     Private Sub cmdhidetime_Click(sender As Object, e As EventArgs) Handles cmdhidetime.Click
         On Error Resume Next
         If String.IsNullOrWhiteSpace(cmblayertime.Text) Then Exit Sub
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayertime.Text), Int(cmblayertime.Text))
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Remove(Int(cmblayertime.Text), Int(cmblayertime.Text))
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) )
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Remove( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) )
 
     End Sub
 
@@ -461,4 +463,8 @@ Partial Public Class ucBreakingNews
         makearray()
     End Sub
 End Class
+
+
+
+
 

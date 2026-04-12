@@ -109,6 +109,8 @@ Partial Public Class ucPhoto1
 
 
 
+
+        SetReady()
     End Sub
 
     Private Sub cmdTally1Update_Click(sender As Object, e As EventArgs) Handles cmdTally1Update.Click
@@ -188,5 +190,6 @@ Partial Public Class ucPhoto1
 
     End Sub
 End Class
+
 
 

@@ -12,6 +12,8 @@ Partial Public Class ucGymnastic
         cmbSubHeader.DataSource = New BindingSource(subHeader, "")
         cmbSubHeader.Text = "Men's Artistic Vault - Final"
 
+
+        SetReady()
     End Sub
     Private Sub defautdataforball()
         On Error Resume Next
@@ -38,7 +40,7 @@ Partial Public Class ucGymnastic
 
 
             .Rows.Add(12)
-            Dim falg1 = "C:/casparcg/NG2022/data/flag/india.png"
+            Dim falg1 = AppSettings.FlagPath & "india.png"
 
             .Rows(0).Cells(0).Value = 1
             dgvGymnastics.Rows(0).Cells(1).Value = "MOHAMAD ALGARNI"
@@ -46,7 +48,7 @@ Partial Public Class ucGymnastic
             dgvGymnastics.Rows(0).Cells(30).Value = falg1
             dgvGymnastics.Rows(0).Cells(31).Value = "IND"
 
-            Dim falg2 = "C:/casparcg/NG2022/data/flag/Afghanistan.png"
+            Dim falg2 = AppSettings.FlagPath & "Afghanistan.png"
             dgvGymnastics.Rows(1).Cells(0).Value = 2
             dgvGymnastics.Rows(1).Cells(1).Value = "SANDEEP KARAN SINGH"
             dgvGymnastics.Rows(1).Cells(2).Value = Image.FromFile(falg2)
@@ -54,7 +56,7 @@ Partial Public Class ucGymnastic
             dgvGymnastics.Rows(1).Cells(31).Value = "AFG"
 
 
-            Dim falg3 = "C:/casparcg/NG2022/data/flag/Pakistan.png"
+            Dim falg3 = AppSettings.FlagPath & "Pakistan.png"
             dgvGymnastics.Rows(2).Cells(0).Value = 3
             dgvGymnastics.Rows(2).Cells(1).Value = "EMAD HAMED NOUR"
             dgvGymnastics.Rows(2).Cells(2).Value = Image.FromFile(falg3)
@@ -62,7 +64,7 @@ Partial Public Class ucGymnastic
             dgvGymnastics.Rows(2).Cells(31).Value = "PAK"
 
 
-            Dim falg4 = "C:/casparcg/NG2022/data/flag/Nepal.png"
+            Dim falg4 = AppSettings.FlagPath & "Nepal.png"
             dgvGymnastics.Rows(3).Cells(0).Value = 4
             dgvGymnastics.Rows(3).Cells(1).Value = "RASHEED RAMZI"
             dgvGymnastics.Rows(3).Cells(2).Value = Image.FromFile(falg4)
@@ -70,7 +72,7 @@ Partial Public Class ucGymnastic
             dgvGymnastics.Rows(3).Cells(31).Value = "NEP"
 
 
-            Dim falg5 = "C:/casparcg/NG2022/data/flag/Eritrea.png"
+            Dim falg5 = AppSettings.FlagPath & "Eritrea.png"
             dgvGymnastics.Rows(4).Cells(0).Value = 5
             dgvGymnastics.Rows(4).Cells(1).Value = "HAMZA DRIOUCH"
             dgvGymnastics.Rows(4).Cells(2).Value = Image.FromFile(falg5)
@@ -78,14 +80,14 @@ Partial Public Class ucGymnastic
             dgvGymnastics.Rows(4).Cells(31).Value = "ERI"
 
 
-            Dim falg6 = "C:/casparcg/NG2022/data/flag/Malaysia.png"
+            Dim falg6 = AppSettings.FlagPath & "Malaysia.png"
             dgvGymnastics.Rows(5).Cells(0).Value = 6
             dgvGymnastics.Rows(5).Cells(1).Value = "SANDEEP KARAN SINGH"
             dgvGymnastics.Rows(5).Cells(2).Value = Image.FromFile(falg6)
             dgvGymnastics.Rows(5).Cells(30).Value = falg6
             dgvGymnastics.Rows(5).Cells(31).Value = "MAL"
 
-            Dim falg7 = ("C:/casparcg/NG2022/data/flag/Sri-Lanka.png")
+            Dim falg7 = (AppSettings.FlagPath & "Sri-Lanka.png")
             dgvGymnastics.Rows(6).Cells(0).Value = 7
             dgvGymnastics.Rows(6).Cells(1).Value = "ABDULLAH OBAID"
             dgvGymnastics.Rows(6).Cells(2).Value = Image.FromFile(falg7)
@@ -93,7 +95,7 @@ Partial Public Class ucGymnastic
             dgvGymnastics.Rows(6).Cells(31).Value = "SRI"
 
 
-            Dim falg8 = ("C:/casparcg/NG2022/data/flag/Bhutan.png")
+            Dim falg8 = (AppSettings.FlagPath & "Bhutan.png")
             dgvGymnastics.Rows(7).Cells(0).Value = 8
             dgvGymnastics.Rows(7).Cells(1).Value = "AMASSRI WESAM"
             dgvGymnastics.Rows(7).Cells(2).Value = Image.FromFile(falg8)
@@ -101,7 +103,7 @@ Partial Public Class ucGymnastic
             dgvGymnastics.Rows(7).Cells(31).Value = "BHU"
 
 
-            Dim falg9 = ("C:/casparcg/NG2022/data/flag/Maldives.png")
+            Dim falg9 = (AppSettings.FlagPath & "Maldives.png")
             dgvGymnastics.Rows(8).Cells(0).Value = 9
             dgvGymnastics.Rows(8).Cells(1).Value = "SAJAD MORADI"
             dgvGymnastics.Rows(8).Cells(2).Value = Image.FromFile(falg9)
@@ -109,7 +111,7 @@ Partial Public Class ucGymnastic
             dgvGymnastics.Rows(8).Cells(31).Value = "MAL"
 
 
-            Dim falg10 = ("C:/casparcg/NG2022/data/flag/Bangladesh.png")
+            Dim falg10 = (AppSettings.FlagPath & "Bangladesh.png")
             dgvGymnastics.Rows(9).Cells(0).Value = 10
             dgvGymnastics.Rows(9).Cells(1).Value = "PRANJAL GOGOI"
             dgvGymnastics.Rows(9).Cells(2).Value = Image.FromFile(falg10)
@@ -117,7 +119,7 @@ Partial Public Class ucGymnastic
             dgvGymnastics.Rows(9).Cells(31).Value = "BAN"
 
 
-            Dim falg11 = ("C:/casparcg/NG2022/data/flag/Italy.png")
+            Dim falg11 = (AppSettings.FlagPath & "Italy.png")
             dgvGymnastics.Rows(10).Cells(0).Value = 11
             dgvGymnastics.Rows(10).Cells(1).Value = "MOHAMMAD ALAZEMI"
             dgvGymnastics.Rows(10).Cells(2).Value = Image.FromFile(falg11)
@@ -125,7 +127,7 @@ Partial Public Class ucGymnastic
             dgvGymnastics.Rows(10).Cells(31).Value = "ITA"
 
 
-            Dim falg12 = ("C:/casparcg/NG2022/data/flag/Australia.png")
+            Dim falg12 = (AppSettings.FlagPath & "Australia.png")
             dgvGymnastics.Rows(11).Cells(0).Value = 12
             dgvGymnastics.Rows(11).Cells(1).Value = "YUKI AKIMOTO"
             dgvGymnastics.Rows(11).Cells(2).Value = Image.FromFile(falg12)
@@ -227,12 +229,12 @@ Partial Public Class ucGymnastic
 
     Private Sub gamelogo_Click(sender As Object, e As EventArgs) Handles gamelogo.Click
         On Error Resume Next
-        openimage("C:\casparcg\ng2022\data\games logo\", sender)
+        openimage(AppSettings.GamesLogoPath, sender)
     End Sub
 
     Private Sub eventlogo_Click(sender As Object, e As EventArgs) Handles eventlogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/event logo/", sender)
+        openimage(AppSettings.EventLogoPath, sender)
     End Sub
 
     Private Sub cmbgames_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbgames.SelectedIndexChanged
@@ -702,12 +704,12 @@ Partial Public Class ucGymnastic
 
     Private Sub opengym_Click(sender As Object, e As EventArgs) Handles opengym.Click
         On Error Resume Next
-        opendatasg("C:\casparcg\ng2022\data\gymnastics\", dgvGymnastics, cmbHeader, cmbSubHeader, lblfilenamegym)
+        opendatasg(AppSettings.GymnasticDataPath, dgvGymnastics, cmbHeader, cmbSubHeader, lblfilenamegym)
     End Sub
 
     Private Sub savegym_Click(sender As Object, e As EventArgs) Handles savegym.Click
         On Error Resume Next
-        savedatasg("C:\casparcg\ng2022\data\gymnastics\", dgvGymnastics, cmbHeader, cmbSubHeader, lblfilenamegym)
+        savedatasg(AppSettings.GymnasticDataPath, dgvGymnastics, cmbHeader, cmbSubHeader, lblfilenamegym)
     End Sub
 
     Private Sub cmdrowupzym_Click(sender As Object, e As EventArgs) Handles cmdrowupzym.Click
@@ -820,5 +822,7 @@ Partial Public Class ucGymnastic
         Next
     End Sub
 End Class
+
+
 
 

@@ -86,6 +86,8 @@ Partial Public Class ucTally1
         Next
 
 
+
+        SetReady()
     End Sub
 
     Private Sub cmdTally1Update_Click(sender As Object, e As EventArgs) Handles cmdTally1Update.Click
@@ -149,5 +151,6 @@ Partial Public Class ucTally1
 
 
 End Class
+
 
 

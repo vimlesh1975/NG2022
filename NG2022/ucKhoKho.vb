@@ -8,6 +8,8 @@ Partial Public Class ucKhoKho
 
         cmbhalfball.DataSource = New BindingSource(halfText, "")
 
+
+        SetReady()
     End Sub
     Private Sub initialisesetscoreball()
         dgvsetscoreball.Rows.Add(3)
@@ -26,12 +28,12 @@ Partial Public Class ucKhoKho
 
     Private Sub gamelogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gamelogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/games logo/", sender)
+        openimage(AppSettings.GamesLogoPath, sender)
     End Sub
 
     Private Sub eventlogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles eventlogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/event logo/", sender)
+        openimage(AppSettings.EventLogoPath, sender)
     End Sub
     Private Sub cmdstopgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopgym.Click
         'On Error Resume Next
@@ -111,7 +113,7 @@ Partial Public Class ucKhoKho
 
     Private Sub pict1logoball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pict1logoball.Click
         On Error Resume Next
-        txtt1ball.Text = openimage("C:\casparcg\ng2022\data\country\", sender)
+        txtt1ball.Text = openimage(AppSettings.CountryPath, sender)
     End Sub
     Private Sub cmdadjustminball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdadjustminball.Click
         On Error Resume Next
@@ -132,7 +134,7 @@ Partial Public Class ucKhoKho
     'End Function
     Private Sub pict2logoball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pict2logoball.Click
         On Error Resume Next
-        txtt2ball.Text = openimage("C:\casparcg\ng2022\data\country\", sender)
+        txtt2ball.Text = openimage(AppSettings.CountryPath, sender)
     End Sub
 
     Private Sub cmdstartclockball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstartclockball.Click
@@ -485,12 +487,12 @@ Partial Public Class ucKhoKho
 
     Private Sub cmdopent2ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdopent2ball.Click
         On Error Resume Next
-        opendatasg("C:\casparcg\ng2022\data\khokho\", dgvt2ball, cmbHeader, cmbSubHeader, lblfilenamet2ball)
+        opendatasg(AppSettings.KhoKhoDataPath, dgvt2ball, cmbHeader, cmbSubHeader, lblfilenamet2ball)
 
     End Sub
     Private Sub cmdsavet2ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsavet2ball.Click
         On Error Resume Next
-        savedatasg("C:\casparcg\ng2022\data\khokho\", dgvt2ball, cmbHeader, cmbSubHeader, lblfilenamet2ball)
+        savedatasg(AppSettings.KhoKhoDataPath, dgvt2ball, cmbHeader, cmbSubHeader, lblfilenamet2ball)
     End Sub
 
     Private Sub cmduprowt2ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmduprowt2ball.Click
@@ -849,7 +851,7 @@ Partial Public Class ucKhoKho
                 Dim targetRow = CType(sourceRow.Clone(), DataGridViewRow)
                 For Each cell As DataGridViewCell In sourceRow.Cells
                     If cell.Value = vbNullString And cell.ColumnIndex = columntosort Then
-                        targetRow.Cells(cell.ColumnIndex).Value = Int(8)
+                        targetRow.Cells(cell.ColumnIndex).Value = CInt(8)
                     Else
                         targetRow.Cells(cell.ColumnIndex).Value = cell.Value
                     End If
@@ -1028,7 +1030,7 @@ Partial Public Class ucKhoKho
     End Sub
     Private Sub cmdsavet1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsavet1ball.Click
         On Error Resume Next
-        savedatasg("C:\casparcg\ng2022\data\khokho\", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+        savedatasg(AppSettings.KhoKhoDataPath, dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
     End Sub
 
     Private Sub cmdnewt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdnewt1ball.Click
@@ -1038,7 +1040,7 @@ Partial Public Class ucKhoKho
 
     Private Sub cmdopent1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdopent1ball.Click
         On Error Resume Next
-        opendatasg("C:\casparcg\ng2022\data\khokho\", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+        opendatasg(AppSettings.KhoKhoDataPath, dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
 
     End Sub
 
@@ -1164,5 +1166,8 @@ Partial Public Class ucKhoKho
 
     End Sub
 End Class
+
+
+
 
 

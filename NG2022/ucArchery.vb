@@ -81,12 +81,12 @@ Public Class ucArchery
 
     Private Sub gamelogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gamelogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/games logo/", sender)
+        openimage(AppSettings.GamesLogoPath, sender)
     End Sub
 
     Private Sub eventlogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles eventlogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/event logo/", sender)
+        openimage(AppSettings.EventLogoPath, sender)
     End Sub
     Private Sub cmdstopgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopgym.Click
         On Error Resume Next
@@ -147,14 +147,14 @@ Public Class ucArchery
 
     Private Sub pict1logoball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pict1logoball.Click
         On Error Resume Next
-        txtt1ball.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+        txtt1ball.Text = openimage(AppSettings.FlagPath, sender)
         txtCounty1.Text = (txtt1ball.Text).Substring(0, 3).ToUpper()
     End Sub
 
 
     Private Sub pict2logoball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pict2logoball.Click
         On Error Resume Next
-        txtt2ball.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+        txtt2ball.Text = openimage(AppSettings.FlagPath, sender)
         txtCounty2.Text = (txtt2ball.Text).Substring(0, 3).ToUpper()
 
     End Sub
@@ -371,7 +371,7 @@ Public Class ucArchery
     End Sub
     Private Sub cmdsavet2ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsavet2ball.Click
         On Error Resume Next
-        savedatasg("C:\casparcg\ng2022\data\netball", dgvt2ball, cmbHeader, cmbSubHeader, lblfilenamet2ball)
+        savedatasg(AppSettings.NetBallDataPath, dgvt2ball, cmbHeader, cmbSubHeader, lblfilenamet2ball)
     End Sub
 
     Private Sub cmduprowt2ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmduprowt2ball.Click
@@ -639,7 +639,7 @@ Public Class ucArchery
                 Dim targetRow = CType(sourceRow.Clone(), DataGridViewRow)
                 For Each cell As DataGridViewCell In sourceRow.Cells
                     If cell.Value = vbNullString And cell.ColumnIndex = columntosort Then
-                        targetRow.Cells(cell.ColumnIndex).Value = Int(8)
+                        targetRow.Cells(cell.ColumnIndex).Value = CInt(8)
                     Else
                         targetRow.Cells(cell.ColumnIndex).Value = cell.Value
                     End If
@@ -808,7 +808,7 @@ Public Class ucArchery
     End Sub
     Private Sub cmdsavet1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsavet1ball.Click
         On Error Resume Next
-        savedatasg("C:\casparcg\ng2022\data\netball", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+        savedatasg(AppSettings.NetBallDataPath, dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
     End Sub
 
     Private Sub cmdnewt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdnewt1ball.Click
@@ -818,7 +818,7 @@ Public Class ucArchery
 
     Private Sub cmdopent1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdopent1ball.Click
         On Error Resume Next
-        opendatasg("C:\casparcg\ng2022\data\netball", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+        opendatasg(AppSettings.NetBallDataPath, dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
 
     End Sub
 
@@ -826,12 +826,12 @@ Public Class ucArchery
 
     Private Sub cmdSaveas1_Click(sender As Object, e As EventArgs) Handles cmdSaveas1.Click
         On Error Resume Next
-        saveasdatasg("C:\casparcg\ng2022\data\netball", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+        saveasdatasg(AppSettings.NetBallDataPath, dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
     End Sub
 
     Private Sub cmdSaveas2_Click(sender As Object, e As EventArgs) Handles cmdSaveas2.Click
         On Error Resume Next
-        saveasdatasg("C:\casparcg\ng2022\data\netball", dgvt2ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+        saveasdatasg(AppSettings.NetBallDataPath, dgvt2ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
     End Sub
     Private Sub cmdpauseshotball_Click(sender As Object, e As EventArgs)
 
@@ -1032,3 +1032,5 @@ Public Class ucArchery
         Next
     End Sub
 End Class
+
+

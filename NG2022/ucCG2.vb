@@ -119,7 +119,7 @@ Partial Public Class ucCG2
     Private Sub eventlogoforcg2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles eventlogoforcg2.Click
         On Error Resume Next
         Dim picofd As New OpenFileDialog
-        picofd.InitialDirectory = "c:\casparcg\ng2022\data\event logo\"
+        picofd.InitialDirectory = AppSettings.EventLogoPath
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
             eventlogoforcg2.ImageLocation = picofd.FileName
         End If
@@ -128,7 +128,7 @@ Partial Public Class ucCG2
     Private Sub gamelogoforcg2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gamelogoforcg2.Click
         On Error Resume Next
         Dim picofd As New OpenFileDialog
-        picofd.InitialDirectory = "c:\casparcg\ng2022\data\Games logo\"
+        picofd.InitialDirectory = AppSettings.GamesLogoPath
         If (picofd.ShowDialog() = Windows.Forms.DialogResult.OK) Then
             gamelogoforcg2.ImageLocation = picofd.FileName
         End If
@@ -220,6 +220,8 @@ Partial Public Class ucCG2
 
     Private Sub ucCG2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         refreshdatacg2()
+
+        SetReady()
     End Sub
 
     Private Sub cmdNextStepCG2_Click(sender As Object, e As EventArgs) Handles cmdNextStepCG2.Click
@@ -270,4 +272,6 @@ Partial Public Class ucCG2
         End Using
     End Sub
 End Class
+
+
 

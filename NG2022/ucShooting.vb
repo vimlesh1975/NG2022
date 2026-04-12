@@ -56,7 +56,7 @@ Partial Public Class ucShooting
             Dim img As String
             Dim i As Integer
 
-            img = "C:/casparcg/NG2022/data/flag/india.png"
+            img = AppSettings.FlagPath & "india.png"
             i = 0
             .Rows(i).Cells(0).Value = i + 1
             .Rows(i).Cells(1).Value = "IND"
@@ -66,7 +66,7 @@ Partial Public Class ucShooting
             .Rows(i).Cells(11).Value = i + 15
 
 
-            img = "C:/casparcg/NG2022/data/flag/Afghanistan.png"
+            img = AppSettings.FlagPath & "Afghanistan.png"
             i = 1
             .Rows(i).Cells(0).Value = i + 1
             .Rows(i).Cells(1).Value = "AFG"
@@ -76,7 +76,7 @@ Partial Public Class ucShooting
             .Rows(i).Cells(11).Value = i + 15
 
 
-            img = "C:/casparcg/NG2022/data/flag/Pakistan.png"
+            img = AppSettings.FlagPath & "Pakistan.png"
             i = 2
 
             .Rows(i).Cells(0).Value = i + 1
@@ -86,7 +86,7 @@ Partial Public Class ucShooting
             .Rows(i).Cells(4).Value = "EMAD HAMED NOUR"
             .Rows(i).Cells(11).Value = i + 15
 
-            img = "C:/casparcg/NG2022/data/flag/Nepal.png"
+            img = AppSettings.FlagPath & "Nepal.png"
             i = 3
 
             .Rows(i).Cells(0).Value = i + 1
@@ -96,7 +96,7 @@ Partial Public Class ucShooting
             .Rows(i).Cells(4).Value = "RASHEED RAMZI"
             .Rows(i).Cells(11).Value = i + 15
 
-            img = "C:/casparcg/NG2022/data/flag/Bhutan.png"
+            img = AppSettings.FlagPath & "Bhutan.png"
             i = 4
             .Rows(i).Cells(0).Value = i + 1
             .Rows(i).Cells(1).Value = "BHU"
@@ -106,7 +106,7 @@ Partial Public Class ucShooting
             .Rows(i).Cells(11).Value = i + 15
 
 
-            img = "C:/casparcg/NG2022/data/flag/Bolivia.png"
+            img = AppSettings.FlagPath & "Bolivia.png"
             i = 5
             .Rows(i).Cells(0).Value = i + 1
             .Rows(i).Cells(1).Value = "AUS"
@@ -115,7 +115,7 @@ Partial Public Class ucShooting
             .Rows(i).Cells(4).Value = "Viraj Vimlesh Prasad"
             .Rows(i).Cells(11).Value = i + 15
 
-            img = "C:/casparcg/NG2022/data/flag/Maldives.png"
+            img = AppSettings.FlagPath & "Maldives.png"
             i = 6
             .Rows(i).Cells(0).Value = i + 1
             .Rows(i).Cells(1).Value = "MDV"
@@ -125,7 +125,7 @@ Partial Public Class ucShooting
             .Rows(i).Cells(11).Value = i + 15
 
 
-            img = "C:/casparcg/NG2022/data/flag/Bangladesh.png"
+            img = AppSettings.FlagPath & "Bangladesh.png"
             i = 7
             .Rows(i).Cells(0).Value = i + 1
             .Rows(i).Cells(1).Value = "BAN"
@@ -134,7 +134,7 @@ Partial Public Class ucShooting
             .Rows(i).Cells(4).Value = "VIMLESH KUMAR"
             .Rows(i).Cells(11).Value = i + 15
 
-            img = "C:/casparcg/NG2022/data/flag/Italy.png"
+            img = AppSettings.FlagPath & "Italy.png"
             i = 8
             .Rows(i).Cells(0).Value = i + 1
             .Rows(i).Cells(1).Value = "ITA"
@@ -143,7 +143,7 @@ Partial Public Class ucShooting
             .Rows(i).Cells(4).Value = "PREM LAL GUPTA"
             .Rows(i).Cells(11).Value = i + 15
 
-            img = "C:/casparcg/NG2022/data/flag/Australia.png"
+            img = AppSettings.FlagPath & "Australia.png"
             i = 9
             .Rows(i).Cells(0).Value = i + 1
             .Rows(i).Cells(1).Value = "AUS"
@@ -197,12 +197,12 @@ Partial Public Class ucShooting
 
     Private Sub gamelogo_Click(sender As Object, e As EventArgs) Handles gamelogo.Click
         On Error Resume Next
-        openimage("C:\casparcg\ng2022\data\games logo\", sender)
+        openimage(AppSettings.GamesLogoPath, sender)
     End Sub
 
     Private Sub eventlogo_Click(sender As Object, e As EventArgs) Handles eventlogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/event logo/", sender)
+        openimage(AppSettings.EventLogoPath, sender)
     End Sub
 
     Private Sub cmbgames_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbgames.SelectedIndexChanged
@@ -276,7 +276,7 @@ Partial Public Class ucShooting
     Private Sub dgvtrack_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles dgvtrack.CellContentClick
         If e.ColumnIndex = 2 Then
             Dim aa As New OpenFileDialog
-            aa.InitialDirectory = "C:\casparcg\NG2022\data\flag\"
+            aa.InitialDirectory = AppSettings.FlagPath
             If aa.ShowDialog = DialogResult.OK Then
                 With dgvtrack
                     .CurrentCell.Value = Image.FromFile(aa.FileName)
@@ -311,7 +311,7 @@ Partial Public Class ucShooting
     End Sub
 
     Private Sub savetrack_Click(sender As Object, e As EventArgs) Handles savetrack.Click
-        savedatShooting("C:\casparcg\ng2022\data\shooting\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenametrack)
+        savedatShooting(AppSettings.ShootingDataPath, dgvtrack, cmbHeader, cmbSubHeader, lblfilenametrack)
     End Sub
 
     Sub savedatShooting(ByVal initialdirectory As String, ByVal dgvname As DataGridView, ByVal headername As ComboBox, ByVal subheadername As ComboBox, ByVal lblfilename As Label)
@@ -322,12 +322,7 @@ Partial Public Class ucShooting
         osd2.InitialDirectory = initialdirectory
         'osd2.FileName = "001_" & ucRccBall.cmbHeader.Text & "_" & ucSG2016.cmbSubHeader.Text
 
-        If File.Exists(lblfilename.Text) = True Then
-            osd2.FileName = lblfilename.Text
-            GoTo 20
-        End If
-        If (osd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-20:
+        If File.Exists(lblfilename.Text) OrElse (osd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
             Using sw As StreamWriter = New StreamWriter(osd2.FileName)
                 If dgvname.Rows.Count = 0 Then
                     sw.Write("")
@@ -368,7 +363,7 @@ Partial Public Class ucShooting
     End Sub
 
     Private Sub opentrack_Click(sender As Object, e As EventArgs) Handles opentrack.Click
-        opendataShooting("C:\casparcg\ng2022\data\shooting\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenametrack)
+        opendataShooting(AppSettings.ShootingDataPath, dgvtrack, cmbHeader, cmbSubHeader, lblfilenametrack)
     End Sub
     Sub opendataShooting(ByVal initialdirectory As String, ByVal dgvname As DataGridView, ByVal headername As ComboBox, ByVal subheadername As ComboBox, ByVal lblfilename As Label)
         On Error Resume Next
@@ -475,3 +470,5 @@ Partial Public Class ucShooting
 
     End Sub
 End Class
+
+

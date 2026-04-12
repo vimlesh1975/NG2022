@@ -22,6 +22,8 @@ Partial Public Class ucRccBall
         cmbhalfball.DataSource = New BindingSource(halfText, "")
 
         'refreshdatacg2()
+
+        SetReady()
     End Sub
     Private Sub initialisesetscoreball()
         dgvsetscoreball.Rows.Add(3)
@@ -40,12 +42,12 @@ Partial Public Class ucRccBall
 
     Private Sub gamelogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gamelogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/games logo/", sender)
+        openimage(AppSettings.GamesLogoPath, sender)
     End Sub
 
     Private Sub eventlogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles eventlogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/event logo/", sender)
+        openimage(AppSettings.EventLogoPath, sender)
     End Sub
     Private Sub cmdstopgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopgym.Click
         'On Error Resume Next
@@ -1077,7 +1079,7 @@ Partial Public Class ucRccBall
                 Dim targetRow = CType(sourceRow.Clone(), DataGridViewRow)
                 For Each cell As DataGridViewCell In sourceRow.Cells
                     If cell.Value = vbNullString And cell.ColumnIndex = columntosort Then
-                        targetRow.Cells(cell.ColumnIndex).Value = Int(8)
+                        targetRow.Cells(cell.ColumnIndex).Value = CInt(8)
                     Else
                         targetRow.Cells(cell.ColumnIndex).Value = cell.Value
                     End If
@@ -1306,11 +1308,11 @@ Partial Public Class ucRccBall
 
     Private Sub pict1logoball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pict1logoball.Click
         On Error Resume Next
-        txtt1ball.Text = openimage("C:\casparcg\ng2022\data\country\", sender)
+        txtt1ball.Text = openimage(AppSettings.CountryPath, sender)
     End Sub
     Private Sub pict2logoball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pict2logoball.Click
         On Error Resume Next
-        txtt2ball.Text = openimage("C:\casparcg\ng2022\data\country\", sender)
+        txtt2ball.Text = openimage(AppSettings.CountryPath, sender)
     End Sub
 
     Private Sub cmdSaveas1_Click(sender As Object, e As EventArgs) Handles cmdSaveas1.Click
@@ -1332,5 +1334,9 @@ Partial Public Class ucRccBall
         End If
     End Sub
 End Class
+
+
+
+
 
 

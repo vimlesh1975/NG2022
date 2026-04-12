@@ -54,11 +54,14 @@ Partial Public Class ucCasparcgWindow
     Private Sub ucCasparcgWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmbcasparcgwindowtitle.DataSource = New BindingSource(screenConsumres, "")
         cmbcasparcgwindowtitle.Text = "Screen consumer [1|1080i5000]"
+
+        SetReady()
     End Sub
     Private Sub gbcasparcgwindow_DoubleClick(sender As Object, e As EventArgs) Handles gbcasparcgwindow.DoubleClick
         'Changebackcolor(sender)
     End Sub
 
 End Class
+
 
 

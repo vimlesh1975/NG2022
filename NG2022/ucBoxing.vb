@@ -50,31 +50,31 @@ Partial Public Class ucBoxing
 
         With dgvtrack
             .Rows.Add(5)
-            Dim img0 = "C:/casparcg/NG2022/data/flag/india.png"
+            Dim img0 = AppSettings.FlagPath & "india.png"
             .Rows(0).Cells(0).Value = "IND"
             .Rows(0).Cells(1).Value = Image.FromFile(img0)
             .Rows(0).Cells(2).Value = "MOHAMAD ALGARNI"
             .Rows(0).Cells(3).Value = img0
 
-            Dim img1 = "C:/casparcg/NG2022/data/flag/pakistan.png"
+            Dim img1 = AppSettings.FlagPath & "pakistan.png"
             .Rows(1).Cells(0).Value = "PAK"
             .Rows(1).Cells(1).Value = Image.FromFile(img1)
             .Rows(1).Cells(2).Value = "EMAD HAMED NOUR"
             .Rows(1).Cells(3).Value = img1
 
-            Dim img2 = "C:/casparcg/NG2022/data/flag/Afghanistan.png"
+            Dim img2 = AppSettings.FlagPath & "Afghanistan.png"
             .Rows(2).Cells(0).Value = "AFG"
             .Rows(2).Cells(1).Value = Image.FromFile(img2)
             .Rows(2).Cells(2).Value = "SANDEEP KARAN SINGH"
             .Rows(2).Cells(3).Value = img2
 
-            Dim img3 = "C:/casparcg/NG2022/data/flag/Nepal.png"
+            Dim img3 = AppSettings.FlagPath & "Nepal.png"
             .Rows(3).Cells(0).Value = "NEP"
             .Rows(3).Cells(1).Value = Image.FromFile(img3)
             .Rows(3).Cells(2).Value = "RASHEED RAMZI"
             .Rows(3).Cells(3).Value = img3
 
-            Dim img4 = "C:/casparcg/NG2022/data/flag/Sri-Lanka.png"
+            Dim img4 = AppSettings.FlagPath & "Sri-Lanka.png"
             .Rows(4).Cells(0).Value = "SRI"
             .Rows(4).Cells(1).Value = Image.FromFile(img4)
             .Rows(4).Cells(2).Value = "HAMZA DRIOUCH"
@@ -90,12 +90,12 @@ Partial Public Class ucBoxing
 
     Private Sub gamelogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles gamelogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/games logo/", sender)
+        openimage(AppSettings.GamesLogoPath, sender)
     End Sub
 
     Private Sub eventlogoforgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles eventlogo.Click
         On Error Resume Next
-        openimage("C:/casparcg/ng2022/data/event logo/", sender)
+        openimage(AppSettings.EventLogoPath, sender)
     End Sub
     Private Sub cmdstopgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopgym.Click
         On Error Resume Next
@@ -333,7 +333,7 @@ Partial Public Class ucBoxing
                 Dim targetRow = CType(sourceRow.Clone(), DataGridViewRow)
                 For Each cell As DataGridViewCell In sourceRow.Cells
                     If cell.Value = vbNullString And cell.ColumnIndex = columntosort Then
-                        targetRow.Cells(cell.ColumnIndex).Value = Int(8)
+                        targetRow.Cells(cell.ColumnIndex).Value = CInt(8)
                     Else
                         targetRow.Cells(cell.ColumnIndex).Value = cell.Value
                     End If
@@ -475,7 +475,7 @@ Partial Public Class ucBoxing
         If e.ColumnIndex = 1 Then
 
             Dim aa As New OpenFileDialog
-            aa.InitialDirectory = "C:\casparcg\NG2022\data\flag\"
+            aa.InitialDirectory = AppSettings.FlagPath
             If aa.ShowDialog = DialogResult.OK Then
                 With dgvtrack
                     .CurrentCell.Value = Image.FromFile(aa.FileName)
@@ -512,7 +512,7 @@ Partial Public Class ucBoxing
     End Sub
 
     Private Sub opentrack_Click(sender As Object, e As EventArgs) Handles opentrack.Click
-        opendataboxing("C:\casparcg\ng2022\data\boxing\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1ball)
+        opendataboxing(AppSettings.BoxingDataPath, dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1ball)
 
     End Sub
     Sub opendataboxing(ByVal initialdirectory As String, ByVal dgvname As DataGridView, ByVal headername As ComboBox, ByVal subheadername As ComboBox, ByVal lblfilename As Label)
@@ -569,7 +569,7 @@ Partial Public Class ucBoxing
     End Sub
     Private Sub savetrack_Click(sender As Object, e As EventArgs) Handles savetrack.Click
         On Error Resume Next
-        savedataboxing("C:\casparcg\ng2022\data\boxing\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1ball, False)
+        savedataboxing(AppSettings.BoxingDataPath, dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1ball, False)
     End Sub
 
     Sub savedataboxing(ByVal initialdirectory As String, ByVal dgvname As DataGridView, ByVal headername As ComboBox, ByVal subheadername As ComboBox, ByVal lblfilename As Label, Optional newfile As Boolean = False)
@@ -581,13 +581,13 @@ Partial Public Class ucBoxing
         'osd2.FileName = "001_" & ucRccBall.cmbHeader.Text & "_" & ucSG2016.cmbSubHeader.Text
 
 
-        If File.Exists(lblfilename.Text) = True And newfile = False Then
+        If File.Exists(lblfilename.Text) = True AndAlso newfile = False Then
             osd2.FileName = lblfilename.Text
-            GoTo 20
+        ElseIf osd2.ShowDialog() <> Windows.Forms.DialogResult.OK Then
+            Exit Sub
         End If
-        If (osd2.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-20:
-            Using sw As StreamWriter = New StreamWriter(osd2.FileName)
+
+        Using sw As StreamWriter = New StreamWriter(osd2.FileName)
                 If dgvname.Rows.Count = 0 Then
                     sw.Write("")
                 Else
@@ -624,8 +624,7 @@ Partial Public Class ucBoxing
                 End If
                 sw.Close()
             End Using
-            lblfilename.Text = osd2.FileName
-        End If
+        lblfilename.Text = osd2.FileName
     End Sub
 
     Private Sub uprowtrack_Click(sender As Object, e As EventArgs) Handles uprowtrack.Click
@@ -783,12 +782,12 @@ Partial Public Class ucBoxing
 
     Private Sub pict1logoball_Click(sender As Object, e As EventArgs) Handles pict1logoball.Click
         On Error Resume Next
-        txtCounty1.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+        txtCounty1.Text = openimage(AppSettings.FlagPath, sender)
     End Sub
 
     Private Sub pict2logoball_Click(sender As Object, e As EventArgs) Handles pict2logoball.Click
         On Error Resume Next
-        txtCounty2.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+        txtCounty2.Text = openimage(AppSettings.FlagPath, sender)
     End Sub
 
     Private Sub cmdCalculate_Click(sender As Object, e As EventArgs) Handles cmdCalculate.Click
@@ -826,7 +825,7 @@ Partial Public Class ucBoxing
     End Sub
 
     Private Sub cmdSaveas1_Click(sender As Object, e As EventArgs) Handles cmdSaveas1.Click
-        savedataboxing("C:\casparcg\ng2022\data\boxing\", dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1ball, True)
+        savedataboxing(AppSettings.BoxingDataPath, dgvtrack, cmbHeader, cmbSubHeader, lblfilenamet1ball, True)
 
     End Sub
 
@@ -884,7 +883,7 @@ Partial Public Class ucBoxing
 
     Private Sub picRefereeCpuntryFlag_Click(sender As Object, e As EventArgs) Handles picRefereeCpuntryFlag.Click
         On Error Resume Next
-        txtRefereeCountryShortName.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+        txtRefereeCountryShortName.Text = openimage(AppSettings.FlagPath, sender)
     End Sub
 
     Private Sub cmdPositioninCourt_Click(sender As Object, e As EventArgs) Handles cmdPositioninCourt.Click
@@ -929,12 +928,12 @@ Partial Public Class ucBoxing
 
     Private Sub picPreviousCountry_Click(sender As Object, e As EventArgs) Handles picPreviousCountry.Click
         On Error Resume Next
-        txtPreviousResultShortName.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+        txtPreviousResultShortName.Text = openimage(AppSettings.FlagPath, sender)
     End Sub
 
     Private Sub picPreviousCountry2_Click(sender As Object, e As EventArgs) Handles picPreviousCountry2.Click
         On Error Resume Next
-        txtPreviousResultShortName2.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+        txtPreviousResultShortName2.Text = openimage(AppSettings.FlagPath, sender)
     End Sub
 
     Private Sub cmdPreviuosResult2_Click(sender As Object, e As EventArgs) Handles cmdPreviuosResult2.Click
@@ -997,15 +996,18 @@ Partial Public Class ucBoxing
 
     Private Sub picPlayer1_Click(sender As Object, e As EventArgs) Handles picPlayer1.Click
         On Error Resume Next
-        txtPlayer1.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+        txtPlayer1.Text = openimage(AppSettings.FlagPath, sender)
     End Sub
 
     Private Sub picPlayer2_Click(sender As Object, e As EventArgs) Handles picPlayer2.Click
         On Error Resume Next
-        txtPlayer2.Text = openimage("C:\casparcg\ng2022\data\flag\", sender)
+        txtPlayer2.Text = openimage(AppSettings.FlagPath, sender)
     End Sub
 
     Private Sub Ball_Click(sender As Object, e As EventArgs) Handles Ball.Click
 
     End Sub
 End Class
+
+
+
