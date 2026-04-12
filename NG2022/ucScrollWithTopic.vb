@@ -1,4 +1,4 @@
-﻿Imports System.Diagnostics.Eventing.Reader
+Imports System.Diagnostics.Eventing.Reader
 Imports System.IO
 Imports System.Threading
 Imports Newtonsoft.Json
@@ -189,6 +189,7 @@ Public Class ucScrollWithTopic
     End Sub
 
     Private Sub chkCapitalise_CheckedChanged(sender As Object, e As EventArgs) Handles chkCapitalise.CheckedChanged
+        If String.IsNullOrWhiteSpace(cmblayerscroll.Text) Then Exit Sub
         'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "capitalizeArray()" & """")
         UpdateData()
     End Sub
@@ -422,6 +423,7 @@ Public Class ucScrollWithTopic
     End Sub
 
     Private Sub chkUseImage_CheckedChanged(sender As Object, e As EventArgs) Handles chkUseImage.CheckedChanged
+        If String.IsNullOrWhiteSpace(cmblayerscroll.Text) Then Exit Sub
         If chkUseImage.Checked Then
             CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "putImage=true" & """")
             CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayerscroll.Text) & " " & """" & "updateimage('ccg_image', '" + Replace(eventlogo.ImageLocation, "\", "/") + "')" & """")

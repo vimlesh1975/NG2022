@@ -1,4 +1,4 @@
-﻿Imports System.Threading
+Imports System.Threading
 Imports Microsoft.VisualBasic.FileIO
 
 Public Class ucTrack
@@ -499,6 +499,7 @@ Public Class ucTrack
     End Sub
     Sub perspectivemixer() Handles nperspectivetlx.ValueChanged, nperspectivetly.ValueChanged, nperspectivetrx.ValueChanged, nperspectivetry.ValueChanged, nperspectivebrx.ValueChanged, nperspectivebry.ValueChanged, nperspectiveblx.ValueChanged, nperspectivebly.ValueChanged
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 2 & " perspective " & Replace(nperspectivetlx.Value, ",", ".") & " " & Replace(nperspectivetly.Value, ",", ".") & " " & Replace(nperspectivetrx.Value, ",", ".") & " " & Replace(nperspectivetry.Value, ",", ".") & " " & Replace(nperspectivebrx.Value, ",", ".") & " " & Replace(nperspectivebry.Value, ",", ".") & " " & Replace(nperspectiveblx.Value, ",", ".") & " " & Replace(nperspectivebly.Value, ",", "."))
 
     End Sub

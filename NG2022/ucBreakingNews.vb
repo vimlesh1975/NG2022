@@ -1,4 +1,4 @@
-﻿Imports System.IO
+Imports System.IO
 
 Public Class ucBreakingNews
     Dim ibreakingnews As Integer
@@ -62,6 +62,7 @@ Public Class ucBreakingNews
     End Sub
     Private Sub cmdplaybreakingnews_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdplaybreakingnews.Click
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayerbreakingnews.Text) Then Exit Sub
         flash = 1
         makearray()
         setdataofbreakingnews()
@@ -113,6 +114,7 @@ Public Class ucBreakingNews
 
     Sub updatedata()
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayerbreakingnews.Text) Then Exit Sub
         setdataofbreakingnews()
         'CasparDevice.Channels(cmbchannel.Text-1).CG.Invoke(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), "loop")
 
@@ -143,6 +145,7 @@ Public Class ucBreakingNews
 
     Private Sub cmdstopbrekingnews_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopbrekingnews.Click
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayerbreakingnews.Text) Then Exit Sub
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Invoke(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), "out")
         Threading.Thread.Sleep(500)
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text))
@@ -375,12 +378,14 @@ Public Class ucBreakingNews
 
     Private Sub cmdshowtime_Click(sender As Object, e As EventArgs) Handles cmdshowtime.Click
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayertime.Text) Then Exit Sub
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayertime.Text), Int(cmblayertime.Text), txtclockTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
 
     Private Sub cmdhidetime_Click(sender As Object, e As EventArgs) Handles cmdhidetime.Click
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayertime.Text) Then Exit Sub
         'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayertime.Text), Int(cmblayertime.Text))
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Remove(Int(cmblayertime.Text), Int(cmblayertime.Text))
 

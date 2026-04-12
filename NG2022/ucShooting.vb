@@ -1,4 +1,4 @@
-﻿Imports System.IO
+Imports System.IO
 
 Public Class ucShooting
     Private Sub ucGymnastic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -162,8 +162,8 @@ Public Class ucShooting
     End Sub
 
     Private Sub cmdstopgym_Click(sender As Object, e As EventArgs) Handles cmdstopgym.Click
-
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         If frmNG2022.chkanimation.Checked Then
             frmNG2022.animation2(Int(cmblayergames.Text))
         End If
@@ -426,6 +426,7 @@ Public Class ucShooting
     End Sub
     Sub startlist(dgv As DataGridView)
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         CasparCGDataCollection.Clear()
         With dgv
 

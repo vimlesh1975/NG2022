@@ -1,9 +1,10 @@
-﻿Public Class ucPhoto1
+Public Class ucPhoto1
     Private Sub cmdPlayTally1_Click(sender As Object, e As EventArgs) Handles cmdPlayTally1.Click
         playTemplate()
     End Sub
     Sub playTemplate()
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         collectData()
         showtemplate("ng2022/template/Election/Photo1/Photo1", CasparCGDataCollection.ToAMCPEscapedXml, cmblayergames.Text)
     End Sub
@@ -28,6 +29,7 @@
 
     Sub stopTemplate()
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         If frmNG2022.chkanimation.Checked Then
             frmNG2022.animation2(Int(cmblayergames.Text))
         End If
@@ -114,6 +116,7 @@
 
     Sub UpdateTemplate()
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         collectData()
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
 

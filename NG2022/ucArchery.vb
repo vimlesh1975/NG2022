@@ -1,4 +1,4 @@
-﻿Public Class ucArchery
+Public Class ucArchery
     Private Sub NG_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
 
@@ -853,6 +853,7 @@
     End Sub
 
     Private Sub chkShowService_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowService.CheckedChanged
+        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         If chkShowService.Checked Then
             If rdoServiceT1.Checked Then
                 CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
@@ -1008,6 +1009,7 @@
 
     Private Sub cmbShowArrow_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbShowArrow.SelectedIndexChanged
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
 
         If cmbShowArrow.Text = 1 Then
             CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showAll()" & """")

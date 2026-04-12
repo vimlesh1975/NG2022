@@ -1,4 +1,4 @@
-﻿Public Class ucTally1
+Public Class ucTally1
     Private Sub cmdPlayTally1_Click(sender As Object, e As EventArgs) Handles cmdPlayTally1.Click
         playTemplate()
     End Sub
@@ -37,6 +37,7 @@
     End Sub
     Private Sub cmdstopcg2_Click(sender As Object, e As EventArgs) Handles cmdstopcg2.Click
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         If frmNG2022.chkanimation.Checked Then
             frmNG2022.animation2(Int(cmblayergames.Text))
         End If
@@ -92,6 +93,7 @@
 
     Sub UpdateTemplate()
         On Error Resume Next
+        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         collectData()
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
 
