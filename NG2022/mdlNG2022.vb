@@ -105,6 +105,14 @@ Module mdlNG2022
 
         Return str
     End Function
+    Public Sub SendCasparCommand(command As String)
+        If CasparDevice Is Nothing OrElse Not CasparDevice.IsConnected Then
+            Exit Sub
+        End If
+
+        CasparDevice.SendString(command)
+    End Sub
+
     Public Sub MakeMenuDropDownWhenParrented(ByVal sender As Object)
         sender.Focus()
         SendKeys.Send("{DOWN}")

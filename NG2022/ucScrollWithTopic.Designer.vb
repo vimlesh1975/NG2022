@@ -23,12 +23,16 @@ Partial Class ucScrollWithTopic
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucScrollWithTopic))
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbscroll = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmdPlayasBreakingNews = New System.Windows.Forms.Button()
+        Me.chkUseImage = New System.Windows.Forms.CheckBox()
+        Me.eventlogo = New System.Windows.Forms.PictureBox()
         Me.chkChangeColor = New System.Windows.Forms.CheckBox()
         Me.chkltr = New System.Windows.Forms.CheckBox()
         Me.cmdStopImmediate = New System.Windows.Forms.Button()
@@ -53,7 +57,6 @@ Partial Class ucScrollWithTopic
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtScrollTemplate = New System.Windows.Forms.TextBox()
         Me.chkCapitalise = New System.Windows.Forms.CheckBox()
-        Me.cmdhidegbscrollandclock = New System.Windows.Forms.Button()
         Me.cmdselectallforscroll = New System.Windows.Forms.Button()
         Me.cmddeselectallforscroll = New System.Windows.Forms.Button()
         Me.txtdelemeterforscroll = New System.Windows.Forms.TextBox()
@@ -72,18 +75,18 @@ Partial Class ucScrollWithTopic
         Me.Label20 = New System.Windows.Forms.Label()
         Me.cmblayerscroll = New System.Windows.Forms.ComboBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.chkUseImage = New System.Windows.Forms.CheckBox()
-        Me.eventlogo = New System.Windows.Forms.PictureBox()
         Me.gbscroll.SuspendLayout()
+        CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvscroll, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nspeedscroll, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gbscroll
         '
         Me.gbscroll.BackColor = System.Drawing.Color.Bisque
+        Me.gbscroll.Controls.Add(Me.Button1)
+        Me.gbscroll.Controls.Add(Me.cmdPlayasBreakingNews)
         Me.gbscroll.Controls.Add(Me.chkUseImage)
         Me.gbscroll.Controls.Add(Me.eventlogo)
         Me.gbscroll.Controls.Add(Me.chkChangeColor)
@@ -100,7 +103,6 @@ Partial Class ucScrollWithTopic
         Me.gbscroll.Controls.Add(Me.Label2)
         Me.gbscroll.Controls.Add(Me.txtScrollTemplate)
         Me.gbscroll.Controls.Add(Me.chkCapitalise)
-        Me.gbscroll.Controls.Add(Me.cmdhidegbscrollandclock)
         Me.gbscroll.Controls.Add(Me.cmdselectallforscroll)
         Me.gbscroll.Controls.Add(Me.cmddeselectallforscroll)
         Me.gbscroll.Controls.Add(Me.txtdelemeterforscroll)
@@ -123,10 +125,51 @@ Partial Class ucScrollWithTopic
         Me.gbscroll.TabStop = False
         Me.gbscroll.Text = "Scroll And Clock"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(782, 41)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(179, 23)
+        Me.Button1.TabIndex = 1192
+        Me.Button1.Text = "Play as small Breaking News"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'cmdPlayasBreakingNews
+        '
+        Me.cmdPlayasBreakingNews.Location = New System.Drawing.Point(782, 12)
+        Me.cmdPlayasBreakingNews.Name = "cmdPlayasBreakingNews"
+        Me.cmdPlayasBreakingNews.Size = New System.Drawing.Size(201, 23)
+        Me.cmdPlayasBreakingNews.TabIndex = 1191
+        Me.cmdPlayasBreakingNews.Text = "Play as full Page  Breaking News"
+        Me.cmdPlayasBreakingNews.UseVisualStyleBackColor = True
+        '
+        'chkUseImage
+        '
+        Me.chkUseImage.AutoSize = True
+        Me.chkUseImage.Checked = True
+        Me.chkUseImage.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkUseImage.Location = New System.Drawing.Point(476, 51)
+        Me.chkUseImage.Name = "chkUseImage"
+        Me.chkUseImage.Size = New System.Drawing.Size(77, 17)
+        Me.chkUseImage.TabIndex = 1190
+        Me.chkUseImage.Text = "Use Image"
+        Me.chkUseImage.UseVisualStyleBackColor = True
+        '
+        'eventlogo
+        '
+        Me.eventlogo.BackColor = System.Drawing.SystemColors.Highlight
+        Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/ammu_logo.png"
+        Me.eventlogo.Location = New System.Drawing.Point(445, 48)
+        Me.eventlogo.Name = "eventlogo"
+        Me.eventlogo.Size = New System.Drawing.Size(24, 17)
+        Me.eventlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.eventlogo.TabIndex = 1189
+        Me.eventlogo.TabStop = False
+        '
         'chkChangeColor
         '
         Me.chkChangeColor.AutoSize = True
-        Me.chkChangeColor.Location = New System.Drawing.Point(796, 17)
+        Me.chkChangeColor.Location = New System.Drawing.Point(616, 8)
         Me.chkChangeColor.Name = "chkChangeColor"
         Me.chkChangeColor.Size = New System.Drawing.Size(90, 17)
         Me.chkChangeColor.TabIndex = 1186
@@ -186,7 +229,7 @@ Partial Class ucScrollWithTopic
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(597, 22)
+        Me.Label6.Location = New System.Drawing.Point(560, 31)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(55, 13)
@@ -196,7 +239,7 @@ Partial Class ucScrollWithTopic
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(597, 53)
+        Me.Label5.Location = New System.Drawing.Point(560, 56)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(55, 13)
@@ -208,7 +251,7 @@ Partial Class ucScrollWithTopic
         Me.cmdcolor.BackColor = System.Drawing.Color.DarkSlateBlue
         Me.cmdcolor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdcolor.ForeColor = System.Drawing.Color.White
-        Me.cmdcolor.Location = New System.Drawing.Point(659, 41)
+        Me.cmdcolor.Location = New System.Drawing.Point(616, 49)
         Me.cmdcolor.Name = "cmdcolor"
         Me.cmdcolor.Size = New System.Drawing.Size(130, 29)
         Me.cmdcolor.TabIndex = 1176
@@ -220,7 +263,7 @@ Partial Class ucScrollWithTopic
         Me.cmdstripcolor.BackColor = System.Drawing.Color.DarkSlateBlue
         Me.cmdstripcolor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdstripcolor.ForeColor = System.Drawing.Color.White
-        Me.cmdstripcolor.Location = New System.Drawing.Point(659, 14)
+        Me.cmdstripcolor.Location = New System.Drawing.Point(616, 24)
         Me.cmdstripcolor.Name = "cmdstripcolor"
         Me.cmdstripcolor.Size = New System.Drawing.Size(130, 27)
         Me.cmdstripcolor.TabIndex = 1175
@@ -312,7 +355,7 @@ Partial Class ucScrollWithTopic
         '
         Me.txtScrollTemplate.Location = New System.Drawing.Point(63, 19)
         Me.txtScrollTemplate.Name = "txtScrollTemplate"
-        Me.txtScrollTemplate.Size = New System.Drawing.Size(353, 20)
+        Me.txtScrollTemplate.Size = New System.Drawing.Size(292, 20)
         Me.txtScrollTemplate.TabIndex = 1168
         Me.txtScrollTemplate.Text = "ng2022/template/news/scrollwithtopic/index"
         '
@@ -326,18 +369,9 @@ Partial Class ucScrollWithTopic
         Me.chkCapitalise.Text = "Capitalise"
         Me.chkCapitalise.UseVisualStyleBackColor = True
         '
-        'cmdhidegbscrollandclock
-        '
-        Me.cmdhidegbscrollandclock.Image = CType(resources.GetObject("cmdhidegbscrollandclock.Image"), System.Drawing.Image)
-        Me.cmdhidegbscrollandclock.Location = New System.Drawing.Point(1057, 8)
-        Me.cmdhidegbscrollandclock.Name = "cmdhidegbscrollandclock"
-        Me.cmdhidegbscrollandclock.Size = New System.Drawing.Size(28, 27)
-        Me.cmdhidegbscrollandclock.TabIndex = 712
-        Me.cmdhidegbscrollandclock.UseVisualStyleBackColor = True
-        '
         'cmdselectallforscroll
         '
-        Me.cmdselectallforscroll.Location = New System.Drawing.Point(1005, 49)
+        Me.cmdselectallforscroll.Location = New System.Drawing.Point(1005, 52)
         Me.cmdselectallforscroll.Name = "cmdselectallforscroll"
         Me.cmdselectallforscroll.Size = New System.Drawing.Size(76, 23)
         Me.cmdselectallforscroll.TabIndex = 513
@@ -360,7 +394,7 @@ Partial Class ucScrollWithTopic
         Me.txtdelemeterforscroll.Name = "txtdelemeterforscroll"
         Me.txtdelemeterforscroll.Size = New System.Drawing.Size(69, 26)
         Me.txtdelemeterforscroll.TabIndex = 511
-        Me.txtdelemeterforscroll.Text = " ⏺️"
+        Me.txtdelemeterforscroll.Text = " "
         Me.txtdelemeterforscroll.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label114
@@ -440,38 +474,38 @@ Partial Class ucScrollWithTopic
         '
         Me.dgvscroll.AllowDrop = True
         Me.dgvscroll.AllowUserToOrderColumns = True
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvscroll.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvscroll.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvscroll.BackgroundColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvscroll.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvscroll.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvscroll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvscroll.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Category, Me.Content, Me.DataGridViewCheckBoxColumn2})
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvscroll.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvscroll.DefaultCellStyle = DataGridViewCellStyle4
         Me.dgvscroll.Location = New System.Drawing.Point(4, 106)
         Me.dgvscroll.MultiSelect = False
         Me.dgvscroll.Name = "dgvscroll"
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvscroll.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvscroll.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvscroll.RowHeadersWidth = 60
         Me.dgvscroll.RowTemplate.Height = 30
         Me.dgvscroll.Size = New System.Drawing.Size(1094, 773)
@@ -485,8 +519,8 @@ Partial Class ucScrollWithTopic
         '
         'Content
         '
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Content.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Content.DefaultCellStyle = DataGridViewCellStyle3
         Me.Content.HeaderText = "Content"
         Me.Content.MinimumWidth = 540
         Me.Content.Name = "Content"
@@ -530,7 +564,7 @@ Partial Class ucScrollWithTopic
         '
         Me.cmblayerscroll.FormattingEnabled = True
         Me.cmblayerscroll.Items.AddRange(New Object() {"51", "52", "53", "54", "55"})
-        Me.cmblayerscroll.Location = New System.Drawing.Point(550, 23)
+        Me.cmblayerscroll.Location = New System.Drawing.Point(488, 19)
         Me.cmblayerscroll.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cmblayerscroll.Name = "cmblayerscroll"
         Me.cmblayerscroll.Size = New System.Drawing.Size(40, 21)
@@ -540,35 +574,12 @@ Partial Class ucScrollWithTopic
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(434, 25)
+        Me.Label21.Location = New System.Drawing.Point(372, 21)
         Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(108, 13)
         Me.Label21.TabIndex = 449
         Me.Label21.Text = "video layer-flash layer"
-        '
-        'chkUseImage
-        '
-        Me.chkUseImage.AutoSize = True
-        Me.chkUseImage.Checked = True
-        Me.chkUseImage.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkUseImage.Location = New System.Drawing.Point(476, 51)
-        Me.chkUseImage.Name = "chkUseImage"
-        Me.chkUseImage.Size = New System.Drawing.Size(77, 17)
-        Me.chkUseImage.TabIndex = 1190
-        Me.chkUseImage.Text = "Use Image"
-        Me.chkUseImage.UseVisualStyleBackColor = True
-        '
-        'eventlogo
-        '
-        Me.eventlogo.BackColor = System.Drawing.SystemColors.Highlight
-        Me.eventlogo.ImageLocation = "C:/casparcg/ng2022/data/event logo/ammu_logo.png"
-        Me.eventlogo.Location = New System.Drawing.Point(445, 48)
-        Me.eventlogo.Name = "eventlogo"
-        Me.eventlogo.Size = New System.Drawing.Size(24, 17)
-        Me.eventlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.eventlogo.TabIndex = 1189
-        Me.eventlogo.TabStop = False
         '
         'ucScrollWithTopic
         '
@@ -579,11 +590,11 @@ Partial Class ucScrollWithTopic
         Me.Size = New System.Drawing.Size(1119, 967)
         Me.gbscroll.ResumeLayout(False)
         Me.gbscroll.PerformLayout()
+        CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgvscroll, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nspeedscroll, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.eventlogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -606,7 +617,6 @@ Partial Class ucScrollWithTopic
     Friend WithEvents Label2 As Label
     Friend WithEvents txtScrollTemplate As TextBox
     Friend WithEvents chkCapitalise As CheckBox
-    Friend WithEvents cmdhidegbscrollandclock As Button
     Friend WithEvents cmdselectallforscroll As Button
     Friend WithEvents cmddeselectallforscroll As Button
     Friend WithEvents txtdelemeterforscroll As TextBox
@@ -633,4 +643,6 @@ Partial Class ucScrollWithTopic
     Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
     Friend WithEvents chkUseImage As CheckBox
     Friend WithEvents eventlogo As PictureBox
+    Friend WithEvents cmdPlayasBreakingNews As Button
+    Friend WithEvents Button1 As Button
 End Class

@@ -97,6 +97,8 @@ Partial Class frmNG2022
         Me.txtClientID = New System.Windows.Forms.TextBox()
         Me.lblClientID = New System.Windows.Forms.Label()
         Me.UcCasparcgWindow1 = New NG2022.ucCasparcgWindow()
+        Me.UcPreview1 = New NG2022.ucPreview()
+        Me.UcWebScocketServer1 = New NG2022.ucWebScocketServer()
         Me.gbPannel.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.Scroll2.SuspendLayout()
@@ -652,7 +654,7 @@ Partial Class frmNG2022
         Me.GroupBox12.Controls.Add(Me.gbOutAnimation)
         Me.GroupBox12.Controls.Add(Me.gbINAnimation)
         Me.GroupBox12.Controls.Add(Me.chkanimation)
-        Me.GroupBox12.Location = New System.Drawing.Point(1168, 529)
+        Me.GroupBox12.Location = New System.Drawing.Point(1149, 510)
         Me.GroupBox12.Name = "GroupBox12"
         Me.GroupBox12.Size = New System.Drawing.Size(377, 99)
         Me.GroupBox12.TabIndex = 1312
@@ -827,10 +829,10 @@ Partial Class frmNG2022
         '
         'chkSendToHtml
         '
-        Me.chkSendToHtml.AutoSize = True
-        Me.chkSendToHtml.Location = New System.Drawing.Point(1177, 649)
+        Me.chkSendToHtml.Location = New System.Drawing.Point(1752, 766)
+        Me.chkSendToHtml.MaximumSize = New System.Drawing.Size(0, 51)
         Me.chkSendToHtml.Name = "chkSendToHtml"
-        Me.chkSendToHtml.Size = New System.Drawing.Size(326, 17)
+        Me.chkSendToHtml.Size = New System.Drawing.Size(0, 51)
         Me.chkSendToHtml.TabIndex = 1315
         Me.chkSendToHtml.Text = "Send To HTML http://localhost:10000/ReactCasparClient/html"
         Me.chkSendToHtml.UseVisualStyleBackColor = True
@@ -838,7 +840,7 @@ Partial Class frmNG2022
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(1168, 709)
+        Me.Button1.Location = New System.Drawing.Point(1752, 858)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1316
@@ -848,9 +850,9 @@ Partial Class frmNG2022
         '
         'txtClientID
         '
-        Me.txtClientID.Location = New System.Drawing.Point(1227, 672)
+        Me.txtClientID.Location = New System.Drawing.Point(1797, 832)
         Me.txtClientID.Name = "txtClientID"
-        Me.txtClientID.Size = New System.Drawing.Size(113, 20)
+        Me.txtClientID.Size = New System.Drawing.Size(69, 20)
         Me.txtClientID.TabIndex = 1317
         Me.txtClientID.Text = "1234"
         Me.txtClientID.Visible = False
@@ -858,7 +860,7 @@ Partial Class frmNG2022
         'lblClientID
         '
         Me.lblClientID.AutoSize = True
-        Me.lblClientID.Location = New System.Drawing.Point(1179, 675)
+        Me.lblClientID.Location = New System.Drawing.Point(1749, 835)
         Me.lblClientID.Name = "lblClientID"
         Me.lblClientID.Size = New System.Drawing.Size(42, 13)
         Me.lblClientID.TabIndex = 1318
@@ -875,11 +877,30 @@ Partial Class frmNG2022
         Me.UcCasparcgWindow1.Size = New System.Drawing.Size(756, 498)
         Me.UcCasparcgWindow1.TabIndex = 1173
         '
+        'UcPreview1
+        '
+        Me.UcPreview1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.UcPreview1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.UcPreview1.Location = New System.Drawing.Point(1150, 608)
+        Me.UcPreview1.Name = "UcPreview1"
+        Me.UcPreview1.Size = New System.Drawing.Size(600, 450)
+        Me.UcPreview1.TabIndex = 1341
+        '
+        'UcWebScocketServer1
+        '
+        Me.UcWebScocketServer1.BackColor = System.Drawing.Color.PeachPuff
+        Me.UcWebScocketServer1.Location = New System.Drawing.Point(1532, 515)
+        Me.UcWebScocketServer1.Name = "UcWebScocketServer1"
+        Me.UcWebScocketServer1.Size = New System.Drawing.Size(218, 87)
+        Me.UcWebScocketServer1.TabIndex = 1342
+        '
         'frmNG2022
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1916, 1061)
+        Me.Controls.Add(Me.UcWebScocketServer1)
+        Me.Controls.Add(Me.UcPreview1)
         Me.Controls.Add(Me.lblClientID)
         Me.Controls.Add(Me.txtClientID)
         Me.Controls.Add(Me.Button1)
@@ -890,7 +911,7 @@ Partial Class frmNG2022
         Me.Controls.Add(Me.gbPannel)
         Me.Name = "frmNG2022"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "NG_050724_1"
+        Me.Text = "NG_261024_2"
         Me.gbPannel.ResumeLayout(False)
         Me.gbPannel.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
@@ -996,4 +1017,6 @@ Partial Class frmNG2022
     Friend WithEvents UcElection1 As ucElection
     Friend WithEvents Scroll2 As TabPage
     Friend WithEvents UcScrollWithTopic1 As ucScrollWithTopic
+    Friend WithEvents UcPreview1 As ucPreview
+    Friend WithEvents UcWebScocketServer1 As ucWebScocketServer
 End Class
