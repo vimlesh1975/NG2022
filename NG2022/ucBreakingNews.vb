@@ -382,15 +382,15 @@ Partial Public Class ucBreakingNews
     Private Sub cmdshowtime_Click(sender As Object, e As EventArgs) Handles cmdshowtime.Click
         On Error Resume Next
         If String.IsNullOrWhiteSpace(cmblayertime.Text) Then Exit Sub
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) , txtclockTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add( SafeInt(cmblayertime.Text) ,  SafeInt(cmblayertime.Text) , txtclockTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
 
     Private Sub cmdhidetime_Click(sender As Object, e As EventArgs) Handles cmdhidetime.Click
         On Error Resume Next
         If String.IsNullOrWhiteSpace(cmblayertime.Text) Then Exit Sub
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) )
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Remove( SafeInt(cmblayerbreakingnews.Text) ,  SafeInt(cmblayerbreakingnews.Text) )
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop( SafeInt(cmblayertime.Text) ,  SafeInt(cmblayertime.Text) )
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Remove( SafeInt(cmblayertime.Text) ,  SafeInt(cmblayertime.Text) )
 
     End Sub
 
