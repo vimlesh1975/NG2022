@@ -1,4 +1,4 @@
-﻿Imports System.IO
+Imports System.IO
 Imports System.Net
 Imports Newtonsoft.Json
 Module mdlNG2022
@@ -106,12 +106,28 @@ Module mdlNG2022
         Return str
     End Function
     Public Sub SendCasparCommand(command As String)
-        If CasparDevice Is Nothing OrElse Not CasparDevice.IsConnected Then
+        If Not IsCasparConnected() Then
             Exit Sub
         End If
 
         CasparDevice.SendString(command)
     End Sub
+
+    Public Function IsCasparConnected() As Boolean
+        Return CasparDevice IsNot Nothing AndAlso CasparDevice.IsConnected
+    End Function
+
+    Public Function SafeInt(val As String, Optional defaultVal As Integer = 0) As Integer
+        Dim result As Integer
+        If Integer.TryParse(val, result) Then Return result
+        Return defaultVal
+    End Function
+
+    Public Function SafeVal(val As String, Optional defaultVal As Double = 0) As Double
+        Dim result As Double
+        If Double.TryParse(val, result) Then Return result
+        Return defaultVal
+    End Function
 
     Public Sub MakeMenuDropDownWhenParrented(ByVal sender As Object)
         sender.Focus()

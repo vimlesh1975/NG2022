@@ -1,4 +1,5 @@
-Public Class ucNetBall
+Partial Public Class ucNetBall
+    Inherits ucNGBase
     Private Sub NG_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
 
@@ -21,6 +22,7 @@ Public Class ucNetBall
         cmbSubHeader.Text = "Bronze Medal Match"
 
 
+        SetReady()
     End Sub
     Private Sub initialisesetscoreball()
         dgvsetscoreball.Rows.Add(3)
@@ -49,39 +51,39 @@ Public Class ucNetBall
     Private Sub cmdstopgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopgym.Click
         On Error Resume Next
         'If frmNG2022.chkanimation.Checked Then
-        '    frmNG2022.animation2(Int(cmblayergames.Text))
+        '    frmNG2022.animation2(SafeInt(cmblayergames.Text))
         'End If
         'If frmNG2022.chkanimation.Checked = False Then
-        '    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outEfeect()")
+        '    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " outEfeect()")
         'Else
-        '    CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        '    CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         'End If
 
         'If frmNG2022.chkanimation.Checked Then
         '    Threading.Thread.Sleep(1000)
-        '    frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        '    frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         'End If
 
         On Error Resume Next
         If frmNG2022.chkanimation.Checked Then
-            frmNG2022.animation2(Int(cmblayergames.Text))
+            frmNG2022.animation2(SafeInt(cmblayergames.Text))
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " outAnimation()")
         Else
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         End If
 
         If frmNG2022.chkanimation.Checked Then
             Threading.Thread.Sleep(1000)
-            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+            frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         End If
 
         'On Error Resume Next
-        'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(Int(cmblayergames.Text))
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(SafeInt(cmblayergames.Text))
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         'Threading.Thread.Sleep(1000)
-        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         tmrtimeupdateontemplate.Enabled = False
 
     End Sub
@@ -105,13 +107,7 @@ Public Class ucNetBall
 
 
     Private Sub cmdaddoutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        On Error Resume Next
-
-        CasparDevice.SendString("add " & g_int_ChannelNumber & " decklink 1 " & "embedded_audio")
-        CasparDevice.SendString("add " & g_int_ChannelNumber & " bluefish 1 " & "embedded_audio")
-
-        CasparDevice.SendString("add " & g_int_ChannelNumber & " decklink 2 " & "key_only") ' for key
-        CasparDevice.SendString("add " & g_int_ChannelNumber & " bluefish 2 " & "key_only") ' for key
+        AddCasparOutputs()
     End Sub
 
     Private Sub cmdremoveoutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -131,12 +127,12 @@ Public Class ucNetBall
     End Sub
     Private Sub cmdsqueezeforsafesd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
-        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text & " fill .1 0 .8 1 50 easeoutexpo")
+        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " fill .1 0 .8 1 50 easeoutexpo")
     End Sub
 
     Private Sub cmdfillnormal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
-        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text & " fill 0 0 1 1 50 easeoutexpo")
+        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " fill 0 0 1 1 50 easeoutexpo")
     End Sub
 
     Private Sub pict1logoball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pict1logoball.Click
@@ -209,17 +205,17 @@ Public Class ucNetBall
         On Error Resume Next
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgtime", txtminball.Text & ":" & txtsecball.Text)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
 
     End Sub
     Private Sub cmdstopscoreball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
-        If frmNG2022.chkanimation.Checked Then CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill -1 0 1 1 50 easeoutexpo")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        If frmNG2022.chkanimation.Checked Then CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " fill -1 0 1 1 50 easeoutexpo")
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         Threading.Thread.Sleep(2000)
         If frmNG2022.chkanimation.Checked Then
-            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill .1 0 .8 1 50 easeoutexpo")
-            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill 0 0 1 1 50 easeoutexpo")
+            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " fill .1 0 .8 1 50 easeoutexpo")
+            CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " fill 0 0 1 1 50 easeoutexpo")
         End If
         tmrtimeupdateontemplate.Enabled = False
     End Sub
@@ -317,11 +313,11 @@ Public Class ucNetBall
 
     'Sub showtemplatescore(ByVal templatename As String, ByVal datacollection As String)
     '    On Error Resume Next
-    '    If frmNG2022.chkanimation.Checked Then frmNG2022.animation1(Int(cmblayergames.Text))
+    '    If frmNG2022.chkanimation.Checked Then frmNG2022.animation1(SafeInt(cmblayergames.Text))
     '    Threading.Thread.Sleep(250)
-    '    CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), templatename, True, datacollection)
+    '    CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), templatename, True, datacollection)
     '    Threading.Thread.Sleep(1300)
-    '    If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+    '    If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
     'End Sub
     Private counter As Integer
     Private Sub dgvt2ball_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvt2ball.CellDoubleClick
@@ -646,9 +642,9 @@ Public Class ucNetBall
 
         If chkShowService.Checked Then
             If rdoServiceT1.Checked Then
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
             Else
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('1')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo2('1')" & """")
             End If
         End If
 
@@ -678,15 +674,15 @@ Public Class ucNetBall
 
         If chkShowService.Checked Then
             If rdoServiceT1.Checked Then
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
             Else
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('1')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo2('1')" & """")
 
             End If
         End If
 
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showccgccgTimeStrip('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showccgccgTimeStrip('1')" & """")
 
         tmrtimeupdateontemplate.Enabled = True
     End Sub
@@ -706,10 +702,10 @@ Public Class ucNetBall
 
         showtemplate("ng2022/template/netball/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = False
 
@@ -773,13 +769,13 @@ Public Class ucNetBall
     End Sub
 
 
-    Private Sub txtfullnamet1tt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+    Private Sub txtfullnamet1tt_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtt1ball.KeyPress
         On Error Resume Next
         capitalisetext(sender, e)
     End Sub
     Private Sub cmdscoreboxing_Click(sender As Object, e As EventArgs)
         On Error Resume Next
-        If frmNG2022.chkanimation.Checked Then CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill -1 0 1 1 50 easeoutexpo")
+        If frmNG2022.chkanimation.Checked Then CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " fill -1 0 1 1 50 easeoutexpo")
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccginfo", cmbinfoball.Text)
 
@@ -793,10 +789,10 @@ Public Class ucNetBall
 
         showtemplate("ng2022/template/netball/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(Color.Blue) & "')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(Color.Blue) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = False
     End Sub
@@ -823,7 +819,7 @@ Public Class ucNetBall
     Private Sub cmdscorewithclockboxing_Click(sender As Object, e As EventArgs)
         On Error Resume Next
 
-        If frmNG2022.chkanimation.Checked Then CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill -1 0 1 1 50 easeoutexpo")
+        If frmNG2022.chkanimation.Checked Then CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " fill -1 0 1 1 50 easeoutexpo")
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgf0", txtt1ball.Text)
         CasparCGDataCollection.SetData("ccgf1", txtt2ball.Text)
@@ -838,9 +834,9 @@ Public Class ucNetBall
         CasparCGDataCollection.SetData("ccgloader1", pict1logoball.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader2", pict2logoball.ImageLocation.Replace("\", "/"))
         showtemplate("ng2022/template/netball/score_boxing", CasparCGDataCollection.ToAMCPEscapedXml)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(Color.Blue) & "')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(Color.Blue) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = True
     End Sub
@@ -933,7 +929,7 @@ Public Class ucNetBall
         On Error Resume Next
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("resume", "")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
 
     End Sub
     Private Sub dgvFE_DataError(sender As Object, e As DataGridViewDataErrorEventArgs)
@@ -984,17 +980,17 @@ Public Class ucNetBall
         showtemplate("ng2022/template/netball/groupresult1", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
-    Private Sub cmdgroupresul2tball_Click(sender As Object, e As EventArgs) Handles cmdgroupresul2tball.Click
+    Private Sub cmdgroupresul2tball_Click(sender As Object, e As EventArgs)
         On Error Resume Next
         showtemplate("ng2022/template/netball/groupresult2", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
-    Private Sub cmdmatchstatics_Click(sender As Object, e As EventArgs) Handles cmdmatchstatics.Click
+    Private Sub cmdmatchstatics_Click(sender As Object, e As EventArgs)
         On Error Resume Next
         showtemplate("ng2022/template/netball/MatchStatics", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
-    Private Sub cmdgoalsummarywithtime_Click(sender As Object, e As EventArgs) Handles cmdgoalsummarywithtime.Click
+    Private Sub cmdgoalsummarywithtime_Click(sender As Object, e As EventArgs)
         showtemplate("ng2022/template/netball/goalsummarywithtime", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 
@@ -1016,35 +1012,35 @@ Public Class ucNetBall
 
 
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showPenalty('1')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showPenalty('1')" & """")
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showccgstatusStrip('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showccgccgTimeStrip('1')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showccgstatusStrip('1')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showccgccgTimeStrip('1')" & """")
 
 
         tmrtimeupdateontemplate.Enabled = True
     End Sub
-    Private Sub cmdPenaltyUpdate_Click(sender As Object, e As EventArgs) Handles cmdPenaltyUpdate.Click
+    Private Sub cmdPenaltyUpdate_Click(sender As Object, e As EventArgs)
         On Error Resume Next
 
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgf2", txtt1gball.Text)
         CasparCGDataCollection.SetData("ccgf3", txtt2gball.Text)
 
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
 
         If chkShowService.Checked Then
             If rdoServiceT1.Checked Then
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('0')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo2('0')" & """")
             Else
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('1')" & """")
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('0')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo2('1')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('0')" & """")
 
             End If
         End If
@@ -1056,35 +1052,35 @@ Public Class ucNetBall
 
     End Sub
 
-    Private Sub cmdremoverowt1ball_Click_1(sender As Object, e As EventArgs) Handles cmdremoverowt1ball.Click
+    Private Sub cmdremoverowt1ball_Click_1(sender As Object, e As EventArgs)
         deletesg(dgvt1ball)
     End Sub
 
 
 
-    Private Sub cmduprowt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmduprowt1ball.Click
+    Private Sub cmduprowt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
         upsg(dgvt1ball)
     End Sub
 
-    Private Sub cmddownrowt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmddownrowt1ball.Click
+    Private Sub cmddownrowt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
         downsg(dgvt1ball)
     End Sub
-    Private Sub cmdaddrowt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdaddrowt1ball.Click
+    Private Sub cmdaddrowt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         insertsg(dgvt1ball)
     End Sub
-    Private Sub cmdsavet1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdsavet1ball.Click
+    Private Sub cmdsavet1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
         savedatasg("C:\casparcg\ng2022\data\netball", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
     End Sub
 
-    Private Sub cmdnewt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdnewt1ball.Click
+    Private Sub cmdnewt1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
         newdatasg(dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
     End Sub
 
-    Private Sub cmdopent1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdopent1ball.Click
+    Private Sub cmdopent1ball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
         opendatasg("C:\casparcg\ng2022\data\netball", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
 
@@ -1093,29 +1089,29 @@ Public Class ucNetBall
 
 
     Private Sub cmdStart30sectimer_Click(sender As Object, e As EventArgs)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 2 & " starttimer()")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 2 & " starttimer()")
 
     End Sub
 
     Private Sub cmdStop30secondTimer_Click(sender As Object, e As EventArgs)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 2 & " pausetimer()")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 2 & " pausetimer()")
 
     End Sub
 
     Private Sub Stoptimer30sec_Click(sender As Object, e As EventArgs)
         CasparCGDataCollection.Clear()
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('0')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('0')" & """")
         CasparCGDataCollection.SetData("ccgextra", "")
         CasparCGDataCollection.SetData("ccginfo", "")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " pausetimer()")
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " pausetimer()")
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('0')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo2('0')" & """")
         CasparCGDataCollection.SetData("ccgextra2", "")
         CasparCGDataCollection.SetData("ccginfo2", "")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " pausetimer()")
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " pausetimer()")
 
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -1134,22 +1130,22 @@ Public Class ucNetBall
 
         showtemplate("ng2022/template/netball/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showccgccgTimeStrip('1')" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showClockAndhalf('1')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setTeamcolor('xccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showccgccgTimeStrip('1')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
 
         tmrtimeupdateontemplate.Enabled = True
     End Sub
 
 
-    Private Sub cmdSaveas1_Click(sender As Object, e As EventArgs) Handles cmdSaveas1.Click
+    Private Sub cmdSaveas1_Click(sender As Object, e As EventArgs)
         On Error Resume Next
         saveasdatasg("C:\casparcg\ng2022\data\netball", dgvt1ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
     End Sub
 
-    Private Sub cmdSaveas2_Click(sender As Object, e As EventArgs) Handles cmdSaveas2.Click
+    Private Sub cmdSaveas2_Click(sender As Object, e As EventArgs)
         On Error Resume Next
         saveasdatasg("C:\casparcg\ng2022\data\netball", dgvt2ball, cmbHeader, cmbSubHeader, lblfilenamet1ball)
     End Sub
@@ -1194,32 +1190,33 @@ Public Class ucNetBall
         On Error Resume Next
         'Stoptimer30sec.PerformClick()
         'CasparCGDataCollection.Clear()
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
         'CasparCGDataCollection.SetData("ccgextra", RaidTime.Text)
         'CasparCGDataCollection.SetData("ccginfo", dgvt1ball.CurrentCell.Value)
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " pausetimer()")
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " pausetimer()")
     End Sub
 
     Private Sub cmdResumeShotClock_Click(sender As Object, e As EventArgs)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " starttimer()")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " starttimer()")
 
     End Sub
 
-    Private Sub chkShowService_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowService.CheckedChanged
-        If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
+    Private Sub chkShowService_CheckedChanged(sender As Object, e As EventArgs)
+        On Error Resume Next
+        If Not IsReady Then Exit Sub
         If chkShowService.Checked Then
             If rdoServiceT1.Checked Then
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('0')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('1')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo2('0')" & """")
             Else
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('1')" & """")
-                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('0')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo2('1')" & """")
+                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('0')" & """")
 
             End If
         Else
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('0')" & """")
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('0')" & """")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('0')" & """")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo2('0')" & """")
         End If
     End Sub
 
