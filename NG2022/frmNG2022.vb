@@ -3,10 +3,57 @@ Imports System.Net
 Imports Newtonsoft.Json
 
 Public Class frmNG2022
+    Private Function BuildMainFormTitle() As String
+        If String.IsNullOrWhiteSpace(ChannelName) Then
+            ChannelName = "NG2022_" & DateTime.Now.ToString("ddMMyy_HHmmss")
+        End If
+
+        Return ChannelName
+    End Function
+
+    Private Sub RefreshMainFormTitle()
+        Dim titleText = BuildMainFormTitle()
+
+        If String.IsNullOrWhiteSpace(cmbhost.Text) OrElse String.IsNullOrWhiteSpace(cmbchannel.Text) Then
+            Me.Text = titleText
+            Exit Sub
+        End If
+
+        Me.Text = titleText & "                              " & cmbhost.Text & "       Channel " & cmbchannel.Text
+    End Sub
+
+    Private Function SelectedChannelNumber() As Integer
+        Return g_int_ChannelNumber
+    End Function
+
+    Private Sub SendCasparCommand(command As String)
+        If CasparDevice Is Nothing OrElse Not CasparDevice.IsConnected Then
+            Exit Sub
+        End If
+
+        CasparDevice.SendString(command)
+    End Sub
+
+    Private Function GetAnimationOffset(leftOption As RadioButton, rightOption As RadioButton, upOption As RadioButton, downOption As RadioButton) As PointF
+        If leftOption.Checked Then Return New PointF(-1.0F, 0.0F)
+        If rightOption.Checked Then Return New PointF(1.0F, 0.0F)
+        If upOption.Checked Then Return New PointF(0.0F, -1.0F)
+        If downOption.Checked Then Return New PointF(0.0F, 1.0F)
+        Return PointF.Empty
+    End Function
+
+    Private Sub ApplyOpacityAnimation(videoLayer As Integer, opacity As Integer, duration As Integer)
+        SendCasparCommand("mixer " & SelectedChannelNumber() & "-" & videoLayer & " opacity " & opacity & " " & duration & " easeoutexpo")
+    End Sub
+
+    Private Sub ApplyFillAnimation(videoLayer As Integer, x As Decimal, y As Decimal, width As Decimal, height As Decimal, duration As Integer)
+        SendCasparCommand("mixer " & SelectedChannelNumber() & "-" & videoLayer & " fill " & x & " " & y & " " & width & " " & height & " " & duration & " easeoutexpo")
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         On Error Resume Next
 
         Me.WindowState = FormWindowState.Maximized
+        RefreshMainFormTitle()
 
         Control.CheckForIllegalCrossThreadCalls = False
         AddHandler CasparDevice.ConnectionStatusChanged, AddressOf connectionhandler
@@ -60,7 +107,7 @@ Public Class frmNG2022
     Sub Modifychannelname()
         On Error Resume Next
         If Me.Text <> "" Then
-            Me.Text = ChannelName & "                              " & cmbhost.Text & "       Channel " & cmbchannel.Text
+            RefreshMainFormTitle()
             g_int_ChannelNumber = Int(cmbchannel.Text)
         End If
     End Sub
