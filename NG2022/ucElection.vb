@@ -1,4 +1,4 @@
-﻿Public Class ucElection
+Public Class ucElection
     Private Sub ucElection_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'gfhfghfgh
     End Sub

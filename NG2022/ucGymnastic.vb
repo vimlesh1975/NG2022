@@ -1,4 +1,4 @@
-﻿Public Class ucGymnastic
+Public Class ucGymnastic
     Private Sub ucGymnastic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         gymnasticsdefaultdata()
         defautdataforball()

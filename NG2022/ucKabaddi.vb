@@ -1,4 +1,4 @@
-﻿Public Class ucKabaddi
+Public Class ucKabaddi
     Private Sub NG_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
 

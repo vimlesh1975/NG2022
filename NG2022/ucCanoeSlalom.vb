@@ -1,4 +1,4 @@
-﻿Imports System.Threading
+Imports System.Threading
 Imports Microsoft.VisualBasic.FileIO
 
 Public Class ucCanoeSlalom

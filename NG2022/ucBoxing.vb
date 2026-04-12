@@ -1,7 +1,8 @@
-﻿Imports System.Diagnostics.Eventing.Reader
+Imports System.Diagnostics.Eventing.Reader
 Imports System.IO
 
-Public Class ucBoxing
+Partial Public Class ucBoxing
+    Inherits ucNGBase
     Private Sub NG_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
 
@@ -23,7 +24,7 @@ Public Class ucBoxing
         cmbSubHeader.DataSource = New BindingSource(subHeader, "")
         cmbSubHeader.Text = "Bronze Medal Match"
 
-
+        SetReady()
     End Sub
     Sub initialiseprofile()
 
@@ -99,17 +100,17 @@ Public Class ucBoxing
     Private Sub cmdstopgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopgym.Click
         On Error Resume Next
         If frmNG2022.chkanimation.Checked Then
-            frmNG2022.animation2(Int(cmblayergames.Text))
+            frmNG2022.animation2(SafeInt(cmblayergames.Text))
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " outAnimation()")
         Else
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         End If
 
         If frmNG2022.chkanimation.Checked Then
             Threading.Thread.Sleep(1000)
-            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+            frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         End If
         tmrtimeupdateontemplate.Enabled = False
 
@@ -134,21 +135,11 @@ Public Class ucBoxing
 
 
     Private Sub cmdaddoutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        On Error Resume Next
-
-        CasparDevice.SendString("add " & g_int_ChannelNumber & " decklink 1 " & "embedded_audio")
-        CasparDevice.SendString("add " & g_int_ChannelNumber & " bluefish 1 " & "embedded_audio")
-
-        CasparDevice.SendString("add " & g_int_ChannelNumber & " decklink 2 " & "key_only") ' for key
-        CasparDevice.SendString("add " & g_int_ChannelNumber & " bluefish 2 " & "key_only") ' for key
+        AddCasparOutputs()
     End Sub
 
     Private Sub cmdremoveoutput_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        On Error Resume Next
-        CasparDevice.SendString("remove " & g_int_ChannelNumber & " decklink 1")
-        CasparDevice.SendString("remove " & g_int_ChannelNumber & " bluefish 1")
-        CasparDevice.SendString("remove " & g_int_ChannelNumber & " decklink 2") ' for key
-        CasparDevice.SendString("remove " & g_int_ChannelNumber & " bluefish 2") ' for key
+        RemoveCasparOutputs()
     End Sub
     Private Sub cmdhd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
@@ -187,7 +178,7 @@ Public Class ucBoxing
 
     Private Sub cmdstartclockball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstartclockball.Click
         tmrtimeonform.Enabled = True
-        aa = Val(Now.Second.ToString) 'new code
+        aa = SafeVal(Now.Second.ToString) 'new code
     End Sub
     Dim aa As Integer 'new code
     Private Sub cmdresetclockball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdresetclockball.Click
@@ -199,25 +190,25 @@ Public Class ucBoxing
     End Sub
     Private Sub tmrtimeonform_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tmrtimeonform.Tick
         On Error Resume Next
-        Dim bb = Val(Now.Second.ToString)
+        Dim bb = SafeVal(Now.Second.ToString)
 
         Dim dif As Integer = (bb - aa)
         aa = bb
         If dif < 0 Then dif = dif + 60
 
         If rdodowncounterball.Checked = True Then
-            txtsecball.Text = Format(Val(txtsecball.Text - dif), "00")
-            If Val(txtsecball.Text) < 0 Then
+            txtsecball.Text = Format(SafeVal(txtsecball.Text - dif), "00")
+            If SafeVal(txtsecball.Text) < 0 Then
                 txtsecball.Text = 59
                 txtminball.Text = Format(txtminball.Text - 1, "0")
             End If
-            If Val(txtminball.Text) < 0 Then
+            If SafeVal(txtminball.Text) < 0 Then
                 txtsecball.Text = "00"
                 txtminball.Text = "0"
             End If
         End If
         If rdoupcounterball.Checked = True Then
-            txtsecball.Text = Format(Val(txtsecball.Text + dif), "00")
+            txtsecball.Text = Format(SafeVal(txtsecball.Text + dif), "00")
             If txtsecball.Text > 59 Then
                 txtsecball.Text = "00"
                 txtminball.Text = Format(txtminball.Text + 1, "0")
@@ -229,13 +220,13 @@ Public Class ucBoxing
         On Error Resume Next
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgtime", txtminball.Text & ":" & txtsecball.Text)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
 
     End Sub
     Private Sub cmdstopscoreball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         On Error Resume Next
         If frmNG2022.chkanimation.Checked Then CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill -1 0 1 1 50 easeoutexpo")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         Threading.Thread.Sleep(2000)
         If frmNG2022.chkanimation.Checked Then
             CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill .1 0 .8 1 50 easeoutexpo")
@@ -362,7 +353,7 @@ Public Class ucBoxing
         On Error Resume Next
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("resume", "")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
 
     End Sub
     Private Sub dgvFE_DataError(sender As Object, e As DataGridViewDataErrorEventArgs)
@@ -428,29 +419,29 @@ Public Class ucBoxing
     End Sub
 
     Private Sub cmdStart30sectimer_Click(sender As Object, e As EventArgs)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 2 & " starttimer()")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 2 & " starttimer()")
 
     End Sub
 
     Private Sub cmdStop30secondTimer_Click(sender As Object, e As EventArgs)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 2 & " pausetimer()")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 2 & " pausetimer()")
 
     End Sub
 
     Private Sub Stoptimer30sec_Click(sender As Object, e As EventArgs)
         CasparCGDataCollection.Clear()
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo('0')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo('0')" & """")
         CasparCGDataCollection.SetData("ccgextra", "")
         CasparCGDataCollection.SetData("ccginfo", "")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " pausetimer()")
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " pausetimer()")
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "showinfo2('0')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "showinfo2('0')" & """")
         CasparCGDataCollection.SetData("ccgextra2", "")
         CasparCGDataCollection.SetData("ccginfo2", "")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " pausetimer()")
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " pausetimer()")
 
     End Sub
 
@@ -741,7 +732,7 @@ Public Class ucBoxing
             'CasparCGDataCollection.SetData("ccgheader", cmbHeader.Text)
             'CasparCGDataCollection.SetData("ccgsubheader", cmbSubHeader.Text)
 
-            If Val(txtt1gball.Text) > Val(txtt2gball.Text) Then
+            If SafeVal(txtt1gball.Text) > SafeVal(txtt2gball.Text) Then
                 CasparCGDataCollection.SetData("ccgsn1", txtCounty1.Text)
                 CasparCGDataCollection.SetData("ccgloader55", pict1logoball.ImageLocation.Replace("\", "/"))
                 CasparCGDataCollection.SetData("ccgf0", txtPlayer1.Text)
@@ -764,7 +755,7 @@ Public Class ucBoxing
                 CasparCGDataCollection.SetData("ccg_code" & 5 + i, .Rows(i).Cells(0).Value)
 
                 CasparCGDataCollection.SetData("ccgr1pl1j" & i + 1, .Rows(i).Cells(7).Value & "-" & .Rows(i).Cells(11).Value)
-                If Val(.Rows(i).Cells(7).Value > Val(.Rows(i).Cells(11).Value)) Then
+                If SafeVal(.Rows(i).Cells(7).Value > SafeVal(.Rows(i).Cells(11).Value)) Then
                     CasparCGDataCollection.SetData("ccgwincolorj" & i + 1, ColorTranslator.ToHtml(Color.Red))
                 Else
                     CasparCGDataCollection.SetData("ccgwincolorj" & i + 1, ColorTranslator.ToHtml(Color.Blue))
@@ -806,13 +797,13 @@ Public Class ucBoxing
 
         With dgvtrack
             For i = 0 To .RowCount - 2
-                .Rows(i).Cells(7).Value = Val(.Rows(i).Cells(4).Value) + Val(.Rows(i).Cells(5).Value) + Val(.Rows(i).Cells(6).Value)
-                .Rows(i).Cells(11).Value = Val(.Rows(i).Cells(8).Value) + Val(.Rows(i).Cells(9).Value) + Val(.Rows(i).Cells(10).Value)
+                .Rows(i).Cells(7).Value = SafeVal(.Rows(i).Cells(4).Value) + SafeVal(.Rows(i).Cells(5).Value) + SafeVal(.Rows(i).Cells(6).Value)
+                .Rows(i).Cells(11).Value = SafeVal(.Rows(i).Cells(8).Value) + SafeVal(.Rows(i).Cells(9).Value) + SafeVal(.Rows(i).Cells(10).Value)
 
-                If Val(.Rows(i).Cells(7).Value) > Val(.Rows(i).Cells(11).Value) Then
-                    txtt1gball.Text = Val(txtt1gball.Text) + 1
+                If SafeVal(.Rows(i).Cells(7).Value) > SafeVal(.Rows(i).Cells(11).Value) Then
+                    txtt1gball.Text = SafeVal(txtt1gball.Text) + 1
                 Else
-                    txtt2gball.Text = Val(txtt2gball.Text) + 1
+                    txtt2gball.Text = SafeVal(txtt2gball.Text) + 1
                 End If
             Next
         End With
@@ -865,13 +856,13 @@ Public Class ucBoxing
 
         With dgvtrack
             For i = 0 To .RowCount - 2
-                '.Rows(i).Cells(7).Value = Val(.Rows(i).Cells(4).Value) + Val(.Rows(i).Cells(5).Value) + Val(.Rows(i).Cells(6).Value)
-                '.Rows(i).Cells(11).Value = Val(.Rows(i).Cells(8).Value) + Val(.Rows(i).Cells(9).Value) + Val(.Rows(i).Cells(10).Value)
+                '.Rows(i).Cells(7).Value = SafeVal(.Rows(i).Cells(4).Value) + SafeVal(.Rows(i).Cells(5).Value) + SafeVal(.Rows(i).Cells(6).Value)
+                '.Rows(i).Cells(11).Value = SafeVal(.Rows(i).Cells(8).Value) + SafeVal(.Rows(i).Cells(9).Value) + SafeVal(.Rows(i).Cells(10).Value)
 
-                'If Val(.Rows(i).Cells(7).Value) > Val(.Rows(i).Cells(11).Value) Then
-                '    txtt1gball.Text = Val(txtt1gball.Text) + 1
+                'If SafeVal(.Rows(i).Cells(7).Value) > SafeVal(.Rows(i).Cells(11).Value) Then
+                '    txtt1gball.Text = SafeVal(txtt1gball.Text) + 1
                 'Else
-                '    txtt2gball.Text = Val(txtt2gball.Text) + 1
+                '    txtt2gball.Text = SafeVal(txtt2gball.Text) + 1
                 'End If
                 For j = 4 To .ColumnCount - 1
                     .Rows(i).Cells(j).Value = 0

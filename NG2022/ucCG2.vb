@@ -1,4 +1,4 @@
-﻿Imports System.IO
+Imports System.IO
 Public Class ucCG2
     Private Sub cmd10linercg2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd10linercg2.Click
         cg2dataandtemplate(10)

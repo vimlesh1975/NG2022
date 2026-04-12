@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucScroll
     Inherits System.Windows.Forms.UserControl
 
@@ -359,7 +359,7 @@ Partial Class ucScroll
         Me.txtdelemeterforscroll.Name = "txtdelemeterforscroll"
         Me.txtdelemeterforscroll.Size = New System.Drawing.Size(69, 26)
         Me.txtdelemeterforscroll.TabIndex = 511
-        Me.txtdelemeterforscroll.Text = " ⏺️"
+        Me.txtdelemeterforscroll.Text = " ??"
         Me.txtdelemeterforscroll.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label114

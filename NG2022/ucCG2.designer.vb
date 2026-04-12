@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucCG2
     Inherits System.Windows.Forms.UserControl
     'Inherits WeifenLuo.WinFormsUI.Docking.DockContent

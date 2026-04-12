@@ -1,4 +1,4 @@
-﻿Public Class ucWebScocketServer
+Public Class ucWebScocketServer
     Private webSocketServer As New WebSocketServer()
 
     ' Start the server when button is clicked

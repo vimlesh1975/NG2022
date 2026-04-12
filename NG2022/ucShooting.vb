@@ -1,7 +1,10 @@
 Imports System.IO
 
-Public Class ucShooting
+Partial Public Class ucShooting
+    Inherits ucNGBase
     Private Sub ucGymnastic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        On Error Resume Next
+        If IsReady Then Exit Sub
 
         defauttrackdata()
 
@@ -13,6 +16,7 @@ Public Class ucShooting
         'cmbSubHeader.DataSource = New BindingSource(subHeader, "")
         cmbSubHeader.Text = "25m Rapid Fire Pistol Men - Final"
 
+        SetReady()
     End Sub
 
     Private Sub dgvtrack_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvtrack.CellClick
@@ -36,7 +40,7 @@ Public Class ucShooting
 
         With dgvtrack
             For i = 0 To .RowCount - 2
-                .Rows(i).Cells(12).Value = Val(.Rows(i).Cells(10).Value) + Val(.Rows(i).Cells(11).Value)
+                .Rows(i).Cells(12).Value = SafeVal(.Rows(i).Cells(10).Value) + SafeVal(.Rows(i).Cells(11).Value)
             Next
         End With
 
@@ -150,32 +154,30 @@ Public Class ucShooting
 
             For i = 0 To .RowCount - 2
                 .Rows(i).Cells(10).Value = 0
-                .Rows(i).Cells(12).Value = Val(.Rows(i).Cells(10).Value) + Val(.Rows(i).Cells(11).Value)
+                .Rows(i).Cells(12).Value = SafeVal(.Rows(i).Cells(10).Value) + SafeVal(.Rows(i).Cells(11).Value)
             Next
 
 
         End With
     End Sub
 
-    Private Sub dgvtrack_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles dgvtrack.DataError
-        'dummy code dont delete
-    End Sub
 
     Private Sub cmdstopgym_Click(sender As Object, e As EventArgs) Handles cmdstopgym.Click
         On Error Resume Next
+        If Not IsReady Then Exit Sub
         If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         If frmNG2022.chkanimation.Checked Then
-            frmNG2022.animation2(Int(cmblayergames.Text))
+            frmNG2022.animation2(SafeInt(cmblayergames.Text))
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " outAnimation()")
         Else
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         End If
 
         If frmNG2022.chkanimation.Checked Then
             Threading.Thread.Sleep(1000)
-            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+            frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         End If
 
 
@@ -251,9 +253,10 @@ Public Class ucShooting
 
         For i = 5 To 9
             Dim colorValue As String = If(dgvtrack.CurrentRow.Cells(i).Value = True, "Green", "Red")
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setCircleColor('circle" & i - 4 & "','" & colorValue & "')" & """")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setCircleColor('circle" & i - 4 & "','" & colorValue & "')" & """")
         Next
 
+        If Not IsReady Then Exit Sub
     End Sub
     Private Sub dgvtrack_SelectionChanged(sender As Object, e As EventArgs) Handles dgvtrack.SelectionChanged
         For Each row As DataGridViewRow In dgvtrack.Rows
@@ -267,7 +270,7 @@ Public Class ucShooting
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "setCircleColor('circle" & "1" & "','red')" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "setCircleColor('circle" & "1" & "','red')" & """")
     End Sub
 
     Private Sub dgvtrack_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles dgvtrack.CellContentClick

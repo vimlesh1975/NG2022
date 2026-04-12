@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucKabaddi
     Inherits System.Windows.Forms.UserControl
     'Inherits WeifenLuo.WinFormsUI.Docking.DockContent

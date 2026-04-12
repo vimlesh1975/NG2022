@@ -1,4 +1,4 @@
-﻿Imports System.Net
+Imports System.Net
 Imports System.Net.WebSockets
 Imports System.Text
 Imports System.Threading

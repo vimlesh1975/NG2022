@@ -1,4 +1,4 @@
-﻿Public Class ucCasparcgWindow
+Public Class ucCasparcgWindow
     'This is the API that does all the hard work
     <Runtime.InteropServices.DllImport("user32.dll")>
     Public Shared Function SetParent(ByVal hWndChild As IntPtr, ByVal hWndNewParent As IntPtr) As Integer

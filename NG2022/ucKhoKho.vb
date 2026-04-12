@@ -1,4 +1,4 @@
-﻿Public Class ucKhoKho
+Public Class ucKhoKho
     Private Sub NG_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
 
