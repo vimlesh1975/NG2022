@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ucPhoto1
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -255,3 +255,4 @@ Partial Class ucPhoto1
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents cmdDeleteRow As Button
 End Class
+

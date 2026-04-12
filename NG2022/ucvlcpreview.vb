@@ -1,4 +1,5 @@
-Public Class ucvlcpreview
+Partial Public Class ucvlcpreview
+    Inherits ucNGBase
     Public chnumber As Integer = 1
     Dim isplaying As Boolean = False
     Private Sub cmdpreview_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdpreview.Click
@@ -39,3 +40,5 @@ Public Class ucvlcpreview
         isplaying = False
     End Sub
 End Class
+
+

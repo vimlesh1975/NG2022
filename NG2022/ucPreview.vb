@@ -1,4 +1,5 @@
-Public Class ucPreview
+Partial Public Class ucPreview
+    Inherits ucNGBase
     Dim isplaying As Boolean = False
 
     Private Sub cmdpreviewkey_Click(sender As Object, e As EventArgs) Handles cmdpreviewkey.Click
@@ -34,3 +35,5 @@ Public Class ucPreview
     End Sub
 
 End Class
+
+

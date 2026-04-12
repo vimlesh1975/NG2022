@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ucBreakingNews
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -565,3 +565,4 @@ Partial Class ucBreakingNews
     Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
 End Class
+

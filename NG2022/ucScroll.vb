@@ -2,7 +2,8 @@ Imports System.Diagnostics.Eventing.Reader
 Imports System.IO
 Imports System.Threading
 
-Public Class ucScroll
+Partial Public Class ucScroll
+    Inherits ucNGBase
 
 
     Sub UpdateData()
@@ -391,3 +392,4 @@ Public Class ucScroll
         End If
     End Sub
 End Class
+

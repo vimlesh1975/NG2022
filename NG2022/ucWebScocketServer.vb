@@ -1,4 +1,5 @@
-Public Class ucWebScocketServer
+Partial Public Class ucWebScocketServer
+    Inherits ucNGBase
     Private webSocketServer As New WebSocketServer()
 
     ' Start the server when button is clicked
@@ -27,3 +28,5 @@ Public Class ucWebScocketServer
         CheckServerStatus()
     End Sub
 End Class
+
+

@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucCG2
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
     'Inherits WeifenLuo.WinFormsUI.Docking.DockContent
 
     'UserControl overrides dispose to clean up the component list.
@@ -592,3 +592,4 @@ Partial Class ucCG2
     Friend WithEvents cmblayergames As ComboBox
     Friend WithEvents osd2 As SaveFileDialog
 End Class
+

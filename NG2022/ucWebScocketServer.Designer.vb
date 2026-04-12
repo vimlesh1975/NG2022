@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ucWebScocketServer
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -84,3 +84,4 @@ Partial Class ucWebScocketServer
     Friend WithEvents Label1 As Label
     Friend WithEvents lblStatus As Label
 End Class
+

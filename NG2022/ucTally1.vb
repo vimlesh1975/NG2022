@@ -1,4 +1,5 @@
-Public Class ucTally1
+Partial Public Class ucTally1
+    Inherits ucNGBase
     Private Sub cmdPlayTally1_Click(sender As Object, e As EventArgs) Handles cmdPlayTally1.Click
         playTemplate()
     End Sub
@@ -39,17 +40,17 @@ Public Class ucTally1
         On Error Resume Next
         If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         If frmNG2022.chkanimation.Checked Then
-            frmNG2022.animation2(Int(cmblayergames.Text))
+            frmNG2022.animation2(SafeInt(cmblayergames.Text))
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " outAnimation()")
         Else
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         End If
 
         If frmNG2022.chkanimation.Checked Then
             Threading.Thread.Sleep(1000)
-            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+            frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         End If
     End Sub
 
@@ -95,7 +96,7 @@ Public Class ucTally1
         On Error Resume Next
         If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
         collectData()
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
 
     End Sub
 
@@ -148,3 +149,5 @@ Public Class ucTally1
 
 
 End Class
+
+

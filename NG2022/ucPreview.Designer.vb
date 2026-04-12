@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ucPreview
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -131,3 +131,4 @@ Partial Class ucPreview
     Friend WithEvents cmdpreview As System.Windows.Forms.Button
     Friend WithEvents vlcpreview As Vlc.DotNet.Forms.VlcControl
 End Class
+

@@ -1,6 +1,7 @@
 Imports System.IO
 
-Public Class ucCG1
+Partial Public Class ucCG1
+    Inherits ucNGBase
 
     Private Sub cmdwelcome_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdwelcome.Click
         On Error Resume Next
@@ -12,7 +13,7 @@ Public Class ucCG1
 
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/cg/welcome", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), "ng2022/template/cg/welcome", True, CasparCGDataCollection.ToAMCPEscapedXml)
         'Threading.Thread.Sleep(1300)
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
         showtemplate("ng2022/template/cg/welcome", CasparCGDataCollection.ToAMCPEscapedXml)
@@ -40,7 +41,7 @@ Public Class ucCG1
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
 
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/cg/official_id", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), "ng2022/template/cg/official_id", True, CasparCGDataCollection.ToAMCPEscapedXml)
         'Threading.Thread.Sleep(1300)
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
         showtemplate("ng2022/template/cg/official_id", CasparCGDataCollection.ToAMCPEscapedXml)
@@ -58,7 +59,7 @@ Public Class ucCG1
 
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
 
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/cg/commentators", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), "ng2022/template/cg/commentators", True, CasparCGDataCollection.ToAMCPEscapedXml)
         'Threading.Thread.Sleep(1300)
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
         showtemplate("ng2022/template/cg/commentators", CasparCGDataCollection.ToAMCPEscapedXml)
@@ -77,7 +78,7 @@ Public Class ucCG1
 
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
 
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/cg/official_id", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), "ng2022/template/cg/official_id", True, CasparCGDataCollection.ToAMCPEscapedXml)
         'Threading.Thread.Sleep(1300)
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
         showtemplate("ng2022/template/cg/official_id", CasparCGDataCollection.ToAMCPEscapedXml)
@@ -95,7 +96,7 @@ Public Class ucCG1
 
         CasparCGDataCollection.SetData("ccgloader5", gamelogo.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogo.ImageLocation.Replace("\", "/"))
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/cg/welcome", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), "ng2022/template/cg/welcome", True, CasparCGDataCollection.ToAMCPEscapedXml)
         'Threading.Thread.Sleep(1300)
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
         showtemplate("ng2022/template/cg/welcome", CasparCGDataCollection.ToAMCPEscapedXml)
@@ -132,7 +133,7 @@ Public Class ucCG1
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgf0", cmblefttopcg.Text)
 
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/cg/lefttop", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), "ng2022/template/cg/lefttop", True, CasparCGDataCollection.ToAMCPEscapedXml)
         'Threading.Thread.Sleep(1300)
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
         showtemplate("ng2022/template/cg/lefttop", CasparCGDataCollection.ToAMCPEscapedXml)
@@ -150,7 +151,7 @@ Public Class ucCG1
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animation1(cmblayergames.Text)
         'Threading.Thread.Sleep(250)
 
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/cg/oneliner", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), "ng2022/template/cg/oneliner", True, CasparCGDataCollection.ToAMCPEscapedXml)
         'Threading.Thread.Sleep(1300)
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
         showtemplate("ng2022/template/cg/oneliner", CasparCGDataCollection.ToAMCPEscapedXml)
@@ -211,23 +212,23 @@ Public Class ucCG1
     Private Sub cmdstopcg2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopcg2.Click
         'On Error Resume Next
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(cmblayergames.Text)
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         'Threading.Thread.Sleep(1000)
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
 
         On Error Resume Next
         If frmNG2022.chkanimation.Checked Then
-            frmNG2022.animation2(Int(cmblayergames.Text))
+            frmNG2022.animation2(SafeInt(cmblayergames.Text))
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " outAnimation()")
         Else
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         End If
 
         If frmNG2022.chkanimation.Checked Then
             Threading.Thread.Sleep(1000)
-            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+            frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         End If
 
     End Sub
@@ -671,3 +672,4 @@ Public Class ucCG1
         showtemplate("ng2022/template/cg/HeatsToQuaterFinals", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 End Class
+

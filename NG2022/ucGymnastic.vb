@@ -1,4 +1,5 @@
-Public Class ucGymnastic
+Partial Public Class ucGymnastic
+    Inherits ucNGBase
     Private Sub ucGymnastic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         gymnasticsdefaultdata()
         defautdataforball()
@@ -188,25 +189,25 @@ Public Class ucGymnastic
     End Sub
     Private Sub cmdstopgym_Click(sender As Object, e As EventArgs) Handles cmdstopgym.Click
         'On Error Resume Next
-        'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(Int(cmblayergames.Text))
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(SafeInt(cmblayergames.Text))
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         'Threading.Thread.Sleep(1000)
-        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
 
 
         On Error Resume Next
         If frmNG2022.chkanimation.Checked Then
-            frmNG2022.animation2(Int(cmblayergames.Text))
+            frmNG2022.animation2(SafeInt(cmblayergames.Text))
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " outAnimation()")
         Else
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         End If
 
         If frmNG2022.chkanimation.Checked Then
             Threading.Thread.Sleep(1000)
-            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+            frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         End If
 
 
@@ -320,7 +321,7 @@ Public Class ucGymnastic
                     CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(1).Value)
                     CasparCGDataCollection.SetData("ccg_r" & i, .Rows(i).Cells(CType(cmbstandingsgym.Text, Integer)).Value)
 
-                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
 
                 End If
             Next
@@ -330,7 +331,7 @@ Public Class ucGymnastic
 
             For i = 0 To 7
                 If .Rows(i).Cells(0).Value <> "" Then
-                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
                 End If
             Next
         End With
@@ -357,7 +358,7 @@ Public Class ucGymnastic
             showtemplate("ng2022/template/Gymnastics/result", CasparCGDataCollection.ToAMCPEscapedXml)
             For i = 8 To .RowCount - 1
                 If .Rows(i).Cells(0).Value <> "" Then
-                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i - 8 & "').style.display = 'block'" & """")
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i - 8 & "').style.display = 'block'" & """")
                 End If
             Next
         End With
@@ -379,7 +380,7 @@ Public Class ucGymnastic
                     CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(1).Value)
                     CasparCGDataCollection.SetData("ccg_r" & i, .Rows(i).Cells(CType(cmbstandingsgym.Text, Integer)).Value)
 
-                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
 
                 End If
             Next
@@ -410,7 +411,7 @@ Public Class ucGymnastic
                     CasparCGDataCollection.SetData("ccg_r1" & i, .Rows(i).Cells(21).Value)
                     CasparCGDataCollection.SetData("ccg_r2" & i, .Rows(i).Cells(22).Value)
 
-                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
 
                 End If
             Next
@@ -420,7 +421,7 @@ Public Class ucGymnastic
 
             For i = 0 To 7
                 If .Rows(i).Cells(0).Value <> "" Then
-                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i & "').style.display = 'block'" & """")
                 End If
             Next
         End With
@@ -449,7 +450,7 @@ Public Class ucGymnastic
             showtemplate("ng2022/template/Gymnastics/vault_standings", CasparCGDataCollection.ToAMCPEscapedXml)
             For i = 8 To .RowCount - 1
                 If .Rows(i).Cells(0).Value <> "" Then
-                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i - 8 & "').style.display = 'block'" & """")
+                    CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('ccgred" & i - 8 & "').style.display = 'block'" & """")
                 End If
             Next
         End With
@@ -490,9 +491,9 @@ Public Class ucGymnastic
         '    CasparCGDataCollection.SetData("f2", dgvGymnastics.Columns(27).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(27).Value)
         '    CasparCGDataCollection.SetData("f4", dgvGymnastics.Columns(20).HeaderText & " " & dgvGymnastics.CurrentRow.Cells(20).Value)
         '    If rdoaveragevaultgym.Checked Then
-        '        CasparCGDataCollection.SetData("f5", "Total" & " " & (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)) / 2)
+        '        CasparCGDataCollection.SetData("f5", "Total" & " " & (SafeVal(dgvGymnastics.CurrentRow.Cells(27).Value) + SafeVal(dgvGymnastics.CurrentRow.Cells(20).Value)) / 2)
         '    Else
-        '        CasparCGDataCollection.SetData("f5", "Total" & " " & (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)))
+        '        CasparCGDataCollection.SetData("f5", "Total" & " " & (SafeVal(dgvGymnastics.CurrentRow.Cells(27).Value) + SafeVal(dgvGymnastics.CurrentRow.Cells(20).Value)))
 
         '    End If
 
@@ -524,7 +525,7 @@ Public Class ucGymnastic
         'If rdoArtisticsgym.Checked Then
         '    showtemplate("ng2022/template/Gymnastics/PlayerScorecard2ndvault", CasparCGDataCollection.ToAMCPEscapedXml)
         'Else
-        '    'CasparDevice.Channels(g_int_ChannelNumber-1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/Gymnastics/PlayerScorecard2", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        '    'CasparDevice.Channels(g_int_ChannelNumber-1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), "ng2022/template/Gymnastics/PlayerScorecard2", True, CasparCGDataCollection.ToAMCPEscapedXml)
         'End If
         On Error Resume Next
         CasparCGDataCollection.Clear()
@@ -538,12 +539,12 @@ Public Class ucGymnastic
         CasparCGDataCollection.SetData("ccg_v0", dgvGymnastics.CurrentRow.Cells(20).Value)
 
         If rdoaveragevaultgym.Checked Then
-            CasparCGDataCollection.SetData("ccg_t0", (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)) / 2)
+            CasparCGDataCollection.SetData("ccg_t0", (SafeVal(dgvGymnastics.CurrentRow.Cells(27).Value) + SafeVal(dgvGymnastics.CurrentRow.Cells(20).Value)) / 2)
 
-            'CasparCGDataCollection.SetData("f5", "Total" & " " & (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)) / 2)
+            'CasparCGDataCollection.SetData("f5", "Total" & " " & (SafeVal(dgvGymnastics.CurrentRow.Cells(27).Value) + SafeVal(dgvGymnastics.CurrentRow.Cells(20).Value)) / 2)
         Else
-            'CasparCGDataCollection.SetData("f5", "Total" & " " & (Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value)))
-            CasparCGDataCollection.SetData("ccg_t0", Val(dgvGymnastics.CurrentRow.Cells(27).Value) + Val(dgvGymnastics.CurrentRow.Cells(20).Value))
+            'CasparCGDataCollection.SetData("f5", "Total" & " " & (SafeVal(dgvGymnastics.CurrentRow.Cells(27).Value) + SafeVal(dgvGymnastics.CurrentRow.Cells(20).Value)))
+            CasparCGDataCollection.SetData("ccg_t0", SafeVal(dgvGymnastics.CurrentRow.Cells(27).Value) + SafeVal(dgvGymnastics.CurrentRow.Cells(20).Value))
 
         End If
 
@@ -730,22 +731,22 @@ Public Class ucGymnastic
 
     Private Sub dgvGymnastics_CellValueChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvGymnastics.CellValueChanged
         On Error Resume Next
-        dgvGymnastics.Rows(e.RowIndex).Cells(9).Value = Format(Val(dgvGymnastics.Rows(e.RowIndex).Cells(3).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(4).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(5).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(6).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(7).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(8).Value), "00.00")
+        dgvGymnastics.Rows(e.RowIndex).Cells(9).Value = Format(SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(3).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(4).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(5).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(6).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(7).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(8).Value), "00.00")
 
-        dgvGymnastics.Rows(e.RowIndex).Cells(14).Value = Format(Val(dgvGymnastics.Rows(e.RowIndex).Cells(10).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(11).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(12).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(13).Value), "00.00")
+        dgvGymnastics.Rows(e.RowIndex).Cells(14).Value = Format(SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(10).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(11).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(12).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(13).Value), "00.00")
         If rdoaveragevaultgym.Checked Then
-            dgvGymnastics.Rows(e.RowIndex).Cells(22).Value = Format((Val(dgvGymnastics.Rows(e.RowIndex).Cells(20).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(21).Value)) / 2, "00.00")
+            dgvGymnastics.Rows(e.RowIndex).Cells(22).Value = Format((SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(20).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(21).Value)) / 2, "00.00")
 
         Else
-            dgvGymnastics.Rows(e.RowIndex).Cells(22).Value = Format(Val(dgvGymnastics.Rows(e.RowIndex).Cells(20).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(21).Value), "00.00")
+            dgvGymnastics.Rows(e.RowIndex).Cells(22).Value = Format(SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(20).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(21).Value), "00.00")
 
         End If
 
         If rdoArtisticsgym.Checked Then
-            dgvGymnastics.Rows(e.RowIndex).Cells(27).Value = Format(Val(dgvGymnastics.Rows(e.RowIndex).Cells(23).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(25).Value) - Val(dgvGymnastics.Rows(e.RowIndex).Cells(26).Value), "00.00")
+            dgvGymnastics.Rows(e.RowIndex).Cells(27).Value = Format(SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(23).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(25).Value) - SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(26).Value), "00.00")
 
         Else
-            dgvGymnastics.Rows(e.RowIndex).Cells(27).Value = Format(Val(dgvGymnastics.Rows(e.RowIndex).Cells(23).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(24).Value) + Val(dgvGymnastics.Rows(e.RowIndex).Cells(25).Value) - Val(dgvGymnastics.Rows(e.RowIndex).Cells(26).Value), "00.00")
+            dgvGymnastics.Rows(e.RowIndex).Cells(27).Value = Format(SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(23).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(24).Value) + SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(25).Value) - SafeVal(dgvGymnastics.Rows(e.RowIndex).Cells(26).Value), "00.00")
 
         End If
 
@@ -763,10 +764,10 @@ Public Class ucGymnastic
         On Error Resume Next
         For i = 0 To dgvGymnastics.RowCount - 1
             If rdoArtisticsgym.Checked Then
-                dgvGymnastics.Rows(i).Cells(27).Value = Format(Val(dgvGymnastics.Rows(i).Cells(23).Value) + Val(dgvGymnastics.Rows(i).Cells(25).Value) - Val(dgvGymnastics.Rows(i).Cells(26).Value), "00.000")
+                dgvGymnastics.Rows(i).Cells(27).Value = Format(SafeVal(dgvGymnastics.Rows(i).Cells(23).Value) + SafeVal(dgvGymnastics.Rows(i).Cells(25).Value) - SafeVal(dgvGymnastics.Rows(i).Cells(26).Value), "00.000")
                 cmdplayerscorecard2ndvaultgym.Visible = True
             Else
-                dgvGymnastics.Rows(i).Cells(27).Value = Format(Val(dgvGymnastics.Rows(i).Cells(23).Value) + Val(dgvGymnastics.Rows(i).Cells(24).Value) + Val(dgvGymnastics.Rows(i).Cells(25).Value) - Val(dgvGymnastics.Rows(i).Cells(26).Value), "00.000")
+                dgvGymnastics.Rows(i).Cells(27).Value = Format(SafeVal(dgvGymnastics.Rows(i).Cells(23).Value) + SafeVal(dgvGymnastics.Rows(i).Cells(24).Value) + SafeVal(dgvGymnastics.Rows(i).Cells(25).Value) - SafeVal(dgvGymnastics.Rows(i).Cells(26).Value), "00.000")
                 cmdplayerscorecard2ndvaultgym.Visible = False
 
             End If
@@ -812,10 +813,12 @@ Public Class ucGymnastic
         On Error Resume Next
         For i = 0 To dgvGymnastics.RowCount - 1
             If rdoaveragevaultgym.Checked Then
-                dgvGymnastics.Rows(i).Cells(22).Value = Format((Val(dgvGymnastics.Rows(i).Cells(20).Value) + Val(dgvGymnastics.Rows(i).Cells(21).Value)) / 2, "00.00")
+                dgvGymnastics.Rows(i).Cells(22).Value = Format((SafeVal(dgvGymnastics.Rows(i).Cells(20).Value) + SafeVal(dgvGymnastics.Rows(i).Cells(21).Value)) / 2, "00.00")
             Else
-                dgvGymnastics.Rows(i).Cells(22).Value = Format(Val(dgvGymnastics.Rows(i).Cells(20).Value) + Val(dgvGymnastics.Rows(i).Cells(21).Value), "00.00")
+                dgvGymnastics.Rows(i).Cells(22).Value = Format(SafeVal(dgvGymnastics.Rows(i).Cells(20).Value) + SafeVal(dgvGymnastics.Rows(i).Cells(21).Value), "00.00")
             End If
         Next
     End Sub
 End Class
+
+

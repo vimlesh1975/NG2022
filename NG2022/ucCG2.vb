@@ -1,5 +1,6 @@
 Imports System.IO
-Public Class ucCG2
+Partial Public Class ucCG2
+    Inherits ucNGBase
     Private Sub cmd10linercg2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmd10linercg2.Click
         cg2dataandtemplate(10)
     End Sub
@@ -72,30 +73,30 @@ Public Class ucCG2
         Next
         CasparCGDataCollection.SetData("ccgloader5", gamelogoforcg2.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogoforcg2.ImageLocation.Replace("\", "/"))
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), txtTemplateDirectoryCg2.Text & "/" & "3linecenter", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), txtTemplateDirectoryCg2.Text & "/" & "3linecenter", True, CasparCGDataCollection.ToAMCPEscapedXml)
 
         showtemplate(txtTemplateDirectoryCg2.Text & "/" & "3linecenter", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
     Private Sub cmdstopcg2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopcg2.Click
         'On Error Resume Next
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(cmblayergames.Text)
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         'Threading.Thread.Sleep(1000)
         'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
 
         On Error Resume Next
         If frmNG2022.chkanimation.Checked Then
-            frmNG2022.animation2(Int(cmblayergames.Text))
+            frmNG2022.animation2(SafeInt(cmblayergames.Text))
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " outAnimation()")
         Else
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         End If
 
         If frmNG2022.chkanimation.Checked Then
             Threading.Thread.Sleep(1000)
-            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+            frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         End If
 
     End Sub
@@ -203,7 +204,7 @@ Public Class ucCG2
     Private Sub cmdvenueidcg2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         On Error Resume Next
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animation1(Int(cmblayergames.Text))
+        If frmNG2022.chkanimation.Checked Then frmNG2022.animation1(SafeInt(cmblayergames.Text))
         CasparCGDataCollection.Clear()
         Dim i As Integer = dgvinfocg2.CurrentRow.Index
         CasparCGDataCollection.SetData("ccgf" & i - dgvinfocg2.CurrentRow.Index, dgvinfocg2.Rows(i).Cells(0).Value)
@@ -211,7 +212,7 @@ Public Class ucCG2
         CasparCGDataCollection.SetData("ccgloader5", gamelogoforcg2.ImageLocation.Replace("\", "/"))
         CasparCGDataCollection.SetData("ccgloader6", eventlogoforcg2.ImageLocation.Replace("\", "/"))
 
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), txtTemplateDirectoryCg2.Text & "/" & "venue_id", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), txtTemplateDirectoryCg2.Text & "/" & "venue_id", True, CasparCGDataCollection.ToAMCPEscapedXml)
         If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(cmblayergames.Text)
     End Sub
 
@@ -222,7 +223,7 @@ Public Class ucCG2
     End Sub
 
     Private Sub cmdNextStepCG2_Click(sender As Object, e As EventArgs) Handles cmdNextStepCG2.Click
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Next(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Next(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs)
@@ -269,3 +270,4 @@ Public Class ucCG2
         End Using
     End Sub
 End Class
+

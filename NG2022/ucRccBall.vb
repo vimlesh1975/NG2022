@@ -1,4 +1,5 @@
-Public Class ucRccBall
+Partial Public Class ucRccBall
+    Inherits ucNGBase
     Private Sub NG_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
 
@@ -48,24 +49,24 @@ Public Class ucRccBall
     End Sub
     Private Sub cmdstopgym_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopgym.Click
         'On Error Resume Next
-        'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(Int(cmblayergames.Text))
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(SafeInt(cmblayergames.Text))
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         'Threading.Thread.Sleep(1000)
-        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
 
         On Error Resume Next
         If frmNG2022.chkanimation.Checked Then
-            frmNG2022.animation2(Int(cmblayergames.Text))
+            frmNG2022.animation2(SafeInt(cmblayergames.Text))
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " outAnimation()")
         Else
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         End If
 
         If frmNG2022.chkanimation.Checked Then
             Threading.Thread.Sleep(1000)
-            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+            frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         End If
 
     End Sub
@@ -199,7 +200,7 @@ Public Class ucRccBall
 
     Private Sub cmdstartclockball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstartclockball.Click
         tmrtimeonform.Enabled = True
-        aa = Val(Now.Second.ToString) 'new code
+        aa = SafeVal(Now.Second.ToString) 'new code
     End Sub
     Dim aa As Integer 'new code
     Private Sub cmdresetclockball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdresetclockball.Click
@@ -211,25 +212,25 @@ Public Class ucRccBall
     End Sub
     Private Sub tmrtimeonform_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tmrtimeonform.Tick
         On Error Resume Next
-        Dim bb = Val(Now.Second.ToString)
+        Dim bb = SafeVal(Now.Second.ToString)
 
         Dim dif As Integer = (bb - aa)
         aa = bb
         If dif < 0 Then dif = dif + 60
 
         If rdodowncounterball.Checked = True Then
-            txtsecball.Text = Format(Val(txtsecball.Text - dif), "00")
-            If Val(txtsecball.Text) < 0 Then
+            txtsecball.Text = Format(SafeVal(txtsecball.Text - dif), "00")
+            If SafeVal(txtsecball.Text) < 0 Then
                 txtsecball.Text = 59
                 txtminball.Text = Format(txtminball.Text - 1, "00")
             End If
-            If Val(txtminball.Text) < 0 Then
+            If SafeVal(txtminball.Text) < 0 Then
                 txtsecball.Text = "00"
                 txtminball.Text = "00"
             End If
         End If
         If rdoupcounterball.Checked = True Then
-            txtsecball.Text = Format(Val(txtsecball.Text + dif), "00")
+            txtsecball.Text = Format(SafeVal(txtsecball.Text + dif), "00")
             If txtsecball.Text > 59 Then
                 txtsecball.Text = "00"
                 txtminball.Text = Format(txtminball.Text + 1, "00")
@@ -241,7 +242,7 @@ Public Class ucRccBall
         On Error Resume Next
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgtime", txtminball.Text & ":" & txtsecball.Text)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1, CasparCGDataCollection)
 
     End Sub
 
@@ -250,7 +251,7 @@ Public Class ucRccBall
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("ccgtime", txthalftimeball.Text & ":00")
         CasparCGDataCollection.SetData("ccgextra", txtminball.Text & ":" & txtsecball.Text)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1, CasparCGDataCollection)
     End Sub
 
     Private Sub cmdscorewithextraball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdscorewithextraball.Click
@@ -274,11 +275,11 @@ Public Class ucRccBall
 
         showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "extraalpha('1')" & """")
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showClockAndhalf('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "extraalpha('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "showClockAndhalf('1')" & """")
 
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = False
         tmrupdateontemplateextra.Enabled = True
@@ -288,7 +289,7 @@ Public Class ucRccBall
     Private Sub cmdstopscoreball_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdstopscoreball.Click
         On Error Resume Next
         'If frmNG2022.chkanimation.Checked Then CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill -1 0 1 1 50 easeoutexpo")
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1)
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1)
         'Threading.Thread.Sleep(2000)
         'If frmNG2022.chkanimation.Checked Then
         '    CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & cmblayergames.Text + 1 & " fill .1 0 .8 1 50 easeoutexpo")
@@ -297,17 +298,17 @@ Public Class ucRccBall
 
         On Error Resume Next
         If frmNG2022.chkanimation.Checked Then
-            frmNG2022.animation2(Int(cmblayergames.Text) + 1)
+            frmNG2022.animation2(SafeInt(cmblayergames.Text) + 1)
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " outAnimation()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " outAnimation()")
         Else
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1)
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1)
         End If
 
         If frmNG2022.chkanimation.Checked Then
             Threading.Thread.Sleep(1000)
-            frmNG2022.animationtoscreen(Int(cmblayergames.Text) + 1)
+            frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text) + 1)
         End If
         tmrtimeupdateontemplate.Enabled = False
         tmrupdateontemplateextra.Enabled = False
@@ -437,11 +438,11 @@ Public Class ucRccBall
 
     Sub showtemplatescore(ByVal templatename As String, ByVal datacollection As String)
         On Error Resume Next
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animation1(Int(cmblayergames.Text) + 1)
+        If frmNG2022.chkanimation.Checked Then frmNG2022.animation1(SafeInt(cmblayergames.Text) + 1)
         Threading.Thread.Sleep(250)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, templatename, True, datacollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1, templatename, True, datacollection)
         Threading.Thread.Sleep(1300)
-        If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text) + 1)
+        If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text) + 1)
     End Sub
     Private counter As Integer
     Private Sub dgvt2ball_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvt2ball.CellDoubleClick
@@ -740,7 +741,7 @@ Public Class ucRccBall
         CasparCGDataCollection.SetData("ccgf2", txtt1gball.Text)
         CasparCGDataCollection.SetData("ccgf3", txtt2gball.Text)
 
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1, CasparCGDataCollection)
     End Sub
     Private Sub cmdgoalSummary_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdgoalSummary.Click
         On Error Resume Next
@@ -802,9 +803,9 @@ Public Class ucRccBall
 
         showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showClockAndhalf('1')" & """")
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "showClockAndhalf('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = True
         tmrupdateontemplateextra.Enabled = False
@@ -917,10 +918,10 @@ Public Class ucRccBall
 
         showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
 
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showinfo('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "showinfo('1')" & """")
 
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(Color.Blue) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(Color.Blue) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = False
         tmrupdateontemplateextra.Enabled = False
@@ -1000,9 +1001,9 @@ Public Class ucRccBall
         CasparCGDataCollection.SetData("ccgteam2color", ColorTranslator.ToHtml(Color.Blue))
 
         showtemplatescore("ng2022/template/ball/score", CasparCGDataCollection.ToAMCPEscapedXml)
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showClockAndhalf('1')" & """")
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(Color.Blue) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "showClockAndhalf('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(Color.Blue) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = True
         tmrupdateontemplateextra.Enabled = False
@@ -1096,7 +1097,7 @@ Public Class ucRccBall
         On Error Resume Next
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("resume", "")
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1, CasparCGDataCollection)
 
     End Sub
     Private Sub dgvFE_DataError(sender As Object, e As DataGridViewDataErrorEventArgs)
@@ -1212,11 +1213,11 @@ Public Class ucRccBall
                     If .Rows(0).Cells(iii).Value = 0 Then
                         CasparCGDataCollection.SetData("ccgpenaltycircle" & iii + 1, ColorTranslator.ToHtml(Color.Red))
 
-                        ' CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+                        ' CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
                     Else
                         CasparCGDataCollection.SetData("ccgpenaltycircle" & iii + 1, ColorTranslator.ToHtml(Color.Green))
 
-                        ' CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
+                        ' CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
                     End If
 
                 End If
@@ -1226,11 +1227,11 @@ Public Class ucRccBall
                     If .Rows(1).Cells(iii).Value = 0 Then
                         CasparCGDataCollection.SetData("ccgpenaltycircle" & iii + 1 + 5, ColorTranslator.ToHtml(Color.Red))
 
-                        ' CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+                        ' CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
                     Else
                         CasparCGDataCollection.SetData("ccgpenaltycircle" & iii + 1 + 5, ColorTranslator.ToHtml(Color.Green))
 
-                        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
+                        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
                     End If
 
                 End If
@@ -1243,15 +1244,15 @@ Public Class ucRccBall
 
 
 
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "showPenalty('1')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "showPenalty('1')" & """")
 
         'With dgvpenaltyball
         '    For iii = 0 To 4
         '        If .Rows(0).Cells(iii).Value <> "" Then
         '            If .Rows(0).Cells(iii).Value = 0 Then
-        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
         '            Else
-        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
+        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
         '            End If
 
         '        End If
@@ -1259,9 +1260,9 @@ Public Class ucRccBall
         '    For iii = 0 To 4
         '        If .Rows(1).Cells(iii).Value <> "" Then
         '            If .Rows(1).Cells(iii).Value = 0 Then
-        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
         '            Else
-        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
+        '                CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
         '            End If
 
         '        End If
@@ -1269,8 +1270,8 @@ Public Class ucRccBall
 
         'End With
 
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam1color'," & "'" & ColorTranslator.ToHtml(cmdt1colorball.BackColor) & "')" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setTeamcolor('ccgteam2color'," & "'" & ColorTranslator.ToHtml(cmdt2colorball.BackColor) & "')" & """")
 
         tmrtimeupdateontemplate.Enabled = False
         tmrupdateontemplateextra.Enabled = False
@@ -1281,18 +1282,18 @@ Public Class ucRccBall
             For iii = 0 To 4
                 If .Rows(0).Cells(iii).Value <> "" Then
                     If .Rows(0).Cells(iii).Value = 0 Then
-                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
                     Else
-                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
+                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
                     End If
                 End If
             Next
             For iii = 0 To 4
                 If .Rows(1).Cells(iii).Value <> "" Then
                     If .Rows(1).Cells(iii).Value = 0 Then
-                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
+                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Red) & "')" & """")
                     Else
-                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
+                        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "setCircleColor('ccgpenaltycircle" & iii + 1 + 5 & "'," & "'" & ColorTranslator.ToHtml(Color.Green) & "')" & """")
                     End If
                 End If
             Next
@@ -1331,3 +1332,5 @@ Public Class ucRccBall
         End If
     End Sub
 End Class
+
+

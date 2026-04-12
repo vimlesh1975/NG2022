@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucScroll
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -627,3 +627,4 @@ Partial Class ucScroll
     Friend WithEvents eventlogo As PictureBox
     Friend WithEvents chkUseImage As CheckBox
 End Class
+

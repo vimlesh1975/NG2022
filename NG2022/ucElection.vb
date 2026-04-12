@@ -1,4 +1,5 @@
-Public Class ucElection
+Partial Public Class ucElection
+    Inherits ucNGBase
     Private Sub ucElection_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'gfhfghfgh
     End Sub
@@ -7,3 +8,5 @@ Public Class ucElection
 
     End Sub
 End Class
+
+

@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucGymnastic
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -1671,3 +1671,4 @@ Partial Class ucGymnastic
     Friend WithEvents dgvt1ball As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
 End Class
+

@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucCanoeSlalom
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -1054,3 +1054,4 @@ Partial Class ucCanoeSlalom
     Friend WithEvents cmdplayerId2 As Button
     Friend WithEvents cmdCourseDescription As Button
 End Class
+

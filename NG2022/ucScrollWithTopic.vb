@@ -2,7 +2,8 @@ Imports System.Diagnostics.Eventing.Reader
 Imports System.IO
 Imports System.Threading
 Imports Newtonsoft.Json
-Public Class ucScrollWithTopic
+Partial Public Class ucScrollWithTopic
+    Inherits ucNGBase
 
 
     Sub UpdateData()
@@ -443,3 +444,4 @@ Public Class ucScrollWithTopic
 
     End Sub
 End Class
+

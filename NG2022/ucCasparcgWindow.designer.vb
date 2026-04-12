@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucCasparcgWindow
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -135,3 +135,4 @@ Partial Class ucCasparcgWindow
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents tmraudio As Timer
 End Class
+

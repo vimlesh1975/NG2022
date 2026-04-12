@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucKhoKho
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
     'Inherits WeifenLuo.WinFormsUI.Docking.DockContent
 
     'Form overrides dispose to clean up the component list.
@@ -1588,3 +1588,4 @@ Partial Class ucKhoKho
     Friend WithEvents chkRunner As CheckBox
     Friend WithEvents cmdscoreupdateball As Button
 End Class
+

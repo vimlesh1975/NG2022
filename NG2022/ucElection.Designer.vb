@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ucElection
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -98,3 +98,4 @@ Partial Class ucElection
     Friend WithEvents UcTally11 As ucTally1
     Friend WithEvents UcPhoto11 As ucPhoto1
 End Class
+

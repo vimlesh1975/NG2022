@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ucTally1
-    Inherits System.Windows.Forms.UserControl
+    Inherits ucNGBase
 
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -283,3 +283,4 @@ Partial Class ucTally1
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label2 As Label
 End Class
+

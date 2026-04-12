@@ -1,7 +1,8 @@
 Imports System.Threading
 Imports Microsoft.VisualBasic.FileIO
 
-Public Class ucTrack
+Partial Public Class ucTrack
+    Inherits ucNGBase
     Private Sub ucRowing_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         defauttrackdata()
         defautdataforball()
@@ -268,9 +269,9 @@ Public Class ucTrack
         CasparCGDataCollection.Clear()
         CasparCGDataCollection.SetData("uptimer1", txttimerminutetrac.Text + ":" + txttimersecondtrack.Text + "." + "000")
         CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, "ng2022/template/Track/timer", True, CasparCGDataCollection.ToAMCPEscapedXml)
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "startTimer(" & (txttimerminutetrac.Text) * 60000 + (txttimersecondtrack.Text) * 1000 & ")" & """")
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "pause()" & """")
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1, "ng2022/template/Track/timer", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "startTimer(" & (txttimerminutetrac.Text) * 60000 + (txttimersecondtrack.Text) * 1000 & ")" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "pause()" & """")
 
 
     End Sub
@@ -279,16 +280,16 @@ Public Class ucTrack
     Private Sub cmdtimerpausetrack_Click(sender As Object, e As EventArgs) Handles cmdtimerpausetrack.Click
         On Error Resume Next
         'CasparCGDataCollection.Clear()
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "pause()" & """")
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, CasparCGDataCollection)
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "pause()" & """")
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1, CasparCGDataCollection)
 
-        dgvtrack.CurrentRow.Cells(4).Value = txttimerminutetrac.Text + "." + Format(Val(txttimersecondtrack.Text), "00")
+        dgvtrack.CurrentRow.Cells(4).Value = txttimerminutetrac.Text + "." + Format(SafeVal(txttimersecondtrack.Text), "00")
         pauseCount += 1
         dgvtrack.CurrentRow.Cells(5).Value = pauseCount
         cmdfillresulttrack.PerformClick()
         updatecmdIntermediatResult.PerformClick()
         'Thread.Sleep(2000)
-        'txttimersecondtrack.Text = Val(txttimersecondtrack) + 2
+        'txttimersecondtrack.Text = SafeVal(txttimersecondtrack) + 2
         If pauseCount < 8 Then
             cmdtimerresumetrack.PerformClick()
         End If
@@ -303,10 +304,10 @@ Public Class ucTrack
     Private Sub cmdtimerresumetrack_Click(sender As Object, e As EventArgs) Handles cmdtimerresumetrack.Click
         On Error Resume Next
         CasparCGDataCollection.Clear()
-        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "startTimer()" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 1 & " " & """" & "startTimer(" & (txttimerminutetrac.Text) * 60000 + (txttimersecondtrack.Text) * 1000 & ")" & """")
+        'CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "startTimer()" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 1 & " " & """" & "startTimer(" & (txttimerminutetrac.Text) * 60000 + (txttimersecondtrack.Text) * 1000 & ")" & """")
 
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1, CasparCGDataCollection)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1, CasparCGDataCollection)
         tmrtimeonform.Enabled = True
     End Sub
 
@@ -316,13 +317,13 @@ Public Class ucTrack
         CasparCGDataCollection.Clear()
 
         CasparCGDataCollection.SetData("ccg_laps", cmblaptrack.Text)
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text) + 3, Int(cmblayergames.Text) + 3, "ng2022/template/Track/laps", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text) + 3, SafeInt(cmblayergames.Text) + 3, "ng2022/template/Track/laps", True, CasparCGDataCollection.ToAMCPEscapedXml)
 
     End Sub
 
     Private Sub cmdtimerremovetrack_Click(sender As Object, e As EventArgs) Handles cmdtimerremovetrack.Click
         On Error Resume Next
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text) + 1, Int(cmblayergames.Text) + 1)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text) + 1, SafeInt(cmblayergames.Text) + 1)
         Threading.Thread.Sleep(2000)
         tmrtimeonform.Enabled = False
         pauseCount = 0
@@ -377,24 +378,24 @@ Public Class ucTrack
 
     Private Sub cmdstopgym_Click(sender As Object, e As EventArgs) Handles cmdstopgym.Click
         On Error Resume Next
-        'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(Int(cmblayergames.Text))
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animation2(SafeInt(cmblayergames.Text))
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         'Threading.Thread.Sleep(1000)
-        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+        'If frmNG2022.chkanimation.Checked Then frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
 
         On Error Resume Next
         If frmNG2022.chkanimation.Checked Then
-            frmNG2022.animation2(Int(cmblayergames.Text))
+            frmNG2022.animation2(SafeInt(cmblayergames.Text))
         End If
         If frmNG2022.chkanimation.Checked = False Then
-            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " outAnimation()")
+            CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " outAnimation()")
         Else
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text), Int(cmblayergames.Text))
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text))
         End If
 
         If frmNG2022.chkanimation.Checked Then
             Threading.Thread.Sleep(1000)
-            frmNG2022.animationtoscreen(Int(cmblayergames.Text))
+            frmNG2022.animationtoscreen(SafeInt(cmblayergames.Text))
         End If
 
         'tmrtimeupdateontemplate.Enabled = False
@@ -483,7 +484,7 @@ Public Class ucTrack
                 CasparCGDataCollection.SetData("ccgloader" & i, .Rows(i).Cells(6).Value.Replace("\", "/"))
                 CasparCGDataCollection.SetData("ccgf" & i, .Rows(i).Cells(3).Value)
             Next
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text) + 2, Int(cmblayergames.Text) + 2, "ng2022/template/track/langraphics", True, CasparCGDataCollection.ToAMCPEscapedXml)
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text) + 2, SafeInt(cmblayergames.Text) + 2, "ng2022/template/track/langraphics", True, CasparCGDataCollection.ToAMCPEscapedXml)
             ' CasparDevice.SendString("mixer 1-98 perspective 0.60 0.25 1.15 0.50 0.80 0.95 -5.30 0.35")
             perspectivemixer()
             nfill()
@@ -492,15 +493,15 @@ Public Class ucTrack
 
     Private Sub cmdRemoveLanGraphics_Click(sender As Object, e As EventArgs) Handles cmdRemoveLanGraphics.Click
         On Error Resume Next
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text) + 2, Int(cmblayergames.Text) + 2)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text) + 2, SafeInt(cmblayergames.Text) + 2)
         Threading.Thread.Sleep(2000)
-        CasparDevice.SendString("mixer 1-" + Int(cmblayergames.Text) + 2 + " clear")
+        CasparDevice.SendString("mixer 1-" + SafeInt(cmblayergames.Text) + 2 + " clear")
 
     End Sub
     Sub perspectivemixer() Handles nperspectivetlx.ValueChanged, nperspectivetly.ValueChanged, nperspectivetrx.ValueChanged, nperspectivetry.ValueChanged, nperspectivebrx.ValueChanged, nperspectivebry.ValueChanged, nperspectiveblx.ValueChanged, nperspectivebly.ValueChanged
         On Error Resume Next
         If String.IsNullOrWhiteSpace(cmblayergames.Text) Then Exit Sub
-        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) + 2 & " perspective " & Replace(nperspectivetlx.Value, ",", ".") & " " & Replace(nperspectivetly.Value, ",", ".") & " " & Replace(nperspectivetrx.Value, ",", ".") & " " & Replace(nperspectivetry.Value, ",", ".") & " " & Replace(nperspectivebrx.Value, ",", ".") & " " & Replace(nperspectivebry.Value, ",", ".") & " " & Replace(nperspectiveblx.Value, ",", ".") & " " & Replace(nperspectivebly.Value, ",", "."))
+        CasparDevice.SendString("mixer " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) + 2 & " perspective " & Replace(nperspectivetlx.Value, ",", ".") & " " & Replace(nperspectivetly.Value, ",", ".") & " " & Replace(nperspectivetrx.Value, ",", ".") & " " & Replace(nperspectivetry.Value, ",", ".") & " " & Replace(nperspectivebrx.Value, ",", ".") & " " & Replace(nperspectivebry.Value, ",", ".") & " " & Replace(nperspectiveblx.Value, ",", ".") & " " & Replace(nperspectivebly.Value, ",", "."))
 
     End Sub
     Sub resetperpectivemixer()
@@ -544,18 +545,18 @@ Public Class ucTrack
 
     Private Sub cmdSignal_Click(sender As Object, e As EventArgs) Handles cmdSignal.Click
         CasparCGDataCollection.Clear()
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/Track/signal", True, CasparCGDataCollection.ToAMCPEscapedXml)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imgred').getElementsByTagName('image')[0].style.opacity=1" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imggreen').getElementsByTagName('image')[0].style.opacity=0" & """")
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), "ng2022/template/Track/signal", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imgred').getElementsByTagName('image')[0].style.opacity=1" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imggreen').getElementsByTagName('image')[0].style.opacity=0" & """")
 
         cmdtimertrack.PerformClick()
     End Sub
 
     Private Sub cmdGreenSignal_Click(sender As Object, e As EventArgs) Handles cmdGreenSignal.Click
         CasparCGDataCollection.Clear()
-        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayergames.Text), Int(cmblayergames.Text), "ng2022/template/Track/signal", True, CasparCGDataCollection.ToAMCPEscapedXml)
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imgred').getElementsByTagName('image')[0].style.opacity=0" & """")
-        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & Int(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imggreen').getElementsByTagName('image')[0].style.opacity=1" & """")
+        'CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), "ng2022/template/Track/signal", True, CasparCGDataCollection.ToAMCPEscapedXml)
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imgred').getElementsByTagName('image')[0].style.opacity=0" & """")
+        CasparDevice.SendString("call " & g_int_ChannelNumber & "-" & SafeInt(cmblayergames.Text) & " " & """" & "document.getElementById('xccg_imggreen').getElementsByTagName('image')[0].style.opacity=1" & """")
         cmdtimerresumetrack.PerformClick()
     End Sub
 
@@ -714,25 +715,25 @@ Public Class ucTrack
     End Sub
 
     Private Sub cmdRemoveLap_Click(sender As Object, e As EventArgs) Handles cmdRemoveLap.Click
-        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(Int(cmblayergames.Text) + 3, Int(cmblayergames.Text) + 3)
+        CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Stop(SafeInt(cmblayergames.Text) + 3, SafeInt(cmblayergames.Text) + 3)
     End Sub
 
 
     Private Sub tmrtimeonform_Tick(sender As Object, e As EventArgs) Handles tmrtimeonform.Tick
         'On Error Resume Next
-        'Dim bb = Val(Now.Second.ToString)
+        'Dim bb = SafeVal(Now.Second.ToString)
 
         'Dim dif As Integer = (bb - aa)
         'aa = bb
         'If dif < 0 Then dif = dif + 60
 
 
-        'txttimersecondtrack.Text = Format(Val(txttimersecondtrack.Text + dif), "00")
+        'txttimersecondtrack.Text = Format(SafeVal(txttimersecondtrack.Text + dif), "00")
         'If txttimersecondtrack.Text > 59 Then
         '    txttimersecondtrack.Text = "00"
         '    txttimerminutetrac.Text = Format(txttimerminutetrac.Text + 1, "00")
         'End If
-        Dim elapsedTime As Integer = (Val(txttimerminutetrac.Text)) * 60 + Val(txttimersecondtrack.Text)
+        Dim elapsedTime As Integer = (SafeVal(txttimerminutetrac.Text)) * 60 + SafeVal(txttimersecondtrack.Text)
 
         elapsedTime += 1
         txttimerminutetrac.Text = (elapsedTime \ 60).ToString()
@@ -764,7 +765,7 @@ Public Class ucTrack
             CasparCGDataCollection.SetData("ccgloader55", gamelogo.ImageLocation.Replace("\", "/"))
             CasparCGDataCollection.SetData("ccgloader56", eventlogo.ImageLocation.Replace("\", "/"))
 
-            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(Int(cmblayergames.Text), Int(cmblayergames.Text), CasparCGDataCollection)
+            CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Update(SafeInt(cmblayergames.Text), SafeInt(cmblayergames.Text), CasparCGDataCollection)
 
         End With
     End Sub
@@ -822,3 +823,4 @@ Public Class ucTrack
         showtemplate("ng2022/template/Track/falseStart", CasparCGDataCollection.ToAMCPEscapedXml)
     End Sub
 End Class
+

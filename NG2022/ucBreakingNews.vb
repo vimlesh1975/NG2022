@@ -1,6 +1,7 @@
 Imports System.IO
 
-Public Class ucBreakingNews
+Partial Public Class ucBreakingNews
+    Inherits ucNGBase
     Dim ibreakingnews As Integer
     Dim jbreakingnews As Integer
     Dim kbreakingnews As Integer
@@ -67,7 +68,7 @@ Public Class ucBreakingNews
         makearray()
         setdataofbreakingnews()
         CasparDevice.Channels(g_int_ChannelNumber - 1).CG.Add(Int(cmblayerbreakingnews.Text), Int(cmblayerbreakingnews.Text), txtbnTemplate.Text, True, CasparCGDataCollection.ToAMCPEscapedXml)
-        tmrshowdata.Interval = Val(txtbreakingnewsupdateinterval.Text)
+        tmrshowdata.Interval = SafeVal(txtbreakingnewsupdateinterval.Text)
         tmrshowdata.Enabled = True
 
     End Sub
@@ -460,3 +461,4 @@ Public Class ucBreakingNews
         makearray()
     End Sub
 End Class
+
